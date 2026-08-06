@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a1f16" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="description" content="VNIT ECE Sem 3 study portal — guides, tips, remediation, books." />
+  <title>padhai · Sem 3</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #1a1f16;
+      --bg-elev: #242b1f;
+      --bg-card: #2c3426;
+      --line: #3d4734;
+      --text: #e8eadf;
+      --muted: #a3ad96;
+      --accent: #d4a017;
+      --accent-soft: rgba(212, 160, 23, 0.14);
+      --ok: #7cb87c;
+      --warn: #e0a06a;
+      --danger: #d97b6c;
+      --radius: 14px;
+      --font: "IBM Plex Sans", system-ui, sans-serif;
+      --display: "Fraunces", Georgia, serif;
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background:
+        radial-gradient(1200px 600px at 10% -10%, #2f3a24 0%, transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, #3a2e14 0%, transparent 45%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100dvh;
+      padding-bottom: calc(72px + var(--safe-bottom));
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap { width: min(920px, 100%); margin: 0 auto; padding: 1rem 1rem 2rem; }
+
+    header.hero {
+      padding: 1.25rem 0 0.5rem;
+    }
+    .eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    h1 {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: clamp(1.8rem, 6vw, 2.4rem);
+      margin: 0.25rem 0 0.4rem;
+      letter-spacing: -0.02em;
+    }
+    .lede { color: var(--muted); margin: 0; max-width: 36rem; }
+
+    .pills { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 1rem 0 0.25rem; }
+    .pill {
+      border: 1px solid var(--line);
+      background: var(--bg-elev);
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 0.28rem 0.7rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+    }
+    .pill.hot { border-color: var(--accent); color: var(--accent); background: var(--accent-soft); }
+
+    nav.tabs {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      gap: 0.35rem;
+      overflow-x: auto;
+      padding: 0.65rem 0;
+      margin: 0.5rem 0 1rem;
+      background: linear-gradient(var(--bg) 70%, transparent);
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    nav.tabs::-webkit-scrollbar { display: none; }
+    .tab {
+      flex: 0 0 auto;
+      border: 1px solid var(--line);
+      background: var(--bg-elev);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 0.45rem 0.85rem;
+      font: inherit;
+      font-size: 0.85rem;
+      font-weight: 500;
+      cursor: pointer;
+    }
+    .tab[aria-selected="true"] {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #1a1f16;
+    }
+
+    section.panel { display: none; animation: fade 0.2s ease; }
+    section.panel.active { display: block; }
+    @keyframes fade { from { opacity: 0; transform: translateY(4px); } to { opacity: 1; transform: none; } }
+
+    h2 {
+      font-family: var(--display);
+      font-size: 1.35rem;
+      margin: 0 0 0.75rem;
+    }
+    h3 {
+      font-size: 1rem;
+      margin: 1.1rem 0 0.4rem;
+      color: var(--accent);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.75rem;
+    }
+    @media (min-width: 640px) {
+      .grid.two { grid-template-columns: 1fr 1fr; }
+    }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 1rem 1.05rem;
+    }
+    .card h3 { margin-top: 0; }
+    .card p:last-child { margin-bottom: 0; }
+
+    .meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: 0.35rem 0 0.7rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .chip {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 0.15rem 0.45rem;
+      background: var(--bg-elev);
+    }
+    .chip.ok { color: var(--ok); border-color: #3f5a3f; }
+    .chip.warn { color: var(--warn); border-color: #6a4d32; }
+    .chip.danger { color: var(--danger); border-color: #6a3d36; }
+
+    ul.tight { margin: 0.35rem 0; padding-left: 1.1rem; }
+    ul.tight li { margin: 0.25rem 0; }
+    .tip {
+      border-left: 3px solid var(--accent);
+      padding: 0.55rem 0.75rem;
+      background: var(--accent-soft);
+      border-radius: 0 10px 10px 0;
+      margin: 0.7rem 0;
+      font-size: 0.92rem;
+    }
+    .muted { color: var(--muted); }
+    .small { font-size: 0.86rem; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.86rem;
+    }
+    th, td {
+      text-align: left;
+      padding: 0.55rem 0.4rem;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+    th { color: var(--muted); font-weight: 600; }
+
+    .search {
+      width: 100%;
+      border: 1px solid var(--line);
+      background: var(--bg-elev);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 0.7rem 0.85rem;
+      font: inherit;
+      margin-bottom: 0.85rem;
+    }
+    .search:focus { outline: 2px solid var(--accent); border-color: transparent; }
+
+    footer.note {
+      margin-top: 1.5rem;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .bottom-bar {
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      padding: 0.45rem 0.75rem calc(0.45rem + var(--safe-bottom));
+      background: rgba(26, 31, 22, 0.92);
+      backdrop-filter: blur(10px);
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-around;
+      gap: 0.25rem;
+      z-index: 30;
+    }
+    .bottom-bar button {
+      flex: 1;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      font: inherit;
+      font-size: 0.72rem;
+      font-weight: 600;
+      padding: 0.35rem;
+      cursor: pointer;
+    }
+    .bottom-bar button[aria-current="true"] { color: var(--accent); }
+
+    details.day {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--bg-elev);
+      margin: 0.45rem 0;
+      padding: 0.55rem 0.8rem;
+    }
+    details.day summary {
+      cursor: pointer;
+      font-weight: 600;
+      list-style: none;
+    }
+    details.day summary::-webkit-details-marker { display: none; }
+    .slot { font-size: 0.86rem; color: var(--muted); margin: 0.35rem 0; }
+    .slot b { color: var(--text); font-weight: 500; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="hero">
+      <div class="eyebrow">VNIT Nagpur · ECE · NEP 2025</div>
+      <h1>padhai</h1>
+      <p class="lede">Sem 3 field guide — credits, subject tips, remediation, books, and your weekly map. Built for phone + laptop.</p>
+      <div class="pills">
+        <span class="pill hot">Target SGPA 8+</span>
+        <span class="pill">CGPA climb from ~5.9</span>
+        <span class="pill">IEM / audio path</span>
+      </div>
+    </header>
+
+    <nav class="tabs" role="tablist" aria-label="Sections">
+      <button class="tab" role="tab" data-tab="home" aria-selected="true">Home</button>
+      <button class="tab" role="tab" data-tab="subjects" aria-selected="false">Subjects</button>
+      <button class="tab" role="tab" data-tab="fix" aria-selected="false">Fix gaps</button>
+      <button class="tab" role="tab" data-tab="books" aria-selected="false">Books</button>
+      <button class="tab" role="tab" data-tab="week" aria-selected="false">Week</button>
+      <button class="tab" role="tab" data-tab="iem" aria-selected="false">IEM</button>
+    </nav>
+
+    <section id="home" class="panel active">
+      <h2>This semester</h2>
+      <div class="grid two">
+        <article class="card">
+          <h3>Credit reality</h3>
+          <ul class="tight">
+            <li><b>DCHD 5</b> = theory+tutorial 3 + lab <b>2</b></li>
+            <li><b>SnS / ACD / MNI 4</b> = theory 3 + lab <b>1</b></li>
+            <li><b>EMFT 4</b> = theory + tutorial (no lab)</li>
+            <li><b>LA 3</b> = theory only</li>
+          </ul>
+          <div class="tip">DCHD lab is worth 2 credits — never leave HDL/lab files to the last week.</div>
+        </article>
+        <article class="card">
+          <h3>Effort order</h3>
+          <ol class="tight">
+            <li>DCHD (protect the 5)</li>
+            <li>SnS + Linear Algebra (confidence + IEM)</li>
+            <li>ACD (EDC weak → patch JIT)</li>
+            <li>EMFT (Physics hole → tutorials daily)</li>
+            <li>MNI (scoring with clean notes)</li>
+          </ol>
+        </article>
+      </div>
+
+      <h3>Golden rules</h3>
+      <div class="grid two">
+        <div class="card">
+          <ul class="tight">
+            <li>Same-day: lecture → 3 problems that night</li>
+            <li>Labs: writeup the same evening</li>
+            <li>Don’t restart all of year-1 — just-in-time only</li>
+            <li>IEM side project: 6 hrs/week; cut in MST weeks</li>
+          </ul>
+        </div>
+        <div class="card">
+          <ul class="tight">
+            <li>Thu afternoon = longest free block (SnS + IEM)</li>
+            <li>EMFT fails people who only “read”</li>
+            <li>ACD: sim before every design lab</li>
+            <li>Ask lab: Verilog vs VHDL on day one</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="subjects" class="panel">
+      <h2>Subjects</h2>
+      <input class="search" id="subjectSearch" type="search" placeholder="Filter subjects…" enterkeyhint="search" />
+      <div class="grid" id="subjectGrid"></div>
+    </section>
+
+    <section id="fix" class="panel">
+      <h2>Fix gaps (just-in-time)</h2>
+      <p class="muted small">You barely passed EE, EDC, NS; Physics was FF → summer. Cap catch-up at ~2–3 hrs/week.</p>
+
+      <article class="card">
+        <h3>For ACD ← EE + EDC</h3>
+        <ol class="tight">
+          <li>Sources, KVL/KCL, voltage divider</li>
+          <li>Thevenin / Norton</li>
+          <li>Diode as switch / clipper intuition</li>
+          <li>BJT as rough current amp (don’t fear 741 guts)</li>
+          <li>Gain, Zin, Zout meaning</li>
+        </ol>
+        <div class="tip">Skip full hybrid-π grinding unless the lecturer demands it. Use Alexander–Sadiku circuits PDF in prereq + Gaikwad ch.1–2.</div>
+      </article>
+
+      <article class="card">
+        <h3>For EMFT ← Physics</h3>
+        <ol class="tight">
+          <li>Unit vectors; what a field is</li>
+          <li>Dot &amp; cross (work / flux / perpendicular)</li>
+          <li>Cartesian first, then cylindrical/spherical</li>
+          <li>Coulomb → Gauss from Sadiku early chapters</li>
+        </ol>
+        <div class="tip">Do the tutorial sheet the same day. Reading alone repeats the Physics failure mode.</div>
+      </article>
+
+      <article class="card">
+        <h3>If NS was networks</h3>
+        <ul class="tight">
+          <li>R/L/C impedance</li>
+          <li>Series/parallel RC</li>
+          <li>Time constant</li>
+          <li>Hand-wavy H(jω) — pairs with SnS</li>
+        </ul>
+      </article>
+
+      <div class="tip">Sunday 60–90 min: alternate ACD patch ↔ EMFT vectors. Never steal DCHD HDL time for this.</div>
+    </section>
+
+    <section id="books" class="panel">
+      <h2>Books</h2>
+      <p class="muted small">PDFs stay on your laptop under each subject’s <code>resources/</code> (not on GitHub — too large). This list is your mobile checklist.</p>
+      <div class="card" style="overflow-x:auto">
+        <table>
+          <thead>
+            <tr><th>Subject</th><th>Book</th><th>Status</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>LA</td><td>Strang — Linear Algebra</td><td class="chip ok">Have</td></tr>
+            <tr><td>LA</td><td>Boyd — Convex Optimization</td><td class="chip ok">Have</td></tr>
+            <tr><td>DCHD</td><td>Mano — Digital Design</td><td class="chip ok">Have</td></tr>
+            <tr><td>DCHD</td><td>Kohavi &amp; Jha — Switching &amp; Finite Automata</td><td class="chip ok">Have</td></tr>
+            <tr><td>SnS</td><td>Oppenheim — Signals &amp; Systems</td><td class="chip ok">Have</td></tr>
+            <tr><td>EMFT</td><td>Sadiku — Elements of Electromagnetics</td><td class="chip ok">Have</td></tr>
+            <tr><td>ACD</td><td>Gaikwad — Op-Amps</td><td class="chip ok">Have</td></tr>
+            <tr><td>MNI</td><td>Bentley — Measurement Systems</td><td class="chip ok">Have</td></tr>
+            <tr><td>MNI</td><td>Doebelin — Measurement Systems (prof “Doble”)</td><td class="chip ok">Have</td></tr>
+            <tr><td>Prereq</td><td>Alexander &amp; Sadiku — Electric Circuits</td><td class="chip ok">Have</td></tr>
+            <tr><td>Optional</td><td>Schaum’s SnS</td><td class="chip warn">MST only</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="tip">Laptop path: <code>~/Documents/padhai/sem3/…/resources/</code></div>
+    </section>
+
+    <section id="week" class="panel">
+      <h2>Weekly map</h2>
+      <p class="muted small">From your timetable. Tap a day.</p>
+
+      <details class="day" open>
+        <summary>Monday — ends 6pm</summary>
+        <div class="slot">8:00 LA · 11:00 DCHD · 12:00 SnS</div>
+        <div class="slot">15:00 DCHD tutorial · <b>16:00–18:00 SnS Lab</b></div>
+        <div class="slot tip">Night: DCHD redo + HDL (7–9)</div>
+      </details>
+      <details class="day">
+        <summary>Tuesday — heavy</summary>
+        <div class="slot">9:00 LA · 10:00 MNI · 11:00 EMFT · 12:00 ACD</div>
+        <div class="slot"><b>14:00–16:00 DCHD Lab</b> · 16:00 EMFT tutorial</div>
+        <div class="slot tip">Night: EMFT sheet + LA (7–9)</div>
+      </details>
+      <details class="day">
+        <summary>Wednesday</summary>
+        <div class="slot">8:00 MNI · 11:00 EMFT · 12:00 ACD</div>
+        <div class="slot"><b>14:00–16:00 MNI Lab</b></div>
+        <div class="slot tip">Evening: MNI writeup same day</div>
+      </details>
+      <details class="day">
+        <summary>Thursday — best deep-work day</summary>
+        <div class="slot">9:00 SnS · 10:00 DCHD · 11:00 LA · 12:00 MNI</div>
+        <div class="slot"><b>After 13:00 free</b> → SnS deep work + IEM</div>
+      </details>
+      <details class="day">
+        <summary>Friday</summary>
+        <div class="slot">9:00 SnS · 10:00 DCHD · 11:00 ACD · 12:00 EMFT</div>
+        <div class="slot"><b>14:00–16:00 ACD Lab</b></div>
+        <div class="slot tip">Evening: ACD sim + week review</div>
+      </details>
+
+      <article class="card" style="margin-top:0.8rem">
+        <h3>Weekend template</h3>
+        <ul class="tight">
+          <li>Sat: weakest subject 3h + IEM 3h (or papers near MST)</li>
+          <li>Sun: EMFT 2h + DCHD 2h + light SnS lab prep</li>
+          <li>MST weeks: IEM → 2–3h maintenance only</li>
+        </ul>
+      </article>
+    </section>
+
+    <section id="iem" class="panel">
+      <h2>IEM / audio track</h2>
+      <p class="muted">Consumer audio path: firmware + DSP later. This semester SnS is the academic twin of your project.</p>
+      <article class="card">
+        <h3>8-week starter (6 hrs/week)</h3>
+        <ol class="tight">
+          <li>Waveform notebook</li>
+          <li>FFT / spectrum</li>
+          <li>EQ / filters + A/B WAVs</li>
+          <li>Measurement setup (IEM → mic)</li>
+          <li>Rough FR curve</li>
+          <li>Auto-EQ prototype</li>
+          <li>Demo + README</li>
+          <li>Bridge note toward on-device EQ / ANC later</li>
+        </ol>
+        <div class="tip">Repo: <code>iem-fr-eq</code>. Link SnS lab scripts into the story for US MS SOP later.</div>
+      </article>
+      <article class="card">
+        <h3>Course links</h3>
+        <ul class="tight">
+          <li>SnS → FFT, LTI, filters, sampling</li>
+          <li>ACD → mic preamp / active EQ later</li>
+          <li>LA → least squares / PCA on measurements</li>
+          <li>MNI → mics, errors, ADC, conditioning</li>
+          <li>DCHD → digital EQ / FPGA audio later</li>
+        </ul>
+      </article>
+    </section>
+
+    <footer class="note">
+      Local vault: <code>~/Documents/padhai</code> · PDFs gitignored · This page is the phone-friendly layer.
+    </footer>
+  </div>
+
+  <nav class="bottom-bar" aria-label="Quick nav">
+    <button type="button" data-tab="home" aria-current="true">Home</button>
+    <button type="button" data-tab="subjects">Subjects</button>
+    <button type="button" data-tab="fix">Gaps</button>
+    <button type="button" data-tab="books">Books</button>
+    <button type="button" data-tab="week">Week</button>
+  </nav>
+
+  <script>
+    const subjects = [
+      {
+        id: "la",
+        name: "Linear Algebra for ML",
+        code: "ECL3xx",
+        credits: "3",
+        risk: "ok",
+        books: "Strang (+ Boyd when optimization hits)",
+        tips: [
+          "Use Strang + MIT 18.06 videos together",
+          "Tie every topic to signals: projection, least squares, eigen, SVD",
+          "Boyd only when syllabus hits GD / Lagrange / KKT",
+          "Tiny NumPy demos beat passive reading"
+        ],
+        common: [
+          "Mixing row space / null space language in exams",
+          "Computing eigen without interpretation",
+          "Skipping least-squares geometry"
+        ]
+      },
+      {
+        id: "dchd",
+        name: "Digital Circuits & Hardware Design",
+        code: "ECL216",
+        credits: "5 (theory 3 + lab 2)",
+        risk: "warn",
+        books: "Mano + Kohavi/Jha",
+        tips: [
+          "Highest credit course — never fall behind",
+          "Confirm Verilog vs VHDL day 1",
+          "After every tutorial: redo 2–3 problems same evening",
+          "Simulate HDL before the board",
+          "FSM / ASM / race-free design = scoring + viva gold"
+        ],
+        common: [
+          "Async vs sync counter confusion",
+          "Mealy/Moore overlapping sequence mistakes",
+          "Leaving FPGA experiments undocumented"
+        ]
+      },
+      {
+        id: "sns",
+        name: "Signals & Systems",
+        code: "ECL211",
+        credits: "4 (theory 3 + lab 1)",
+        risk: "ok",
+        books: "Oppenheim (Lathi if stuck)",
+        tips: [
+          "Career + IEM core subject — protect weekly problem time",
+          "Master convolution + LTI properties early",
+          "Fourier: always ask what frequency content means physically",
+          "Sampling / aliasing: draw pictures",
+          "SnS lab scripts = portfolio material"
+        ],
+        common: [
+          "Forgetting ROC for Laplace/Z",
+          "Mixing CT/DT formulas",
+          "Treating impulse as ‘infinity’ with no sifting property"
+        ]
+      },
+      {
+        id: "emft",
+        name: "Electromagnetic Fields",
+        code: "ECL305",
+        credits: "4 (no lab)",
+        risk: "danger",
+        books: "Sadiku Elements of Electromagnetics",
+        tips: [
+          "Physics was weak — same-day tutorials are mandatory",
+          "Coordinates + vector calculus before memorizing laws",
+          "One worked Gauss/Ampere problem > three reread chapters",
+          "Keep a formula sheet: div, curl, Maxwell set, Poynting"
+        ],
+        common: [
+          "Wrong coordinate system for the symmetry",
+          "Confusing E vs D, B vs H",
+          "Cramming waves without electrostatics comfort"
+        ]
+      },
+      {
+        id: "acd",
+        name: "Analog Circuit Design",
+        code: "ECL308",
+        credits: "4 (theory 3 + lab 1)",
+        risk: "warn",
+        books: "Gaikwad",
+        tips: [
+          "EDC was weak — patch Thevenin/KVL before each new topic",
+          "Know 741 params: offset, CMRR, slew, bandwidth",
+          "Design filters on paper, then Multisim/LTspice",
+          "Memorize 5 patterns: inverting, Schmitt, integrator, 2nd-order filter, 555 astable"
+        ],
+        common: [
+          "Ignoring virtual ground conditions",
+          "Filter order / cutoff algebra errors",
+          "Lab without calculated resistor values"
+        ]
+      },
+      {
+        id: "mni",
+        name: "Measurements & Instrumentation",
+        code: "ECL204",
+        credits: "4 (theory 3 + lab 1)",
+        risk: "ok",
+        books: "Bentley + Doebelin (prof)",
+        tips: [
+          "One-page sheet per sensor/bridge = easy marks",
+          "Static/dynamic characteristics + error stats early",
+          "Finish ultrasonic liquid-level mini-project early",
+          "ADC/DAC types: flash, SAR, dual-slope, R-2R — compare table"
+        ],
+        common: [
+          "Mixing accuracy / precision / resolution",
+          "Bridge balance conditions half-remembered",
+          "Lab curves without error discussion"
+        ]
+      }
+    ];
+
+    const grid = document.getElementById("subjectGrid");
+    const search = document.getElementById("subjectSearch");
+
+    function riskChip(risk) {
+      if (risk === "danger") return '<span class="chip danger">grade risk</span>';
+      if (risk === "warn") return '<span class="chip warn">watch closely</span>';
+      return '<span class="chip ok">recovery lane</span>';
+    }
+
+    function render(list) {
+      grid.innerHTML = list.map(s => `
+        <article class="card" data-name="${s.name.toLowerCase()} ${s.code.toLowerCase()}">
+          <h3>${s.name}</h3>
+          <div class="meta">
+            <span class="chip">${s.code}</span>
+            <span class="chip">${s.credits}</span>
+            ${riskChip(s.risk)}
+          </div>
+          <p class="small muted"><b>Books:</b> ${s.books}</p>
+          <h3>Do this</h3>
+          <ul class="tight">${s.tips.map(t => `<li>${t}</li>`).join("")}</ul>
+          <h3>Common traps</h3>
+          <ul class="tight">${s.common.map(t => `<li>${t}</li>`).join("")}</ul>
+        </article>
+      `).join("");
+    }
+
+    render(subjects);
+    search.addEventListener("input", () => {
+      const q = search.value.trim().toLowerCase();
+      render(subjects.filter(s =>
+        !q || s.name.toLowerCase().includes(q) || s.code.toLowerCase().includes(q)
+      ));
+    });
+
+    function showTab(id) {
+      document.querySelectorAll(".panel").forEach(p => p.classList.toggle("active", p.id === id));
+      document.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", String(t.dataset.tab === id)));
+      document.querySelectorAll(".bottom-bar button").forEach(b => b.setAttribute("aria-current", String(b.dataset.tab === id)));
+      history.replaceState(null, "", "#" + id);
+      window.scrollTo({ top: 0, behavior: "instant" in window ? "instant" : "auto" });
+    }
+
+    document.querySelectorAll(".tab, .bottom-bar button").forEach(btn => {
+      btn.addEventListener("click", () => showTab(btn.dataset.tab));
+    });
+
+    const initial = location.hash.replace("#", "") || "home";
+    if (document.getElementById(initial)) showTab(initial);
+  </script>
+</body>
+</html>
