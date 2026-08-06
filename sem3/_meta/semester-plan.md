@@ -1,18 +1,19 @@
 # Sem 3 quick plan
 
-Target SGPA: **8.0+** (recover from ~5.9 and near-fail pattern in EE / EDC / NS / Physics).
+Target: **AA (10) in every subject** → **SGPA ≥ 9.5** (climb from ~5.9 CGPA).
 
-## Priority
-1. **DCHD** (5: theory 3 + lab 2) — least blocked by weak EE/EDC; protect this hard  
-2. **SnS** + **Linear Algebra** — rebuild confidence with weekly problem sets; feeds IEM  
-3. **ACD** — assume EDC is weak; do just-in-time EE/EDC patch (see `remediation.md`)  
-4. **EMFT** — Physics was FF/summer; daily tutorial problems, not weekend cramming  
-5. **MNI** — scoring if notes kept; uses some EE/bridge intuition  
+Full operating system: [`ten-pointer-plan.md`](ten-pointer-plan.md).
 
-Lab marks matter extra for **DCHD (2 of 5)**. Other labs are **1 of 4**.
+## Priority (AA mode)
+1. **DCHD** (5: theory 3 + lab 2) — cannot be the soft subject  
+2. **EMFT** — Physics hole; daily problems + same-day tutorials  
+3. **ACD** — EDC weak; JIT Thevenin/KVL + design drills  
+4. **SnS** — problem volume; feeds IEM + MS story  
+5. **MNI** — clean notes + early mini-project = free AA band  
+6. **LA** — Strang consistency  
 
 ## Background
 See `academic-background.md` and `remediation.md`.
 
 ## IEM side project
-Keep in separate repo `iem-fr-eq`; link SnS lab work here. Cut IEM hours in MST weeks.
+`iem-fr-eq` — cut to ≤2–3 hrs/week near MSTs; freeze in endsem week.

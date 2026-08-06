@@ -255,16 +255,17 @@
     <header class="hero">
       <div class="eyebrow">VNIT Nagpur · ECE · NEP 2025</div>
       <h1>padhai</h1>
-      <p class="lede">Sem 3 field guide — credits, subject tips, remediation, books, and your weekly map. Built for phone + laptop.</p>
+      <p class="lede">Sem 3 field guide — push for AA in every subject and SGPA ≥ 9.5. Credits, tips, remediation, books, weekly map.</p>
       <div class="pills">
-        <span class="pill hot">Target SGPA 8+</span>
-        <span class="pill">CGPA climb from ~5.9</span>
-        <span class="pill">IEM / audio path</span>
+        <span class="pill hot">Target: all AAs · SGPA ≥ 9.5</span>
+        <span class="pill">From CGPA ~5.9</span>
+        <span class="pill">IEM cut near MSTs</span>
       </div>
     </header>
 
     <nav class="tabs" role="tablist" aria-label="Sections">
       <button class="tab" role="tab" data-tab="home" aria-selected="true">Home</button>
+      <button class="tab" role="tab" data-tab="aa" aria-selected="false">10-pt OS</button>
       <button class="tab" role="tab" data-tab="subjects" aria-selected="false">Subjects</button>
       <button class="tab" role="tab" data-tab="fix" aria-selected="false">Fix gaps</button>
       <button class="tab" role="tab" data-tab="books" aria-selected="false">Books</button>
@@ -274,6 +275,7 @@
 
     <section id="home" class="panel active">
       <h2>This semester</h2>
+      <div class="tip">Ambition: <b>10 in every subject</b>. Contract: <b>SGPA ≥ 9.5</b> even if one subject is AB. DCHD (5 cr) cannot be the soft one. See <b>10-pt OS</b> tab.</div>
       <div class="grid two">
         <article class="card">
           <h3>Credit reality</h3>
@@ -283,39 +285,90 @@
             <li><b>EMFT 4</b> = theory + tutorial (no lab)</li>
             <li><b>LA 3</b> = theory only</li>
           </ul>
-          <div class="tip">DCHD lab is worth 2 credits — never leave HDL/lab files to the last week.</div>
+          <div class="tip">One BB on DCHD still clears ~9.58 if everything else is AA — but don’t plan for that.</div>
         </article>
         <article class="card">
-          <h3>Effort order</h3>
+          <h3>AA effort order</h3>
           <ol class="tight">
-            <li>DCHD (protect the 5)</li>
-            <li>SnS + Linear Algebra (confidence + IEM)</li>
-            <li>ACD (EDC weak → patch JIT)</li>
-            <li>EMFT (Physics hole → tutorials daily)</li>
-            <li>MNI (scoring with clean notes)</li>
+            <li>DCHD — must be AA</li>
+            <li>EMFT — Physics hole; daily problems</li>
+            <li>ACD — EDC patch + design drills</li>
+            <li>SnS — problem volume</li>
+            <li>MNI — notes + early mini-project</li>
+            <li>LA — Strang consistency</li>
           </ol>
         </article>
       </div>
 
-      <h3>Golden rules</h3>
+      <h3>Golden rules (AA mode)</h3>
       <div class="grid two">
         <div class="card">
           <ul class="tight">
-            <li>Same-day: lecture → 3 problems that night</li>
-            <li>Labs: writeup the same evening</li>
-            <li>Don’t restart all of year-1 — just-in-time only</li>
-            <li>IEM side project: 6 hrs/week; cut in MST weeks</li>
+            <li>Same-day: lecture → ≥3 problems that night</li>
+            <li>Labs: full marks trajectory; writeup same evening</li>
+            <li>Tutorials: redo sheet until clean</li>
+            <li>MST-1/2 treated like endsem</li>
           </ul>
         </div>
         <div class="card">
           <ul class="tight">
-            <li>Thu afternoon = longest free block (SnS + IEM)</li>
-            <li>EMFT fails people who only “read”</li>
-            <li>ACD: sim before every design lab</li>
-            <li>Ask lab: Verilog vs VHDL on day one</li>
+            <li>~22–30 hrs/week outside class</li>
+            <li>IEM ≤2–3 hrs near MSTs; freeze endsem week</li>
+            <li>EMFT: never “read only”</li>
+            <li>Cloudy &gt;48h → ask TA/prof with a stuck point</li>
           </ul>
         </div>
       </div>
+    </section>
+
+    <section id="aa" class="panel">
+      <h2>10-pointer OS</h2>
+      <p class="muted small">From CGPA ~5.9 → all AAs if possible; floor SGPA ≥ 9.5.</p>
+
+      <article class="card">
+        <h3>SGPA math (24 credits)</h3>
+        <ul class="tight">
+          <li>All AA → 10.0</li>
+          <li>One AB (9) on 4-cr, rest AA → ~9.83</li>
+          <li>One BB (8) on 4-cr, rest AA → ~9.67</li>
+          <li>One BB on DCHD 5-cr, rest AA → ~9.58</li>
+          <li>Two BBs on 4-cr → ~9.33 <b>(misses 9.5)</b></li>
+        </ul>
+        <div class="tip">AB is the emergency floor. Two soft subjects breaks the goal.</div>
+      </article>
+
+      <article class="card">
+        <h3>Weekly hours outside class</h3>
+        <ul class="tight">
+          <li>Same-day closes: 8–10h</li>
+          <li>Deep problems (SnS/EMFT/DCHD/ACD): 8–10h</li>
+          <li>Lab polish + HDL/sim: 4–5h</li>
+          <li>Remediation EE/EDC/Physics: ~2h</li>
+          <li>IEM: 0–4h (cut first under load)</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>Per-subject AA keys</h3>
+        <ul class="tight">
+          <li><b>DCHD:</b> HDL early, mistake log, lab docs same day</li>
+          <li><b>EMFT:</b> 2–3 Sadiku problems daily + same-day tutorials</li>
+          <li><b>ACD:</b> design + sim before lab; 5 patterns cold</li>
+          <li><b>SnS:</b> weekly Oppenheim drills; own sampling/ROC</li>
+          <li><b>MNI:</b> one-pagers; mini-project early</li>
+          <li><b>LA:</b> Strang + interpret eigen/SVD, not only compute</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h3>MST protocol</h3>
+        <ul class="tight">
+          <li>T−14: weak-unit map per subject</li>
+          <li>T−7: only problems / papers / tutorial banks</li>
+          <li>T−2: formula sheets + sleep</li>
+          <li>After MST: if any subject trends ≤8 path → it becomes #1 priority</li>
+        </ul>
+      </article>
     </section>
 
     <section id="subjects" class="panel">
@@ -398,38 +451,38 @@
         <summary>Monday — ends 6pm</summary>
         <div class="slot">8:00 LA · 11:00 DCHD · 12:00 SnS</div>
         <div class="slot">15:00 DCHD tutorial · <b>16:00–18:00 SnS Lab</b></div>
-        <div class="slot tip">Night: DCHD redo + HDL (7–9)</div>
+        <div class="slot tip">Night AA: DCHD redo + HDL (7–9) — non-negotiable</div>
       </details>
       <details class="day">
         <summary>Tuesday — heavy</summary>
         <div class="slot">9:00 LA · 10:00 MNI · 11:00 EMFT · 12:00 ACD</div>
         <div class="slot"><b>14:00–16:00 DCHD Lab</b> · 16:00 EMFT tutorial</div>
-        <div class="slot tip">Night: EMFT sheet + LA (7–9)</div>
+        <div class="slot tip">Night AA: EMFT tutorial sheet clean + LA problems</div>
       </details>
       <details class="day">
         <summary>Wednesday</summary>
         <div class="slot">8:00 MNI · 11:00 EMFT · 12:00 ACD</div>
         <div class="slot"><b>14:00–16:00 MNI Lab</b></div>
-        <div class="slot tip">Evening: MNI writeup same day</div>
+        <div class="slot tip">Evening: MNI writeup + one-pager update</div>
       </details>
       <details class="day">
         <summary>Thursday — best deep-work day</summary>
         <div class="slot">9:00 SnS · 10:00 DCHD · 11:00 LA · 12:00 MNI</div>
-        <div class="slot"><b>After 13:00 free</b> → SnS deep work + IEM</div>
+        <div class="slot"><b>After 13:00 free</b> → SnS deep problems; IEM only if ahead</div>
       </details>
       <details class="day">
         <summary>Friday</summary>
         <div class="slot">9:00 SnS · 10:00 DCHD · 11:00 ACD · 12:00 EMFT</div>
         <div class="slot"><b>14:00–16:00 ACD Lab</b></div>
-        <div class="slot tip">Evening: ACD sim + week review</div>
+        <div class="slot tip">Evening: ACD sim + week scorecard (any subject slipping?)</div>
       </details>
 
       <article class="card" style="margin-top:0.8rem">
-        <h3>Weekend template</h3>
+        <h3>Weekend template (AA mode)</h3>
         <ul class="tight">
-          <li>Sat: weakest subject 3h + IEM 3h (or papers near MST)</li>
-          <li>Sun: EMFT 2h + DCHD 2h + light SnS lab prep</li>
-          <li>MST weeks: IEM → 2–3h maintenance only</li>
+          <li>Sat: EMFT or ACD deep 4h + DCHD HDL 2h (IEM only if green on all)</li>
+          <li>Sun: SnS 2h + weakest subject 2h + remediation 1h</li>
+          <li>MST weeks: IEM ≤2–3h; endsem week = freeze</li>
         </ul>
       </article>
     </section>
@@ -470,9 +523,9 @@
 
   <nav class="bottom-bar" aria-label="Quick nav">
     <button type="button" data-tab="home" aria-current="true">Home</button>
+    <button type="button" data-tab="aa">10-pt</button>
     <button type="button" data-tab="subjects">Subjects</button>
     <button type="button" data-tab="fix">Gaps</button>
-    <button type="button" data-tab="books">Books</button>
     <button type="button" data-tab="week">Week</button>
   </nav>
 
