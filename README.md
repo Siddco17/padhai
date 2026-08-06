@@ -7,7 +7,7 @@ Study vault + mobile web guide for 3rd semester (NEP 2025).
 ## Phone access (GitHub Pages)
 
 Open: **https://siddco17.github.io/padhai/**  
-(URL finalizes after Pages is enabled on this repo.)
+Repo: **https://github.com/Siddco17/padhai** (public — needed for free GitHub Pages)
 
 Add to iPhone home screen: Safari → Share → Add to Home Screen.
 
