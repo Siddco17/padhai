@@ -15,8 +15,10 @@
 | `06-mni/resources/` | Bentley — *Principles of Measurement Systems* |
 | `06-mni/resources/` | Doebelin — *Measurement Systems: Application and Design* |
 | `_meta/prereq/` | Alexander & Sadiku — *Fundamentals of Electric Circuits* (5e) |
-| `07-fundamentals-of-ml/resources/` | *(FoML IE books TBD — ask offering dept)* |
+| `07-fundamentals-of-ml/resources/` | Syllabus docx (local); fetch Mitchell/Alpaydin + Deisenroth MML |
 
 ## Still add
-- [ ] Fundamentals of Machine Learning (IE): prescribed text(s) from that department
-- Optional: Schaum’s SnS before MST
+- [ ] **FoML:** Tom Mitchell — *Machine Learning* **or** Alpaydin — *Introduction to Machine Learning*
+- [ ] **FoML math:** Deisenroth et al. — *Mathematics for Machine Learning* (free: https://mml-book.github.io/)
+- [ ] **FoML lab:** Géron — *Hands-On ML* (optional but great for sklearn labs)
+- Optional: Schaum’s SnS before MST; Bishop PRML only as reference

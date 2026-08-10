@@ -2,21 +2,19 @@
 
 Starting CGPA ~5.9. Goal this term: **AA (10) in every subject**, floor **SGPA ≥ 9.5**.
 
-## What ≥9.5 actually requires (**27 credits** with IE)
+## What ≥9.5 actually requires (**28 credits** with FoML)
 
-Core DC load 24 + Institute Elective **Fundamentals of Machine Learning (3)** ≈ **27**.
+Core DC load 24 + **CSL2XX Fundamentals of Machine Learning (4, OC, 3-0-2)** ≈ **28**.
 
 | Outcome | Approx SGPA |
 |---------|-------------|
 | All AA (10) | **10.0** |
-| One AB (9) on IE 3-cr, rest AA | ~9.89 |
-| One AB (9) on a 4-cr subject, rest AA | ~9.85 |
-| One BB (8) on IE 3-cr, rest AA | ~9.78 |
-| One BB (8) on a 4-cr subject, rest AA | ~9.70 |
-| One BB (8) on **DCHD 5-cr**, rest AA | ~9.63 |
-| Two BBs on 4-cr subjects, rest AA | ~9.41 — **misses 9.5** |
+| One AB (9) on a 4-cr subject (e.g. FoML), rest AA | ~9.86 |
+| One BB (8) on a 4-cr subject, rest AA | ~9.71 |
+| One BB (8) on **DCHD 5-cr**, rest AA | ~9.64 |
+| Two BBs on 4-cr subjects, rest AA | ~9.43 — **misses 9.5** |
 
-**Rule:** Treat **AB as the emergency floor**. One soft subject is survivable; two is not. **DCHD cannot be the soft subject** (5 credits). Don’t treat the IE as “auto-pass” — a BB there still hurts less than DCHD, but two soft courses kills ≥9.5.
+**Rule:** Treat **AB as the emergency floor**. One soft subject is survivable; two is not. **DCHD cannot be the soft subject** (5 credits). FoML lab is **25%** of that course — protect it like DCHD lab.
 
 Relative grading: AA ≈ top band of the class. You are not competing with “pass”; you are competing with serious toppers. That means **perfect internals + top MST + top endsem**, not “understood the vibe.”
 
@@ -36,11 +34,11 @@ Assume ~6–7 hrs classes/labs on heavy days. Outside class:
 
 | Block | Hours/week | Focus |
 |-------|------------|--------|
-| Same-day closes | 8–12 | All **seven** subjects (incl. IE) |
+| Same-day closes | 8–12 | All subjects incl. FoML |
 | Deep problem blocks | 8–10 | SnS, EMFT, DCHD, ACD rotate |
 | Lab polish + HDL/sim | 4–5 | Especially DCHD + ACD |
 | Remediation (EE/EDC/Physics) | 2 | Only as needed for ACD/EMFT |
-| IE (FoML) weekly | 2–3 | Notes + problems — don’t dump to endsem |
+| FoML (CSL2XX) | 3–5 | Theory + lab notebooks + project (lab = 25%) |
 | IEM (optional) | 0–3 | Cut first under load |
 | **Total outside class** | **~24–32** | This is a full-time semester |
 
@@ -81,11 +79,13 @@ Thu afternoon free block = **SnS deep + weakest theory**, not Netflix.
 - Code tiny demos (projection, SVD) for memory.
 - Boyd only when syllabus hits optimization — don’t drown early.
 
-### Fundamentals of Machine Learning (IE, 3) — AA
-- Confirm official title, dept, syllabus, books in week 1.
-- Same-day notes like a core; weekly problem/assignment close.
-- Get weightage (MST / assignments / attendance) early.
-- Easy to under-prepare because it’s “just an IE” — that mistake costs SGPA.
+### FoML CSL2XX (OC, 4) — AA
+- Annexure: Mid **25%** / End **50%** / Lab **25%** — lab is not optional for AA.
+- Texts: Mitchell or Alpaydin; Deisenroth MML (free) for math unit; Géron for labs.
+- Units: probability/Naive Bayes → supervised basics → ANN/backprop → trees/KNN/k-means → PCA/apps.
+- Tiny NumPy impl before sklearn; confusion matrix / precision / recall cold.
+- Start the real-life lab project by mid-sem (audio/IEM topic OK if allowed).
+- Synergy: use Linear Algebra for ML the same week PCA/least squares appear.
 
 ## MST / endsem protocol
 

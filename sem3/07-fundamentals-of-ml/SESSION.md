@@ -1,28 +1,60 @@
-# Fundamentals of Machine Learning (Institute Elective)
+# Fundamentals of Machine Learning
 
-- **Code:** IE (confirm exact code with registration / offering dept)
-- **Credits:** 3 `(3-0-0)` typical IE
-- **Type:** Institute Elective (theory)
-- **Books / primary refs:** Follow the offering dept list — common refs: course notes; sometimes Géron *Hands-On ML*, Bishop *PRML* (heavy), or dept PDF pack
-- **Pairs with:** ECL3xx Linear Algebra for ML (your DC) — use LA for the math behind this IE
-- **Have PDF:** none yet — drop into `resources/`
+- **Code:** CSL2XX (CSE) — confirm final numeric code on registration
+- **Credits:** **4** `(3-0-2)` → theory **3** + lab **1**
+- **Type:** **OC** (Open Course) on annexure — counts in your elective/OC slot
+- **Pre-req:** CSL101 Computer Programming (you already have programming strength)
+- **Pairs with:** ECL3xx Linear Algebra for ML
+- **Evaluation:** Mid-sem **25%** · End-sem **50%** · Lab **25%**
+- **Syllabus:** `notes/syllabus.md` (from Annexure III); original docx in `resources/` (local)
 
-## This session is for
-- Lecture notes → `notes/`
-- Problem sets / assignments → `problems/`
-- PDFs / notebooks / links → `resources/`
+## Books (from annexure)
 
-## AA tips (10-pointer semester)
-- Same-day notes + re-derive key formulas (loss, gradient step, bias-variance intuition)
-- Implement tiny versions (NumPy) of: linear/logistic regression, k-means, simple NN if in syllabus — beats passive reading
-- Keep a one-pager: supervised vs unsupervised, overfitting, train/val/test, confusion matrix metrics
-- Get evaluation scheme (MST / assignments / project) in week 1
-- Don’t treat IE as auto-pass — still need AA/AB for ≥9.5 SGPA
+**Text**
+1. Tom M. Mitchell — *Machine Learning*
+2. Ethem Alpaydin — *Introduction to Machine Learning*
+3. K.S. Trivedi — *Probability and Statistics…* (for the probability unit)
+4. Christopher Bishop — *PRML* (heavy — use selectively)
+
+**Reference / practical**
+- Deisenroth, Faisal, Ong — *Mathematics for Machine Learning* ([free official PDF](https://mml-book.github.io/))
+- Aurélien Géron — *Hands-On ML* (labs / sklearn)
+- NPTEL: Sudeshna Sarkar — Introduction to Machine Learning (IIT KGP)
+- Goodfellow et al. — *Deep Learning* (only if ANN unit goes deep)
+
+**Fetch first:** Mitchell **or** Alpaydin + Deisenroth (free) + Géron for lab.
+
+## Syllabus map (≈14 weeks)
+
+| Block | Weeks | Focus |
+|-------|-------|--------|
+| Math for ML | 3 | Probability, Bayes, MLE/MoM, Naive Bayes, metrics |
+| Intro to ML | 2 | Paradigms, train/val/test, class/reg/cluster |
+| Basics | 2 | Linear classifiers/regression, loss, overfitting |
+| Neural nets | 3 | Perceptron, backprop, MLP, regularization |
+| Selected algos | 2 | Decision trees, KNN, k-means, hierarchical |
+| Eng. applications | 2 | Features, PCA, domain case studies |
+
+## Lab (25% — AA insurance)
+Indicative experiments:
+1. Bayesian learning; linear regression + NNs; decision trees; k-means
+2. Compare models/metrics on datasets
+3. **Real-life course project**
+
+Same-day lab notes + GitHub notebook hygiene. Project topic: can lean audio/IEM later if allowed.
+
+## AA tips
+- Lab + mid (50% combined before endsem) — never coast on “I’ll crush endsem”
+- Re-derive Naive Bayes / linear regression / backprop once by hand
+- Tiny NumPy implementations before high-level sklearn/keras
+- Confusion matrix / precision / recall cold for exams
+- Use LA course for PCA / least squares intuition the same week they appear
 
 ## Current focus
-- [ ] Confirm official title + course code + department
-- [ ] Get syllabus + prescribed books / notebooks
-- [ ] Note MST / assignment / project dates
+- [ ] Confirm final course code (CSL2xx → CSL2??)
+- [ ] Fetch Mitchell or Alpaydin PDF
+- [ ] Bookmark Deisenroth MML free book
+- [ ] Note lab schedule + project deadline
 
 ## Log
 | Date | What I did | Next |

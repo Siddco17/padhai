@@ -11,7 +11,7 @@ Full operating system: [`ten-pointer-plan.md`](ten-pointer-plan.md).
 4. **SnS** — problem volume; feeds IEM + MS story  
 5. **MNI** — clean notes + early mini-project = free AA band  
 6. **LA** — Strang consistency  
-7. **Fundamentals of Machine Learning (IE, 3)** — treat like a core; get syllabus/books week 1  
+7. **FoML CSL2XX (OC, 4: theory 3 + lab 1)** — Mid 25% / End 50% / Lab 25%; Mitchell or Alpaydin + labs  
 
 ## Background
 See `academic-background.md` and `remediation.md`.

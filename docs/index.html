@@ -283,10 +283,11 @@
             <li><b>DCHD 5</b> = theory+tutorial 3 + lab <b>2</b></li>
             <li><b>SnS / ACD / MNI 4</b> = theory 3 + lab <b>1</b></li>
             <li><b>EMFT 4</b> = theory + tutorial (no lab)</li>
-            <li><b>LA 3</b> + <b>FoML IE 3</b> = theory (ML math + ML intro)</li>
-            <li>Total ≈ <b>27 credits</b> with IE</li>
+            <li><b>LA 3</b> = theory (ML math)</li>
+            <li><b>FoML CSL2XX 4</b> = theory 3 + lab <b>1</b> (OC)</li>
+            <li>Total ≈ <b>28 credits</b> with FoML</li>
           </ul>
-          <div class="tip">Don’t treat the IE as auto-pass — still need AA/AB for ≥9.5.</div>
+          <div class="tip">FoML lab is <b>25%</b> of that course — protect it for AA.</div>
         </article>
         <article class="card">
           <h3>AA effort order</h3>
@@ -297,7 +298,7 @@
             <li>SnS — problem volume</li>
             <li>MNI — notes + early mini-project</li>
             <li>LA — Strang consistency</li>
-            <li>FoML IE — weekly close like a core</li>
+            <li>FoML — theory + lab project (Mid 25 / End 50 / Lab 25)</li>
           </ol>
         </article>
       </div>
@@ -325,29 +326,27 @@
 
     <section id="aa" class="panel">
       <h2>10-pointer OS</h2>
-      <p class="muted small">From CGPA ~5.9 → all AAs if possible; floor SGPA ≥ 9.5. Load ≈ 27 cr with IE.</p>
+      <p class="muted small">From CGPA ~5.9 → all AAs if possible; floor SGPA ≥ 9.5. Load ≈ 28 cr with FoML (CSL2XX).</p>
 
       <article class="card">
-        <h3>SGPA math (27 credits)</h3>
+        <h3>SGPA math (28 credits)</h3>
         <ul class="tight">
           <li>All AA → 10.0</li>
-          <li>One AB on FoML IE 3-cr → ~9.89</li>
-          <li>One AB on 4-cr → ~9.85</li>
-          <li>One BB on FoML IE 3-cr → ~9.78</li>
-          <li>One BB on 4-cr → ~9.70</li>
-          <li>One BB on DCHD 5-cr → ~9.63</li>
-          <li>Two BBs on 4-cr → ~9.41 <b>(misses 9.5)</b></li>
+          <li>One AB on 4-cr (e.g. FoML) → ~9.86</li>
+          <li>One BB on 4-cr → ~9.71</li>
+          <li>One BB on DCHD 5-cr → ~9.64</li>
+          <li>Two BBs on 4-cr → ~9.43 <b>(misses 9.5)</b></li>
         </ul>
-        <div class="tip">AB is the emergency floor. Two soft subjects breaks the goal. IE is not “free.”</div>
+        <div class="tip">AB is the emergency floor. Two soft subjects breaks the goal. FoML lab = 25%.</div>
       </article>
 
       <article class="card">
         <h3>Weekly hours outside class</h3>
         <ul class="tight">
-          <li>Same-day closes: 8–12h (all seven)</li>
+          <li>Same-day closes: 8–12h (all subjects incl. FoML)</li>
           <li>Deep problems (SnS/EMFT/DCHD/ACD): 8–10h</li>
           <li>Lab polish + HDL/sim: 4–5h</li>
-          <li>FoML IE: 2–3h weekly</li>
+          <li>FoML: 3–5h (theory + lab notebooks + project)</li>
           <li>Remediation EE/EDC/Physics: ~2h</li>
           <li>IEM: 0–3h (cut first under load)</li>
         </ul>
@@ -362,7 +361,7 @@
           <li><b>SnS:</b> weekly Oppenheim drills; own sampling/ROC</li>
           <li><b>MNI:</b> one-pagers; mini-project early</li>
           <li><b>LA:</b> Strang + interpret eigen/SVD, not only compute</li>
-          <li><b>FoML IE:</b> syllabus/books week 1; same-day notes; weekly problems</li>
+          <li><b>FoML:</b> Mitchell/Alpaydin; Naive Bayes→ANN→trees/k-means; lab 25%</li>
         </ul>
       </article>
 
@@ -442,7 +441,9 @@
             <tr><td>MNI</td><td>Bentley — Measurement Systems</td><td class="chip ok">Have</td></tr>
             <tr><td>MNI</td><td>Doebelin — Measurement Systems (prof “Doble”)</td><td class="chip ok">Have</td></tr>
             <tr><td>Prereq</td><td>Alexander &amp; Sadiku — Electric Circuits</td><td class="chip ok">Have</td></tr>
-            <tr><td>FoML IE</td><td>Prescribed text(s) from offering dept</td><td class="chip warn">Need</td></tr>
+            <tr><td>FoML</td><td>Mitchell — Machine Learning <b>or</b> Alpaydin</td><td class="chip warn">Need</td></tr>
+            <tr><td>FoML</td><td>Deisenroth — Mathematics for ML (free)</td><td class="chip warn">Need</td></tr>
+            <tr><td>FoML lab</td><td>Géron — Hands-On ML (optional)</td><td class="chip warn">Nice</td></tr>
             <tr><td>Optional</td><td>Schaum’s SnS</td><td class="chip warn">MST only</td></tr>
           </tbody>
         </table>
@@ -657,21 +658,21 @@
       {
         id: "foml",
         name: "Fundamentals of Machine Learning",
-        code: "IE",
-        credits: "3 (institute elective)",
+        code: "CSL2XX",
+        credits: "4 (theory 3 + lab 1, OC)",
         risk: "warn",
-        books: "Ask offering dept; pairs with your LA-for-ML course — drop PDFs in resources/",
+        books: "Mitchell or Alpaydin; Deisenroth MML (free); Géron for lab",
         tips: [
-          "Confirm code/dept/syllabus in week 1; reuse LA intuition (projection, eigen, least squares)",
-          "Treat like a core: same-day notes + weekly problems",
-          "Get evaluation scheme (MST / assignments / attendance) early",
-          "One-page formula/mechanism sheet before each MST",
-          "Don’t leave IE to endsem — silent SGPA leak"
+          "Eval: Mid 25% · End 50% · Lab 25% — lab decides AA",
+          "Math unit: probability, Bayes, MLE, Naive Bayes, metrics",
+          "Then linear models → ANN/backprop → trees/KNN/k-means → PCA",
+          "NumPy first, then sklearn/keras; start real-life project by mid-sem",
+          "Synergy with Linear Algebra for ML (PCA / least squares)"
         ],
         common: [
-          "Ignoring IE until mid-sem",
-          "Not knowing weightage until it’s too late",
-          "Skipping assignments that look ‘small’"
+          "Coasting on lab/project until late",
+          "Memorizing sklearn without metrics/overfitting intuition",
+          "Skipping probability unit then drowning in Naive Bayes"
         ]
       }
     ];
