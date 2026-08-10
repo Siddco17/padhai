@@ -2,17 +2,21 @@
 
 Starting CGPA ~5.9. Goal this term: **AA (10) in every subject**, floor **SGPA ≥ 9.5**.
 
-## What ≥9.5 actually requires (24 credits)
+## What ≥9.5 actually requires (**27 credits** with IE)
+
+Core DC load 24 + Institute Elective **Fundamentals of Machine (3)** ≈ **27**.
 
 | Outcome | Approx SGPA |
 |---------|-------------|
 | All AA (10) | **10.0** |
-| One AB (9) on a 4-cr subject, rest AA | ~9.83 |
-| One BB (8) on a 4-cr subject, rest AA | ~9.67 |
-| One BB (8) on **DCHD 5-cr**, rest AA | ~9.58 |
-| Two BBs on 4-cr subjects, rest AA | ~9.33 — **misses 9.5** |
+| One AB (9) on IE 3-cr, rest AA | ~9.89 |
+| One AB (9) on a 4-cr subject, rest AA | ~9.85 |
+| One BB (8) on IE 3-cr, rest AA | ~9.78 |
+| One BB (8) on a 4-cr subject, rest AA | ~9.70 |
+| One BB (8) on **DCHD 5-cr**, rest AA | ~9.63 |
+| Two BBs on 4-cr subjects, rest AA | ~9.41 — **misses 9.5** |
 
-**Rule:** Treat **AB as the emergency floor**. One soft subject is survivable; two is not. **DCHD cannot be the soft subject** (5 credits).
+**Rule:** Treat **AB as the emergency floor**. One soft subject is survivable; two is not. **DCHD cannot be the soft subject** (5 credits). Don’t treat the IE as “auto-pass” — a BB there still hurts less than DCHD, but two soft courses kills ≥9.5.
 
 Relative grading: AA ≈ top band of the class. You are not competing with “pass”; you are competing with serious toppers. That means **perfect internals + top MST + top endsem**, not “understood the vibe.”
 
@@ -32,12 +36,13 @@ Assume ~6–7 hrs classes/labs on heavy days. Outside class:
 
 | Block | Hours/week | Focus |
 |-------|------------|--------|
-| Same-day closes | 8–10 | All six subjects |
+| Same-day closes | 8–12 | All **seven** subjects (incl. IE) |
 | Deep problem blocks | 8–10 | SnS, EMFT, DCHD, ACD rotate |
 | Lab polish + HDL/sim | 4–5 | Especially DCHD + ACD |
 | Remediation (EE/EDC/Physics) | 2 | Only as needed for ACD/EMFT |
-| IEM (optional) | 0–4 | Cut first under load |
-| **Total outside class** | **~22–30** | This is a full-time semester |
+| IE (FoM) weekly | 2–3 | Notes + problems — don’t dump to endsem |
+| IEM (optional) | 0–3 | Cut first under load |
+| **Total outside class** | **~24–32** | This is a full-time semester |
 
 Thu afternoon free block = **SnS deep + weakest theory**, not Netflix.
 
@@ -75,6 +80,12 @@ Thu afternoon free block = **SnS deep + weakest theory**, not Netflix.
 - Strang + 18.06; prove you can compute **and** interpret.
 - Code tiny demos (projection, SVD) for memory.
 - Boyd only when syllabus hits optimization — don’t drown early.
+
+### Fundamentals of Machine (IE, 3) — AA
+- Confirm official title, dept, syllabus, books in week 1.
+- Same-day notes like a core; weekly problem/assignment close.
+- Get weightage (MST / assignments / attendance) early.
+- Easy to under-prepare because it’s “just an IE” — that mistake costs SGPA.
 
 ## MST / endsem protocol
 

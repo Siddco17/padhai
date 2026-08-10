@@ -15,6 +15,8 @@
 | `06-mni/resources/` | Bentley — *Principles of Measurement Systems* |
 | `06-mni/resources/` | Doebelin — *Measurement Systems: Application and Design* |
 | `_meta/prereq/` | Alexander & Sadiku — *Fundamentals of Electric Circuits* (5e) |
+| `07-fundamentals-of-machine/resources/` | *(IE books TBD — ask offering dept)* |
 
 ## Still add
-Nothing required. Optional only: Schaum’s SnS before MST.
+- [ ] Fundamentals of Machine (IE): prescribed text(s) from that department
+- Optional: Schaum’s SnS before MST

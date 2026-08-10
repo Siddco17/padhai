@@ -1,0 +1,17 @@
+{
+  "folders": [
+    { "name": "01 LA", "path": "sem3/01-linear-algebra" },
+    { "name": "02 DCHD", "path": "sem3/02-dchd" },
+    { "name": "02 DCHD Lab", "path": "sem3/02-dchd-lab" },
+    { "name": "03 SnS", "path": "sem3/03-sns" },
+    { "name": "03 SnS Lab", "path": "sem3/03-sns-lab" },
+    { "name": "04 EMFT", "path": "sem3/04-emft" },
+    { "name": "05 ACD", "path": "sem3/05-acd" },
+    { "name": "05 ACD Lab", "path": "sem3/05-acd-lab" },
+    { "name": "06 MNI", "path": "sem3/06-mni" },
+    { "name": "06 MNI Lab", "path": "sem3/06-mni-lab" },
+    { "name": "07 FoM IE", "path": "sem3/07-fundamentals-of-machine" },
+    { "name": "padhai (root)", "path": "." }
+  ],
+  "settings": {}
+}
