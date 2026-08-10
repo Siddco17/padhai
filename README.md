@@ -28,7 +28,11 @@ Add to iPhone home screen: Safari → Share → Add to Home Screen.
 | `sem3/07-fundamentals-of-ml` | CSL2XX FoML (OC) theory | 3 of 4 |
 | `sem3/07-fundamentals-of-ml-lab` | FoML Lab | 1 of 4 |
 
-PDFs live in each subject's `resources/` and are **gitignored** (keep them on your machine).
+PDFs/photos live in each subject's `resources/` and are **gitignored** (keep them on your machine).
+
+## WhatsApp → folder ingest (Beeper)
+
+Shared WhatsApp PDFs/photos can be queued from Beeper, approved, then filed into the right course folder. See [`tools/beeper-ingest/README.md`](tools/beeper-ingest/README.md).
 
 ## Web guide
 
