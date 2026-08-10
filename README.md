@@ -25,7 +25,7 @@ Add to iPhone home screen: Safari → Share → Add to Home Screen.
 | `sem3/05-acd-lab` | ACD Lab | 1 of 4 |
 | `sem3/06-mni` | Measurements & Instrumentation | 3 of 4 |
 | `sem3/06-mni-lab` | MNI Lab | 1 of 4 |
-| `sem3/07-fundamentals-of-machine` | Fundamentals of Machine (IE) | 3 |
+| `sem3/07-fundamentals-of-ml` | Fundamentals of Machine Learning (IE) | 3 |
 
 PDFs live in each subject's `resources/` and are **gitignored** (keep them on your machine).
 

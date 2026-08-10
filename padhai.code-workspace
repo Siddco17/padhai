@@ -10,7 +10,7 @@
     { "name": "05 ACD Lab", "path": "sem3/05-acd-lab" },
     { "name": "06 MNI", "path": "sem3/06-mni" },
     { "name": "06 MNI Lab", "path": "sem3/06-mni-lab" },
-    { "name": "07 FoM IE", "path": "sem3/07-fundamentals-of-machine" },
+    { "name": "07 FoML IE", "path": "sem3/07-fundamentals-of-ml" },
     { "name": "padhai (root)", "path": "." }
   ],
   "settings": {}

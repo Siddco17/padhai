@@ -4,7 +4,7 @@ Starting CGPA ~5.9. Goal this term: **AA (10) in every subject**, floor **SGPA �
 
 ## What ≥9.5 actually requires (**27 credits** with IE)
 
-Core DC load 24 + Institute Elective **Fundamentals of Machine (3)** ≈ **27**.
+Core DC load 24 + Institute Elective **Fundamentals of Machine Learning (3)** ≈ **27**.
 
 | Outcome | Approx SGPA |
 |---------|-------------|
@@ -40,7 +40,7 @@ Assume ~6–7 hrs classes/labs on heavy days. Outside class:
 | Deep problem blocks | 8–10 | SnS, EMFT, DCHD, ACD rotate |
 | Lab polish + HDL/sim | 4–5 | Especially DCHD + ACD |
 | Remediation (EE/EDC/Physics) | 2 | Only as needed for ACD/EMFT |
-| IE (FoM) weekly | 2–3 | Notes + problems — don’t dump to endsem |
+| IE (FoML) weekly | 2–3 | Notes + problems — don’t dump to endsem |
 | IEM (optional) | 0–3 | Cut first under load |
 | **Total outside class** | **~24–32** | This is a full-time semester |
 
@@ -81,7 +81,7 @@ Thu afternoon free block = **SnS deep + weakest theory**, not Netflix.
 - Code tiny demos (projection, SVD) for memory.
 - Boyd only when syllabus hits optimization — don’t drown early.
 
-### Fundamentals of Machine (IE, 3) — AA
+### Fundamentals of Machine Learning (IE, 3) — AA
 - Confirm official title, dept, syllabus, books in week 1.
 - Same-day notes like a core; weekly problem/assignment close.
 - Get weightage (MST / assignments / attendance) early.

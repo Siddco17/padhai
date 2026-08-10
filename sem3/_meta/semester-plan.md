@@ -11,7 +11,7 @@ Full operating system: [`ten-pointer-plan.md`](ten-pointer-plan.md).
 4. **SnS** — problem volume; feeds IEM + MS story  
 5. **MNI** — clean notes + early mini-project = free AA band  
 6. **LA** — Strang consistency  
-7. **Fundamentals of Machine (IE, 3)** — treat like a core; get syllabus/books week 1  
+7. **Fundamentals of Machine Learning (IE, 3)** — treat like a core; get syllabus/books week 1  
 
 ## Background
 See `academic-background.md` and `remediation.md`.
