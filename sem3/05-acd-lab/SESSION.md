@@ -4,7 +4,7 @@
 - **Credits:** 1 of 4 (from ECL308 ACD)
 - **Type:** Lab
 - **Books / primary refs:** Multisim / LTspice + lab manual
-- **Senior resources:** `notes/senior-resources.md` (EDC lab journal samples — external Drive)
+- **Senior resources:** `notes/senior-resources.md` (Sem 3 EDC + Sem 4 ACD lab — external Drive)
 
 ## This session is for
 - Lecture notes → `notes/`

@@ -6,7 +6,7 @@
 - **Books / primary refs:** Sadiku — *Elements of Electromagnetics*
 - **Have PDF:** `resources/Sadiku_Elements_of_Electromagnetics.pdf`
 - **Prerequisite risk:** Physics FF → summer clear (~5) → vectors/fields weak; same-day tutorial problems mandatory (`../_meta/remediation.md`)
-- **Senior resources:** `notes/senior-resources.md` (PYQ only — external Drive links)
+- **Senior resources:** `notes/senior-resources.md` (Sem 4 EMFT notes + PYQ — external Drive)
 
 ## This session is for
 - Lecture notes → `notes/`

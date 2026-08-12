@@ -5,7 +5,7 @@
 - **Type:** Theory
 - **Books / primary refs:** Gaikwad; Sedra/Smith selective; Roy Choudhary
 - **Prerequisite risk:** EDC + EE barely passed → patch KVL/Thevenin/op-amp loading before each new ACD topic (`../_meta/remediation.md`)
-- **Senior resources:** `notes/senior-resources.md` (EDC notes + PYQs — external Drive links)
+- **Senior resources:** `notes/senior-resources.md` (Sem 3 EDC + Sem 4 ACD — external Drive)
 
 ## This session is for
 - Lecture notes → `notes/`
