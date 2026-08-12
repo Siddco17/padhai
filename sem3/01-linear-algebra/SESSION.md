@@ -5,7 +5,7 @@
 - **Type:** Theory
 - **Books / primary refs:** Strang — Linear Algebra and Its Applications; MIT 18.06
 - **Have PDF:** `resources/Gilbert_Strang_Linear_Algebra_and_Its_Applicatio_230928_225121.pdf`
-- **Senior resources:** `notes/senior-resources.md` (external Drive links — download locally to `resources/` if needed)
+- **Senior resources:** `notes/senior-resources.md` (Sem 3 MATH + Sem 4 NMPT — external Drive)
 
 ## This session is for
 - Lecture notes → `notes/`
