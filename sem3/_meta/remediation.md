@@ -33,3 +33,19 @@ Update this file with the full name — remediation list changes.
 ## Weekly slot suggestion
 - **Sun 60–90 min:** ACD prerequisite patch OR EMFT vector/field patch (alternate weeks)
 - Never let remediation steal DCHD lab/HDL time (2 credits of the 5)
+
+## Senior LNT / EDC refs
+
+Pre-NEP senior material for network-theory and EDC gaps (not core Sem 3 subjects, but useful here):
+
+| Topic | Link |
+|-------|------|
+| LNT folder (notes + books) | https://drive.google.com/drive/folders/1xqUSMjrIy7uLAW-LmZAl-4du-lC7CkB4 |
+| Alexander & Sadiku — Electric Circuits | https://drive.google.com/file/d/15qzK6c9p_v6F1TDeoWVjwZxKWP6YYvbG/view |
+| LNT Laplace notes | https://drive.google.com/file/d/1vzV8YBPFREp4ifGTqPUeajO8thBlO_I7/view |
+| LNT Midsem / Endsem (PAPERS) | https://drive.google.com/file/d/1FGh2p2JptE7goY4Fv-WJcZwFg7QoPTDi/view · https://drive.google.com/file/d/1sojcxV9H5aDCiSTocNIwAqi-siKhtRLl/view |
+| PYQ — LNT (supplemental) | https://drive.google.com/file/d/1PBeZ7_Q1g6gPvNbTt2Lg8vFZ5RUm5tFZ/view |
+| PYQ — EDC (supplemental, ACD patch) | https://drive.google.com/file/d/1npNzPdHoFAV5JHd3xmUvh125YYka6MHB/view |
+| EDC theory notes (full folder) | https://drive.google.com/drive/folders/13DeUiDceAHXClNa5tbd3ahd34R0EMMZy |
+
+Full index: [`senior-resources.md`](senior-resources.md)

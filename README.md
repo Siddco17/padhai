@@ -30,6 +30,8 @@ Add to iPhone home screen: Safari → Share → Add to Home Screen.
 
 PDFs/photos live in each subject's `resources/` and are **gitignored** (keep them on your machine).
 
+Senior-curated external links (Sem 3 filtered): [`sem3/_meta/senior-resources.md`](sem3/_meta/senior-resources.md)
+
 ## WhatsApp → folder ingest (Beeper)
 
 Shared WhatsApp PDFs/photos can be queued from Beeper, approved, then filed into the right course folder. See [`tools/beeper-ingest/README.md`](tools/beeper-ingest/README.md).

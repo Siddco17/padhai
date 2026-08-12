@@ -4,6 +4,7 @@
 - **Credits:** 3 of 4
 - **Type:** Theory
 - **Books / primary refs:** Oppenheim Willsky / Lathi; Schaum for drill
+- **Senior resources:** `notes/senior-resources.md` (external Drive links — download locally to `resources/` if needed)
 
 ## This session is for
 - Lecture notes → `notes/`

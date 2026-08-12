@@ -7,6 +7,7 @@
 - **Pairs with:** ECL3xx Linear Algebra for ML
 - **Evaluation:** Mid-sem **25%** · End-sem **50%** · Lab **25%**
 - **Syllabus:** `notes/syllabus.md` (from Annexure III); original docx in `resources/` (local)
+- **Senior resources:** `notes/senior-resources.md` (PYQ only — external Drive links)
 
 ## Books (from annexure)
 
