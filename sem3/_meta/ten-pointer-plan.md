@@ -58,6 +58,7 @@ Thu afternoon free block = **SnS deep + weakest theory**, not Netflix.
 - Lab scripts clean + comments; viva-ready explanations.
 
 ### EMFT (4) — hardest AA (Physics hole)
+- Eval: Mid 30 / End 50 / TA 20. Internals = `(Mid + TA) × A*` — **> 75% attendance or you donate marks**.
 - Sadiku problems **daily** (even 2–3 solid ones).
 - Tutorial sheet same day, every time.
 - Build formula + symmetry cheat sheet by week 4; revise weekly.
