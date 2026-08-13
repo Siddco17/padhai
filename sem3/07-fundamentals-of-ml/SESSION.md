@@ -56,7 +56,8 @@ Same-day lab notes + GitHub notebook hygiene. Project topic: can lean audio/IEM 
 - [ ] Confirm final course code (CSL2xx → CSL2??)
 - [ ] Fetch Mitchell or Alpaydin PDF
 - [ ] Bookmark Deisenroth MML free book
-- [ ] Note lab schedule + project deadline
+- [x] Lab slot locked: **Thu 14:00–16:00**
+- [ ] Note project deadline
 
 ## Log
 | Date | What I did | Next |
