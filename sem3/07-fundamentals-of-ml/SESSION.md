@@ -8,6 +8,7 @@
 - **Evaluation:** Mid-sem **25%** · End-sem **50%** · Lab **25%**
 - **Syllabus:** `notes/syllabus.md` (from Annexure III); original docx in `resources/` (local)
 - **Senior resources:** `notes/senior-resources.md` (Sem 7 ML notes + PYQ — external Drive)
+- **Timetable:** Theory Mon 9–10 · Tue 8–9 · Wed 9–10 · Lab Thu 14:00–16:00
 
 ## Books (from annexure)
 
