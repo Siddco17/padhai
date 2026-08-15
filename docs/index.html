@@ -248,6 +248,22 @@
     details.day summary::-webkit-details-marker { display: none; }
     .slot { font-size: 0.86rem; color: var(--muted); margin: 0.35rem 0; }
     .slot b { color: var(--text); font-weight: 500; }
+
+    details.block {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--bg-elev);
+      margin: 0.4rem 0;
+      padding: 0.5rem 0.75rem;
+    }
+    details.block summary {
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      list-style: none;
+    }
+    details.block summary::-webkit-details-marker { display: none; }
+    details.block .block { background: var(--bg-card); }
   </style>
 </head>
 <body>
@@ -378,7 +394,8 @@
 
     <section id="subjects" class="panel">
       <h2>Subjects</h2>
-      <input class="search" id="subjectSearch" type="search" placeholder="Filter subjects…" enterkeyhint="search" />
+      <p class="muted small">Official NEP 2025 coursebook descriptions and syllabi. FoML from Annexure III. EMFT lecture counts from the teaching plan. Tap a block to expand.</p>
+      <input class="search" id="subjectSearch" type="search" placeholder="Filter subjects, units, labs…" enterkeyhint="search" />
       <div class="grid" id="subjectGrid"></div>
     </section>
 
@@ -541,11 +558,26 @@
     const subjects = [
       {
         id: "la",
-        name: "Linear Algebra for ML",
+        name: "Linear Algebra for Machine Learning Applications",
         code: "ECL3xx",
-        credits: "3",
+        ltp: "3-0-0",
+        credits: "3 DC theory",
         risk: "ok",
-        books: "Strang (+ Boyd when optimization hits)",
+        books: "Strang (primary). Boyd when optimization starts. Papoulis; Meyer.",
+        blurb: "Department-core math for signals, estimation, and ML: least squares, subspaces, eigen/SVD, then convex optimization. No lab. Numeric code is still ECL3xx in the coursebook. Pairs with FoML when PCA and least squares appear.",
+        outcomes: [
+          "Apply vector-space ideas to represent and analyze signals",
+          "Compute eigenvalues/eigenvectors and use them in signal and system analysis",
+          "Use optimization for parameter estimation and ML training",
+          "Simulate random processes with Monte Carlo for comms / signal processing",
+          "Connect linear algebra to MIMO, PCA, and detection"
+        ],
+        units: [
+          { title: "Linear algebra for estimation and ML", topics: ["Systems of linear equations and least-squares solutions", "Projection theorem; linear detectors", "Covariance matrices and principal components", "Signal subspace methods", "Feature extraction with linear algebra"] },
+          { title: "Vector spaces and signal representation", topics: ["Basis, dimension, linear independence", "Inner product spaces and orthogonality", "Orthonormal bases; Gram–Schmidt", "Continuous and discrete signal-space representation", "Complete orthonormal sets"] },
+          { title: "Eigenvectors, eigenvalues, decompositions", topics: ["Eigenvalues / eigenvectors: properties and interpretation", "Diagonalization and spectral decomposition", "SVD for ML (PCA)", "Channel modeling, beamforming, dimensionality reduction"] },
+          { title: "Optimization fundamentals", topics: ["Problem formulation: objective and constraints", "Convex sets / functions; optimality conditions", "Unconstrained: gradient descent, Newton", "Constrained: Lagrange multipliers, KKT", "Parameter tuning in ML; resource allocation in communications"] }
+        ],
         tips: [
           "Use Strang + MIT 18.06 videos together",
           "Tie every topic to signals: projection, least squares, eigen, SVD",
@@ -560,11 +592,32 @@
       },
       {
         id: "dchd",
-        name: "Digital Circuits & Hardware Design",
+        name: "Digital Circuits and Hardware Design",
         code: "ECL216",
-        credits: "5 (theory 3 + lab 2)",
+        ltp: "3-1-2",
+        credits: "5 (theory+tutorial 3 + lab 2)",
         risk: "warn",
-        books: "Mano + Kohavi/Jha",
+        books: "Kohavi/Jha; Mano (Verilog); Brown (VHDL).",
+        blurb: "Highest-credit Sem 3 course. Combinational minimization, sequential/FSM design, HDL, FPGA CAD, and fault/hazard awareness. Theory+tutorial is 3 credits; lab is 2 credits of the same course.",
+        outcomes: [
+          "Realize logic with combinational and sequential design principles",
+          "Understand digital system design fundamentals",
+          "Design complex digital systems",
+          "Identify and remove faults in digital systems",
+          "Use HDLs and realize circuits on FPGAs"
+        ],
+        units: [
+          { title: "Combinational minimization", topics: ["Quine–McCluskey method up to five variables, including don’t-cares"] },
+          { title: "Sequential circuits", topics: ["Registers and counters; async vs sync design", "Moore and Mealy machines, overlapping and non-overlapping sequences", "Memory elements, excitation tables, race-free design"] },
+          { title: "FSMs, controllers, programmable logic", topics: ["Finite state machines", "Controller design: minimal flip-flop method and shift-register method", "ASM charts, state assignment, minimization", "PLA, FPGAs"] },
+          { title: "HDL and CAD", topics: ["Introduction to HDL; analysis and synthesis", "CAD tools, netlists, placement, static timing analysis"] },
+          { title: "Digital system design", topics: ["Bus structure, simple processor, bit-counting circuit", "Clock synchronization and timing"] },
+          { title: "Async logic, memory, faults", topics: ["Asynchronous sequential design; hazards", "ROM, SRAM", "Fault models and complexity", "Programming FPGAs with a sample circuit / processor"] }
+        ],
+        lab: {
+          title: "Lab — 10 experiments (2 of 5 credits)",
+          items: ["Sequential circuits", "HDL programming (confirm Verilog vs VHDL in lab)", "FPGA board implementation"]
+        },
         tips: [
           "Highest credit course — never fall behind",
           "Confirm Verilog vs VHDL day 1",
@@ -580,11 +633,45 @@
       },
       {
         id: "sns",
-        name: "Signals & Systems",
+        name: "Signals and Systems Analysis",
         code: "ECL211",
+        ltp: "3-0-2",
         credits: "4 (theory 3 + lab 1)",
         risk: "ok",
-        books: "Oppenheim (Lathi if stuck)",
+        books: "Oppenheim (primary). Lathi if stuck. Refs: Ambardar; Ziemer; Proakis; Mitra; Haykin.",
+        blurb: "Core signals course: CT/DT signals, LTI convolution, Fourier series/transform, sampling, Laplace and Z. Lab is MATLAB/Python. Feeds DSP, communications, and the IEM/audio track.",
+        outcomes: [
+          "Classify systems and get LTI response via convolution",
+          "Analyze and synthesize spectra of CT periodic and aperiodic signals",
+          "Read system properties from impulse response and Fourier analysis",
+          "Relate sampling in time and frequency (including aliasing)",
+          "Apply spectral tools to CT and DT signals and systems"
+        ],
+        units: [
+          { title: "CT and DT signals and systems", topics: ["Energy and power; transformations of the independent variable", "Periodic, even/odd, exponential and sinusoidal, complex exponential", "Unit impulse and unit step", "Systems and their properties"] },
+          { title: "Linear time-invariant systems", topics: ["Convolution integral / sum", "Impulse representation of signals", "Impulse response; properties of LTI systems"] },
+          { title: "Fourier series and Fourier transform (CT and DT)", topics: ["LTI response to complex exponentials", "FS representation, convergence, properties, Parseval", "FT of aperiodic signals, convergence, properties"] },
+          { title: "Time and frequency characterization", topics: ["Magnitude–phase representation of the FT", "Frequency response of LTI systems", "Linear vs nonlinear phase; group delay"] },
+          { title: "Sampling", topics: ["Sampling theorem; impulse-train sampling", "Reconstruction by interpolation", "Undersampling / aliasing", "DT processing of CT signals; DT sampling, decimation, interpolation"] },
+          { title: "Laplace and Z-transform", topics: ["Region of convergence; inverse Laplace", "Geometric evaluation of the FT from pole–zero plots", "Properties; LTI analysis and characterization; interconnections"] }
+        ],
+        lab: {
+          title: "Lab — coursebook experiment list (1 of 4 credits)",
+          items: [
+            "Generate complex exponentials and real sinusoids",
+            "Even/odd symmetry under algebraic operations",
+            "Amplitude scaling and time shifting",
+            "Impulse-signal properties",
+            "Linearity, causality, stability of a given system",
+            "Discrete Fourier transform of a signal",
+            "Parseval for a sampled periodic square wave",
+            "Multiplication property for a sampled periodic triangle",
+            "Shifting property for a sampled periodic square wave",
+            "Symmetry properties for real and complex periodic square waves",
+            "Fourier-series properties under downsampling",
+            "Z-transform of a sequence"
+          ]
+        },
         tips: [
           "Career + IEM core subject — protect weekly problem time",
           "Master convolution + LTI properties early",
@@ -602,9 +689,27 @@
         id: "emft",
         name: "Electromagnetic Fields",
         code: "ECL305",
-        credits: "4 (no lab)",
+        ltp: "3-1-0",
+        credits: "4 (theory + tutorial, no lab)",
         risk: "danger",
-        books: "Sadiku (primary); Hayt / Schaum if needed",
+        books: "Sadiku (primary). Hayt for the Physics-hole start. Cheng in the coursebook. Schaum / Irodov for drill.",
+        blurb: "Vector calculus through electrostatics, magnetostatics, Maxwell, uniform plane waves, and reflection. No lab; weekly tutorial. Teaching plan is 44 lectures; Maxwell + time-varying is compressed into 3.",
+        eval: "Mid 30 · End 50 · TA 20 (4 Moodle quizzes + 1 group test). Internals = (Mid + TA) × attendance multiplier. Stay above 75% or internals are cut; below 50% internals go to zero.",
+        outcomes: [
+          "Apply vector calculus to static E and H fields in Cartesian, cylindrical, spherical coordinates",
+          "Compute fields due to charges and charge distributions",
+          "Solve electromagnetic boundary-value problems",
+          "Describe and analyze EM wave propagation in free space",
+          "Understand power associated with an EM wave"
+        ],
+        units: [
+          { title: "Vector calculus (8 lectures)", topics: ["Cartesian, cylindrical, spherical coordinates", "Differential lengths, surfaces, volumes", "Physical meaning of gradient, divergence, curl, Laplacian"] },
+          { title: "Electrostatics (10 lectures)", topics: ["Coulomb; E and D; Gauss and applications", "Divergence theorem; potential and gradient", "Dipole and dipole moment; energy in the electric field"] },
+          { title: "Steady magnetic fields (10 lectures)", topics: ["Biot–Savart; Ampere and applications", "Curl and Stokes; B and flux", "Scalar and vector magnetic potentials"] },
+          { title: "Maxwell and time-varying fields (3 lectures)", topics: ["Faraday; displacement current", "Maxwell in point and integral form", "Retarded potentials; boundary conditions"] },
+          { title: "Uniform plane waves (8 lectures)", topics: ["Maxwell in phasor form; wave equation in general and perfect-dielectric media", "Solutions; intrinsic impedance, velocity, wavelength", "Conductors vs dielectrics; skin depth; Poynting"] },
+          { title: "Reflection of EM waves (5 lectures)", topics: ["Normal incidence; standing waves", "Laws of reflection; oblique incidence; Brewster’s angle"] }
+        ],
         tips: [
           "Eval: Mid 30 / End 50 / TA 20. Internals = (Mid+TA)×attendance; stay >75%",
           "Physics was weak — same-day tutorials are mandatory",
@@ -622,9 +727,37 @@
         id: "acd",
         name: "Analog Circuit Design",
         code: "ECL308",
+        ltp: "3-0-2",
         credits: "4 (theory 3 + lab 1)",
         risk: "warn",
-        books: "Gaikwad",
+        books: "Gaikwad (primary). Tobey/Graeme/Huelsman. Refs: Franco; Fiore; Sedra/Smith; Roy Choudhary.",
+        blurb: "Op-amp configurations, 741 parameters, linear and nonlinear applications, active filters, oscillators, ADC/DAC, and 555 / 565 / 723 ICs. Prerequisite: Electronic Circuits (ECLA102). Lab is design + Multisim/T-spice.",
+        outcomes: [
+          "Know op-amps using BJT and FET in depth",
+          "Use op-amp ICs for practical applications",
+          "Design op-amp circuits for embedded, comms, and instrumentation",
+          "Learn analog circuit design practice",
+          "Design analog filters"
+        ],
+        units: [
+          { title: "Op-amp configurations", topics: ["Inverting, non-inverting, differential", "Negative feedback; voltage gain; Zin / Zout; bandwidth"] },
+          { title: "Op-amp parameters and the 741", topics: ["Input offset voltage; input bias and offset current; thermal drift", "CMRR, PSRR, frequency response", "741 IC parameters and internal circuit"] },
+          { title: "Linear applications", topics: ["DC/AC amplifiers, summing, differential, instrumentation amp", "V-to-I and I-to-V (floating and grounded load)", "Integrator, differentiator; constant-current sources"] },
+          { title: "Nonlinear applications", topics: ["Comparators, Schmitt trigger, clippers/clampers", "Absolute-value, peak detectors, sample-and-hold", "Log / antilog; half-wave and full-wave rectifiers", "Function generators (square, triangle)"] },
+          { title: "Active filters", topics: ["First/second-order LPF, HPF, BPF, band-reject, all-pass", "Design up to sixth order (equal-component and unity-gain methods)"] },
+          { title: "Oscillators, converters, and analog ICs", topics: ["RC and LC oscillators using op-amps; square/triangle generators", "ADC and DAC types, design examples, performance parameters", "LM555 timer applications", "LM565 PLL principle and applications", "LM723 voltage regulator (low/high voltage and current variants)"] }
+        ],
+        lab: {
+          title: "Lab (1 of 4 credits)",
+          items: [
+            "Op-amp characteristics (2–3 experiments)",
+            "Linear applications (3–4)",
+            "Nonlinear applications (3–4)",
+            "Filter design (2–3)",
+            "IC555 (2–3)",
+            "Simulation: linear, nonlinear, and 555 in Multisim or T-spice"
+          ]
+        },
         tips: [
           "EDC was weak — patch Thevenin/KVL before each new topic",
           "Know 741 params: offset, CMRR, slew, bandwidth",
@@ -639,11 +772,41 @@
       },
       {
         id: "mni",
-        name: "Measurements & Instrumentation",
+        name: "Measurements and Instrumentation",
         code: "ECL204",
+        ltp: "3-0-2",
         credits: "4 (theory 3 + lab 1)",
         risk: "ok",
-        books: "Bentley + Doebelin (prof)",
+        books: "Bentley + Doebelin (prof “Doble”). Helfrick/Cooper. Refs: Sawhney; Kalsi; Bell.",
+        blurb: "Metrology, errors, DC/AC bridges, analog instruments, temperature/pressure/flow sensors, ADC/DAC, displays, and signal conditioning. Lab plus an ultrasonic liquid-level mini-project.",
+        outcomes: [
+          "Use formal metrology when designing measurement systems",
+          "Comprehend measurement errors and how to correct them",
+          "Select sensors / instruments for a process",
+          "Examine operating principles of widely used instruments",
+          "Design signal-conditioning circuits and display devices"
+        ],
+        units: [
+          { title: "Introduction and errors", topics: ["Static and dynamic characteristics", "Errors and statistical analysis", "Least-squares fit of experimental data"] },
+          { title: "Bridges and analog instruments", topics: ["DC: Wheatstone, Kelvin", "AC: inductance and capacitance measurement", "PMMC, DC ammeters, series/shunt ohmmeters, VOM", "Watt-hour meter, instrument transformers, power-factor meter, Q-meter"] },
+          { title: "Process sensors", topics: ["Temperature: RTD, thermistor, thermocouple (laws, CJC), radiation and optical pyrometers", "Pressure: strain gauges, Bourdon, bellows, diaphragms; piezoelectric; LVDT elastic elements", "Flow: classification, differential-pressure, electromagnetic, hot-wire anemometer", "Hall-effect and ultrasonic sensors"] },
+          { title: "Converters, analysers, displays, conditioning", topics: ["ADC: flash, single/dual-slope, SAR, sigma-delta", "DAC: weighted-R, R-2R; ADC/DAC characteristics", "Period, time, frequency measurement; Q-meter", "CRT / DSO / spectrum analyzer", "Signal-conditioning design; IEEE-488 bus"] }
+        ],
+        lab: {
+          title: "Lab + mini-project (1 of 4 credits)",
+          items: [
+            "LVDT characteristics",
+            "Pressure-cell characteristics",
+            "Thermistor characteristics and signal-conditioning design",
+            "Torque measurement",
+            "Strain measurement",
+            "Liquid-level measurement",
+            "Linear regression in MATLAB; filtering for noisy measurements",
+            "Capacitance measurement with signal conditioning",
+            "R-2R DAC design",
+            "Mini-project: liquid-level measurement using an ultrasonic sensor"
+          ]
+        },
         tips: [
           "One-page sheet per sensor/bridge = easy marks",
           "Static/dynamic characteristics + error stats early",
@@ -660,9 +823,34 @@
         id: "foml",
         name: "Fundamentals of Machine Learning",
         code: "CSL2XX",
-        credits: "4 (theory 3 + lab 1, OC)",
+        ltp: "3-0-2",
+        credits: "4 OC (theory 3 + lab 1)",
         risk: "warn",
-        books: "Mitchell or Alpaydin; Deisenroth MML (free); Géron for lab",
+        books: "Mitchell or Alpaydin (fetch). Deisenroth MML (free). Géron for lab. Trivedi for probability. Bishop only as heavy ref.",
+        blurb: "CSE open course: probability and Naive Bayes, supervised/unsupervised paradigms, linear models, neural nets and backprop, trees/KNN/k-means, then features/PCA and engineering case studies. Lab is 25% of the grade and includes a real-life project. Prerequisite: CSL101. Confirm the final numeric code on registration.",
+        eval: "Mid-sem 25% · End-sem 50% · Lab 25%. Lab decides AA as much as the endsem.",
+        outcomes: [
+          "Understand popular ML algorithms and their math",
+          "Implement algorithms with basic ML libraries",
+          "Apply ML across domains",
+          "Get exposure to high-level ML libraries / frameworks"
+        ],
+        units: [
+          { title: "Mathematics for ML (~3 weeks)", topics: ["Basic probability, Bayes rule, continuous/discrete", "Parameter estimation: method of moments, MLE", "Naive Bayes / Gaussian NB (single and multiple features)", "Decision boundary, error estimation, precision, recall, confusion matrix"] },
+          { title: "Introduction to ML (~2 weeks)", topics: ["Motivation and role of ML", "Supervised, unsupervised, and brief other paradigms", "Train / validation / test; error estimation", "Classification, regression, clustering"] },
+          { title: "Basics of ML (~2 weeks)", topics: ["Linear classifiers", "Linear regression; errors, losses, correlations", "Train / validation / test split", "Generalization and overfitting"] },
+          { title: "Neural network learning (~3 weeks)", topics: ["Intro to ANNs", "Backpropagation, gradient descent, perceptron / delta learning", "MLP for classification and regression", "Regularization and early stopping"] },
+          { title: "Selected algorithms (~2 weeks)", topics: ["Non-parametric: decision trees; nearest neighbors / KNN", "Unsupervised: k-means; hierarchical clustering"] },
+          { title: "Applications to engineering (~2 weeks)", topics: ["Feature generation (images, time series), selection, dimensionality reduction, PCA", "Survey of domain problems and common models"] }
+        ],
+        lab: {
+          title: "Lab (1 of 4 credits, 25% of course grade)",
+          items: [
+            "Implement Bayesian learning; linear regression + neural nets; decision trees; k-means",
+            "Compare models on datasets with proper metrics",
+            "Course project on a real-life problem"
+          ]
+        },
         tips: [
           "Eval: Mid 25% · End 50% · Lab 25% — lab decides AA",
           "Math unit: probability, Bayes, MLE, Naive Bayes, metrics",
@@ -687,20 +875,51 @@
       return '<span class="chip ok">recovery lane</span>';
     }
 
+    function bullets(items) {
+      return `<ul class="tight">${items.map(t => `<li>${t}</li>`).join("")}</ul>`;
+    }
+
+    function haystack(s) {
+      return [
+        s.name, s.code, s.ltp, s.credits, s.blurb, s.books, s.eval || "",
+        ...(s.outcomes || []),
+        ...(s.units || []).flatMap(u => [u.title, ...u.topics]),
+        ...(s.lab ? [s.lab.title, ...s.lab.items] : []),
+        ...s.tips, ...s.common
+      ].join(" ").toLowerCase();
+    }
+
     function render(list) {
       grid.innerHTML = list.map(s => `
-        <article class="card" data-name="${s.name.toLowerCase()} ${s.code.toLowerCase()}">
+        <article class="card">
           <h3>${s.name}</h3>
           <div class="meta">
             <span class="chip">${s.code}</span>
+            <span class="chip">${s.ltp}</span>
             <span class="chip">${s.credits}</span>
             ${riskChip(s.risk)}
           </div>
+          <p>${s.blurb}</p>
+          ${s.eval ? `<div class="tip">${s.eval}</div>` : ""}
           <p class="small muted"><b>Books:</b> ${s.books}</p>
+          <details class="block">
+            <summary>Course outcomes</summary>
+            ${bullets(s.outcomes)}
+          </details>
+          <details class="block" open>
+            <summary>Syllabus</summary>
+            ${s.units.map(u => `
+              <details class="block">
+                <summary>${u.title}</summary>
+                ${bullets(u.topics)}
+              </details>
+            `).join("")}
+          </details>
+          ${s.lab ? `<details class="block"><summary>${s.lab.title}</summary>${bullets(s.lab.items)}</details>` : `<p class="small muted">No lab.</p>`}
           <h3>Do this</h3>
-          <ul class="tight">${s.tips.map(t => `<li>${t}</li>`).join("")}</ul>
+          ${bullets(s.tips)}
           <h3>Common traps</h3>
-          <ul class="tight">${s.common.map(t => `<li>${t}</li>`).join("")}</ul>
+          ${bullets(s.common)}
         </article>
       `).join("");
     }
@@ -708,9 +927,7 @@
     render(subjects);
     search.addEventListener("input", () => {
       const q = search.value.trim().toLowerCase();
-      render(subjects.filter(s =>
-        !q || s.name.toLowerCase().includes(q) || s.code.toLowerCase().includes(q)
-      ));
+      render(subjects.filter(s => !q || haystack(s).includes(q)));
     });
 
     function showTab(id) {
