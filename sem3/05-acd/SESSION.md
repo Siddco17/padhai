@@ -13,10 +13,12 @@
 - Labs → `experiments/`, `reports/`, code as relevant
 
 ## Current focus
-- [ ] Week topics (fill after each lecture)
-- [ ] Open questions for next study block
+- [x] Closed-loop configs: follower, inverting, non-inverting, matched difference (16 Aug)
+- [ ] Instrumentation amp polish (formula in notes; re-derive only if a problem needs it)
+- [ ] Friday lab 1: inverting — measure vs `Af = −Rf/R1`, then `20 log |G|` vs frequency
+- [ ] Open: lab 2 non-inverting with the same `1 k / 10 k` pair (gain +11)
 
 ## Log
 | Date | What I did | Next |
 |------|------------|------|
-| | | |
+| 2026-08-16 | Sunday prereq patch (KVL/divider, Thevenin, Zin/Zout) + golden rules through four configs. Notes: `notes/2026-08-16-prereqs-and-configs.md`. Drills: `problems/2026-08-16.md`. Lab 1 pick: `R1=1k`, `Rf=10k`, `Vin=0.5 V` peak → `Af=−10`, `Vo=−5 V`. | Before Friday 14:00: redraw lab 1, confirm pin 2/3/4/6/7, optional Multisim/LTspice of the −10 inverter. In-amp only if a lecture problem shows up. |
