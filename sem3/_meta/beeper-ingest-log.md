@@ -32,3 +32,7 @@ Files stay local (gitignored). This log is what gets committed.
 | 2026-08-13 18:34 | `06-mni` | `sem3/06-mni/resources/20260813T183416Z_650091e6_image.jpg` | MNI | <p><em>↷ Forwarded</em></p> |
 | 2026-08-13 18:34 | `06-mni` | `sem3/06-mni/resources/20260813T183415Z_6c838ee6_image.jpg` | MNI | <p><em>↷ Forwarded</em></p> |
 | 2026-08-13 18:34 | `06-mni` | `sem3/06-mni/resources/20260813T183418Z_efc91f69_image.jpg` | Students Official | This book will be followed in MNI classes. |
+| 2026-08-18 06:17 | `07-fundamentals-of-ml` | `sem3/07-fundamentals-of-ml/resources/20260818T061546Z_0e80a062_DecisionTreesClassificationExample.pdf` | ECE FoML W26 |  |
+| 2026-08-18 06:17 | `02-dchd` | `sem3/02-dchd/resources/20260818T061547Z_cd8797af_Tutorial 1 DCHD.pdf` | ECLA 201 DCHD |  |
+| 2026-08-18 06:17 | `_unsorted` | `sem3/_inbox/unsorted/20260818T061537Z_e97d5770_zero-First-Second order systems (1).pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-08-18 06:17 | `_unsorted` | `sem3/_inbox/unsorted/20260818T061538Z_f3f23a00_dynamic characteristics intro.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
