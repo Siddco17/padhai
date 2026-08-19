@@ -264,6 +264,9 @@
     }
     details.block summary::-webkit-details-marker { display: none; }
     details.block .block { background: var(--bg-card); }
+
+    .files { margin: 0.35rem 0 0; }
+    .files a { word-break: break-word; }
   </style>
 </head>
 <body>
@@ -277,6 +280,10 @@
         <span class="pill">From CGPA ~5.9</span>
         <span class="pill">IEM cut near MSTs</span>
       </div>
+      <p class="lede" style="margin-top:0.85rem">
+        <a href="https://drive.google.com/drive/folders/1sVKhfgNmSfFbm0-W_uqFfpgf9oCO-Yj1" target="_blank" rel="noopener">Open all PDFs on Google Drive</a>
+        <span class="muted"> · signed in as siddco17@gmail.com</span>
+      </p>
     </header>
 
     <nav class="tabs" role="tablist" aria-label="Sections">
@@ -394,7 +401,7 @@
 
     <section id="subjects" class="panel">
       <h2>Subjects</h2>
-      <p class="muted small">Official NEP 2025 coursebook descriptions and syllabi. FoML from Annexure III. EMFT lecture counts from the teaching plan. Tap a block to expand.</p>
+      <p class="muted small">Official NEP 2025 coursebook descriptions and syllabi. Each card has a Drive link for that course’s PDFs. Tap a block to expand.</p>
       <input class="search" id="subjectSearch" type="search" placeholder="Filter subjects, units, labs…" enterkeyhint="search" />
       <div class="grid" id="subjectGrid"></div>
     </section>
@@ -441,31 +448,31 @@
 
     <section id="books" class="panel">
       <h2>Books</h2>
-      <p class="muted small">PDFs stay on your laptop under each subject’s <code>resources/</code> (not on GitHub — too large). This list is your mobile checklist.</p>
+      <p class="muted small">Book titles open the PDF. Subject names open the course folder. Stay signed into <code>siddco17@gmail.com</code> — files stay private, off GitHub.</p>
       <div class="card" style="overflow-x:auto">
         <table>
           <thead>
             <tr><th>Subject</th><th>Book</th><th>Status</th></tr>
           </thead>
           <tbody>
-            <tr><td>LA</td><td>Strang — Linear Algebra</td><td class="chip ok">Have</td></tr>
-            <tr><td>LA</td><td>Boyd — Convex Optimization</td><td class="chip ok">Have</td></tr>
-            <tr><td>DCHD</td><td>Mano — Digital Design</td><td class="chip ok">Have</td></tr>
-            <tr><td>DCHD</td><td>Kohavi &amp; Jha — Switching &amp; Finite Automata</td><td class="chip ok">Have</td></tr>
-            <tr><td>SnS</td><td>Oppenheim — Signals &amp; Systems</td><td class="chip ok">Have</td></tr>
-            <tr><td>EMFT</td><td>Sadiku — Elements of Electromagnetics</td><td class="chip ok">Have</td></tr>
-            <tr><td>ACD</td><td>Gaikwad — Op-Amps</td><td class="chip ok">Have</td></tr>
-            <tr><td>MNI</td><td>Bentley — Measurement Systems</td><td class="chip ok">Have</td></tr>
-            <tr><td>MNI</td><td>Doebelin — Measurement Systems (prof “Doble”)</td><td class="chip ok">Have</td></tr>
-            <tr><td>Prereq</td><td>Alexander &amp; Sadiku — Electric Circuits</td><td class="chip ok">Have</td></tr>
-            <tr><td>FoML</td><td>Mitchell — Machine Learning <b>or</b> Alpaydin</td><td class="chip warn">Need</td></tr>
-            <tr><td>FoML</td><td>Deisenroth — Mathematics for ML (free)</td><td class="chip warn">Need</td></tr>
-            <tr><td>FoML lab</td><td>Géron — Hands-On ML (optional)</td><td class="chip warn">Nice</td></tr>
+            <tr><td><a href="https://drive.google.com/drive/folders/1P0RjF6NT_j9G_nlYlOWYZSAVeu_nvPWf" target="_blank" rel="noopener">LA</a></td><td><a href="https://drive.google.com/file/d/1NwlrkK9xedsgi30BePcNpKgXa-G-fUK_/view" target="_blank" rel="noopener">Strang — Linear Algebra</a></td><td class="chip ok">Drive</td></tr>
+            <tr><td><a href="https://drive.google.com/drive/folders/1P0RjF6NT_j9G_nlYlOWYZSAVeu_nvPWf" target="_blank" rel="noopener">LA</a></td><td><a href="https://drive.google.com/file/d/11oOLkQlngw456YxJdJ_Ea6IWr7kVo3-9/view" target="_blank" rel="noopener">Boyd — Convex Optimization</a></td><td class="chip ok">Drive</td></tr>
+            <tr><td><a href="https://drive.google.com/drive/folders/1BM1RwNNibRMTeN4AvcC2dktET3yiORZz" target="_blank" rel="noopener">DCHD</a></td><td><a href="https://drive.google.com/file/d/1NOsKTQx5m95K0qLk2-gCAsr-iCCe5xIl/view" target="_blank" rel="noopener">Mano — Digital Design</a></td><td class="chip ok">Drive</td></tr>
+            <tr><td><a href="https://drive.google.com/drive/folders/1BM1RwNNibRMTeN4AvcC2dktET3yiORZz" target="_blank" rel="noopener">DCHD</a></td><td><a href="https://drive.google.com/file/d/1kzdEpeweFJgCyYigOFK_AhWV4_xpYX5X/view" target="_blank" rel="noopener">Kohavi &amp; Jha — Switching &amp; Finite Automata</a></td><td class="chip ok">Drive</td></tr>
+            <tr><td><a href="https://drive.google.com/drive/folders/1ynWWrkhsMD2dYo7IUFgM9zfX0hNm8Dzc" target="_blank" rel="noopener">SnS</a></td><td><a href="https://drive.google.com/file/d/1TdpCsPcQeT1FkncaZWhbc1TwPa89T7zI/view" target="_blank" rel="noopener">Oppenheim — Signals &amp; Systems</a></td><td class="chip ok">Drive</td></tr>
+            <tr><td><a href="https://drive.google.com/drive/folders/12RMdBvL-pM5CJsF58VwhGCaT_5OEz9CL" target="_blank" rel="noopener">EMFT</a></td><td><a href="https://drive.google.com/file/d/1EYhoayPlTld7snZ0LeQtJMR2rupFPl8_/view" target="_blank" rel="noopener">Sadiku — Elements of Electromagnetics</a></td><td class="chip ok">Drive</td></tr>
+            <tr><td><a href="https://drive.google.com/drive/folders/154n9V_zCdaGecmnv_xYrHYrXDTcHCZrz" target="_blank" rel="noopener">ACD</a></td><td><a href="https://drive.google.com/file/d/1Fll7zaOuIKK0UGWPJReQlASU1RlGqHkZ/view" target="_blank" rel="noopener">Gaikwad — Op-Amps</a></td><td class="chip ok">Drive</td></tr>
+            <tr><td><a href="https://drive.google.com/drive/folders/1_rukx9_DuLOlbxeYBJCQrLAqIDZWQ8_q" target="_blank" rel="noopener">MNI</a></td><td><a href="https://drive.google.com/file/d/1NmPbQhFRgBsBd8yIdsnMH9wtQG9yy81P/view" target="_blank" rel="noopener">Bentley — Measurement Systems</a></td><td class="chip ok">Drive</td></tr>
+            <tr><td><a href="https://drive.google.com/drive/folders/1_rukx9_DuLOlbxeYBJCQrLAqIDZWQ8_q" target="_blank" rel="noopener">MNI</a></td><td><a href="https://drive.google.com/file/d/1RgOxrBMCtzjZpGnq8USYfAcJwEZnSYAt/view" target="_blank" rel="noopener">Doebelin — Measurement Systems (prof “Doble”)</a></td><td class="chip ok">Drive</td></tr>
+            <tr><td>Prereq</td><td>Alexander &amp; Sadiku — Electric Circuits</td><td class="chip ok">Have (laptop)</td></tr>
+            <tr><td><a href="https://drive.google.com/drive/folders/1UQikhwmZtOb4TVHn-LekU_utYs5URGbT" target="_blank" rel="noopener">FoML</a></td><td>Mitchell — Machine Learning <b>or</b> Alpaydin</td><td class="chip warn">Need</td></tr>
+            <tr><td><a href="https://drive.google.com/drive/folders/1UQikhwmZtOb4TVHn-LekU_utYs5URGbT" target="_blank" rel="noopener">FoML</a></td><td>Deisenroth — Mathematics for ML (free)</td><td class="chip warn">Need</td></tr>
+            <tr><td><a href="https://drive.google.com/drive/folders/1GWh7NuQbMhX8bUDXQsQlLuC0L8amZPZR" target="_blank" rel="noopener">FoML lab</a></td><td>Géron — Hands-On ML (optional)</td><td class="chip warn">Nice</td></tr>
             <tr><td>Optional</td><td>Schaum’s SnS</td><td class="chip warn">MST only</td></tr>
           </tbody>
         </table>
       </div>
-      <div class="tip">Laptop path: <code>~/Documents/padhai/sem3/…/resources/</code></div>
+      <div class="tip">Drive root: <a href="https://drive.google.com/drive/folders/1sVKhfgNmSfFbm0-W_uqFfpgf9oCO-Yj1" target="_blank" rel="noopener">padhai</a> · laptop copy still at <code>~/Documents/padhai/sem3/…/resources/</code></div>
     </section>
 
     <section id="week" class="panel">
@@ -542,7 +549,7 @@
     </section>
 
     <footer class="note">
-      Local vault: <code>~/Documents/padhai</code> · PDFs gitignored · This page is the phone-friendly layer.
+      Local vault: <code>~/Documents/padhai</code> · PDFs on <a href="https://drive.google.com/drive/folders/1sVKhfgNmSfFbm0-W_uqFfpgf9oCO-Yj1" target="_blank" rel="noopener">Google Drive</a> · this page is the phone layer.
     </footer>
   </div>
 
@@ -558,6 +565,8 @@
     const subjects = [
       {
         id: "la",
+        driveKey: "01-linear-algebra",
+        drive: "https://drive.google.com/drive/folders/1P0RjF6NT_j9G_nlYlOWYZSAVeu_nvPWf",
         name: "Linear Algebra for Machine Learning Applications",
         code: "ECL3xx",
         ltp: "3-0-0",
@@ -592,6 +601,10 @@
       },
       {
         id: "dchd",
+        driveKey: "02-dchd",
+        driveLabKey: "02-dchd-lab",
+        drive: "https://drive.google.com/drive/folders/1BM1RwNNibRMTeN4AvcC2dktET3yiORZz",
+        driveLab: "https://drive.google.com/drive/folders/1w-2ag9YLYS79AZAf7qQC_ZltO4OzCPHv",
         name: "Digital Circuits and Hardware Design",
         code: "ECL216",
         ltp: "3-1-2",
@@ -633,6 +646,10 @@
       },
       {
         id: "sns",
+        driveKey: "03-sns",
+        driveLabKey: "03-sns-lab",
+        drive: "https://drive.google.com/drive/folders/1ynWWrkhsMD2dYo7IUFgM9zfX0hNm8Dzc",
+        driveLab: "https://drive.google.com/drive/folders/13YO6oBE6crN0GifAc2GuCl3wB8Tm6Xp7",
         name: "Signals and Systems Analysis",
         code: "ECL211",
         ltp: "3-0-2",
@@ -687,6 +704,8 @@
       },
       {
         id: "emft",
+        driveKey: "04-emft",
+        drive: "https://drive.google.com/drive/folders/12RMdBvL-pM5CJsF58VwhGCaT_5OEz9CL",
         name: "Electromagnetic Fields",
         code: "ECL305",
         ltp: "3-1-0",
@@ -725,6 +744,10 @@
       },
       {
         id: "acd",
+        driveKey: "05-acd",
+        driveLabKey: "05-acd-lab",
+        drive: "https://drive.google.com/drive/folders/154n9V_zCdaGecmnv_xYrHYrXDTcHCZrz",
+        driveLab: "https://drive.google.com/drive/folders/1o6foyK-w5qVnmn-xlf-K8MraokOfeH3m",
         name: "Analog Circuit Design",
         code: "ECL308",
         ltp: "3-0-2",
@@ -772,6 +795,10 @@
       },
       {
         id: "mni",
+        driveKey: "06-mni",
+        driveLabKey: "06-mni-lab",
+        drive: "https://drive.google.com/drive/folders/1_rukx9_DuLOlbxeYBJCQrLAqIDZWQ8_q",
+        driveLab: "https://drive.google.com/drive/folders/14razay6zCxAqbrjL-ZQ_rHvqIxRwTf5T",
         name: "Measurements and Instrumentation",
         code: "ECL204",
         ltp: "3-0-2",
@@ -821,6 +848,10 @@
       },
       {
         id: "foml",
+        driveKey: "07-fundamentals-of-ml",
+        driveLabKey: "07-fundamentals-of-ml-lab",
+        drive: "https://drive.google.com/drive/folders/1UQikhwmZtOb4TVHn-LekU_utYs5URGbT",
+        driveLab: "https://drive.google.com/drive/folders/1GWh7NuQbMhX8bUDXQsQlLuC0L8amZPZR",
         name: "Fundamentals of Machine Learning",
         code: "CSL2XX",
         ltp: "3-0-2",
@@ -882,11 +913,23 @@
     function haystack(s) {
       return [
         s.name, s.code, s.ltp, s.credits, s.blurb, s.books, s.eval || "",
+        s.drive || "", s.driveLab || "",
+        ...(s.files || []).map(f => f.name),
+        ...(s.filesLab || []).map(f => f.name),
         ...(s.outcomes || []),
         ...(s.units || []).flatMap(u => [u.title, ...u.topics]),
         ...(s.lab ? [s.lab.title, ...s.lab.items] : []),
         ...s.tips, ...s.common
       ].join(" ").toLowerCase();
+    }
+
+    function prettyFile(name) {
+      return name.replace(/^\d{8}T\d{6}Z_(?:[a-f0-9]{8}_)?/, "");
+    }
+
+    function fileLinks(files) {
+      if (!files || !files.length) return "";
+      return `<ul class="tight files">${files.map(f => `<li><a href="${f.url}" target="_blank" rel="noopener">${prettyFile(f.name)}</a></li>`).join("")}</ul>`;
     }
 
     function render(list) {
@@ -900,6 +943,9 @@
             ${riskChip(s.risk)}
           </div>
           <p>${s.blurb}</p>
+          <p class="small"><a href="${s.drive}" target="_blank" rel="noopener">Open Drive folder</a>${s.driveLab ? ` · <a href="${s.driveLab}" target="_blank" rel="noopener">Lab folder</a>` : ""}</p>
+          ${fileLinks(s.files)}
+          ${s.filesLab && s.filesLab.length ? `<p class="small muted" style="margin-top:0.6rem"><b>Lab files</b></p>${fileLinks(s.filesLab)}` : ""}
           ${s.eval ? `<div class="tip">${s.eval}</div>` : ""}
           <p class="small muted"><b>Books:</b> ${s.books}</p>
           <details class="block">
@@ -929,6 +975,18 @@
       const q = search.value.trim().toLowerCase();
       render(subjects.filter(s => !q || haystack(s).includes(q)));
     });
+
+    fetch("drive-files.json")
+      .then(r => r.ok ? r.json() : Promise.reject(r.status))
+      .then(manifest => {
+        for (const s of subjects) {
+          s.files = (manifest.files && s.driveKey && manifest.files[s.driveKey]) || [];
+          s.filesLab = (manifest.files && s.driveLabKey && manifest.files[s.driveLabKey]) || [];
+        }
+        const q = search.value.trim().toLowerCase();
+        render(subjects.filter(s => !q || haystack(s).includes(q)));
+      })
+      .catch(() => {});
 
     function showTab(id) {
       document.querySelectorAll(".panel").forEach(p => p.classList.toggle("active", p.id === id));
