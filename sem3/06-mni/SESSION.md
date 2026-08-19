@@ -5,6 +5,7 @@
 - **Type:** Theory
 - **Books / primary refs:** Bentley; **Doebelin** (*Measurement Systems: Application and Design*); Helfrick/Cooper or Sawhney optional
 - **Have PDF:** `resources/Bentley_Principles_of_Measurement_Systems.pdf`, `resources/Doebelin_Measurement_Systems_Application_and_Design.pdf`
+- **Senior resources:** `notes/senior-resources.md` (Sem 5 MnI notes + PYQ — external Drive)
 
 ## This session is for
 - Lecture notes → `notes/`

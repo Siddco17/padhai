@@ -42,7 +42,7 @@ Assume ~6–7 hrs classes/labs on heavy days. Outside class:
 | IEM (optional) | 0–3 | Cut first under load |
 | **Total outside class** | **~24–32** | This is a full-time semester |
 
-Thu afternoon free block = **SnS deep + weakest theory**, not Netflix.
+Thu afternoon is now **FoML Lab (14:00–16:00)** — SnS deep + weakest theory move to **Thu evening / weekend**.
 
 ## Subject AA playbooks
 

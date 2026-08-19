@@ -7,6 +7,8 @@
 - **Pairs with:** ECL3xx Linear Algebra for ML
 - **Evaluation:** Mid-sem **25%** · End-sem **50%** · Lab **25%**
 - **Syllabus:** `notes/syllabus.md` (from Annexure III); original docx in `resources/` (local)
+- **Senior resources:** `notes/senior-resources.md` (Sem 7 ML notes + PYQ — external Drive)
+- **Timetable:** Theory Mon 9–10 · Tue 8–9 · Wed 9–10 · Lab Thu 14:00–16:00
 
 ## Books (from annexure)
 
@@ -54,7 +56,8 @@ Same-day lab notes + GitHub notebook hygiene. Project topic: can lean audio/IEM 
 - [ ] Confirm final course code (CSL2xx → CSL2??)
 - [ ] Fetch Mitchell or Alpaydin PDF
 - [ ] Bookmark Deisenroth MML free book
-- [ ] Note lab schedule + project deadline
+- [x] Lab slot locked: **Thu 14:00–16:00**
+- [ ] Note project deadline
 
 ## Log
 | Date | What I did | Next |

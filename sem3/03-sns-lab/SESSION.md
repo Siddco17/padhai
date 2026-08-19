@@ -4,6 +4,7 @@
 - **Credits:** 1 of 4 (from ECL211 SnS)
 - **Type:** Lab
 - **Books / primary refs:** MATLAB/Python as required by lab
+- **Senior resources:** `notes/senior-resources.md` (lab sample links — external Drive)
 
 ## This session is for
 - Lecture notes → `notes/`

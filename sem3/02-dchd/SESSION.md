@@ -5,6 +5,7 @@
 - **Type:** Theory + Tutorial
 - **Books / primary refs:** Kohavi/Jha; Mano (Verilog) or Brown (VHDL) — match lab HDL
 - **Have PDF:** `resources/Morris_Mano_Digital_Design.pdf`, `resources/Kohavi_Jha_Switching_and_Finite_Automata_Theory.pdf`
+- **Senior resources:** `notes/senior-resources.md` (PYQ + Sem 4 DCMP notes — external Drive)
 
 ## This session is for
 - Lecture notes → `notes/`

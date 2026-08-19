@@ -9,6 +9,7 @@
 - **Have PDF:** `resources/Sadiku_Elements_of_Electromagnetics.pdf`
 - **Syllabus:** `notes/syllabus.md` (from teaching-plan photo)
 - **Prerequisite risk:** Physics FF → summer clear (~5) → vectors/fields weak; same-day tutorial problems mandatory (`../_meta/remediation.md`)
+- **Senior resources:** `notes/senior-resources.md` (Sem 4 EMFT notes + PYQ — external Drive)
 
 ## This session is for
 - Lecture notes → `notes/`

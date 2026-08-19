@@ -3,6 +3,7 @@
 - **Parent:** CSL2XX Fundamentals of Machine Learning
 - **Credits:** 1 of 4 (from `3-0-2`)
 - **Weight:** **25%** of course grade (AA-critical)
+- **Slot:** Thu **14:00–16:00**
 - **Theory session:** `../07-fundamentals-of-ml/`
 
 ## Indicative work
