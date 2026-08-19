@@ -657,8 +657,14 @@ def strip_html(text: str) -> str:
 # Strong filename overrides when keyword classifier is thin.
 FILENAME_COURSE = (
     ("static characteristics", "06-mni"),
+    ("dynamic characteristics", "06-mni"),
+    ("order systems", "06-mni"),
+    ("wheatstone", "06-mni"),
     ("bridge and loading", "06-mni"),
     ("p45-4-5", "06-mni"),
+    ("decisiontree", "07-fundamentals-of-ml"),
+    ("decision tree", "07-fundamentals-of-ml"),
+    ("tutorial 1 dchd", "02-dchd"),
     ("opamp", "05-acd"),
     ("24258", "05-acd"),
     ("acd lab", "05-acd-lab"),
@@ -667,6 +673,8 @@ FILENAME_COURSE = (
     ("experiment 2", "06-mni-lab"),
     ("dc journal", "02-dchd-lab"),
     ("regression analysis", "07-fundamentals-of-ml"),
+    ("emf-t", "04-emft"),
+    ("acd formulas", "05-acd"),
 )
 
 

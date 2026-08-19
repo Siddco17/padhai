@@ -36,3 +36,8 @@ Files stay local (gitignored). This log is what gets committed.
 | 2026-08-18 06:17 | `02-dchd` | `sem3/02-dchd/resources/20260818T061547Z_cd8797af_Tutorial 1 DCHD.pdf` | ECLA 201 DCHD |  |
 | 2026-08-18 06:17 | `_unsorted` | `sem3/_inbox/unsorted/20260818T061537Z_e97d5770_zero-First-Second order systems (1).pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
 | 2026-08-18 06:17 | `_unsorted` | `sem3/_inbox/unsorted/20260818T061538Z_f3f23a00_dynamic characteristics intro.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-08-19 16:01 | `_unsorted` | `sem3/_inbox/unsorted/20260819T155748Z_1dae088d_Unit-2.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-08-19 16:01 | `05-acd` | `sem3/05-acd/resources/20260819T155746Z_4b3a0084_ACD Formulas.pdf` | Batch 2 |  |
+| 2026-08-19 16:01 | `07-fundamentals-of-ml` | `sem3/07-fundamentals-of-ml/resources/20260819T155747Z_60892467_6. Regression Analysis.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-08-19 16:01 | `04-emft` | `sem3/04-emft/resources/20260819T155744Z_78f6745e_EMF-T Practice Questions_Line _ Surface Integral.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-08-19 16:01 | `02-dchd` | `sem3/02-dchd/resources/20260819T155750Z_cfe783df_Tutorial 1 DCHD.pdf` | Aadvik |  |
