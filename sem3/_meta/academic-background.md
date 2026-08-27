@@ -1,5 +1,7 @@
 # Academic background (honest map)
 
+**Mind:** [[Home]] · [[sem3/_maps/Dependency Map.canvas|Dependency Map]] · [[sem3/_meta/remediation|remediation]]
+
 ## Grades that barely cleared
 | When | Course (as remembered) | Implication for Sem 3 |
 |------|------------------------|------------------------|
@@ -14,13 +16,14 @@
 - Motivation for consumer audio / IEM path
 
 ## Sem 3 dependency map
-```
-EE + EDC ──► ACD (op-amps assume device + circuit comfort)
-EE + NS  ──► ACD / MNI (bridges, signal conditioning)
-Physics  ──► EMFT (coordinates, E/H fields, waves)
-Math     ──► SnS + Linear Algebra (can be recovery subjects if worked weekly)
-Digital  ──► DCHD (more independent of EE/EDC weakness — protect this 5-credit course)
-```
+
+- EE + EDC → [[ACD]] (op-amps assume device + circuit comfort)
+- EE + NS → [[ACD]] / [[MNI]] (bridges, signal conditioning)
+- Physics → [[EMFT]] (coordinates, E/H fields, waves)
+- Math → [[Signals and Systems]] + [[Linear Algebra]] (can be recovery subjects if worked weekly)
+- Digital → [[DCHD]] (more independent of EE/EDC weakness — protect this 5-credit course)
+
+Whiteboard: [[sem3/_maps/Dependency Map.canvas|Dependency Map]].
 
 ## Rule
-Do **not** re-study all of year-1 from scratch. Do **just-in-time** catch-up the week a Sem 3 topic needs it (see `remediation.md`).
+Do **not** re-study all of year-1 from scratch. Do **just-in-time** catch-up the week a Sem 3 topic needs it (see [[sem3/_meta/remediation|remediation]]).

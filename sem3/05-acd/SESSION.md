@@ -1,4 +1,10 @@
+---
+tags: [log, course/acd]
+---
+
 # Analog Circuit Design
+
+**Hub:** [[ACD]] · [[ACD Lab]] · [[Thevenin and Norton]]
 
 - **Code:** ECL308
 - **Credits:** 3 of 4

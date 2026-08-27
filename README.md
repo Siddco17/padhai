@@ -4,6 +4,20 @@
 
 Study vault + mobile web guide for 3rd semester (NEP 2025).
 
+## Obsidian (this folder is the vault)
+
+`~/Documents/padhai` opens as an Obsidian vault. Start at [`Home.md`](Home.md).
+
+| Open | What |
+|------|------|
+| `Home.md` | Dashboard |
+| `sem3/_maps/Sem 3 Mind.canvas` | Whole-semester whiteboard |
+| `sem3/_maps/Dependency Map.canvas` | Year-1 holes → Sem 3 |
+| `sem3/_maps/MST-1 Mind.canvas` | 18-day recovery |
+| Graph view (`Cmd+G`) | Same map as a force layout |
+
+Course hubs (`DCHD.md`, `FoML.md`, …) and `sem3/_concepts/` one-pagers are the graph. Daily logs stay in each subject's `SESSION.md`. New dump notes go to `sem3/_inbox/`.
+
 ## Phone access (GitHub Pages)
 
 Open: **https://siddco17.github.io/padhai/**  

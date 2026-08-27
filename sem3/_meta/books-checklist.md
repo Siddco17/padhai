@@ -1,5 +1,7 @@
 # Book PDF checklist
 
+**Mind:** [[Home]] · course hubs [[DCHD]] · [[Signals and Systems]] · [[EMFT]] · [[ACD]] · [[MNI]] · [[Linear Algebra]] · [[FoML]]
+
 ## Acknowledged (complete Sem 3 set)
 
 | Location | Book |

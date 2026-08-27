@@ -1,11 +1,13 @@
 # Just-in-time remediation (EE / EDC / NS / Physics)
 
+**Mind:** [[Home]] · [[sem3/_maps/Dependency Map.canvas|Dependency Map]]
+
 Goal: patch holes only when Sem 3 needs them. Cap catch-up at **~2–3 hrs/week** total unless MST week.
 
 ## Before / with ACD (highest urgency)
 From **EDC + EE**, refresh in this order (Gaikwad chapter 1–2 style, not full EDC textbook):
-1. Ideal voltage/current sources, KVL/KCL, voltage divider
-2. Thevenin / Norton (op-amp analysis uses this constantly)
+1. Ideal voltage/current sources, [[KVL and KCL]], [[Voltage divider]]
+2. [[Thevenin and Norton]] (op-amp analysis uses this constantly)
 3. Diode as switch / clipper intuition (for nonlinear op-amp apps later)
 4. BJT as approx. current amplifier — enough to not fear “transistor inside 741”
 5. What gain, input impedance, output impedance mean
@@ -13,19 +15,19 @@ From **EDC + EE**, refresh in this order (Gaikwad chapter 1–2 style, not full 
 **Skip for now:** full small-signal hybrid-π grinding unless ACD lecturer demands it.
 
 ## Before / with EMFT (Physics hole)
-1. Vector basics: i,j,k / unit vectors; gradient intuition
-2. Dot & cross product meaning (work, flux, “perpendicular”)
-3. Coordinate systems: Cartesian first, then cylindrical/spherical when syllabus hits them
+1. Vector basics: i,j,k / unit vectors; [[Vectors and fields|gradient intuition]]
+2. [[Dot and cross product]] meaning (work, flux, “perpendicular”)
+3. [[Coordinate systems]]: Cartesian first, then cylindrical/spherical when syllabus hits them
 4. What “field” means (value at every point) — then Coulomb / Gauss from Hayt ch.1–3 slowly
 
 **Do EMFT tutorial problems the same day** — reading alone won’t fix a Physics FF pattern.
 
 ## If NS = Network Theory / Networks
 When ACD or MNI hits frequency / transfer ideas:
-1. Impedance of R, L, C
+1. [[Impedance]] of R, L, C
 2. Series/parallel RC
 3. First-order time constant
-4. Transfer function H(jω) at a hand-wavy level (pairs with SnS)
+4. Transfer function H(jω) at a hand-wavy level (pairs with [[Signals and Systems]])
 
 ## If NS = something else
 Update this file with the full name — remediation list changes.

@@ -1,0 +1,80 @@
+/* padhai — warm umber + Google Sans Flex / Code */
+body {
+  --font-interface-theme: "Google Sans Flex", sans-serif;
+  --font-text-theme: "Google Sans Flex", sans-serif;
+  --font-monospace-theme: "Google Sans Code", ui-monospace, monospace;
+  --font-text: "Google Sans Flex";
+  --font-interface: "Google Sans Flex";
+  --font-monospace: "Google Sans Code";
+  --accent-h: 36;
+  --accent-s: 71%;
+  --accent-l: 58%;
+  font-optical-sizing: auto;
+}
+
+.theme-dark {
+  --color-base-00: #1c1610;
+  --color-base-05: #1c1610;
+  --color-base-10: #241c14;
+  --color-base-20: #2a2118;
+  --color-base-25: #34281e;
+  --color-base-30: #4a3c2e;
+  --color-base-35: #5c4c3a;
+  --titlebar-background: #1c1610;
+  --titlebar-background-focused: #1c1610;
+  --background-primary: #1c1610;
+  --background-secondary: #241c14;
+  --background-modifier-border: #4a3c2e;
+  --text-normal: #f4ece3;
+  --text-muted: #c4b09a;
+  --text-faint: #8f7d6a;
+  --text-accent: #e0a04a;
+  --text-accent-hover: #f0b45c;
+  --interactive-accent: #e0a04a;
+  --canvas-color: #1c1610;
+}
+
+.theme-light {
+  --color-base-00: #f7f0e6;
+  --color-base-05: #f3ebe0;
+  --color-base-10: #ece3d4;
+  --color-base-20: #e4d8c6;
+  --color-base-25: #dccdb8;
+  --color-base-30: #c4b09a;
+  --titlebar-background: #f7f0e6;
+  --titlebar-background-focused: #f3ebe0;
+  --text-normal: #2a2118;
+  --text-muted: #6e5c4a;
+  --text-accent: #b56e12;
+  --interactive-accent: #c08216;
+}
+
+.workspace-leaf-content[data-type="graph"] .view-content,
+.workspace-leaf-content[data-type="canvas"] .view-content,
+.canvas-wrapper {
+  background: #1c1610 !important;
+}
+
+.theme-light .workspace-leaf-content[data-type="graph"] .view-content,
+.theme-light .workspace-leaf-content[data-type="canvas"] .view-content,
+.theme-light .canvas-wrapper {
+  background: #f7f0e6 !important;
+}
+
+.canvas-node-container.is-focused {
+  box-shadow: 0 0 0 2px rgba(224, 160, 74, 0.55);
+}
+
+.markdown-preview-view code,
+.cm-s-obsidian span.cm-inline-code,
+.markdown-source-view.mod-cm6 .cm-line .cm-inlineCode,
+pre, code {
+  font-family: "Google Sans Code", ui-monospace, monospace !important;
+}
+
+.markdown-preview-view h1,
+.markdown-preview-view h2,
+.cm-header {
+  font-family: "Google Sans Flex", sans-serif;
+  font-optical-sizing: auto;
+}

@@ -1,4 +1,10 @@
+---
+tags: [log, course/la]
+---
+
 # Linear Algebra for ML
+
+**Hub:** [[Linear Algebra]]
 
 - **Code:** ECL3xx
 - **Credits:** 3

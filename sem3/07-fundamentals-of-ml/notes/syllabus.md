@@ -1,5 +1,7 @@
 # CSL2XX — Fundamentals of Machine Learning (Annexure III)
 
+**Hub:** [[FoML]] · [[FoML Lab]]
+
 **Programme:** B.Tech · **Type:** OC · **L-T-P:** 3-0-2 · **Credits:** 4  
 **Pre-requisite:** CSL101 Computer Programming  
 **Evaluation:** Mid-sem 25% · End-sem 50% · Lab 25%
