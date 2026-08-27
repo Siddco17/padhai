@@ -18,16 +18,15 @@
 - Report metrics properly (accuracy alone is weak — precision/recall/confusion matrix)
 - Start project by mid-sem; audio/IEM-flavored OK if instructor allows
 
-## This evaluation (Kaggle + Linear Regression + Decision Tree)
+## This evaluation (two independent experiments)
 
-- **Notebook (open in Colab):** [`scripts/linear_regression_decision_tree.ipynb`](scripts/linear_regression_decision_tree.ipynb)
-  - Colab: upload the `.ipynb`, or *File → Upload notebook*. Then **Runtime → Run all**.
-- **Dataset:** Kaggle [Medical Cost Personal Dataset](https://www.kaggle.com/datasets/mirichoi0218/insurance) (copy in [`data/insurance.csv`](data/insurance.csv))
-- **Viva answers:** [`notes/viva-linear-regression-decision-tree.md`](notes/viva-linear-regression-decision-tree.md)
-
-Headline result: **depth-3 tree beats Linear Regression on test R²**; unlimited tree **overfits**.
+- **Notebook:** [`scripts/linear_regression_decision_tree.ipynb`](scripts/linear_regression_decision_tree.ipynb) — Colab: upload, then **Runtime → Run all**
+- **A. Linear Regression** — Kaggle [insurance](https://www.kaggle.com/datasets/mirichoi0218/insurance) → `LinearRegression` → MAE / RMSE / R²
+- **B. Decision Tree** — Kaggle [Titanic](https://www.kaggle.com/datasets/yasserh/titanic-dataset) → `DecisionTreeClassifier` → accuracy / precision / recall / confusion matrix
+- **Not a comparison.** Different models, different datasets, different metrics.
+- **Viva:** [`notes/viva-linear-regression-decision-tree.md`](notes/viva-linear-regression-decision-tree.md)
 
 ## Log
 | Date | Experiment / project | Next |
 |------|----------------------|------|
-| 2026-08-27 | Insurance charges: Linear Regression vs Decision Tree (Colab) | Re-run in Colab before viva; memorise 30-second script |
+| 2026-08-27 | A: LinearRegression on insurance. B: DecisionTreeClassifier on Titanic. Separate experiments, not a comparison. | Re-run in Colab; two 20-second viva pitches |

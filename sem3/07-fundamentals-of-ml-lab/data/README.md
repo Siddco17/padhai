@@ -1,10 +1,10 @@
-# insurance.csv
+# FoML Lab datasets (Kaggle)
 
-Same table as the Kaggle **Medical Cost Personal Dataset**:
+Each experiment uses **its own** table. They are not mixed and not compared.
 
-https://www.kaggle.com/datasets/mirichoi0218/insurance
+| File | Kaggle source | Used for |
+|------|----------------|----------|
+| `insurance.csv` | [Medical Cost Personal Dataset](https://www.kaggle.com/datasets/mirichoi0218/insurance) (Lantz / Choi) | **Linear Regression** — predict `charges` |
+| `titanic.csv` | [Titanic](https://www.kaggle.com/datasets/yasserh/titanic-dataset) | **Decision Tree classifier** — predict `Survived` |
 
-Originally published with Brett Lantz, *Machine Learning with R*.  
-1338 rows, no missing values. Target column: `charges`.
-
-Kept in the repo so the Colab notebook still runs if the Kaggle API is not set up.
+Copies are in the repo so Colab still runs without `kaggle.json`.

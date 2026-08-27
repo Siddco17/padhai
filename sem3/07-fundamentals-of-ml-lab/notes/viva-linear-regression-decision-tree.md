@@ -1,176 +1,171 @@
-# FoML lab viva — Linear Regression vs Decision Tree
+# FoML lab viva — Linear Regression and Decision Tree
 
-Use with the Colab notebook `scripts/linear_regression_decision_tree.ipynb`.  
-Numbers below are from `random_state=42`, 80/20 split, on the Kaggle insurance CSV (1338 rows). Re-run the notebook before the viva so yours match.
+Two **independent** experiments. Different datasets, different sklearn classes, different metrics. **Do not compare them** and do not call one “better.”
 
-## 30-second opening (memorise this)
+Notebook: `scripts/linear_regression_decision_tree.ipynb`  
+Re-run in Colab before the viva so your printed numbers match.
 
-> I took the Kaggle medical cost dataset — 1338 people, predict insurance `charges`.  
-> I encoded the categorical columns and used an 80/20 train-test split.  
-> Linear Regression is an interpretable baseline: test R² about **0.78**, and the smoker flag adds roughly **+$23,600**.  
-> An unlimited Decision Tree overfits (train R² ≈ 1, test worse than Linear Regression).  
-> A tree with `max_depth=3` is the best predictor here (test R² about **0.85**) because charges are not a straight line — smokers sit on a higher band.
+## If they ask “did you use different models?”
 
-## Dataset (they will ask)
+**Yes.**
 
-| Question | Answer |
-|----------|--------|
-| Source? | Kaggle: *Medical Cost Personal Dataset* (`mirichoi0218/insurance`) |
-| Task? | **Regression** (continuous target). Not classification. |
-| Why this set? | Linear Regression needs a numeric target. Features are easy to explain. Smoking is a strong signal. |
-| Size? | 1338 rows × 7 columns. **No missing values.** |
-| Features? | `age`, `sex`, `bmi`, `children`, `smoker`, `region` → predict `charges` |
-| Any leak? | Encoder and models are fit on **train only** (sklearn `Pipeline`). |
+| Experiment | sklearn class | What it outputs |
+|------------|---------------|-----------------|
+| A | `LinearRegression` | a **number** (`charges` in USD) |
+| B | `DecisionTreeClassifier` | a **class** (`Survived` 0/1) |
 
-If they say “why not a classification dataset?”: Linear Regression predicts a real number. Decision trees can do both; we used `DecisionTreeRegressor` so the comparison is fair.
+Not `DecisionTreeRegressor`. The tree is a classifier because Titanic is a yes/no problem. Linear Regression is not a classifier.
 
-## What you actually did (pipeline)
+If they ask “which is better?”: they are not on the same task, so there is no ranking.
 
-1. Load CSV → inspect types, nulls, plots.
-2. One-hot encode `sex`, `smoker`, `region` (`drop="first"`).
-3. 80% train, 20% test (`random_state=42` → 1070 / 268).
-4. Fit Linear Regression.
-5. Fit Decision Tree: unlimited, `max_depth=3`, `max_depth=5`.
-6. Compare **MAE, RMSE, R²** on train **and** test.
+## 20-second pitch A — Linear Regression
 
-## Results to quote
+> Kaggle medical insurance dataset, 1338 people, predict `charges`.  
+> One-hot encoded sex, smoker, region. 80/20 split.  
+> `LinearRegression`, test R² about **0.78**, MAE about **$4180**.  
+> Smoker adds about **+$23,600** in the linear weights.
 
-| Model | Train R² | Test R² | Test RMSE (USD) | Test MAE (USD) |
-|-------|----------|---------|-----------------|----------------|
-| Linear Regression | 0.742 | **0.784** | 5796 | 4181 |
-| Tree, unlimited | 0.998 | 0.697 | 6861 | 3384 |
-| Tree, depth=3 | 0.854 | **0.853** | **4776** | **2866** |
-| Tree, depth=5 | 0.880 | 0.834 | 5083 | 2931 |
+## 20-second pitch B — Decision Tree
 
-**Winner for prediction:** depth-3 tree.  
-**Winner for “how many dollars does smoking add?”:** Linear Regression.
+> Kaggle Titanic dataset, 891 passengers, predict `Survived`.  
+> Dropped name/ticket/cabin; imputed age and embarked on train only.  
+> `DecisionTreeClassifier` with `max_depth=3`.  
+> Test accuracy about **0.79**. First split is **sex**. Confusion matrix and precision/recall are in the notebook.
 
-## Metrics (do not say “accuracy”)
+---
 
-This is regression. **Accuracy / precision / recall / confusion matrix are for classification.**
+# Experiment A — Linear Regression (insurance)
 
-| Metric | Formula idea | Use |
-|--------|----------------|-----|
-| **MAE** | mean of \|error\| | typical dollar miss; easy to say in viva |
-| **MSE** | mean of error² | what Linear Regression minimises |
-| **RMSE** | √MSE | same units as `charges`; large mistakes hurt more |
-| **R²** | 1 − SS_res/SS_tot | fraction of variance explained; 1 = perfect, 0 = “predict the mean” |
+| | |
+|--|--|
+| Kaggle | [Medical Cost Personal Dataset](https://www.kaggle.com/datasets/mirichoi0218/insurance) |
+| Size | 1338 × 7, **no missing values** |
+| Target | `charges` (continuous) |
+| Features | `age`, `sex`, `bmi`, `children`, `smoker`, `region` |
+| Split | 80/20, `random_state=42` → 1070 / 268 |
 
-Always report **test** metrics. Train-only numbers hide overfitting.
+### What Linear Regression is
 
-## Linear Regression — expected questions
+\(\hat{y} = w_0 + w_1 x_1 + \cdots + w_d x_d\)  
+Weights minimise **MSE** (ordinary least squares).
 
-**What is it?**  
-A model that predicts a **linear combination** of features:  
-\(\hat{y} = w_0 + w_1 x_1 + \cdots + w_d x_d\).  
-Weights are chosen to minimise MSE (ordinary least squares).
-
-**Normal equation (Linear Algebra course):**  
+Normal equation (Linear Algebra course):  
 \(w = (X^\top X)^{-1} X^\top y\)  
-(with a column of 1s in \(X\) for the intercept). The notebook checks this with `numpy` and matches sklearn.
+(with a column of 1s for the intercept). The notebook matches sklearn with NumPy (`pinv`).
 
-**Assumptions:** linear + additive effects; errors roughly homoscedastic. Smoking × BMI is an **interaction** — a plain linear model will miss it unless you add that column.
+**Assumptions:** linear, additive effects. One-hot encoding because strings cannot go into that formula. `drop="first"` avoids the dummy-variable trap. Scaling is **not** required for unregularized OLS predictions.
 
-**Do you scale features?**  
-Not required for unregularized OLS **predictions**. Scaling helps if you compare coefficient *sizes* across different units, or if you use Ridge/Lasso.
+### Numbers (`random_state=42`)
 
-**One-hot encoding?**  
-Strings cannot go into the linear formula. `smoker=yes` becomes a 0/1 column. `drop="first"` drops one dummy so columns are not perfectly collinear (dummy-variable trap).
+| Split | MAE | RMSE | R² |
+|-------|-----|------|-----|
+| Train | 4208 | 6106 | 0.742 |
+| Test | **4181** | **5796** | **0.784** |
 
-**Coefficients on this data (approx):**
+Coefficients (approx):
 
-- `smoker_yes` **+23651** — dominant
+- `smoker_yes` **+23651**
 - `bmi` **+337** per point
 - `age` **+257** per year
 - `children` **+425**
-- `sex_male` ≈ **0** — almost unused
-- intercept ≈ **−11931** — baseline when encoded features are 0; don’t over-explain it
+- `sex_male` ≈ **0**
+- intercept ≈ **−11931** (baseline when encoded features are 0 — don’t over-explain)
 
-**Why is test R² a bit higher than train R² for Linear Regression?**  
-Chance of the random split (test set happened to be slightly easier). Not a bug. Trees show the opposite pattern when they overfit.
+### Metrics — regression only
 
-## Decision Tree — expected questions
+| Metric | Meaning |
+|--------|---------|
+| **MAE** | typical dollar miss |
+| **MSE** | what OLS minimises |
+| **RMSE** | √MSE, same units as `charges` |
+| **R²** | fraction of variance explained |
 
-**What is it?**  
-Recursive yes/no splits. Each leaf predicts the **mean** `charges` of training rows in that leaf (CART regression, MSE split criterion).
+**Do not say accuracy / precision / recall / confusion matrix for Experiment A.** Those belong to classification.
 
-**How does it choose a split?**  
-Try thresholds; pick the one that most reduces MSE in the two child nodes.
+### Likely questions (A)
 
-**Gini / entropy?**  
-Those are for **classification** trees. Regression trees use **MSE / variance**.
+- *Why this dataset?* Target is a real number, so Linear Regression applies.  
+- *Did test R² > train R² mean a bug?* No — this split was slightly easier.  
+- *Why is charges skewed?* Histogram is right-skewed; a log target would be a possible next step, not required for this lab.
 
-**Why did unlimited depth fail?**  
-It can isolate almost every training row (train R² ≈ 1) and then fails on new people. That gap is **overfitting**.
+---
 
-**Why did depth 3 win?**  
-The true pattern is simple: smoker vs not, then BMI/age. Extra depth fits noise.
+# Experiment B — Decision Tree (Titanic)
 
-**Feature importance vs linear weights?**  
-Importance = how much that feature reduced error across splits. Here `smoker_yes` ≈ 0.69, then `bmi`, then `age`. Same story as the linear coefficients, different math.
+| | |
+|--|--|
+| Kaggle | [Titanic dataset](https://www.kaggle.com/datasets/yasserh/titanic-dataset) |
+| Size | 891 × 12 |
+| Target | `Survived` (0 died, 1 survived) — **classification** |
+| Features used | `Pclass`, `Sex`, `Age`, `SibSp`, `Parch`, `Fare`, `Embarked` |
+| Dropped | `PassengerId`, `Name`, `Ticket`, `Cabin` |
+| Missing | `Age` 177, `Embarked` 2, `Cabin` 687 (cabin dropped) |
+| Split | 80/20 **stratified**, `random_state=42` → 712 / 179 |
 
-**Does a tree need scaling or one-hot encoding?**  
-Scaling: **no** (splits are on thresholds). One-hot: sklearn trees want numbers, so we still encode categoricals. (Trees can also split on integer category codes; one-hot is the consistent choice with Linear Regression.)
+### What a classification tree is
 
-**`random_state`?**  
-Ties / feature order; keeps the tree reproducible for the lab file.
+Recursive yes/no splits. Leaf predicts the **majority class**. Default split rule: **Gini impurity**. Entropy/information gain is the alternative.  
+`max_depth=3` so the tree is drawable. sklearn class: **`DecisionTreeClassifier`**.
 
-## Overfitting / underfitting (they love this)
+Gini / entropy are for **classification** trees. Regression trees would use MSE — we did not use that here.
 
-| | Underfit | Overfit |
-|--|----------|---------|
-| Symptom | Train **and** test both poor | Train great, **test** poor |
-| Example here | Linear Regression misses smoker×BMI (mild) | Unlimited tree |
-| Fix | Richer features / more flexible model | `max_depth`, min samples per leaf, more data |
+### Numbers (`max_depth=3`, `random_state=42`)
 
-**Generalisation** = performance on **unseen** test data.
+| Split | Accuracy | Precision (survived) | Recall (survived) | F1 |
+|-------|----------|----------------------|-------------------|----|
+| Train | 0.833 | 0.897 | 0.637 | 0.745 |
+| Test | **0.793** | **0.864** | **0.551** | 0.673 |
 
-## Comparison they want to hear
+Test confusion matrix (rows = actual, columns = predicted):
 
-- Linear Regression: few parameters, stable, interpretable dollars. Blind to interactions unless you add them.
-- Decision Tree: piecewise constant, captures interactions, easy to draw, overfits if grown fully.
-- On **this** dataset the shallow tree wins on RMSE/R² because of the smoker gap, which is not a single straight line through age.
+|  | pred died | pred survived |
+|--|-----------|---------------|
+| **actual died** | 104 (TN) | 6 (FP) |
+| **actual survived** | 31 (FN) | 38 (TP) |
+
+Root feature importance: **`Sex_male` ≈ 0.64**, then 3rd class, then age.
+
+Recall on survivors is only 0.55: the shallow tree is conservative (few false survivors, misses some real ones). That is a feature of depth 3, not a reason to switch to Linear Regression.
+
+### Metrics — classification only
+
+| Metric | Meaning |
+|--------|---------|
+| **Accuracy** | overall correct. Weak alone (~62% died, so “always died” is already ~62%) |
+| **Precision** | of predicted survivors, how many truly survived |
+| **Recall** | of actual survivors, how many we found |
+| **Confusion matrix** | TN, FP, FN, TP |
+
+**Do not report R² / MAE for Experiment B.**
+
+### Likely questions (B)
+
+- *Why drop Cabin?* Mostly missing; raw cabin strings are not a clean numeric feature.  
+- *Why impute Age with median?* Trees need a number; median is robust. Fit imputer on **train** only (pipeline).  
+- *Why stratify?* Keep the same survival rate in train and test.  
+- *Gini vs entropy?* Both measure impurity. Gini is sklearn’s default; results are usually similar.  
+- *Does a tree need feature scaling?* **No.** Splits are thresholds.  
+- *Why not Linear Regression on Titanic?* Survived is a class, not a dollar amount. A linear model for 0/1 would be a different method (linear classifier / logistic regression), which is not this experiment.
+
+### Overfitting (tree only — not vs Linear Regression)
+
+An unlimited tree can memorise the training passengers (train accuracy near 1) and then do worse on new ones. `max_depth=3` is regularisation for **this** model.
+
+---
 
 ## Trick questions
 
-**“What is the accuracy of your model?”**  
-I did not use accuracy. Test R² is 0.85 for the depth-3 tree; MAE is about $2900.
+**“What is the accuracy of Linear Regression?”**  
+I did not use accuracy there. Test R² is 0.78.
+
+**“What is the R² of the decision tree?”**  
+I did not use R² there. Test accuracy is 0.79, with precision/recall on the notebook.
+
+**“Which model won?”**  
+Neither. Different problems.
 
 **“Is Linear Regression a classifier?”**  
-No. Linear *classifier* / logistic regression is a different model. This lab is regression.
+No.
 
-**“Did you use neural nets?”**  
-Not in this experiment. Syllabus has ANN later; this lab is Linear Regression + trees.
-
-**“Why 80/20 not 70/30?”**  
-Common default. With 1338 rows both are fine. What matters is a held-out test set and a fixed seed.
-
-**“Did you use validation?”**  
-Simple lab: one train/test split. Better practice: a validation set or k-fold to choose `max_depth`, *then* report test once.
-
-**“What if charges are skewed?”**  
-They are (histogram). A log target can help Linear Regression. The tree cares less because it only cares about order/thresholds.
-
-**“Bias-variance?”**  
-Linear Regression: higher bias, lower variance. Deep tree: low bias, high variance. Depth 3 is the bias-variance compromise here.
-
-**“Could you implement Linear Regression without sklearn?”**  
-Yes — normal equation in the notebook. Gradient descent also works; OLS has a closed form.
-
-## If they open the notebook
-
-Walk them in this order:
-
-1. Shape 1338×7, zero nulls.  
-2. Boxplot: smokers much more expensive.  
-3. Coefficient table: `smoker_yes`.  
-4. Metrics table: unlimited tree overfit.  
-5. Drawn depth-3 tree: root split is smoker.  
-6. Actual vs predicted scatter: tree hugs the diagonal better.
-
-## What I would do next (if they ask)
-
-- Add interaction term `smoker * bmi` to Linear Regression (often closes most of the gap).
-- Tune `max_depth` with cross-validation.
-- Random Forest / Gradient Boosting as a stronger tree ensemble.
-- Check residuals vs predicted (fan shape → heteroscedasticity).
+**“Did you one-hot encode for the tree?”**  
+Yes, so sklearn gets numbers. Trees can also split on integer codes; encoding keeps `Sex` and `Embarked` explicit. Scaling still not needed.
