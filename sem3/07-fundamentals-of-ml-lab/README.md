@@ -18,4 +18,7 @@ If you only upload the `.ipynb`, it still runs (public mirrors of the same Kaggl
 
 ## Viva
 
-Read [`notes/viva-linear-regression-decision-tree.md`](notes/viva-linear-regression-decision-tree.md). Two separate 20-second pitches — do not rank the models against each other.
+- Why + numbers: [`notes/viva-linear-regression-decision-tree.md`](notes/viva-linear-regression-decision-tree.md)
+- Basics + questions to drill: [`notes/viva-questions.md`](notes/viva-questions.md)
+
+Two separate 20-second pitches — do not rank the models against each other.
