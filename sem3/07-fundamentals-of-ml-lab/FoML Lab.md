@@ -12,7 +12,9 @@ Log: [[sem3/07-fundamentals-of-ml-lab/SESSION|SESSION]] · Theory: [[FoML]] · D
 
 ## In the vault
 
-`notebooks/foml-lab-2026-08-20.ipynb` — NumPy warmup, [[Linear regression]] by least squares vs sklearn, [[Decision trees]] on the play/go-out table (entropy).
+- `notebooks/learn-linear-regression-and-decision-trees.ipynb` — Colab learning notebook: [[Linear regression]] by hand, NumPy `lstsq`, sklearn, and PyTorch GD; [[Decision trees]] entropy/gain from scratch on the play/go-out table, then sklearn. **Upload this to Colab.**
+- `notebooks/foml-lab-2026-08-20.ipynb` — 20 Aug lab starter (NumPy warmup + the same two experiments, no PyTorch).
+- `notebooks/foml-viva-colab.ipynb` — short viva demo of the same two + Git/Kaggle one-liners.
 
 ## AA habits
 

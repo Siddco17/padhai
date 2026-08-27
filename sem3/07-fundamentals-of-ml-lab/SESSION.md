@@ -27,4 +27,4 @@ tags: [log, course/foml, lab]
 ## Log
 | Date | Experiment / project | Next |
 |------|----------------------|------|
-| | | |
+| 2026-08-27 | Colab learning notebook: linreg (lstsq + sklearn + PyTorch) and entropy trees | Run in Colab before viva; keep train/test habit |
