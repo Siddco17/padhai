@@ -18,6 +18,47 @@ Not `DecisionTreeRegressor`. The tree is a classifier because Titanic is a yes/n
 
 If they ask “which is better?”: they are not on the same task, so there is no ranking.
 
+## Why these models? Why these datasets?
+
+Memorise this as **target → task → model → data**.
+
+The target column picks the model. A dollar amount is regression. A yes/no flag is classification. We then took one Kaggle table that actually has that kind of target.
+
+### Why Linear Regression
+
+- FoML asks you to implement **linear** regression: \(\hat{y}=w_0+w_1x_1+\cdots\), minimise MSE, talk about errors and correlation.
+- That formula outputs a **number**, so the target must be continuous.
+- Weights are interpretable in dollars. That is the point of OLS for a viva, not “it scored higher than a tree.”
+
+### Why the insurance dataset
+
+- `charges` **is** that number (yearly medical bill).
+- Kaggle, 1338 rows, **no missing values**, features a first-year student can explain (age, BMI, smoker).
+- Smoker is a huge, clean signal — easy to point at on the coefficient list.
+- Real-world domain (healthcare billing), which is what the course means by applying ML.
+
+We did **not** put Linear Regression on Titanic: `Survived` is a class, not a bill. Predicting 0.37 is not “survived.”
+
+### Why a Decision Tree classifier
+
+- FoML lists decision trees as the **non-parametric** method: splits, Gini/entropy, a class at each leaf.
+- A classifier is the matching model when the target is a label.
+- Trees capture “if female **and** 1st class” without us multiplying features by hand. That is why they are used on survival / diagnosis / loan-approve problems.
+- Confusion matrix / precision / recall only belong on a classification experiment.
+
+### Why the Titanic dataset
+
+- `Survived` **is** that label (0/1).
+- Kaggle, famous, 891 rows, story everyone already knows (women and 1st class survive more).
+- The drawn tree’s first split is **sex** — examiners recognise it immediately.
+- Missing age/embarked is a small, honest preprocessing step (median / mode, train only).
+
+We did **not** put a classification tree on insurance: `charges` is not a class. We also did not reuse insurance with a regression tree, because that would be two regressors on one table (a comparison), which this lab is not.
+
+### One sentence if they only let you say one
+
+> Insurance bills are continuous so I used Linear Regression; Titanic survival is a yes/no label so I used a Decision Tree classifier. Each Kaggle set was chosen because it has that kind of target, is small enough for Colab, and is easy to explain.
+
 ## 20-second pitch A — Linear Regression
 
 > Kaggle medical insurance dataset, 1338 people, predict `charges`.  

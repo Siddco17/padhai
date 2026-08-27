@@ -26,7 +26,7 @@ def code(source: str):
 
 
 md(
-    """
+    r"""
 # FoML Lab — Linear Regression **and** Decision Tree
 
 **Course:** CSL2XX Fundamentals of Machine Learning (Lab)  
@@ -43,6 +43,47 @@ Two **separate** experiments. Different Kaggle datasets, different sklearn model
 | Metrics | MAE, RMSE, R² | Accuracy, precision, recall, confusion matrix |
 
 Linear Regression predicts a **number**. A classification tree predicts a **class**. Mixing those metrics (or ranking the two models) would be the wrong lab.
+
+## Why these models, and why these datasets?
+
+The **target column** decides the model. We did not pick a favourite algorithm and then force a table onto it.
+
+| If the target is… | The job is… | Matching model in this lab |
+|-------------------|-------------|----------------------------|
+| a real number (`charges` in dollars) | **regression** | `LinearRegression` |
+| a label (`Survived` yes/no) | **classification** | `DecisionTreeClassifier` |
+
+**Why Linear Regression (not a tree) for insurance**
+
+- The syllabus unit is *linear* regression: a weighted sum \(\hat{y}=w_0+w_1x_1+\cdots\), fitted by least squares.
+- Insurance `charges` is a bill — continuous, in USD — so that formula is the right kind of output.
+- Coefficients have a meaning you can say in viva: “a smoker is billed about $23.6k more, holding other features fixed.” A class label would not give that.
+- The table is small, complete (no nulls), and mixes numbers + categories, so we can show encoding without a huge pipeline.
+
+**Why this insurance dataset (Kaggle)**
+
+- Public, well-known, 1338 rows — runs in seconds on Colab.
+- Features (age, BMI, smoker) are things a person can explain without domain research.
+- It is a real billing problem, which matches the course outcome “apply ML across domains.”
+
+**Why a Decision Tree *classifier* (not Linear Regression) for Titanic**
+
+- `Survived` is 0 or 1, not a quantity. Linear Regression would output 0.37 or 1.4; that is not a class. The right family is classification.
+- Decision trees are the syllabus *non-parametric* method: yes/no questions, majority class at a leaf, Gini impurity.
+- Survival depends on **interactions** (woman *and* 1st class). A tree’s second split can sit under “female”; that is the natural picture, and we can draw it.
+- Lab metrics for classification are accuracy, precision, recall, confusion matrix — those only make sense here, not on `charges`.
+
+**Why this Titanic dataset (Kaggle)**
+
+- Standard classification table; 891 passengers; target is obvious.
+- Sex / class / age are the story every examiner already understands, so the tree is viva-friendly.
+- A few missing `Age`/`Embarked` values let us show train-only imputation — a real preprocessing step, not fake complexity.
+
+**What we deliberately did not do**
+
+- Same dataset for both models — that would turn the lab into a bake-off. The assignment is to *apply* each algorithm, not to rank them.
+- Linear Regression on Titanic — wrong output type.
+- A regression tree on insurance — that would be a second regressor on the same task, not a decision-tree *classifier*.
 """
 )
 
