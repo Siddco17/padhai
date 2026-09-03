@@ -103,3 +103,7 @@ Files stay local (gitignored). This log is what gets committed.
 | 2026-08-31 06:22 | `_unsorted` | `sem3/_inbox/unsorted/20260831T062226Z_f195ff79_Assignment_Differential_Equations_MAL_102.pdf` | Students Official |  |
 | 2026-08-31 06:22 | `02-dchd` | `sem3/02-dchd/resources/20260831T061738Z_fbb77dbc_image.jpg` | ECLA 201 DCHD |  |
 | 2026-08-31 06:22 | `05-acd` | `sem3/05-acd/resources/20260831T061717Z_fd6a4b35_image.jpg` | Students Official | ACD pratice questions for now pratice till the 30th question only |
+| 2026-09-03 05:06 | `05-acd` | `sem3/05-acd/resources/20260903T050615Z_29bab7f5_ACD SYLLABUS.pdf` | SECTION A-Official | <p><em>↷ Forwarded</em></p> |
+| 2026-09-03 05:06 | `06-mni-lab` | `sem3/06-mni-lab/resources/20260903T050615Z_52c75f33_20260810T192654Z_MNI lab journal.pdf` | Dhruti (ECE) | do we have to do this one? |
+| 2026-09-03 05:06 | `_unsorted` | `sem3/_inbox/unsorted/20260903T050615Z_9629ba6f_Adobe Scan 01 Sept 2026.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-09-03 05:06 | `_unsorted` | `sem3/_inbox/unsorted/20260903T050623Z_d9c85acc_13. PMMC.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
