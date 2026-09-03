@@ -336,11 +336,16 @@ def cmd_scan(args: argparse.Namespace) -> None:
 
     state = load_state()
     titles: dict[str, str] = {}
-    since = datetime.now(timezone.utc) - timedelta(hours=args.hours)
+    if args.all:
+        since = datetime(2020, 1, 1, tzinfo=timezone.utc)
+        window = "all history"
+    else:
+        since = datetime.now(timezone.utc) - timedelta(hours=args.hours)
+        window = f"last {args.hours}h"
     queued = 0
     seen_msg_ids: set[str] = set()
 
-    print(f"scanning WhatsApp media since {since.isoformat()} ({args.hours}h)…")
+    print(f"scanning WhatsApp media since {since.isoformat()} ({window})…")
 
     messages: list[Any] = []
     try:
@@ -396,7 +401,7 @@ def cmd_scan(args: argparse.Namespace) -> None:
         title = resolve_chat_title(c, chat_id, titles)
         queued += process_message(c, chat_id, title, msg, state)
 
-    print(f"scan done — queued {queued} new file(s) in last {args.hours}h")
+    print(f"scan done — queued {queued} new file(s) ({window})")
 
 
 def cmd_watch(_: argparse.Namespace) -> None:
@@ -675,6 +680,11 @@ FILENAME_COURSE = (
     ("regression analysis", "07-fundamentals-of-ml"),
     ("emf-t", "04-emft"),
     ("acd formulas", "05-acd"),
+    ("acd syllabus", "05-acd"),
+    ("unit-2", "06-mni"),
+    ("pmmc", "06-mni"),
+    ("ml_notes", "07-fundamentals-of-ml"),
+    ("ml notes", "07-fundamentals-of-ml"),
 )
 
 
@@ -710,7 +720,13 @@ def auto_decide(item: dict[str, Any]) -> tuple[str, str | None]:
         for k in (
             "batch 2",
             "students official",
+            "section a-official",
+            "section a",
             "vnit ece",
+            "official ece",
+            "ece unoff",
+            "ecla 201",
+            "ece foml",
             "mni",
             "acd",
             "shoumik ece",
@@ -834,6 +850,11 @@ def main() -> None:
 
     p_scan = sub.add_parser("scan", help="Backfill recent WhatsApp PDFs/photos into approval queue")
     p_scan.add_argument("--hours", type=int, default=48, help="Look back window (default 48)")
+    p_scan.add_argument(
+        "--all",
+        action="store_true",
+        help="Scan entire WhatsApp history (walks all chats; slow)",
+    )
     p_scan.set_defaults(func=cmd_scan)
 
     sub.add_parser("watch", help="Live-watch WhatsApp for new PDFs/photos").set_defaults(func=cmd_watch)

@@ -18,6 +18,84 @@
   "files": {
     "01-linear-algebra": [
       {
+        "name": "classmate/NOTES/Concept of Matrix Inverse.pdf",
+        "id": "1GAqY6DRnqytIc5_aqk3uoHkJ_Ua5Ql8p",
+        "size": 209999,
+        "url": "https://drive.google.com/file/d/1GAqY6DRnqytIc5_aqk3uoHkJ_Ua5Ql8p/view"
+      },
+      {
+        "name": "classmate/NOTES/Elimination using Matrices.pdf",
+        "id": "1NVdbVOTnW3SQLbymSDWeRsQHWxbXxg73",
+        "size": 264308,
+        "url": "https://drive.google.com/file/d/1NVdbVOTnW3SQLbymSDWeRsQHWxbXxg73/view"
+      },
+      {
+        "name": "classmate/NOTES/Gaussian Elimination.pdf",
+        "id": "19gGawa1PID5mfhmtjBj3tyXHPXmtMBoI",
+        "size": 199234,
+        "url": "https://drive.google.com/file/d/19gGawa1PID5mfhmtjBj3tyXHPXmtMBoI/view"
+      },
+      {
+        "name": "classmate/NOTES/Practice Problem set 1.pdf",
+        "id": "1ws8QvdLV8o_yK-VIDPJg9IUpzqLvInpS",
+        "size": 213009,
+        "url": "https://drive.google.com/file/d/1ws8QvdLV8o_yK-VIDPJg9IUpzqLvInpS/view"
+      },
+      {
+        "name": "classmate/NOTES/Practice set 2.pdf",
+        "id": "1Vo5X6S9YiQuHbuRBvED5SUE8VL4ggRjS",
+        "size": 304496,
+        "url": "https://drive.google.com/file/d/1Vo5X6S9YiQuHbuRBvED5SUE8VL4ggRjS/view"
+      },
+      {
+        "name": "classmate/NOTES/Rank Linear Mapping.pdf",
+        "id": "1tXH2wOKIien8Yd6CKQbfkefjBeB0eyKn",
+        "size": 329505,
+        "url": "https://drive.google.com/file/d/1tXH2wOKIien8Yd6CKQbfkefjBeB0eyKn/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/LA (BEFORE MID).pdf",
+        "id": "1aqYVrpS55lgK55ONMddodtVqXqAAfeZe",
+        "size": 5582010,
+        "url": "https://drive.google.com/file/d/1aqYVrpS55lgK55ONMddodtVqXqAAfeZe/view"
+      },
+      {
+        "name": "classmate/NOTES/Solution Structure.pdf",
+        "id": "1Fh3D21nqCh2XFq6HEgtYPPiYGvJX2KSM",
+        "size": 206598,
+        "url": "https://drive.google.com/file/d/1Fh3D21nqCh2XFq6HEgtYPPiYGvJX2KSM/view"
+      },
+      {
+        "name": "classmate/NOTES/Span Independence and Basis.pdf",
+        "id": "14mAsAjL80V0vdsnNqunRE1l7pni2QCTJ",
+        "size": 248015,
+        "url": "https://drive.google.com/file/d/14mAsAjL80V0vdsnNqunRE1l7pni2QCTJ/view"
+      },
+      {
+        "name": "classmate/NOTES/Systems of Linear Equations.pdf",
+        "id": "1zd_KEQcInxExbLkvEReHyxHO0chTe16c",
+        "size": 241047,
+        "url": "https://drive.google.com/file/d/1zd_KEQcInxExbLkvEReHyxHO0chTe16c/view"
+      },
+      {
+        "name": "classmate/NOTES/Understanding Vectors.pdf",
+        "id": "1fsgxxpSFg4WYs1MjsEkNHqkRiKgW6kkI",
+        "size": 241916,
+        "url": "https://drive.google.com/file/d/1fsgxxpSFg4WYs1MjsEkNHqkRiKgW6kkI/view"
+      },
+      {
+        "name": "classmate/NOTES/Vector Spaces.pdf",
+        "id": "1dP-7qujdL2F87Qv7ISMEg-Xoozqx0p_h",
+        "size": 259045,
+        "url": "https://drive.google.com/file/d/1dP-7qujdL2F87Qv7ISMEg-Xoozqx0p_h/view"
+      },
+      {
+        "name": "classmate/RESOURCES/Gilbert_Strang_Linear_Algebra_and_Its_Applicatio_.pdf",
+        "id": "183kcGQ2WeIeJcmdyS53YH1VEAija2QTR",
+        "size": 5320731,
+        "url": "https://drive.google.com/file/d/183kcGQ2WeIeJcmdyS53YH1VEAija2QTR/view"
+      },
+      {
         "name": "Gilbert_Strang_Linear_Algebra_and_Its_Applicatio_230928_225121.pdf",
         "id": "1NwlrkK9xedsgi30BePcNpKgXa-G-fUK_",
         "size": 5313691,
@@ -44,10 +122,100 @@
         "url": "https://drive.google.com/file/d/1bwjxXcq9on9NgCGSkFp8PTOv1Y0QcHPd/view"
       },
       {
+        "name": "20260821_tutorial_submission_format.jpg",
+        "id": "1FCDf2poa9NGWURR8J3DVXmqjOQfLu7F8",
+        "size": 208839,
+        "url": "https://drive.google.com/file/d/1FCDf2poa9NGWURR8J3DVXmqjOQfLu7F8/view"
+      },
+      {
+        "name": "20260824T155420Z_Tutorial 2 DCHD.pdf",
+        "id": "1sqtSXIhe5TobD49lkBIAd7GnPo7K-abp",
+        "size": 576742,
+        "url": "https://drive.google.com/file/d/1sqtSXIhe5TobD49lkBIAd7GnPo7K-abp/view"
+      },
+      {
+        "name": "20260831T061738Z_fbb77dbc_image.jpg",
+        "id": "1CEkHGglyLEKNij5oLVm6p5NJgWm2ZGr2",
+        "size": 208839,
+        "url": "https://drive.google.com/file/d/1CEkHGglyLEKNij5oLVm6p5NJgWm2ZGr2/view"
+      },
+      {
+        "name": "20260831T062133Z_63c16e22_Tutorial 3 DCHD.pdf",
+        "id": "1aoM8DYS52sUTH4UOBW8tR98zOQ1lsjty",
+        "size": 524553,
+        "url": "https://drive.google.com/file/d/1aoM8DYS52sUTH4UOBW8tR98zOQ1lsjty/view"
+      },
+      {
+        "name": "20260831T062146Z_270ea78d_Tutorial_Submission_format.pdf",
+        "id": "1-mtf8dKtSu69Bzn03kDxCuzC60SPiuY0",
+        "size": 258716,
+        "url": "https://drive.google.com/file/d/1-mtf8dKtSu69Bzn03kDxCuzC60SPiuY0/view"
+      },
+      {
+        "name": "20260831T062202Z_e845afd2_Tutorial 2 DCHD (5).pdf",
+        "id": "1ZS6Y8YeL3mLnWz2_GRWuLDNEGVTcKO_y",
+        "size": 576742,
+        "url": "https://drive.google.com/file/d/1ZS6Y8YeL3mLnWz2_GRWuLDNEGVTcKO_y/view"
+      },
+      {
+        "name": "classmate/NOTES/8.Digital_Electronicsss.pdf",
+        "id": "1TVS44J0PVZrkY1f7UhGeS8EVaoem4cGT",
+        "size": 13741200,
+        "url": "https://drive.google.com/file/d/1TVS44J0PVZrkY1f7UhGeS8EVaoem4cGT/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/DCHD (BEFORE MID).pdf",
+        "id": "1k6KEkWml_hY3Xr0SnG4VxPRaWRyB1k_v",
+        "size": 17976021,
+        "url": "https://drive.google.com/file/d/1k6KEkWml_hY3Xr0SnG4VxPRaWRyB1k_v/view"
+      },
+      {
+        "name": "classmate/PYQS/DCMP.pdf",
+        "id": "18AMTBK1ITU-xfFM99gc9ndArHSP_isMo",
+        "size": 272570,
+        "url": "https://drive.google.com/file/d/18AMTBK1ITU-xfFM99gc9ndArHSP_isMo/view"
+      },
+      {
+        "name": "classmate/PYQS/MS S24 ECL207.pdf",
+        "id": "12X8vC4icJfvSgxuFBSiUyKKPpr84UkXi",
+        "size": 643641,
+        "url": "https://drive.google.com/file/d/12X8vC4icJfvSgxuFBSiUyKKPpr84UkXi/view"
+      },
+      {
+        "name": "classmate/PYQS/MS S25 ECL207.pdf",
+        "id": "1-ndS7Jodp6QZBrtI2qcVA8bcu8TsDm6E",
+        "size": 361995,
+        "url": "https://drive.google.com/file/d/1-ndS7Jodp6QZBrtI2qcVA8bcu8TsDm6E/view"
+      },
+      {
+        "name": "classmate/RESOURCES/digital circuits.pdf",
+        "id": "1yrB90mnlL-68PmcaWlvwzgzFhMrYTWjv",
+        "size": 3135536,
+        "url": "https://drive.google.com/file/d/1yrB90mnlL-68PmcaWlvwzgzFhMrYTWjv/view"
+      },
+      {
+        "name": "classmate/RESOURCES/Digital Design 5th Edition - M Morris Mano and Michael D Ciletti-1.pdf",
+        "id": "1uq7IVr2RCCLWiZGwqqEmYKSkwo2Ftpyu",
+        "size": 3135536,
+        "url": "https://drive.google.com/file/d/1uq7IVr2RCCLWiZGwqqEmYKSkwo2Ftpyu/view"
+      },
+      {
+        "name": "classmate/RESOURCES/Digital-Circuits and Number Theory.pdf",
+        "id": "1kWmXtl0xuOPnz63AJA2RQwT2ADre5nL1",
+        "size": 5664751,
+        "url": "https://drive.google.com/file/d/1kWmXtl0xuOPnz63AJA2RQwT2ADre5nL1/view"
+      },
+      {
         "name": "Kohavi_Jha_Switching_and_Finite_Automata_Theory.pdf",
         "id": "1kzdEpeweFJgCyYigOFK_AhWV4_xpYX5X",
         "size": 7777694,
         "url": "https://drive.google.com/file/d/1kzdEpeweFJgCyYigOFK_AhWV4_xpYX5X/view"
+      },
+      {
+        "name": "Mano_Ciletti_Digital_Design_5e.pdf",
+        "id": "14LS87I_LGzR9laZsJK0RlPQ0sTnkDxx4",
+        "size": 3135536,
+        "url": "https://drive.google.com/file/d/14LS87I_LGzR9laZsJK0RlPQ0sTnkDxx4/view"
       },
       {
         "name": "Morris_Mano_Digital_Design.pdf",
@@ -65,6 +233,120 @@
       }
     ],
     "03-sns": [
+      {
+        "name": "20260831T062103Z_55fedb0f_Alan V. Oppenheim_ Alan S. Willsky_ with S. Hamid-Signals and Systems-Prentice Hall (1996).pdf",
+        "id": "10JM7DGQOho8-cn4_p2ve4d07CzcCe_f-",
+        "size": 35621763,
+        "url": "https://drive.google.com/file/d/10JM7DGQOho8-cn4_p2ve4d07CzcCe_f-/view"
+      },
+      {
+        "name": "20260831T062106Z_92314064_SNS_midsem_W24_solutions_new (1).pdf",
+        "id": "1QYEM6nfQXNCCtKYDbxsBzh8kgVPLKnkL",
+        "size": 764729,
+        "url": "https://drive.google.com/file/d/1QYEM6nfQXNCCtKYDbxsBzh8kgVPLKnkL/view"
+      },
+      {
+        "name": "20260831T062107Z_38699eb4_Signals and systems pyqs (1).pdf",
+        "id": "1y8768zkQtSszYnPSpN4NiCPrFrLewOsc",
+        "size": 1093109,
+        "url": "https://drive.google.com/file/d/1y8768zkQtSszYnPSpN4NiCPrFrLewOsc/view"
+      },
+      {
+        "name": "20260831T062108Z_9a81394e_signals and systems 2.pdf",
+        "id": "19nDmox2y2AccLqWyFELRXtkmiTjONZTz",
+        "size": 687755,
+        "url": "https://drive.google.com/file/d/19nDmox2y2AccLqWyFELRXtkmiTjONZTz/view"
+      },
+      {
+        "name": "20260831T062109Z_917c379d_Signals and systems 4.pdf",
+        "id": "1ijl_c5U2koVmxQX-oQK8Jq-bcISBDpI_",
+        "size": 703527,
+        "url": "https://drive.google.com/file/d/1ijl_c5U2koVmxQX-oQK8Jq-bcISBDpI_/view"
+      },
+      {
+        "name": "20260831T062110Z_0a9f70ce_Signals and systems 3.pdf",
+        "id": "1TWu7HuP0R4fmZSDG0anWhEQ56kcDNfFf",
+        "size": 500229,
+        "url": "https://drive.google.com/file/d/1TWu7HuP0R4fmZSDG0anWhEQ56kcDNfFf/view"
+      },
+      {
+        "name": "20260831T062111Z_3a33c3d5_signals and systems 5.pdf",
+        "id": "1piEP74G9Cp0Orsm9kIA9wjZnGTssWwsK",
+        "size": 569239,
+        "url": "https://drive.google.com/file/d/1piEP74G9Cp0Orsm9kIA9wjZnGTssWwsK/view"
+      },
+      {
+        "name": "20260831T062112Z_3f691900_Signals and systems pyqs (1).pdf",
+        "id": "1v5MiMh0rPbXf8AQhogsmtTMj0MK_FISl",
+        "size": 1093109,
+        "url": "https://drive.google.com/file/d/1v5MiMh0rPbXf8AQhogsmtTMj0MK_FISl/view"
+      },
+      {
+        "name": "20260831T062112Z_6c594515_SNS Sec A midsem.pdf",
+        "id": "1_P0TNB2gZ445VpR3MgsMIk3fE94J-Y7a",
+        "size": 33282013,
+        "url": "https://drive.google.com/file/d/1_P0TNB2gZ445VpR3MgsMIk3fE94J-Y7a/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/SNS Sec A midsem.pdf",
+        "id": "1_b0SrRgYIAVgYMgLBzSwYl3qNd66YTu2",
+        "size": 33282013,
+        "url": "https://drive.google.com/file/d/1_b0SrRgYIAVgYMgLBzSwYl3qNd66YTu2/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/SNS SEC A-1 (MID).pdf",
+        "id": "1eC1a-NMW_Csd3KBw45jbjF_ThvQVfFED",
+        "size": 10415908,
+        "url": "https://drive.google.com/file/d/1eC1a-NMW_Csd3KBw45jbjF_ThvQVfFED/view"
+      },
+      {
+        "name": "classmate/NOTES/signals and systems 2.pdf",
+        "id": "1OLsC_hXjuHHGJJnFaQXeguulIQ5dEAxA",
+        "size": 687755,
+        "url": "https://drive.google.com/file/d/1OLsC_hXjuHHGJJnFaQXeguulIQ5dEAxA/view"
+      },
+      {
+        "name": "classmate/NOTES/Signals and systems 3.pdf",
+        "id": "1VcHALkfq4cBCfJlmKvAfA46PPUkQHpF2",
+        "size": 500229,
+        "url": "https://drive.google.com/file/d/1VcHALkfq4cBCfJlmKvAfA46PPUkQHpF2/view"
+      },
+      {
+        "name": "classmate/NOTES/Signals and systems 4.pdf",
+        "id": "1YNRMrPELQUXgIjwHVyrCQydQXaPtrlQl",
+        "size": 703527,
+        "url": "https://drive.google.com/file/d/1YNRMrPELQUXgIjwHVyrCQydQXaPtrlQl/view"
+      },
+      {
+        "name": "classmate/NOTES/signals and systems 5.pdf",
+        "id": "1Wt6DX8rjsfLirzNJIQmqVxNFLQ2xal0N",
+        "size": 569239,
+        "url": "https://drive.google.com/file/d/1Wt6DX8rjsfLirzNJIQmqVxNFLQ2xal0N/view"
+      },
+      {
+        "name": "classmate/PYQS/Signals and systems pyqs (1).pdf",
+        "id": "181jXCX4R7_HHCYDcSvgnq-OONu8DlT_H",
+        "size": 1093109,
+        "url": "https://drive.google.com/file/d/181jXCX4R7_HHCYDcSvgnq-OONu8DlT_H/view"
+      },
+      {
+        "name": "classmate/PYQS/SNS (1).pdf",
+        "id": "1BZ1R1EwF6A2g5eefSXC5yjlJ6s8iJ5QD",
+        "size": 878183,
+        "url": "https://drive.google.com/file/d/1BZ1R1EwF6A2g5eefSXC5yjlJ6s8iJ5QD/view"
+      },
+      {
+        "name": "classmate/PYQS/SNS_midsem_W24_solutions_new (1).pdf",
+        "id": "1tYnkPLk4x_MKD6wIZvmoyONLSnyMQdGV",
+        "size": 764729,
+        "url": "https://drive.google.com/file/d/1tYnkPLk4x_MKD6wIZvmoyONLSnyMQdGV/view"
+      },
+      {
+        "name": "classmate/RESOURCES/SNS-Oppenhiem.pdf",
+        "id": "1MyjMfTNcyc2Fnb5Mx19Ed7vXzlUxjV_h",
+        "size": 35621763,
+        "url": "https://drive.google.com/file/d/1MyjMfTNcyc2Fnb5Mx19Ed7vXzlUxjV_h/view"
+      },
       {
         "name": "Oppenheim SNS.pdf",
         "id": "1TdpCsPcQeT1FkncaZWhbc1TwPa89T7zI",
@@ -225,6 +507,54 @@
         "url": "https://drive.google.com/file/d/1LHVWKWSwyyT4irkMdv98Qo7MIBROkJb7/view"
       },
       {
+        "name": "classmate/NOTES/EMF FINAL.pdf",
+        "id": "1Jdt-A4K-po6GNGXkfJk2CMR37QEZMjm4",
+        "size": 71312669,
+        "url": "https://drive.google.com/file/d/1Jdt-A4K-po6GNGXkfJk2CMR37QEZMjm4/view"
+      },
+      {
+        "name": "classmate/NOTES/EMFT Neeraj Sir Notes.pdf",
+        "id": "1S7tiIAcALw1Ow4F7V4f9Ta3pGvvaHf_N",
+        "size": 26198420,
+        "url": "https://drive.google.com/file/d/1S7tiIAcALw1Ow4F7V4f9Ta3pGvvaHf_N/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION B/EMFT (BEFORE MID).pdf",
+        "id": "1ZD27HRVi9_KDeexzZPMDWn3I42c187il",
+        "size": 7926993,
+        "url": "https://drive.google.com/file/d/1ZD27HRVi9_KDeexzZPMDWn3I42c187il/view"
+      },
+      {
+        "name": "classmate/PYQS/EMFT Question Paper.pdf",
+        "id": "1K8BDd_vJBNQbbjjID3sQB-Y-vqe2mY2s",
+        "size": 680013,
+        "url": "https://drive.google.com/file/d/1K8BDd_vJBNQbbjjID3sQB-Y-vqe2mY2s/view"
+      },
+      {
+        "name": "classmate/PYQS/EMFT.pdf",
+        "id": "1ZZe2OGlxI7REoCTOOUq8HnZ44Rw4pc_5",
+        "size": 826465,
+        "url": "https://drive.google.com/file/d/1ZZe2OGlxI7REoCTOOUq8HnZ44Rw4pc_5/view"
+      },
+      {
+        "name": "classmate/RESOURCES/Sadiku Solutions.pdf",
+        "id": "18QFD8JQ419CxHhUN2ZTf_ma7hkRja-_1",
+        "size": 19567927,
+        "url": "https://drive.google.com/file/d/18QFD8JQ419CxHhUN2ZTf_ma7hkRja-_1/view"
+      },
+      {
+        "name": "classmate/RESOURCES/Sadiku.pdf",
+        "id": "1FzVuM5fop4OUBUok6CJUG2knMNLy-2dC",
+        "size": 40010839,
+        "url": "https://drive.google.com/file/d/1FzVuM5fop4OUBUok6CJUG2knMNLy-2dC/view"
+      },
+      {
+        "name": "classmate/RESOURCES/Schaum electromagnetism.pdf",
+        "id": "1LFl9mQRypb2v1px3XwDhQGv6arwKucWD",
+        "size": 31368089,
+        "url": "https://drive.google.com/file/d/1LFl9mQRypb2v1px3XwDhQGv6arwKucWD/view"
+      },
+      {
         "name": "Sadiku_Elements_of_Electromagnetics.pdf",
         "id": "1EYhoayPlTld7snZ0LeQtJMR2rupFPl8_",
         "size": 39758789,
@@ -257,10 +587,112 @@
         "url": "https://drive.google.com/file/d/1Kteryw4v9pEUEcpwQmn82BfG7t2Sv_Ht/view"
       },
       {
+        "name": "20260831T061717Z_fd6a4b35_image.jpg",
+        "id": "1_FrDND-l7DCWJwjdC1IZl3Z9F6Z3vN7O",
+        "size": 94425,
+        "url": "https://drive.google.com/file/d/1_FrDND-l7DCWJwjdC1IZl3Z9F6Z3vN7O/view"
+      },
+      {
+        "name": "20260831T062128Z_9771d954_OPAMP (2).pdf",
+        "id": "1AzvYCD9VwpfQFFnJn2HKJRmDQ6PSLmf1",
+        "size": 241460,
+        "url": "https://drive.google.com/file/d/1AzvYCD9VwpfQFFnJn2HKJRmDQ6PSLmf1/view"
+      },
+      {
+        "name": "20260903T050615Z_29bab7f5_ACD SYLLABUS.pdf",
+        "id": "1QTP6QXYPmflWMEXDrn_ZHzuJ9eTG10ZU",
+        "size": 1159970,
+        "url": "https://drive.google.com/file/d/1QTP6QXYPmflWMEXDrn_ZHzuJ9eTG10ZU/view"
+      },
+      {
+        "name": "ACD_GATE_opamp_practice_01Sep2026.pdf",
+        "id": "12IfWGFZa10cvr0FqrJRXukkj5GlYIyBI",
+        "size": 1005918,
+        "url": "https://drive.google.com/file/d/12IfWGFZa10cvr0FqrJRXukkj5GlYIyBI/view"
+      },
+      {
         "name": "ACD_notes_24258.pdf",
         "id": "1nnv3eXW_IzGhuzmCuLl6WXDByrwL1iBX",
         "size": 343861,
         "url": "https://drive.google.com/file/d/1nnv3eXW_IzGhuzmCuLl6WXDByrwL1iBX/view"
+      },
+      {
+        "name": "ACD_SYLLABUS_midsem.pdf",
+        "id": "1b8k6h3wl9RLY9Vy6j7oL3SvFeesda2WS",
+        "size": 1159970,
+        "url": "https://drive.google.com/file/d/1b8k6h3wl9RLY9Vy6j7oL3SvFeesda2WS/view"
+      },
+      {
+        "name": "classmate/ACD_SYLLABUS.pdf",
+        "id": "13Xhs5tSI9_Rum3r3s-iSfuQTYjM77XYo",
+        "size": 1159970,
+        "url": "https://drive.google.com/file/d/13Xhs5tSI9_Rum3r3s-iSfuQTYjM77XYo/view"
+      },
+      {
+        "name": "classmate/NOTES/ACD Assignment 1.pdf",
+        "id": "1mR2u-GIV_KGFJgyHTn0AobLxslOxA5FI",
+        "size": 408838,
+        "url": "https://drive.google.com/file/d/1mR2u-GIV_KGFJgyHTn0AobLxslOxA5FI/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/ACD (1).pdf",
+        "id": "1r8crzuK2lTJw6f14-W0skSP7WYvjNlY5",
+        "size": 12122266,
+        "url": "https://drive.google.com/file/d/1r8crzuK2lTJw6f14-W0skSP7WYvjNlY5/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION B/ACD NOTES.pdf",
+        "id": "17iIdAQ_STqQtBU2fcY4z3f1eOkMWgLxQ",
+        "size": 23167068,
+        "url": "https://drive.google.com/file/d/17iIdAQ_STqQtBU2fcY4z3f1eOkMWgLxQ/view"
+      },
+      {
+        "name": "classmate/PYQS/ACD 24.pdf",
+        "id": "1gpP45GJr_Ba3DSDCBN2ADHkgRy1fJTsv",
+        "size": 1993179,
+        "url": "https://drive.google.com/file/d/1gpP45GJr_Ba3DSDCBN2ADHkgRy1fJTsv/view"
+      },
+      {
+        "name": "classmate/PYQS/ACD.pdf",
+        "id": "1oImLmrbVx7N8JeVPrYqBQx4ll9E94Qo1",
+        "size": 811669,
+        "url": "https://drive.google.com/file/d/1oImLmrbVx7N8JeVPrYqBQx4ll9E94Qo1/view"
+      },
+      {
+        "name": "classmate/PYQS/ACD_2021_EndSem_Exam.pdf",
+        "id": "1UjGgYfUXXraPMmw1uiKcqNvnFoUj3woK",
+        "size": 520851,
+        "url": "https://drive.google.com/file/d/1UjGgYfUXXraPMmw1uiKcqNvnFoUj3woK/view"
+      },
+      {
+        "name": "classmate/PYQS/ecl308_Mid_sem2022  - DR. MRS. PRADNYA H GHARE.pdf",
+        "id": "1geiYL_GT9Ma4p7czhAudMnxzF0iBgdg-",
+        "size": 854358,
+        "url": "https://drive.google.com/file/d/1geiYL_GT9Ma4p7czhAudMnxzF0iBgdg-/view"
+      },
+      {
+        "name": "classmate/RESOURCES/Analog-Circuit-EC-405-UNIT-II.pdf",
+        "id": "1WQUN5jozRiLWSBJpNGZyoQexeMOFIxYF",
+        "size": 962544,
+        "url": "https://drive.google.com/file/d/1WQUN5jozRiLWSBJpNGZyoQexeMOFIxYF/view"
+      },
+      {
+        "name": "classmate/RESOURCES/Linear integrated circuits (1).pdf",
+        "id": "1t7vtw98JBzn_h5vxG1usiFcCSZNmbU0p",
+        "size": 9438383,
+        "url": "https://drive.google.com/file/d/1t7vtw98JBzn_h5vxG1usiFcCSZNmbU0p/view"
+      },
+      {
+        "name": "classmate/RESOURCES/OperationalAmplifiersAndLinearICs_3E.pdf",
+        "id": "1ZiHdEy_WoVdr4BK0cRft76uR1NyUdIxF",
+        "size": 13729903,
+        "url": "https://drive.google.com/file/d/1ZiHdEy_WoVdr4BK0cRft76uR1NyUdIxF/view"
+      },
+      {
+        "name": "classmate/RESOURCES/Sergio Franco.pdf",
+        "id": "1TXpapxQqH8bTIvugbvFeNfhw1VNjlZE2",
+        "size": 5063009,
+        "url": "https://drive.google.com/file/d/1TXpapxQqH8bTIvugbvFeNfhw1VNjlZE2/view"
       },
       {
         "name": "Gaikwad Op Amp.pdf",
@@ -423,6 +855,78 @@
         "url": "https://drive.google.com/file/d/1bgq_0apDQtG55f28ftbHgChjZaRA4gVC/view"
       },
       {
+        "name": "20260831T061823Z_5e0e007a_image.jpg",
+        "id": "15MGJSHFxdmal17NTYxAM-kzCQn4CGAe2",
+        "size": 257899,
+        "url": "https://drive.google.com/file/d/15MGJSHFxdmal17NTYxAM-kzCQn4CGAe2/view"
+      },
+      {
+        "name": "20260831T062040Z_02eaecfe_image.jpg",
+        "id": "10n4_5vL9MTFmA3zRmmggr5q3iAm06hn_",
+        "size": 208372,
+        "url": "https://drive.google.com/file/d/10n4_5vL9MTFmA3zRmmggr5q3iAm06hn_/view"
+      },
+      {
+        "name": "20260831T062127Z_9a9a64a1_4. Bridge and Loading Effect.pdf",
+        "id": "16i4aLkKi5SvpgkC3WkJ3coAEFeTikt0k",
+        "size": 1022883,
+        "url": "https://drive.google.com/file/d/16i4aLkKi5SvpgkC3WkJ3coAEFeTikt0k/view"
+      },
+      {
+        "name": "20260831T062129Z_38ad7f51_p45-4-5.pdf",
+        "id": "1LNgLa7AtlBe6w663_UtU8GwLDm8R2Zcv",
+        "size": 117339,
+        "url": "https://drive.google.com/file/d/1LNgLa7AtlBe6w663_UtU8GwLDm8R2Zcv/view"
+      },
+      {
+        "name": "20260831T062130Z_b758a8b7_1.Static Characteristics_1.pdf",
+        "id": "1e_UsD9NGeJBO9E4p11aSFEpxGOo1mN4S",
+        "size": 303515,
+        "url": "https://drive.google.com/file/d/1e_UsD9NGeJBO9E4p11aSFEpxGOo1mN4S/view"
+      },
+      {
+        "name": "20260831T062131Z_a9869d91_2.Static Characteristics_2.pdf",
+        "id": "1RRKgOfDlEb3vzLrsQj0lmxIja91a7or1",
+        "size": 298907,
+        "url": "https://drive.google.com/file/d/1RRKgOfDlEb3vzLrsQj0lmxIja91a7or1/view"
+      },
+      {
+        "name": "20260831T062159Z_720553ea_14. PMMC_ohmmeter_meter extension.pdf",
+        "id": "1Cyyz6RX2THtbzyS34AvIyKtT1IEtPc5t",
+        "size": 1629411,
+        "url": "https://drive.google.com/file/d/1Cyyz6RX2THtbzyS34AvIyKtT1IEtPc5t/view"
+      },
+      {
+        "name": "20260831T062200Z_16f80cb3_5.limiting error.pdf",
+        "id": "1EXfh3L4f0N5GT70RTFPk9ZfK3mgz8WIw",
+        "size": 830212,
+        "url": "https://drive.google.com/file/d/1EXfh3L4f0N5GT70RTFPk9ZfK3mgz8WIw/view"
+      },
+      {
+        "name": "20260831T062200Z_4618c66e_limiting errors-2-16.pdf",
+        "id": "1i87mC21E3qtWjWhPFNdMcvBWduLeE6lX",
+        "size": 124051,
+        "url": "https://drive.google.com/file/d/1i87mC21E3qtWjWhPFNdMcvBWduLeE6lX/view"
+      },
+      {
+        "name": "20260831T062203Z_797bbacd_7. Tutorial-1.pdf",
+        "id": "1QnvgTjWAHrY5XOwvrsKmPcdFIL3COTHB",
+        "size": 310747,
+        "url": "https://drive.google.com/file/d/1QnvgTjWAHrY5XOwvrsKmPcdFIL3COTHB/view"
+      },
+      {
+        "name": "20260831T062204Z_eddaf81b_8. Tutorial_appendix1.pdf",
+        "id": "164r9kf4Ylkj4RseU6bWwS6DxWYQSHOZq",
+        "size": 691465,
+        "url": "https://drive.google.com/file/d/164r9kf4Ylkj4RseU6bWwS6DxWYQSHOZq/view"
+      },
+      {
+        "name": "20260903T050623Z_d9c85acc_13. PMMC.pdf",
+        "id": "1C7cqqzUgracbrfgA0fDv-NAhmkCc5dv0",
+        "size": 724819,
+        "url": "https://drive.google.com/file/d/1C7cqqzUgracbrfgA0fDv-NAhmkCc5dv0/view"
+      },
+      {
         "name": "3. Dynamic Charateristics Full.pdf",
         "id": "1aDzChrGmhsvkGYz0SPUi-5_w8n1dQQhQ",
         "size": 2506068,
@@ -451,6 +955,186 @@
         "id": "1EheOazFFgA174YpwlBE43jUsqobQPn6A",
         "size": 4634062,
         "url": "https://drive.google.com/file/d/1EheOazFFgA174YpwlBE43jUsqobQPn6A/view"
+      },
+      {
+        "name": "classmate/NOTES/M and I notes.pdf",
+        "id": "1qBOkQ5RS4wUR9hcgI9JtE1ohiVMqDQOr",
+        "size": 26017360,
+        "url": "https://drive.google.com/file/d/1qBOkQ5RS4wUR9hcgI9JtE1ohiVMqDQOr/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/1.Static Characteristics_1.pdf",
+        "id": "1o5gHrqjzagVi7oG3ZFf9aRVpea18Worq",
+        "size": 303515,
+        "url": "https://drive.google.com/file/d/1o5gHrqjzagVi7oG3ZFf9aRVpea18Worq/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/1000753349.pdf",
+        "id": "1zDFpzqybOWIK70lgxIzN13C24RPNwZEy",
+        "size": 1010392,
+        "url": "https://drive.google.com/file/d/1zDFpzqybOWIK70lgxIzN13C24RPNwZEy/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/13. PMMC.pdf",
+        "id": "176OrBcoHjD_ikV_VSmEHtvKaY7troOvx",
+        "size": 724819,
+        "url": "https://drive.google.com/file/d/176OrBcoHjD_ikV_VSmEHtvKaY7troOvx/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/14. PMMC_ohmmeter_meter extension.pdf",
+        "id": "11L86ISaU7wRWQi3bz4oIqYZ2zkC-iSwQ",
+        "size": 1629411,
+        "url": "https://drive.google.com/file/d/11L86ISaU7wRWQi3bz4oIqYZ2zkC-iSwQ/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/2.Static Characteristics_2.pdf",
+        "id": "1y-km7wVC2XvNY7aeYVCfs00PSEqTt1f2",
+        "size": 298907,
+        "url": "https://drive.google.com/file/d/1y-km7wVC2XvNY7aeYVCfs00PSEqTt1f2/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/4. Bridge and Loading Effect.pdf",
+        "id": "1gzCZvp2IeYcbZVlEJ6aXFePpODQ1OphG",
+        "size": 1022883,
+        "url": "https://drive.google.com/file/d/1gzCZvp2IeYcbZVlEJ6aXFePpODQ1OphG/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/5.limiting error.pdf",
+        "id": "1hcwX_ggZsznaGp4DnZetaEMFq_1lQH3R",
+        "size": 830212,
+        "url": "https://drive.google.com/file/d/1hcwX_ggZsznaGp4DnZetaEMFq_1lQH3R/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/6. Regression Analysis.pdf",
+        "id": "1qYRa9EPBV_5UGE6rOFlRMqd1ncZPPu9_",
+        "size": 997051,
+        "url": "https://drive.google.com/file/d/1qYRa9EPBV_5UGE6rOFlRMqd1ncZPPu9_/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/7. Tutorial-1.pdf",
+        "id": "19cpfS1DKELVv6ADzsEjU6GNglDVHtDgl",
+        "size": 310747,
+        "url": "https://drive.google.com/file/d/19cpfS1DKELVv6ADzsEjU6GNglDVHtDgl/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/8. Tutorial_appendix1.pdf",
+        "id": "12QOM31-T4CNmcfqA1AJa2_3qFcbyymzD",
+        "size": 691465,
+        "url": "https://drive.google.com/file/d/12QOM31-T4CNmcfqA1AJa2_3qFcbyymzD/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/Laplace Transforms_merged.pdf",
+        "id": "1L_NQWfyaZfdgxbU-SBaurX4bz_eBLW80",
+        "size": 657256,
+        "url": "https://drive.google.com/file/d/1L_NQWfyaZfdgxbU-SBaurX4bz_eBLW80/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/limiting errors-2-16.pdf",
+        "id": "1J4YBG46rgDn0ktQhKdPuDRUISk22gMRD",
+        "size": 124051,
+        "url": "https://drive.google.com/file/d/1J4YBG46rgDn0ktQhKdPuDRUISk22gMRD/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/OPAMP (2).pdf",
+        "id": "1TEjatZ_vtCmRsGEB_kGXhZhyFZLxcnJs",
+        "size": 241460,
+        "url": "https://drive.google.com/file/d/1TEjatZ_vtCmRsGEB_kGXhZhyFZLxcnJs/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/p45-4-5.pdf",
+        "id": "1MR-Do1vmjHg3G2RuZz2_C-DGm0mxn3rw",
+        "size": 117339,
+        "url": "https://drive.google.com/file/d/1MR-Do1vmjHg3G2RuZz2_C-DGm0mxn3rw/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/Unit-2.pdf",
+        "id": "1Ddn0gMmUs9TTt5L8e8zdOezQVpzqHjgF",
+        "size": 2444321,
+        "url": "https://drive.google.com/file/d/1Ddn0gMmUs9TTt5L8e8zdOezQVpzqHjgF/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/WhatsApp Image 2026-08-31 at 6.07.27 AM.jpeg",
+        "id": "1Ca2XSocyT6uAREBGzW7TjITQ3TXdSeP9",
+        "size": 169138,
+        "url": "https://drive.google.com/file/d/1Ca2XSocyT6uAREBGzW7TjITQ3TXdSeP9/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/WhatsApp Image 2026-08-31 at 6.07.47 AM (1).jpeg",
+        "id": "1R5egcCK4q9L8dqWy7aB-fUDG6YC1MY4t",
+        "size": 132254,
+        "url": "https://drive.google.com/file/d/1R5egcCK4q9L8dqWy7aB-fUDG6YC1MY4t/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/WhatsApp Image 2026-08-31 at 6.07.47 AM.jpeg",
+        "id": "1lzNhEXF4_YGu124HA88aiQJmYk-TSh60",
+        "size": 163109,
+        "url": "https://drive.google.com/file/d/1lzNhEXF4_YGu124HA88aiQJmYk-TSh60/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/WhatsApp Image 2026-08-31 at 6.07.48 AM (1).jpeg",
+        "id": "19p770aY5ujDk5jhdck4VqA-tRe0Y8z3N",
+        "size": 132254,
+        "url": "https://drive.google.com/file/d/19p770aY5ujDk5jhdck4VqA-tRe0Y8z3N/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/WhatsApp Image 2026-08-31 at 6.07.48 AM (2).jpeg",
+        "id": "1gt-nXnLDrzyfP6IHPnp8TYm6SX6rly7_",
+        "size": 123559,
+        "url": "https://drive.google.com/file/d/1gt-nXnLDrzyfP6IHPnp8TYm6SX6rly7_/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/WhatsApp Image 2026-08-31 at 6.07.48 AM.jpeg",
+        "id": "12B-wO-M26mgK_4R-WzWhSYYrPF4_TmYZ",
+        "size": 123559,
+        "url": "https://drive.google.com/file/d/12B-wO-M26mgK_4R-WzWhSYYrPF4_TmYZ/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/WhatsApp Image 2026-08-31 at 6.07.49 AM.jpeg",
+        "id": "1Y0M_etPriX9AA4SxkLcL0jAp5PK-qOib",
+        "size": 113777,
+        "url": "https://drive.google.com/file/d/1Y0M_etPriX9AA4SxkLcL0jAp5PK-qOib/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/WhatsApp Image 2026-08-31 at 6.07.52 AM (1).jpeg",
+        "id": "1ExvRvPJKV1_JZGDZrChXKLENhaEWkHtJ",
+        "size": 167533,
+        "url": "https://drive.google.com/file/d/1ExvRvPJKV1_JZGDZrChXKLENhaEWkHtJ/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/WhatsApp Image 2026-08-31 at 6.07.52 AM.jpeg",
+        "id": "1kvFB-F4kWXKCYVORtAxV-LO0Oz6WY7pL",
+        "size": 167533,
+        "url": "https://drive.google.com/file/d/1kvFB-F4kWXKCYVORtAxV-LO0Oz6WY7pL/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/WhatsApp Image 2026-08-31 at 6.07.53 AM (1).jpeg",
+        "id": "1ZSS6DXsqNabNoAUpmxTAEP4qSgrGFo5Q",
+        "size": 108462,
+        "url": "https://drive.google.com/file/d/1ZSS6DXsqNabNoAUpmxTAEP4qSgrGFo5Q/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/WhatsApp Image 2026-08-31 at 6.07.53 AM.jpeg",
+        "id": "1l6VZxRnId13tg1t_3KvvSgrLF9MvMixp",
+        "size": 108462,
+        "url": "https://drive.google.com/file/d/1l6VZxRnId13tg1t_3KvvSgrLF9MvMixp/view"
+      },
+      {
+        "name": "classmate/NOTES/SECTION A/WhatsApp Image 2026-08-31 at 6.07.54 AM.jpeg",
+        "id": "1EoAxq3NzCupJSU7bRMSsNUFS6ODRPxtY",
+        "size": 174144,
+        "url": "https://drive.google.com/file/d/1EoAxq3NzCupJSU7bRMSsNUFS6ODRPxtY/view"
+      },
+      {
+        "name": "classmate/PYQS/MI-pyqs.pdf",
+        "id": "1li_D1aAe4tDY2lnz2LgN5ATNCHyWS2CJ",
+        "size": 2319654,
+        "url": "https://drive.google.com/file/d/1li_D1aAe4tDY2lnz2LgN5ATNCHyWS2CJ/view"
+      },
+      {
+        "name": "classmate/RESOURCES/Bentley.pdf",
+        "id": "1pTMNnjF7hbIoYoONlzkCGiCk2Z1F2V0Q",
+        "size": 12751578,
+        "url": "https://drive.google.com/file/d/1pTMNnjF7hbIoYoONlzkCGiCk2Z1F2V0Q/view"
       },
       {
         "name": "DOC-20260804-WA0012..pdf",
@@ -757,7 +1441,7 @@
       {
         "name": "20260810T192654Z_MNI lab journal.pdf",
         "id": "1hqU62h32gkQc7joitpty3Q3av5CJ58kW",
-        "size": 34275541,
+        "size": 36125631,
         "url": "https://drive.google.com/file/d/1hqU62h32gkQc7joitpty3Q3av5CJ58kW/view"
       },
       {
@@ -771,6 +1455,12 @@
         "id": "1q-BBvkghNJFPDkBtYhmmglOFJGMjv-vn",
         "size": 4583504,
         "url": "https://drive.google.com/file/d/1q-BBvkghNJFPDkBtYhmmglOFJGMjv-vn/view"
+      },
+      {
+        "name": "20260903T050615Z_52c75f33_20260810T192654Z_MNI lab journal.pdf",
+        "id": "1QFwne1-UUZqGE9PckIh_1ORz9AAnAUAi",
+        "size": 34275541,
+        "url": "https://drive.google.com/file/d/1QFwne1-UUZqGE9PckIh_1ORz9AAnAUAi/view"
       }
     ],
     "07-fundamentals-of-ml": [
@@ -799,6 +1489,30 @@
         "url": "https://drive.google.com/file/d/15Ex5EyAnyJToG_6gvfqWbVlucRHkATY2/view"
       },
       {
+        "name": "20260831T061735Z_073f1c37_image.jpg",
+        "id": "13XqeFPkUviK5FySS4tDHJAf3PBDdjak7",
+        "size": 124907,
+        "url": "https://drive.google.com/file/d/13XqeFPkUviK5FySS4tDHJAf3PBDdjak7/view"
+      },
+      {
+        "name": "20260831T061735Z_dc99a5a6_image.jpg",
+        "id": "1etCKKpXIMqZCZ0G0LjUjyyv8_QWdaKAn",
+        "size": 221528,
+        "url": "https://drive.google.com/file/d/1etCKKpXIMqZCZ0G0LjUjyyv8_QWdaKAn/view"
+      },
+      {
+        "name": "20260831T062126Z_e16e0eb0_6. Regression Analysis.pdf",
+        "id": "1UJRNTPaYBm1IdW7zEybk2O_FllRGRIZw",
+        "size": 997051,
+        "url": "https://drive.google.com/file/d/1UJRNTPaYBm1IdW7zEybk2O_FllRGRIZw/view"
+      },
+      {
+        "name": "20260831T062203Z_9f2fc776_DecisionTreeRegression.pdf",
+        "id": "1DHLYr-GbGOsBJU53zHrjzkg3f4_ARPm8",
+        "size": 339275,
+        "url": "https://drive.google.com/file/d/1DHLYr-GbGOsBJU53zHrjzkg3f4_ARPm8/view"
+      },
+      {
         "name": "6. Regression Analysis.pdf",
         "id": "1ONsBVQ1Ald7ANrWZVIQBrtZDiGqhMaIv",
         "size": 997051,
@@ -817,10 +1531,22 @@
         "url": "https://drive.google.com/file/d/1j1FtXhSH7Fum3h4ph-9Z8Bep4JVBIBqQ/view"
       },
       {
+        "name": "DecisionTreeRegression.pdf",
+        "id": "1vHlihVd1RYewu_sG2fvDpoEvZ31AoIpm",
+        "size": 339275,
+        "url": "https://drive.google.com/file/d/1vHlihVd1RYewu_sG2fvDpoEvZ31AoIpm/view"
+      },
+      {
         "name": "Deisenroth_Mathematics_for_ML.pdf",
         "id": "1KqIvsoajLWYnf-ZVOCRHn9C7HdBa0Bpu",
         "size": 17565898,
         "url": "https://drive.google.com/file/d/1KqIvsoajLWYnf-ZVOCRHn9C7HdBa0Bpu/view"
+      },
+      {
+        "name": "Logistic_Regression_Notes_with_Examples.pptx",
+        "id": "1wyarxe6_OdwP4Cx1f2KckYHeyePA0OHm",
+        "size": 56297,
+        "url": "https://drive.google.com/file/d/1wyarxe6_OdwP4Cx1f2KckYHeyePA0OHm/view"
       },
       {
         "name": "Mitchell_Machine_Learning.pdf",
@@ -830,6 +1556,12 @@
       }
     ],
     "07-fundamentals-of-ml-lab": [
+      {
+        "name": "foml-lab-2026-08-20.ipynb",
+        "id": "1pRYYb_IXcE5kSd0P_3g4M0FfT28Fr6GV",
+        "size": 803,
+        "url": "https://drive.google.com/file/d/1pRYYb_IXcE5kSd0P_3g4M0FfT28Fr6GV/view"
+      },
       {
         "name": "Geron_Hands_On_ML.pdf",
         "id": "1_dEK1Eh8iWa9n9Ni34YHY0PeUzpm88zK",

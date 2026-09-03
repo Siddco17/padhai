@@ -32,6 +32,10 @@ cd ~/Documents/padhai/tools/beeper-ingest
 # backfill recent attachments into the approval queue
 .venv/bin/python ingest.py scan --hours 48
 
+# OR scan entire WhatsApp history (slow; Beeper Desktop must be open)
+.venv/bin/python ingest.py scan --all
+# ./full-scan.sh   # scan --all + auto in one step
+
 # OR live-watch (leave running)
 .venv/bin/python ingest.py watch
 
