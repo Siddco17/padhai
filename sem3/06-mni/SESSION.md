@@ -1,4 +1,10 @@
+---
+tags: [log, course/mni]
+---
+
 # Measurements & Instrumentation
+
+**Hub:** [[MNI]] · [[MNI Lab]] · [[Static characteristics]]
 
 - **Code:** ECL204
 - **Credits:** 3 of 4

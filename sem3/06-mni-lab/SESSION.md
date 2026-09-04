@@ -1,4 +1,10 @@
+---
+tags: [log, course/mni, lab]
+---
+
 # MNI Lab
+
+**Hub:** [[MNI Lab]] · theory [[MNI]]
 
 - **Code:** ECL204 Lab
 - **Credits:** 1 of 4 (from ECL204 MNI)

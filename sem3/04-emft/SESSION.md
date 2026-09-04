@@ -1,4 +1,10 @@
+---
+tags: [log, course/emft]
+---
+
 # Electromagnetic Fields
+
+**Hub:** [[EMFT]] · [[sem3/_meta/remediation|remediation]]
 
 - **Code:** ECL305
 - **Credits:** 4 (theory + tutorial; no lab)

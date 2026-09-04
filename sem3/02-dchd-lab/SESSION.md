@@ -1,4 +1,10 @@
+---
+tags: [log, course/dchd, lab]
+---
+
 # DCHD Lab
+
+**Hub:** [[DCHD Lab]] · theory [[DCHD]]
 
 - **Code:** ECL216 Lab
 - **Credits:** 2 of 5 (from ECL216 DCHD)

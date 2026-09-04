@@ -1,5 +1,7 @@
 # ECL305 — Electromagnetic Fields (tentative teaching plan)
 
+**Hub:** [[EMFT]]
+
 **Instructors:** Dr. A.G. Kothari, Dr. Neeraj Rao  
 **Type:** Theory + tutorial · **Credits:** 4 (no lab)  
 **Source:** printed teaching plan (photo in `resources/teaching-plan.png`); quiz list also from 21/7/26 class notes.

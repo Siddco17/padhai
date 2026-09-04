@@ -1,0 +1,250 @@
+{
+  "nodes": [
+    {
+      "id": "mst",
+      "type": "file",
+      "file": "sem3/_meta/mst1-recovery.md",
+      "x": -120,
+      "y": -720,
+      "width": 400,
+      "height": 120,
+      "color": "3"
+    },
+    {
+      "id": "plan",
+      "type": "file",
+      "file": "sem3/_meta/semester-plan.md",
+      "x": 320,
+      "y": -720,
+      "width": 320,
+      "height": 80
+    },
+    {
+      "id": "clock",
+      "type": "text",
+      "text": "**~6 Sep MST-1** \u00b7 classes through ~3\u20134 Sep\nFoML calendar hole 4\u201313 Sep\nConfirm AIMS paper dates this week",
+      "x": 680,
+      "y": -740,
+      "width": 360,
+      "height": 120,
+      "color": "1"
+    },
+    {
+      "id": "g-order",
+      "type": "group",
+      "x": -520,
+      "y": -520,
+      "width": 560,
+      "height": 420,
+      "label": "Effort order",
+      "color": "2"
+    },
+    {
+      "id": "order",
+      "type": "text",
+      "text": "1. Lab journals + vivas (Reminders)\n2. ACD quiz + DCHD tutorial sheet\n3. [[FoML]] catch-up (mid 25%)\n4. [[ACD]] Gaikwad 1\u20132 + [[Thevenin and Norton]]\n5. [[MNI]] one-pagers from saved PDFs\n6. DCHD / EMFT / SnS / LA \u2014 30 min notes only",
+      "x": -480,
+      "y": -460,
+      "width": 480,
+      "height": 320,
+      "color": "2"
+    },
+    {
+      "id": "g-stop",
+      "type": "group",
+      "x": 120,
+      "y": -520,
+      "width": 920,
+      "height": 280,
+      "label": "Caught up enough \u2014 then only problems",
+      "color": "4"
+    },
+    {
+      "id": "foml-s",
+      "type": "text",
+      "text": "**FoML**\n[[Bayes rule]] update\n2\u00d72 [[Confusion matrix]]\n2-point [[Linear regression]]\n1-split [[Decision trees]]",
+      "x": 160,
+      "y": -460,
+      "width": 260,
+      "height": 200,
+      "color": "6"
+    },
+    {
+      "id": "acd-s",
+      "type": "text",
+      "text": "**ACD**\n[[Inverting and non-inverting]]\nwith Thevenin at source\njournal: numbers + screenshot",
+      "x": 450,
+      "y": -460,
+      "width": 260,
+      "height": 200,
+      "color": "2"
+    },
+    {
+      "id": "mni-s",
+      "type": "text",
+      "text": "**MNI**\n[[Accuracy precision resolution]]\n[[Static characteristics]]\ndraw [[Wheatstone bridge]]",
+      "x": 740,
+      "y": -460,
+      "width": 260,
+      "height": 200,
+      "color": "4"
+    },
+    {
+      "id": "g-week",
+      "type": "group",
+      "x": -520,
+      "y": 0,
+      "width": 1560,
+      "height": 360,
+      "label": "Weekly grid (night = 2.5 h)",
+      "color": "5"
+    },
+    {
+      "id": "mon",
+      "type": "text",
+      "text": "**Mon**\n8 LA \u00b7 9 FoML \u00b7 11 DCHD \u00b7 12 SnS\n15 DCHD tut \u00b7 16\u201318 SnS lab\nNight: DCHD tutorial/HDL",
+      "x": -480,
+      "y": 60,
+      "width": 280,
+      "height": 240
+    },
+    {
+      "id": "tue",
+      "type": "text",
+      "text": "**Tue**\n8 FoML \u00b7 9 LA \u00b7 10 MNI \u00b7 11 EMFT \u00b7 12 ACD\n14\u201316 DCHD lab \u00b7 16 EMFT tut\nNight: DCHD journal + 3 EMFT",
+      "x": -180,
+      "y": 60,
+      "width": 280,
+      "height": 240
+    },
+    {
+      "id": "wed",
+      "type": "text",
+      "text": "**Wed**\n8 MNI \u00b7 9 FoML \u00b7 11 EMFT \u00b7 12 ACD\n14\u201316 MNI lab\nNight: MNI journal + one-pager",
+      "x": 120,
+      "y": 60,
+      "width": 280,
+      "height": 240
+    },
+    {
+      "id": "thu",
+      "type": "text",
+      "text": "**Thu**\n9 SnS \u00b7 10 DCHD \u00b7 11 LA \u00b7 12 MNI\n**14\u201316 FoML lab**\nNight: FoML notebook + linreg/trees",
+      "x": 420,
+      "y": 60,
+      "width": 280,
+      "height": 240,
+      "color": "6"
+    },
+    {
+      "id": "fri",
+      "type": "text",
+      "text": "**Fri**\n8 FoML \u00b7 9 SnS \u00b7 10 DCHD \u00b7 11 ACD \u00b7 12 EMFT\n14\u201316 ACD lab\nNight: ACD journal + quiz drill",
+      "x": 720,
+      "y": 60,
+      "width": 280,
+      "height": 240,
+      "color": "2"
+    },
+    {
+      "id": "g-off",
+      "type": "group",
+      "x": -520,
+      "y": 420,
+      "width": 560,
+      "height": 200,
+      "label": "Do not open",
+      "color": "1"
+    },
+    {
+      "id": "off",
+      "type": "text",
+      "text": "IEM \u00b7 e-ink dashboard \u00b7 JyotAI \u00b7 iBoard \u00b7 Beeper ingest \u00b7 Boyd-early \u00b7 career hours",
+      "x": -480,
+      "y": 470,
+      "width": 480,
+      "height": 120,
+      "color": "1"
+    },
+    {
+      "id": "g-hubs",
+      "type": "group",
+      "x": 120,
+      "y": 420,
+      "width": 920,
+      "height": 200,
+      "label": "Catch-up hubs",
+      "color": "6"
+    },
+    {
+      "id": "foml",
+      "type": "file",
+      "file": "sem3/07-fundamentals-of-ml/FoML.md",
+      "x": 160,
+      "y": 470,
+      "width": 260,
+      "height": 80,
+      "color": "6"
+    },
+    {
+      "id": "acd",
+      "type": "file",
+      "file": "sem3/05-acd/ACD.md",
+      "x": 450,
+      "y": 470,
+      "width": 260,
+      "height": 80,
+      "color": "2"
+    },
+    {
+      "id": "mni",
+      "type": "file",
+      "file": "sem3/06-mni/MNI.md",
+      "x": 740,
+      "y": 470,
+      "width": 260,
+      "height": 80,
+      "color": "4"
+    }
+  ],
+  "edges": [
+    {
+      "id": "m1",
+      "fromNode": "mst",
+      "fromSide": "bottom",
+      "toNode": "order",
+      "toSide": "top"
+    },
+    {
+      "id": "m2",
+      "fromNode": "order",
+      "fromSide": "right",
+      "toNode": "foml-s",
+      "toSide": "left"
+    },
+    {
+      "id": "m3",
+      "fromNode": "foml-s",
+      "fromSide": "bottom",
+      "toNode": "foml",
+      "toSide": "top",
+      "color": "6"
+    },
+    {
+      "id": "m4",
+      "fromNode": "acd-s",
+      "fromSide": "bottom",
+      "toNode": "acd",
+      "toSide": "top",
+      "color": "2"
+    },
+    {
+      "id": "m5",
+      "fromNode": "mni-s",
+      "fromSide": "bottom",
+      "toNode": "mni",
+      "toSide": "top",
+      "color": "4"
+    }
+  ]
+}

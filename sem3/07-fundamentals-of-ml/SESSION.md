@@ -1,4 +1,10 @@
+---
+tags: [log, course/foml]
+---
+
 # Fundamentals of Machine Learning
+
+**Hub:** [[FoML]] · [[FoML Lab]]
 
 - **Code:** CSL2XX (CSE) — confirm final numeric code on registration
 - **Credits:** **4** `(3-0-2)` → theory **3** + lab **1**

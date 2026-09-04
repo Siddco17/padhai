@@ -1,4 +1,10 @@
+---
+tags: [log, course/dchd]
+---
+
 # Digital Circuits & Hardware Design
+
+**Hub:** [[DCHD]] · [[DCHD Lab]] · [[Number systems]]
 
 - **Code:** ECL216
 - **Credits:** 3 of 5 (theory + tutorial)

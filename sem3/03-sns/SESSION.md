@@ -1,4 +1,10 @@
+---
+tags: [log, course/sns]
+---
+
 # Signals & Systems Analysis
+
+**Hub:** [[Signals and Systems]] · [[SnS Lab]]
 
 - **Code:** ECL211
 - **Credits:** 3 of 4

@@ -1,0 +1,13 @@
+{
+  "theme": "obsidian",
+  "cssTheme": "",
+  "baseFontSize": 16,
+  "translucency": false,
+  "accentColor": "#e0a04a",
+  "enabledCssSnippets": [
+    "padhai"
+  ],
+  "interfaceFontFamily": "Google Sans Flex",
+  "textFontFamily": "Google Sans Flex",
+  "monospaceFontFamily": "Google Sans Code"
+}

@@ -1,0 +1,58 @@
+{
+  "items": [
+    {
+      "type": "group",
+      "ctime": 1755882000000,
+      "title": "Start here",
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1755882000001,
+          "path": "Home.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1755882000002,
+          "path": "sem3/_maps/Sem 3 Mind.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 1755882000003,
+          "path": "sem3/_maps/Dependency Map.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 1755882000004,
+          "path": "sem3/_maps/MST-1 Mind.canvas"
+        },
+        {
+          "type": "file",
+          "ctime": 1755882000005,
+          "path": "sem3/_maps/MOC - Sem 3.md"
+        }
+      ]
+    },
+    {
+      "type": "group",
+      "ctime": 1755882000010,
+      "title": "Live ops",
+      "items": [
+        {
+          "type": "file",
+          "ctime": 1755882000011,
+          "path": "sem3/_meta/semester-plan.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1755882000012,
+          "path": "sem3/_meta/mst1-recovery.md"
+        },
+        {
+          "type": "file",
+          "ctime": 1755882000013,
+          "path": "sem3/_meta/remediation.md"
+        }
+      ]
+    }
+  ]
+}

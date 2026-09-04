@@ -3,41 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <meta name="theme-color" content="#1a1f16" />
+  <meta name="theme-color" content="#1c1610" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
   <meta name="description" content="VNIT ECE Sem 3 study portal — guides, tips, remediation, books." />
   <title>padhai · Sem 3</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Google+Sans+Flex:opsz,wght@8..144,1..1000&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #1a1f16;
-      --bg-elev: #242b1f;
-      --bg-card: #2c3426;
-      --line: #3d4734;
-      --text: #e8eadf;
-      --muted: #a3ad96;
-      --accent: #d4a017;
-      --accent-soft: rgba(212, 160, 23, 0.14);
-      --ok: #7cb87c;
+      --bg: #1c1610;
+      --bg-elev: #2a2118;
+      --bg-card: #34281e;
+      --line: #4a3c2e;
+      --text: #f4ece3;
+      --muted: #c4b09a;
+      --accent: #e0a04a;
+      --accent-soft: rgba(224, 160, 74, 0.16);
+      --ok: #b8a45a;
       --warn: #e0a06a;
       --danger: #d97b6c;
       --radius: 14px;
-      --font: "IBM Plex Sans", system-ui, sans-serif;
-      --display: "Fraunces", Georgia, serif;
+      --font: "Google Sans Flex", system-ui, sans-serif;
+      --display: "Google Sans Flex", system-ui, sans-serif;
+      --mono: "Google Sans Code", ui-monospace, monospace;
       --safe-bottom: env(safe-area-inset-bottom, 0px);
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html { scroll-behavior: smooth; font-optical-sizing: auto; }
     body {
       margin: 0;
       font-family: var(--font);
       background:
-        radial-gradient(1200px 600px at 10% -10%, #2f3a24 0%, transparent 55%),
-        radial-gradient(900px 500px at 100% 0%, #3a2e14 0%, transparent 45%),
+        radial-gradient(1200px 600px at 10% -10%, #3d2a18 0%, transparent 55%),
+        radial-gradient(900px 500px at 100% 0%, #4a3014 0%, transparent 45%),
         var(--bg);
       color: var(--text);
       line-height: 1.5;
@@ -47,6 +48,10 @@
 
     a { color: var(--accent); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    code, kbd {
+      font-family: var(--mono);
+      font-size: 0.92em;
+    }
 
     .wrap { width: min(920px, 100%); margin: 0 auto; padding: 1rem 1rem 2rem; }
 
@@ -110,7 +115,7 @@
     .tab[aria-selected="true"] {
       background: var(--accent);
       border-color: var(--accent);
-      color: #1a1f16;
+      color: #1c1610;
     }
 
     section.panel { display: none; animation: fade 0.2s ease; }
@@ -160,7 +165,7 @@
       padding: 0.15rem 0.45rem;
       background: var(--bg-elev);
     }
-    .chip.ok { color: var(--ok); border-color: #3f5a3f; }
+    .chip.ok { color: var(--ok); border-color: #5a5232; }
     .chip.warn { color: var(--warn); border-color: #6a4d32; }
     .chip.danger { color: var(--danger); border-color: #6a3d36; }
 
@@ -212,7 +217,7 @@
       position: fixed;
       left: 0; right: 0; bottom: 0;
       padding: 0.45rem 0.75rem calc(0.45rem + var(--safe-bottom));
-      background: rgba(26, 31, 22, 0.92);
+      background: rgba(28, 22, 16, 0.92);
       backdrop-filter: blur(10px);
       border-top: 1px solid var(--line);
       display: flex;

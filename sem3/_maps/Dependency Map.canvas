@@ -1,0 +1,271 @@
+{
+  "nodes": [
+    {
+      "id": "title",
+      "type": "text",
+      "text": "# Year-1 \u2192 Sem 3\n\nDo **not** re-study year 1. Patch the week a hub needs it.\n[[sem3/_meta/academic-background|background]] \u00b7 [[sem3/_meta/remediation|remediation]]",
+      "x": -200,
+      "y": -520,
+      "width": 520,
+      "height": 180,
+      "color": "3"
+    },
+    {
+      "id": "g-y1",
+      "type": "group",
+      "x": -780,
+      "y": -260,
+      "width": 420,
+      "height": 720,
+      "label": "Year 1 (honest map)",
+      "color": "1"
+    },
+    {
+      "id": "ee",
+      "type": "text",
+      "text": "**EE** (barely)\nKVL / Thevenin / divider",
+      "x": -740,
+      "y": -200,
+      "width": 340,
+      "height": 100,
+      "color": "1"
+    },
+    {
+      "id": "edc",
+      "type": "text",
+      "text": "**EDC** (barely)\ndiode / BJT intuition",
+      "x": -740,
+      "y": -70,
+      "width": 340,
+      "height": 100,
+      "color": "1"
+    },
+    {
+      "id": "ns",
+      "type": "text",
+      "text": "**NS** (barely)\nmesh, Laplace, filters?",
+      "x": -740,
+      "y": 60,
+      "width": 340,
+      "height": 100,
+      "color": "1"
+    },
+    {
+      "id": "phy",
+      "type": "text",
+      "text": "**Physics** FF\u2192~5\nvectors, fields, waves",
+      "x": -740,
+      "y": 190,
+      "width": 340,
+      "height": 100,
+      "color": "1"
+    },
+    {
+      "id": "math",
+      "type": "text",
+      "text": "**Math** (lean on this)\nrecovery lane",
+      "x": -740,
+      "y": 320,
+      "width": 340,
+      "height": 100,
+      "color": "4"
+    },
+    {
+      "id": "dig",
+      "type": "text",
+      "text": "**Digital / programming**\nstrength \u2014 protect DCHD",
+      "x": -740,
+      "y": 430,
+      "width": 340,
+      "height": 100,
+      "color": "4"
+    },
+    {
+      "id": "g-s3",
+      "type": "group",
+      "x": 80,
+      "y": -260,
+      "width": 980,
+      "height": 720,
+      "label": "Sem 3 hubs",
+      "color": "3"
+    },
+    {
+      "id": "acd",
+      "type": "file",
+      "file": "sem3/05-acd/ACD.md",
+      "x": 140,
+      "y": -180,
+      "width": 280,
+      "height": 72,
+      "color": "2"
+    },
+    {
+      "id": "mni",
+      "type": "file",
+      "file": "sem3/06-mni/MNI.md",
+      "x": 140,
+      "y": -40,
+      "width": 280,
+      "height": 72,
+      "color": "4"
+    },
+    {
+      "id": "emft",
+      "type": "file",
+      "file": "sem3/04-emft/EMFT.md",
+      "x": 140,
+      "y": 100,
+      "width": 280,
+      "height": 72,
+      "color": "1"
+    },
+    {
+      "id": "sns",
+      "type": "file",
+      "file": "sem3/03-sns/Signals and Systems.md",
+      "x": 140,
+      "y": 240,
+      "width": 280,
+      "height": 72,
+      "color": "5"
+    },
+    {
+      "id": "la",
+      "type": "file",
+      "file": "sem3/01-linear-algebra/Linear Algebra.md",
+      "x": 140,
+      "y": 380,
+      "width": 280,
+      "height": 72,
+      "color": "4"
+    },
+    {
+      "id": "dchd",
+      "type": "file",
+      "file": "sem3/02-dchd/DCHD.md",
+      "x": 520,
+      "y": 240,
+      "width": 280,
+      "height": 72,
+      "color": "3"
+    },
+    {
+      "id": "foml",
+      "type": "file",
+      "file": "sem3/07-fundamentals-of-ml/FoML.md",
+      "x": 520,
+      "y": 380,
+      "width": 280,
+      "height": 72,
+      "color": "6"
+    },
+    {
+      "id": "rule",
+      "type": "text",
+      "text": "ACD assumes device + circuit comfort.\nEMFT assumes coordinates + fields.\nFoML assumes probability + [[Least squares]] / [[PCA]] from LA.\nDCHD is the independent 5-cr \u2014 do not let it slip.",
+      "x": 520,
+      "y": -180,
+      "width": 480,
+      "height": 200,
+      "color": "3"
+    }
+  ],
+  "edges": [
+    {
+      "id": "d1",
+      "fromNode": "ee",
+      "fromSide": "right",
+      "toNode": "acd",
+      "toSide": "left",
+      "label": "KVL / Thevenin",
+      "color": "1"
+    },
+    {
+      "id": "d2",
+      "fromNode": "edc",
+      "fromSide": "right",
+      "toNode": "acd",
+      "toSide": "left",
+      "label": "devices",
+      "color": "1"
+    },
+    {
+      "id": "d3",
+      "fromNode": "ee",
+      "fromSide": "right",
+      "toNode": "mni",
+      "toSide": "left",
+      "label": "bridges",
+      "color": "1"
+    },
+    {
+      "id": "d4",
+      "fromNode": "ns",
+      "fromSide": "right",
+      "toNode": "mni",
+      "toSide": "left",
+      "label": "Laplace / filters",
+      "color": "1"
+    },
+    {
+      "id": "d5",
+      "fromNode": "ns",
+      "fromSide": "right",
+      "toNode": "acd",
+      "toSide": "left",
+      "color": "1"
+    },
+    {
+      "id": "d6",
+      "fromNode": "phy",
+      "fromSide": "right",
+      "toNode": "emft",
+      "toSide": "left",
+      "label": "vectors / fields",
+      "color": "1"
+    },
+    {
+      "id": "d7",
+      "fromNode": "math",
+      "fromSide": "right",
+      "toNode": "sns",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "d8",
+      "fromNode": "math",
+      "fromSide": "right",
+      "toNode": "la",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "d9",
+      "fromNode": "dig",
+      "fromSide": "right",
+      "toNode": "dchd",
+      "toSide": "left",
+      "label": "protect 5 cr",
+      "color": "4"
+    },
+    {
+      "id": "d10",
+      "fromNode": "la",
+      "fromSide": "right",
+      "toNode": "foml",
+      "toSide": "left",
+      "label": "PCA / lstsq",
+      "color": "6"
+    },
+    {
+      "id": "d11",
+      "fromNode": "sns",
+      "fromSide": "right",
+      "toNode": "foml",
+      "toSide": "left",
+      "label": "features"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+---
+tags: [meta, moc]
+aliases: [MOC, map of content]
+---
+
+# MOC — Sem 3
+
+Index of the mind. Visual: [[sem3/_maps/Sem 3 Mind.canvas|Sem 3 Mind]]. Ops: [[Home]].
+
+## Hubs
+
+- [[Home]]
+- [[Linear Algebra]] · [[DCHD]] · [[DCHD Lab]]
+- [[Signals and Systems]] · [[SnS Lab]]
+- [[EMFT]] · [[ACD]] · [[ACD Lab]]
+- [[MNI]] · [[MNI Lab]]
+- [[FoML]] · [[FoML Lab]]
+
+## Meta
+
+- [[sem3/_meta/semester-plan|semester plan]]
+- [[sem3/_meta/mst1-recovery|MST-1 recovery]]
+- [[sem3/_meta/ten-pointer-plan|10-pointer]] (parked)
+- [[sem3/_meta/academic-background|academic background]]
+- [[sem3/_meta/remediation|remediation]]
+- [[sem3/_meta/books-checklist|books checklist]]
+
+## Concepts
+
+- [[555 timer]]
+- [[ADC and DAC]]
+- [[Accuracy precision resolution]]
+- [[Active filters]]
+- [[Backpropagation]]
+- [[Bayes rule]]
+- [[Biot-Savart and Ampere]]
+- [[Boolean minimization]]
+- [[Confusion matrix]]
+- [[Convolution]]
+- [[Coordinate systems]]
+- [[Coulomb and Gauss]]
+- [[Decision trees]]
+- [[Dot and cross product]]
+- [[Eigenvalues and eigenvectors]]
+- [[Entropy and information gain]]
+- [[Finite state machines]]
+- [[Fourier series and transform]]
+- [[Gradient descent]]
+- [[Gradient divergence curl]]
+- [[HDL]]
+- [[Ideal op-amp]]
+- [[Impedance]]
+- [[Impulse and step]]
+- [[Integrator]]
+- [[Inverting and non-inverting]]
+- [[KVL and KCL]]
+- [[LTI systems]]
+- [[Laplace transform]]
+- [[Least squares]]
+- [[Linear regression]]
+- [[Loading effect]]
+- [[Maxwell equations]]
+- [[Moore and Mealy]]
+- [[Naive Bayes]]
+- [[Number systems]]
+- [[Overfitting]]
+- [[PCA]]
+- [[Poynting theorem]]
+- [[Precision and recall]]
+- [[Projection]]
+- [[Reflection of EM waves]]
+- [[SVD]]
+- [[Sampling and aliasing]]
+- [[Schmitt trigger]]
+- [[Static characteristics]]
+- [[Thevenin and Norton]]
+- [[Train validation test]]
+- [[Uniform plane waves]]
+- [[Vector spaces]]
+- [[Vectors and fields]]
+- [[Virtual ground]]
+- [[Voltage divider]]
+- [[Wheatstone bridge]]
+- [[Z-transform]]
+- [[k-means]]

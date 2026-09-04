@@ -1,5 +1,9 @@
 # 10-pointer semester OS (target SGPA ≥ 9.5)
 
+**Mind:** [[Home]] · parked until after MST-1 — live plan is [[sem3/_meta/semester-plan|semester plan]].
+
+**19 Aug 2026 — parked until after MST-1.** You are behind (FoML blank, ACD/MNI lost, lab reminders all open, health absences). The live plan is [`semester-plan.md`](semester-plan.md) + [`mst1-recovery.md`](mst1-recovery.md): labs first, IEM off for the semester, 2.5 h weeknights. Come back to this file after MST marks.
+
 Starting CGPA ~5.9. Goal this term: **AA (10) in every subject**, floor **SGPA ≥ 9.5**.
 
 ## What ≥9.5 actually requires (**28 credits** with FoML)
@@ -26,7 +30,7 @@ Relative grading: AA ≈ top band of the class. You are not competing with “pa
 4. **Labs = AA insurance:** full marks / near-full on every lab file, viva, mini-project. DCHD lab is **2 of 5 credits**.
 5. **MST-1 and MST-2:** treat like endsem. Past sheets + tutorial bank + timed mock.
 6. **Office hours:** if a topic is cloudy for >48h, ask TA/prof with a specific stuck point.
-7. **IEM project:** freeze to ≤2–3 hrs/week from 2 weeks before each MST until results; full freeze in endsem week.
+7. **IEM project:** **off for this semester** (decision 19 Aug). SnS lab is the academic twin if you need a story later.
 
 ## Weekly time budget (10-pointer mode)
 
