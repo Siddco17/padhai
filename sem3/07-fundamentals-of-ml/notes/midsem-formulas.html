@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FoML MST formula sheet</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
+<style>
+  body { font: 16px/1.45 system-ui, sans-serif; max-width: 42rem; margin: 1.5rem auto; padding: 0 1rem; color: #111; }
+  h1 { font-size: 1.35rem; }
+  h2 { font-size: 1.1rem; margin-top: 1.6rem; border-bottom: 1px solid #ddd; padding-bottom: .2rem; }
+  .note { color: #444; }
+  @media print { body { max-width: none; } }
+</style>
+</head>
+<body>
+<h1>CSL2XX FoML — MST formula sheet</h1>
+<p class="note">Rewrite from memory Friday morning. Skip Naive Bayes / Mitchell.</p>
+
+<h2>Bayes</h2>
+<p>$$P(h \mid D) = \frac{P(D \mid h)\, P(h)}{P(D)}, \qquad P(D) = \sum_h P(D \mid h)\, P(h)$$</p>
+<p>MAP = larger numerator $P(D \mid h) P(h)$. Cancer: $P(c)=0.008$, $P(+|c)=0.98$, $P(+|\neg c)=0.03$.</p>
+<p>$$0.008 \times 0.98 = 0.00784, \qquad 0.992 \times 0.03 = 0.02976$$</p>
+<p>MAP $=\neg c$. $P(c|+)=0.00784/0.0376 \approx 0.21$.</p>
+
+<h2>2×2 linear algebra</h2>
+<p>$$\det\begin{bmatrix}a&b\\c&d\end{bmatrix}=ad-bc$$</p>
+<p>Minor $M_{ij}$ = det after deleting row $i$, col $j$. Cofactor $C_{ij}=(-1)^{i+j}M_{ij}$.</p>
+<p>Eigen: $\det(A-\lambda I)=0$, then $(A-\lambda I)v=0$. Check: $\mathrm{trace}=\lambda_1+\lambda_2$, $\det=\lambda_1\lambda_2$.</p>
+<p>You-try $B=\begin{bmatrix}1&2\\2&1\end{bmatrix}$: $\det=-3$, $\lambda=3,-1$, $v\propto(1,1)$ and $(1,-1)$.</p>
+
+<h2>Linear regression</h2>
+<p>$y=a_0+a_1 x$ (slides: $\beta_0,\beta_1$). $S_r=\sum(y_i-a_0-a_1 x_i)^2$.</p>
+<p>$$n a_0 + a_1\sum x=\sum y, \qquad a_0\sum x + a_1\sum x^2=\sum xy$$</p>
+<p>$$a_1=\frac{n\sum xy-(\sum x)(\sum y)}{n\sum x^2-(\sum x)^2}=\frac{\sum(x-\bar x)(y-\bar y)}{\sum(x-\bar x)^2},\qquad a_0=\bar y-a_1\bar x$$</p>
+<p>Through origin: $a_1=\sum xy/\sum x^2$. Power $y=ax^b$: $\ln y=\ln a+b\ln x$. Exp $y=ae^{bx}$: $\ln y=\ln a+bx$.</p>
+<p><strong>5-point</strong> $x=1..5$, $y=2,3,5,4,6$: $\bar x=3$, $\bar y=4$, $\sum(x-\bar x)^2=10$. Products $=9$. OLS: $\hat\beta_1=0.9$, $\hat\beta_0=1.3$, $\hat y(6)=6.7$. Slide boxes $\hat y=1+x$, RSS $=2$, $T=3.876$, reject $H_0$.</p>
+<p>$$\mathrm{RSE}=\sqrt{\frac{\mathrm{RSS}}{n-2}},\quad R^2=1-\frac{\mathrm{RSS}}{\sum(y-\bar y)^2},\quad SE(\hat\beta_1)=\sqrt{\frac{\hat\sigma^2}{\sum(x-\bar x)^2}},\quad \hat\sigma^2=\frac{\mathrm{RSS}}{n-2}$$</p>
+<p>$$T=\hat\beta_1/SE,\quad df=n-2$$</p>
+<p><strong>One GD step</strong> ($\hat y=wx+b$):</p>
+<p>$$\frac{\partial\mathrm{MSE}}{\partial w}=-\frac{2}{n}\sum x(y-\hat y),\qquad \frac{\partial\mathrm{MSE}}{\partial b}=-\frac{2}{n}\sum(y-\hat y)$$</p>
+<p>$$w\leftarrow w-\alpha\frac{\partial\mathrm{MSE}}{\partial w},\qquad b\leftarrow b-\alpha\frac{\partial\mathrm{MSE}}{\partial b}$$</p>
+<p>Salary: $w=10$, $b=10$, $\alpha=0.02$ $\to$ $w=10.8$, $b=10.4$.</p>
+
+<h2>Decision trees — class</h2>
+<p>$$H=-\sum p_c\log_2 p_c,\qquad IG=H_{\mathrm{parent}}-\sum_v\frac{|S_v|}{|S|}H(S_v)$$</p>
+<p>$$\mathrm{Gini}=1-\sum_c p_c^2$$</p>
+<p>Largest IG (or Gini gain) at the root. Pure $\Rightarrow H=0$. Play table: Weather IG $=0.4$. Laptop: root = Student (IG $0.5485$).</p>
+
+<h2>Decision trees — reg</h2>
+<p>$$\mathrm{RSS}=\sum_k\sum_{i\in R_k}(y_i-\bar y_{R_k})^2$$</p>
+<p>Leaf = mean. First split $X_1&lt;2.5$ (RSS $\approx 40.17$). Leaves $4.5,\;7.5,\;8,\;13$.</p>
+
+<h2>Logistic + confusion</h2>
+<p>$$z=w^\top x+b,\qquad \sigma(z)=\frac{1}{1+e^{-z}},\qquad \hat y=\sigma(z)$$</p>
+<p>$\sigma(0)=0.5$, $\sigma(2)\approx 0.88$. Threshold $0.5$.</p>
+<p>$$L=-[y\log\hat y+(1-y)\log(1-\hat y)]$$</p>
+<p>One GD step: $\partial L/\partial b_1=(P-y)x$, $\partial L/\partial b_0=P-y$. p.18: $b_1=-0.15$, $b_0=-0.05$.</p>
+<p>$$\mathrm{Acc}=\frac{\mathrm{TP}+\mathrm{TN}}{N},\quad \mathrm{Prec}=\frac{\mathrm{TP}}{\mathrm{TP}+\mathrm{FP}},\quad \mathrm{Rec}=\frac{\mathrm{TP}}{\mathrm{TP}+\mathrm{FN}},\quad F_1=\frac{2PR}{P+R}$$</p>
+<p>Count from the printed table. PPTX: TP=4,TN=3,FP=1,FN=2. Notes p.22: TP=4,TN=3,FP=2,FN=1.</p>
+
+<h2>Sit 5 redo</h2>
+<ol>
+<li>Normal equations; 5-point $\hat\beta_1=0.9$; if $\hat y=1+x$ then RSS $=2$, $T=3.876$.</li>
+<li>Salary GD $\to 10.8,\;10.4$.</li>
+<li>Weather IG $=0.4$. Gini Study split.</li>
+<li>RSS of $X_1&lt;2.5$.</li>
+<li>$z=2\to\sigma\approx 0.88$; logistic GD p.18.</li>
+<li>Confusion Acc/Prec/Rec/$F_1$.</li>
+<li>Cancer numerators. $B=\begin{bmatrix}1&2\\2&1\end{bmatrix}$ $\lambda,v$.</li>
+</ol>
+</body>
+</html>

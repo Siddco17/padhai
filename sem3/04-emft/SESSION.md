@@ -35,11 +35,12 @@
 - Extra drill: Schaum or Irodov. Intuition: Feynman / Griffiths only if stuck.
 
 ## Current focus
-- [ ] Vector calculus (Cartesian → cylindrical → spherical)
-- [ ] Stay > 75% attendance from week 1
-- [ ] Note Moodle quiz dates when posted
+- MST-1 crash course: [`notes/midsem-map.md`](notes/midsem-map.md), [`notes/midsem-formulas.md`](notes/midsem-formulas.md), [`notes/crash-course.md`](notes/crash-course.md)
+- Scope: vector calculus + electrostatics only (first ~18 lectures). No magnetostatics / waves.
+- First sitting: Block 0 (i, j, k, dot/cross, what a field is, then coords). Do not skip — Physics hole.
 
 ## Log
 | Date | What I did | Next |
 |------|------------|------|
+| 2026-09-02 | Wrote MST-1 map, formula sheet, crash course (worked line/surface/Gauss + 2022/2023 PYQs) | Sit Block 0 from `notes/crash-course.md`; then Tutorial Sheet 2 Q1, Q7 and 2023 Feb Q3 |
 | 2026-08-13 | Digitized teaching plan + eval scheme | Start vector-calculus close |

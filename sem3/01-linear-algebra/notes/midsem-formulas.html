@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LA MST formula sheet</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"
+  onload="renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false}]});"></script>
+<style>
+  body { font: 16px/1.45 system-ui, sans-serif; max-width: 46rem; margin: 1.5rem auto; padding: 0 1rem; color: #111; }
+  h1 { font-size: 1.35rem; }
+  h2 { font-size: 1.1rem; margin-top: 1.6rem; border-bottom: 1px solid #ddd; padding-bottom: .2rem; }
+  .note { color: #444; }
+  table { border-collapse: collapse; width: 100%; font-size: 0.95rem; margin: 0.6rem 0 1rem; }
+  th, td { border: 1px solid #ccc; padding: 0.35rem 0.5rem; text-align: left; vertical-align: top; }
+  th { background: #f4f4f4; }
+  @media print { body { max-width: none; } }
+</style>
+</head>
+<body>
+<h1>ECLA 301 / ECL3xx — MST formula sheet</h1>
+<p class="note">Rewrite from memory in the last 20 minutes. Exact numbers, no floating-point rank, no SVD. Cursor’s markdown preview does <strong>not</strong> render this math — use this HTML (browser or Open Preview).</p>
+
+<h2>$Ax=b$ (column picture)</h2>
+<p>$A\in\mathbb{R}^{m\times n}$, $x\in\mathbb{R}^n$, $b\in\mathbb{R}^m$. Rows = equations; columns = directions you mix.</p>
+<p>$$Ax = x_1 a_1+\cdots+x_n a_n$$</p>
+<p>Solvable $\iff b\in C(A)$. Homogeneous $Ax=0$ always has at least $x=0$.</p>
+<p>Real linear systems: <strong>0, 1, or infinitely many</strong>. Two distinct solutions $\Rightarrow$ the whole line $x_1+t(x_2-x_1)$ also works.</p>
+<p>Do <strong>not</strong> call a missed $b$ “affine.” Affine = the <strong>solution set</strong> $\{x:Ax=b\}$ when $b\neq 0$ (a shifted $N(A)$). A vector $c\notin C(A)$ is simply not reachable.</p>
+
+<h2>Gaussian elimination</h2>
+<p>Multiplier under pivot $a_{kk}$: $m_{ik}=a_{ik}/a_{kk}$, then $R_i\leftarrow R_i-m_{ik}R_k$.</p>
+<p>Zero proposed pivot + nonzero below $\Rightarrow$ <strong>row exchange</strong>. Zero proposed pivot and zeros below $\Rightarrow$ missing pivot (rank drop / possible $0=d$).</p>
+<p>Forward: $Ax=b\to Ux=c$. Back-sub from the bottom. Pivots need <strong>not</strong> be 1.</p>
+<p>Terminal rows: $[0\cdots 0\mid 0]$ = redundant; $[0\cdots 0\mid d]$ with $d\neq 0$ = <strong>inconsistent</strong>.</p>
+
+<h2>Inverse (square)</h2>
+<p>$A^{-1}$ exists $\iff$ $n$ pivots $\iff r=n$ $\iff N(A)=\{0\}$ $\iff Ax=b$ unique for every $b$.</p>
+<p>If $Ax=0$ for some $x\neq 0$, $A$ is singular. Do <strong>not</strong> form $A^{-1}$ to solve one $Ax=b$; eliminate once.</p>
+<p>$$\begin{bmatrix}a&b\\c&d\end{bmatrix}^{-1}
+=\frac{1}{ad-bc}
+\begin{bmatrix}d&-b\\-c&a\end{bmatrix}
+\quad(ad-bc\neq 0)$$</p>
+<p>Gauss–Jordan: $[A\mid I]\to[I\mid A^{-1}]$. Missing left pivot $\Rightarrow$ no inverse. $(AB)^{-1}=B^{-1}A^{-1}$.</p>
+
+<h2>Elimination matrices and $LU$</h2>
+<p>Build $E_{ij}$ by doing $R_i\leftarrow R_i-m_{ij}R_j$ on $I$. Combined $E=E_{\mathrm{last}}\cdots E_{\mathrm{first}}$, so $EA=U$.</p>
+<p>Without swaps: $A=LU$. $L$ has 1s on the diagonal and the <strong>multipliers</strong> (not the minus signs) below. With swaps: $PA=LU$, $P^{-1}=P^T$.</p>
+
+<h2>Four spaces (after every elimination)</h2>
+<p>$A$ is $m\times n$, rank $r=\#$ pivots.</p>
+<table>
+<thead>
+<tr><th>Space</th><th>Lives in</th><th>What</th><th>Dim</th><th>Basis</th></tr>
+</thead>
+<tbody>
+<tr><td>Column $C(A)$</td><td>$\mathbb{R}^m$</td><td>mixes of <strong>columns</strong>; image of $T$</td><td>$r$</td><td>original columns in <strong>pivot positions</strong></td></tr>
+<tr><td>Row $C(A^T)$</td><td>$\mathbb{R}^n$</td><td>mixes of <strong>rows</strong></td><td>$r$</td><td>nonzero rows of $U$</td></tr>
+<tr><td>Null $N(A)$</td><td>$\mathbb{R}^n$</td><td>$Ax=0$; kernel</td><td>$n-r$</td><td>one special per free variable</td></tr>
+<tr><td>Left null $N(A^T)$</td><td>$\mathbb{R}^m$</td><td>$A^Ty=0$ i.e. $y^TA=0$</td><td>$m-r$</td><td>row-dependence weights, or $N(A^T)$</td></tr>
+</tbody>
+</table>
+<p>Row rank = column rank. <strong>Rank–nullity:</strong> $r+\dim N(A)=n$. Also $r+\dim N(A^T)=m$.</p>
+<p>If they only ask $\dim N(A)$, do not solve $Ax=0$: answer $n-r$.</p>
+<p><strong>Pitfall:</strong> row ops change the column vectors. Pivot <strong>positions</strong> from $U$, basis vectors from <strong>original</strong> $A$.</p>
+<p>Special-solution recipe: that free $=1$, other frees $=0$, solve pivots. <strong>Keep the minus signs</strong> ($x_{\mathrm{pivot}}=-$ free terms). $N(A)=\operatorname{span}\{\text{the specials}\}$, not $\operatorname{span}\{(s,t)\}$.</p>
+
+<h2>Complete solution</h2>
+<p>$$x=x_p+x_h,\qquad Ax_p=b,\quad Ax_h=0$$</p>
+<p>Consistent + frees: set frees to 0 for a convenient $x_p$, then add the specials. Inconsistent: stop at $0=d$.</p>
+
+<h2>Subspace vs affine</h2>
+<p>Subspace: contains $0$, closed under $+$ and scalar $\cdot$. $N(A)$ always is. $\{x:Ax=b\}$ with $b\neq 0$ is affine, not a subspace. Nonnegative orthant fails $-$.</p>
+<p>Span is always a subspace. Independent: $Ac=0\Rightarrow c=0$. Basis = independent spanning set. $\dim U=$ size of any basis.</p>
+
+<h2>Linear maps $T(x)=Ax$</h2>
+<p>Necessary: $T(0)=0$. Affine $Ax+b$ with $b\neq 0$ is <strong>not</strong> linear (shift is add, not a mix of columns).</p>
+<p>Columns of $A$ are $T(e_j)$. One-to-one $\iff N=\{0\}$. Onto $\mathbb{R}^m$ $\iff C(A)=\mathbb{R}^m$.</p>
+<table>
+<thead>
+<tr><th>Shape + full rank</th><th>1–1</th><th>Onto</th></tr>
+</thead>
+<tbody>
+<tr><td>Tall $m&gt;n$, $r=n$</td><td>yes</td><td>no</td></tr>
+<tr><td>Wide $m&lt;n$, $r=m$</td><td>no</td><td>yes</td></tr>
+<tr><td>Square $r=n$</td><td>yes</td><td>yes</td></tr>
+</tbody>
+</table>
+<p>Rotation (ccw), reflection, projection in $\mathbb{R}^2$:</p>
+<p>$$R_\theta=\begin{bmatrix}\cos\theta&-\sin\theta\\\sin\theta&\cos\theta\end{bmatrix}
+\qquad
+90^\circ:\ \begin{bmatrix}0&-1\\1&0\end{bmatrix}$$</p>
+<p>$$
+\text{$y$-axis flip }\begin{bmatrix}-1&0\\0&1\end{bmatrix}
+\quad
+\text{$x$-axis flip }\begin{bmatrix}1&0\\0&-1\end{bmatrix}
+\quad
+\text{$y=x$ }\begin{bmatrix}0&1\\1&0\end{bmatrix}
+$$</p>
+<p>$$
+\text{project onto $x$-axis }P=\begin{bmatrix}1&0\\0&0\end{bmatrix}
+\qquad
+C(P)=\operatorname{span}\{e_1\},\ N(P)=\operatorname{span}\{e_2\}
+$$</p>
+<p>Reflection/rotation: two pivots, invertible. Projection: singular, $P^2=P$. Flip $\neq$ squash.</p>
+
+<h2>Least squares (projection onto $C(A)$)</h2>
+<p>If $b\notin C(A)$, no exact $\theta$. Best $p=A\hat\theta\in C(A)$ has error $e=b-p\perp C(A)$:</p>
+<p>$$A^Te=0 \implies A^TA\hat\theta=A^Tb$$</p>
+<p>Then $p=A\hat\theta$, $e=b-p$. Check $A^Te=0$. One-column all-ones: $\hat\theta=\bar b$.</p>
+
+<h2>Transpose (1-markers)</h2>
+<p>$(AB)^T=B^TA^T$. $A^TA$ and $AA^T$ are symmetric. Associativity yes; commutativity no.</p>
+
+<h2>Numbers that keep appearing</h2>
+<ul>
+<li>Lecture elim: pivots $2,1,4$, $x=(-1,2,2)$.</li>
+<li>PS2 #5: zero $a_{11}$, swap, $\theta=(2,-1,1)$.</li>
+<li>$A=\begin{bmatrix}1&2\\3&5\end{bmatrix}\Rightarrow A^{-1}=\begin{bmatrix}-5&2\\3&-1\end{bmatrix}$.</li>
+<li>Wide rank-2 map $\mathbb{R}^4\to\mathbb{R}^3$: $r=2$, $\dim N=2$, neither 1–1 nor onto. Specials $\begin{bmatrix}-1\\-1\\1\\0\end{bmatrix},\begin{bmatrix}-2\\-1\\0\\1\end{bmatrix}$.</li>
+<li>Square invertible $\iff N(A)=\{0\}\iff r=n$.</li>
+</ul>
+</body>
+</html>

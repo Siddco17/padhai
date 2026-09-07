@@ -51,12 +51,14 @@ Same-day lab notes + GitHub notebook hygiene. Project topic: can lean audio/IEM 
 - Use LA course for PCA / least squares intuition the same week they appear
 
 ## Current focus
-- [ ] Confirm final course code (CSL2xx → CSL2??)
-- [ ] Fetch Mitchell or Alpaydin PDF
-- [ ] Bookmark Deisenroth MML free book
-- [ ] Note lab schedule + project deadline
+- MST Friday afternoon. 14h plan: Sit 1–5 then sleep. Open only the six files in `resources/`.
+- Map/formulas retargeted: professor 5-point linreg, GD one-step, Gini, t-test. No Mitchell/CSC311.
 
 ## Log
 | Date | What I did | Next |
 |------|------------|------|
-| | | |
+| 2026-09-02 | Wrote MST-1 map from annexure (NB + linreg) | superseded by professor list |
+| 2026-09-03 | Filed logistic PPTX + tree PDFs; rewrote map/formulas; added Blocks LA/5/6 | Sit trees (IG + RSS) then logistic sigmoid/BCE; 2×2 eigen |
+| 2026-09-03 | Professor list confirmed in chat; classmate Python = lab, p-values = extra | Next sitting: Block LA + Block 5 (trees). Map now matches professor. |
+| 2026-09-03 | 14 h to paper, zero prior. Map now has emergency clock. | Sitting 1: linreg four-point + derive \(a_0,a_1\). Then trees. |
+| 2026-09-03 | Folder simplified; map/formulas = 6 files; GD/Gini/t-stat in | Sit 1 you-try (5-point + salary GD). Then Sit 2 trees. |

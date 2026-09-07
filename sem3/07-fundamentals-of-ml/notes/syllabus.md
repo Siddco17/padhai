@@ -1,5 +1,7 @@
 # CSL2XX — Fundamentals of Machine Learning (Annexure III)
 
+**MST-1 (professor + the six `resources/` files) overrides the week-plan below:** probability/Bayes, 2×2 eigen/det/minor, linear regression (OLS + one GD step + t-test), decision trees class+reg, logistic, confusion. Mainly numerical. Python stays in the lab. See `midsem-map.md`.
+
 **Programme:** B.Tech · **Type:** OC · **L-T-P:** 3-0-2 · **Credits:** 4  
 **Pre-requisite:** CSL101 Computer Programming  
 **Evaluation:** Mid-sem 25% · End-sem 50% · Lab 25%

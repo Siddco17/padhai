@@ -12,10 +12,10 @@
 - Labs → `experiments/`, `reports/`, code as relevant
 
 ## Current focus
-- [ ] Week topics (fill after each lecture)
-- [ ] Open questions for next study block
+- MST-1 crash course: [`notes/midsem-map.md`](notes/midsem-map.md), [`notes/midsem-formulas.md`](notes/midsem-formulas.md), [`notes/crash-course.md`](notes/crash-course.md)
+- Scope: CT/DT signals, system properties, LTI/convolution, FS start. No sampling reconstruction / Laplace ROC / Z / state-space.
 
 ## Log
 | Date | What I did | Next |
 |------|------------|------|
-| | | |
+| 2026-09-02 | Filed Section A mid notes + ECL211 W24 solutions; wrote map, formula sheet, crash course with worked convolution and W24 Q1–Q6 | Sit Block 0+1 from `notes/crash-course.md`; timed W24 in Block 4 |
