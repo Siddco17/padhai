@@ -14,5 +14,11 @@
     { "name": "07 FoML Lab", "path": "sem3/07-fundamentals-of-ml-lab" },
     { "name": "padhai (root)", "path": "." }
   ],
-  "settings": {}
+  "settings": {
+    "markdown.math.enabled": true,
+    "workbench.editorAssociations": {
+      "**/midsem-formulas.md": "vscode.markdown.preview.editor",
+      "*.md": "default"
+    }
+  }
 }

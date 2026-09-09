@@ -5,7 +5,7 @@ Files ready: [map](midsem-map.md) · [formulas](midsem-formulas.md) · [crash-co
 ```
 This chat is MNI / Measurements & Instrumentation (ECL204) MST-1 only. Do not mix in other subjects.
 
-Workspace: /Users/sidd/Documents/padhai
+Workspace: /Users/sidd/Desktop/padhai
 Read first: sem3/06-mni/notes/crash-course.md, midsem-map.md, midsem-formulas.md
 Resources: Bentley + Doebelin PDFs, Static Characteristics 1–2, Unit-2 errors, Bridge and Loading Effect, Laplace/dynamic if in BEFORE-MID set, classmate/PYQS/MI-pyqs.pdf, Tutorial-1.
 Scope to what has been taught: static/dynamic characteristics, errors/stats, bridges/loading. Skip ADC/DAC, sensors survey, IEEE-488 unless PYQs/notes put them in MST.

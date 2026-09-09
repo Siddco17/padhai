@@ -5,7 +5,7 @@ Files ready: [map](midsem-map.md) · [formulas](midsem-formulas.md) · [crash-co
 ```
 This chat is DCHD (ECL216) MST-1 only. Do not mix in other subjects.
 
-Workspace: /Users/sidd/Documents/padhai
+Workspace: /Users/sidd/Desktop/padhai
 Read first: sem3/02-dchd/notes/crash-course.md, midsem-map.md, midsem-formulas.md (files ready).
 Resources: sem3/02-dchd/resources/ (Mano, Kohavi, tutorials 1–3, classmate/NOTES/SECTION A/DCHD (BEFORE MID).pdf, classmate/PYQS/)
 I barely passed year-1 EE; digital is relatively independent — protect this 5-credit course.

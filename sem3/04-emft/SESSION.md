@@ -6,7 +6,7 @@
 - **Instructors:** Dr. A.G. Kothari, Dr. Neeraj Rao
 - **Evaluation:** Mid **30** · End **50** · TA **20** (4 Moodle quizzes + 1 group test, 100 scaled to 20). Internals = `(Mid + TA) × A*` (round up). `A* = 1` only if attendance **> 75%**; 0 if **< 50%**.
 - **Books / primary refs:** Sadiku — *Elements of Electromagnetics*
-- **Have PDF:** `resources/Sadiku_Elements_of_Electromagnetics.pdf`
+- **Have PDF:** `resources/books/Sadiku_Elements_of_Electromagnetics.pdf` (+ alt Sadiku, Solutions, Schaum)
 - **Syllabus:** `notes/syllabus.md` (from teaching-plan photo)
 - **Prerequisite risk:** Physics FF → summer clear (~5) → vectors/fields weak; same-day tutorial problems mandatory (`../_meta/remediation.md`)
 

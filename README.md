@@ -1,6 +1,6 @@
 # padhai — VNIT ECE Sem 3
 
-**Canonical path:** `~/Documents/padhai`
+**Canonical path:** `~/Desktop/padhai`
 
 Study vault + mobile web guide for 3rd semester (NEP 2025).
 

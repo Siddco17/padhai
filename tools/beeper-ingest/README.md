@@ -9,7 +9,7 @@ Watches **WhatsApp** (via Beeper Desktop) for **PDFs and photos**, queues them f
 3. Copy env file and paste the token:
 
 ```bash
-cd ~/Documents/padhai/tools/beeper-ingest
+cd ~/Desktop/padhai/tools/beeper-ingest
 cp .env.example .env
 # edit .env → set BEEPER_ACCESS_TOKEN=...
 ```
@@ -24,7 +24,7 @@ python3 -m venv .venv
 ## Daily use
 
 ```bash
-cd ~/Documents/padhai/tools/beeper-ingest
+cd ~/Desktop/padhai/tools/beeper-ingest
 
 # sanity-check WhatsApp is connected
 .venv/bin/python ingest.py accounts

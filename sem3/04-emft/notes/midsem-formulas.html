@@ -1,4 +1,29 @@
-# ECL305 EMFT — MST formula sheet
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ECL305 EMFT — MST formula sheet</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+<style>
+  :root { color-scheme: dark; --bg:#1e1e1e; --fg:#d4d4d4; --muted:#9d9d9d; --border:#3c3c3c; --accent:#89b4fa; }
+  html,body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 ui-sans-serif,system-ui,-apple-system,sans-serif; }
+  main { max-width:860px; margin:0 auto; padding:28px 22px 64px; }
+  h1 { font-size:1.55rem; font-weight:650; margin:0 0 12px; }
+  h2 { font-size:1.15rem; font-weight:650; margin:28px 0 10px; color:var(--accent); }
+  p { margin:0.7em 0; }
+  strong { font-weight:650; }
+  ul { padding-left:1.2em; }
+  li { margin:0.35em 0; }
+  table { border-collapse:collapse; width:100%; font-size:0.9rem; margin:12px 0 18px; }
+  th,td { border:1px solid var(--border); padding:6px 8px; text-align:left; vertical-align:top; }
+  th { color:var(--muted); font-weight:600; }
+  .katex-display { margin:0.9em 0; overflow-x:auto; overflow-y:hidden; }
+</style>
+</head>
+<body>
+<main id="out">Loading…</main>
+<script type="text/markdown" id="src"># ECL305 EMFT — MST formula sheet
 
 Rewrite this from memory in the last 30 minutes. Free space: $\varepsilon_0=10^{-9}/(36\pi)\,\mathrm{F/m}$, $1/(4\pi\varepsilon_0)=9\times10^9$. Units on every boxed answer.
 
@@ -211,3 +236,26 @@ Spherical shell of field $a<r<b$ around a total charge $Q$: $W_E=\dfrac{Q^2}{8\p
 - Closed-surface flux of $\mathbf{D}$ **is** $Q_{\mathrm{enc}}$ even when $\mathbf{D}$ is not symmetric — then use $\int(\nabla\cdot\mathbf{D})\,dv$.
 - Outward $d\mathbf{S}$ on the **bottom** cap of a cylinder is $-\mathbf{a}_z$.
 - 2022 Group A Q6-style: three infinite lines $\to$ three $\mathbf{a}_\rho$ superpositions, not one $1/R^2$.
+</script>
+<script src="https://cdn.jsdelivr.net/npm/marked@15.0.12/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+<script>
+const src = document.getElementById("src").textContent;
+const slots = [];
+function stash(display, body) {
+  const i = slots.length;
+  slots.push({ display, body });
+  return "@@MATH" + i + "@@";
+}
+let protectedSrc = src.replace(/\$\$([\s\S]+?)\$\$/g, (_, body) => stash(true, body));
+protectedSrc = protectedSrc.replace(/\$([^$]+?)\$/g, (_, body) => stash(false, body));
+marked.setOptions({ gfm: true, breaks: false });
+let html = marked.parse(protectedSrc);
+html = html.replace(/@@MATH(\d+)@@/g, (_, n) => {
+  const { display, body } = slots[Number(n)];
+  return katex.renderToString(body, { displayMode: display, throwOnError: false });
+});
+document.getElementById("out").innerHTML = html;
+</script>
+</body>
+</html>
