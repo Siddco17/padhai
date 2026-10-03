@@ -1,5 +1,9 @@
 # MST-1 — one chat per subject
 
+**Mind:** [[Home]] · [[sem3/_maps/MST-1 Mind.canvas|MST-1 Mind]]
+
+Mids are sat. Live order is [[semester-plan]]: MNI 4/30 and ACD 9/30 are the repair subjects, FoML 18/30 is hold. This file is the pre-exam chat setup.
+
 Cursor cannot open new tabs from an agent. **This vault chat is already titled ACD mid-sem.** For every other theory course: **New Chat** (Composer) → paste the fenced prompt in that subject’s `notes/START-CHAT.md` → rename the tab to the title in the table.
 
 Crash-course files (`midsem-map.md`, `midsem-formulas.md`, `crash-course.md`) are in every theory folder. All seven chats are ready.

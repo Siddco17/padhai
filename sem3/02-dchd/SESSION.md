@@ -1,10 +1,12 @@
 # Digital Circuits & Hardware Design
 
+**Hub:** [[DCHD]] · [[DCHD Lab]]
+
 - **Code:** ECL216
 - **Credits:** 3 of 5 (theory + tutorial)
 - **Type:** Theory + Tutorial
 - **Books / primary refs:** Kohavi/Jha; Mano (Verilog) or Brown (VHDL) — match lab HDL
-- **Have PDF:** `resources/Morris_Mano_Digital_Design.pdf`, `resources/Kohavi_Jha_Switching_and_Finite_Automata_Theory.pdf`
+- **Have PDF:** `resources/books/Morris_Mano_Digital_Design.pdf`, `resources/books/Mano_Ciletti_Digital_Design_5e.pdf`, `resources/books/Kohavi_Jha_Switching_and_Finite_Automata.pdf`
 
 ## This session is for
 - Lecture notes → `notes/`

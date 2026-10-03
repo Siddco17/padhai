@@ -1,5 +1,7 @@
 # ACD Lab
 
+**Hub:** [[ACD Lab]] · theory [[ACD]]
+
 - **Code:** ECL308 Lab
 - **Credits:** 1 of 4 (from ECL308 ACD)
 - **Type:** Lab

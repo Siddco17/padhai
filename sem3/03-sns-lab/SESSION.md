@@ -1,5 +1,7 @@
 # SnS Lab
 
+**Hub:** [[SnS Lab]] · theory [[Signals and Systems]]
+
 - **Code:** ECL211 Lab
 - **Credits:** 1 of 4 (from ECL211 SnS)
 - **Type:** Lab

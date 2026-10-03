@@ -1,6 +1,24 @@
-# 10-pointer semester OS (target SGPA ≥ 9.5)
+# 10-pointer semester OS
 
-Starting CGPA ~5.9. Goal this term: **AA (10) in every subject**, floor **SGPA ≥ 9.5**.
+**Mind:** [[Home]]
+
+Starting CGPA ~5.9. The original goal was **AA in every subject**, floor **SGPA ≥ 9.5**.
+
+## After these midsems (23 Sep 2026)
+
+Live scores: **MNI 4/30**, **ACD 9/30**, **FoML 18/30**. Papers and the arithmetic are in [`semester-plan.md`](semester-plan.md).
+
+The old rule was: one soft subject is survivable, two is not, and DCHD cannot be the soft one. **MNI and ACD are already both soft on the mid.** All-AA is not the plan anymore. The plan is:
+
+- Take every remaining MNI and ACD mark that is still open (lab, TA, endsem).
+- Keep FoML’s lab at full marks so 18/30 does not slide into a third soft course.
+- Get the EMFT, LA, DCHD, and SnS numbers before moving more hours.
+
+Do not spend the week re-deriving an SGPA from guesses. The next number that changes the calendar is EMFT (mid is 30) or DCHD (5 credits).
+
+---
+
+Original contract, kept below so the math is still here.
 
 ## What ≥9.5 actually requires (**28 credits** with FoML)
 
@@ -64,28 +82,29 @@ Thu afternoon free block = **SnS deep + weakest theory**, not Netflix.
 - Build formula + symmetry cheat sheet by week 4; revise weekly.
 - If MST-1 is weak → emergency mode: drop IEM, double EMFT until MST-2.
 
-### ACD (4) — AA with EDC patch
-- Gaikwad design problems, not theory-only reading.
-- Pre-lab: calculated values + LTspice/Multisim screenshots in notebook.
-- Five patterns memorized cold: inverting, Schmitt, integrator, 2nd-order filter, 555.
-- Sunday: 60 min EE/Thevenin patch until mid-sem comfort.
+### ACD (4) — repair after 9/30
+- The 2026 paper is the drill: [`notes/midsem-2026.md`](../05-acd/notes/midsem-2026.md). Ideal op-amp (Q1–Q3, Q7, Q8) before BJT operating points (Q6).
+- Pre-lab: calculated values + LTspice/Multisim screenshots in notebook. Lab is the credit still fully open.
+- GBW and CMRR (Q4, Q5) and the practical integrator (Q9) as closed-book numbers.
+- Sunday: 60 min EE/Thevenin patch. The mid confirmed this is required.
 
-### MNI (4) — “easy AA” if disciplined
-- One-pager per sensor/bridge/ADC type.
-- Bentley + Doebelin as prof expects; quote definitions precisely.
-- Mini-project done **early**; report looks top-quartile.
+### MNI (4) — repair after 4/30
+- “Easy AA” is retired. The 2026 paper is the drill: [`notes/midsem-2026.md`](../06-mni/notes/midsem-2026.md).
+- First rebuild: voltmeter loading, first-order ramp, limiting error on \(Z\), Wheatstone half/full, Ayrton.
+- Quote definitions only after those numericals are clean.
+- Mini-project and lab file stay early and complete. That is the mark the mid did not touch.
 
 ### Linear Algebra (3) — AA
 - Strang + 18.06; prove you can compute **and** interpret.
 - Code tiny demos (projection, SVD) for memory.
 - Boyd only when syllabus hits optimization — don’t drown early.
 
-### FoML CSL2XX (OC, 4) — AA
-- Annexure: Mid **25%** / End **50%** / Lab **25%** — lab is not optional for AA.
+### FoML CSLA 204 (OC, 4) — hold after 18/30
+- Annexure: Mid **25%** / End **50%** / Lab **25%**. At 18/30 the mid is about 15 of those 25. Lab is the lever that is still entirely open.
 - Texts: Mitchell or Alpaydin; Deisenroth MML (free) for math unit; Géron for labs.
 - Units: probability/Naive Bayes → supervised basics → ANN/backprop → trees/KNN/k-means → PCA/apps.
 - Tiny NumPy impl before sklearn; confusion matrix / precision / recall cold.
-- Start the real-life lab project by mid-sem (audio/IEM topic OK if allowed).
+- Lab project is the open 25%. Keep it moving; audio/IEM is fine if the course allows it.
 - Synergy: use Linear Algebra for ML the same week PCA/least squares appear.
 
 ## MST / endsem protocol
@@ -95,12 +114,12 @@ Thu afternoon free block = **SnS deep + weakest theory**, not Netflix.
 **T−2:** formula sheets; sleep.  
 **Exam day:** attempt order = high-mark confident questions first.
 
-After each MST: recompute projected SGPA. If any subject trends ≤8 internal+MST combined trajectory → that subject becomes #1 calendar priority.
+After each MST: recompute from the real script, not from a remembered total. MNI and ACD are already the calendar priority. FoML stays on maintenance unless the script turns out worse than 18/30.
 
 ## Honesty check
 
-All six AAs with your year-1 holes is **possible but rare**. The controllable part is: perfect labs, perfect attendance, weekly problem volume, early remediation so ACD/EMFT don’t crater.
+All-AA was unlikely with the year-1 holes, and the midsems settled it. MNI 4/30 and ACD 9/30 are two soft 4-credit courses. A perfect endsem does not turn either into an AA if the mid is 30 of the course.
 
-**Operating target:** AA everywhere.  
-**Contract with yourself:** SGPA **≥ 9.5** even if one subject lands AB.  
-**Unacceptable:** any BB/BC, or DCHD below AA/AB.
+**Operating target:** full labs, then endsem repair on MNI and ACD, hold FoML.  
+**Still unacceptable:** DCHD joining them. That is 5 credits.  
+**Still get:** EMFT, LA, DCHD, SnS scores onto the table in [`semester-plan.md`](semester-plan.md).

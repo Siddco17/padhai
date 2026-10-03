@@ -20,7 +20,7 @@ Tail form (bases grounded through \(R_B\), single \(R_E\) to \(-V_{EE}\)):
 I_T=\frac{|V_{EE}|-V_{BE}}{R_E},\qquad I_{E1}=I_{E2}=I_T/2
 \]
 
-**AC emitter resistance:** \(r_e=V_T/I_E\).
+**AC emitter resistance:** \(r_e=V_T/I_E\). Also \(r_\pi=\beta r_e=\beta V_T/I_C\). **2023 Q1** asks \(r_\pi\): \(I_T=300\,\mu\mathrm{A}\), \(\beta=150\) \(\Rightarrow r_\pi=26\,\mathrm{k}\Omega\).
 
 | Config | Inputs | \(v_o\) measured | \(A_d=v_o/v_{id}\) | \(R_i\) | \(R_o\) |
 |--------|--------|------------------|----------------------|---------|---------|
@@ -77,7 +77,7 @@ Non-inverting \(G=1+R_F/R_1\) \(\Rightarrow\) \(f_{3\mathrm{dB}}=\mathrm{UGB}/G\
 v_o=A_d v_d+A_{cm}v_c,\quad v_d=v_1-v_2,\quad v_c=(v_1+v_2)/2
 \]
 
-**Offset / bias:** \(I_B=(I_{B1}+I_{B2})/2\), \(I_{os}=|I_{B1}-I_{B2}|\). Output from \(V_{os}\): \(V_o=(1+R_F/R_1)V_{os}\) (non-inv, \(v_i=0\)). Compensating resistor at the unused input: \(R_C=R_1\parallel R_F\).
+**Offset / bias:** \(I_B=(I_{B1}+I_{B2})/2\), \(I_{os}=|I_{B1}-I_{B2}|\). Output from \(V_{os}\): \(V_o=(1+R_F/R_1)V_{os}\) (non-inv, \(v_i=0\)). Compensating resistor at the unused input: \(R_C=R_1\parallel R_F\). **2023 Q6** also has a signal: \(G=200\), \(V_{os}=\pm 2\,\mathrm{mV}\), \(v_i=0.01\sin\omega t\) \(\Rightarrow v_o=2\sin\omega t\pm 0.4\,\mathrm{V}\).
 
 **Slew:** \(t=\Delta V/\mathrm{SR}\). Sine without distortion: \(\mathrm{SR}\ge 2\pi f V_p\). 741: \(0.5\,\mathrm{V/\mu s}\). \(-10\to+10\,\mathrm{V}\) at \(0.5\,\mathrm{V/\mu s}\) \(\Rightarrow 40\,\mu\mathrm{s}\).
 

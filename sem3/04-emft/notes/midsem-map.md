@@ -1,5 +1,7 @@
 # ECL305 EMFT — MST-1 map
 
+**Sat 9 Sep 2026.** Questions are in [`midsem-2026.md`](midsem-2026.md). Score not in yet. This mid is 30 of the course.
+
 **Scope:** teaching-plan topics 1–2 only (8 lect vectors + 10 lect electrostatics). Do **not** grind Biot–Savart, Ampere, Faraday, displacement current, waves, Poynting, Brewster.
 
 **Local copies:** `resources/Sadiku_Elements_of_Electromagnetics.pdf`; `resources/classmate/NOTES/SECTION B/EMFT (BEFORE MID).pdf`; `resources/classmate/NOTES/EMFT Neeraj Sir Notes.pdf`; `resources/20260819T155744Z_78f6745e_EMF-T Practice Questions_Line _ Surface Integral.pdf`

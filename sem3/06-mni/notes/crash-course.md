@@ -537,7 +537,7 @@ True Norton current at pressure \(P\): \(I_N=4\,\mathrm{mA}+16\,\mathrm{mA}\cdot
 
 # Block 4 — op-amp, differential amp, IA (1.5 h)
 
-**Read first:** ACD `resources/20260810T192659Z_OPAMP (2).pdf`; `Bridge_and_Loading_Effect.pdf` pp. 3–4.
+**Read first:** ACD `resources/notes/741_OPAMP.pdf`; `Bridge_and_Loading_Effect.pdf` pp. 3–4.
 
 ## 4.1 Golden rules (linear region)
 

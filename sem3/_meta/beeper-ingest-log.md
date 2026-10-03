@@ -107,3 +107,29 @@ Files stay local (gitignored). This log is what gets committed.
 | 2026-09-03 05:06 | `06-mni-lab` | `sem3/06-mni-lab/resources/20260903T050615Z_52c75f33_20260810T192654Z_MNI lab journal.pdf` | Dhruti (ECE) | do we have to do this one? |
 | 2026-09-03 05:06 | `_unsorted` | `sem3/_inbox/unsorted/20260903T050615Z_9629ba6f_Adobe Scan 01 Sept 2026.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
 | 2026-09-03 05:06 | `_unsorted` | `sem3/_inbox/unsorted/20260903T050623Z_d9c85acc_13. PMMC.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-09-17 11:03 | `02-dchd` | `sem3/02-dchd/resources/20260917T110012Z_077a7e95_image.jpg` | ECLA 201 DCHD |  |
+| 2026-09-17 11:03 | `02-dchd` | `sem3/02-dchd/resources/20260917T110104Z_13c1f167_Tutorial_1_DCHD_Solutions.pdf` | Siddharth Sharma | <p><em>↷ Forwarded</em></p> |
+| 2026-09-17 11:03 | `_unsorted` | `sem3/_inbox/unsorted/20260917T110127Z_28edb44f_L. Algebra and NMPT.pdf` | ECE unoff section A |  |
+| 2026-09-17 11:03 | `05-acd` | `sem3/05-acd/resources/20260917T110124Z_325abaa5_ACD SYLLABUS.pdf` | Devashree |  |
+| 2026-09-17 11:03 | `_unsorted` | `sem3/_inbox/unsorted/20260917T110016Z_32c2d861_inter nit selection trial notice 2026.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-09-17 11:03 | `07-fundamentals-of-ml` | `sem3/07-fundamentals-of-ml/resources/20260917T110016Z_39d2f134_image.jpg` | ECE FoML W26 | <p><em>↷ Forwarded</em></p> |
+| 2026-09-17 11:03 | `05-acd` | `sem3/05-acd/resources/20260917T110128Z_59f891c3_ACD SYLLABUS.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-09-17 11:03 | `05-acd` | `sem3/05-acd/resources/20260917T110011Z_765d128e_image.jpg` | Announcements 2nd year 2026-27 | <p><em>↷ Forwarded</em></p>Capture the magic, energy, and devotion of the Sacred |
+| 2026-09-17 11:03 | `05-acd` | `sem3/05-acd/resources/20260917T110115Z_85c99858_ACD (1).pdf` | Devashree |  |
+| 2026-09-17 11:03 | `05-acd` | `sem3/05-acd/resources/20260917T110011Z_94961892_image.jpg` | Aditya Singh | <p><em>↷ Forwarded</em></p>Capture the magic, energy, and devotion of the Sacred |
+| 2026-09-17 11:03 | `02-dchd` | `sem3/02-dchd/resources/20260917T105953Z_cf871b9f_image.png` | Shafaque Khan | Good evening mam, I was solving the 2nd tutorial of DCHD and I wanted to ask whe |
+| 2026-09-17 11:03 | `_unsorted` | `sem3/_inbox/unsorted/20260917T110124Z_d59d338f_Notice-Fee Remission 2026-27 for 1st_ 2nd 3rd 4th _ 5th year students.pdf` | Official ECE 2029 | <p><em>↷ Forwarded</em></p> |
+| 2026-10-03 12:26 | `06-mni-lab` | `sem3/06-mni-lab/resources/Experiment_6-10.pdf` | Batch 2 |  |
+| 2026-10-03 12:26 | `02-dchd` | `sem3/02-dchd/resources/tutorials/Tutorial_3_Solutions.pdf` | Anvay (ECE) |  |
+| 2026-10-03 12:26 | `02-dchd` | `sem3/02-dchd/resources/tutorials/Tutorial_4.pdf` | ECLA 201 DCHD | Submission date of Tutorial 4: 9th October'26 |
+| 2026-10-03 12:26 | `06-mni` | `sem3/06-mni/resources/pyqs/MI_Midsem_2026.pdf` | Batch 2 |  |
+| 2026-10-03 12:26 | `02-dchd` | `sem3/02-dchd/resources/notes/Kmap_6_Variable.jpg` | ECLA 201 DCHD |  |
+| 2026-10-03 12:26 | `02-dchd` | `sem3/02-dchd/resources/tutorials/Tutorial_5.pdf` | ECLA 201 DCHD | Tutorial 5 submission date: 16th October '26 |
+| 2026-10-03 12:26 | `07-fundamentals-of-ml` | `sem3/07-fundamentals-of-ml/resources/notes/Kmeans_Hierarchical.pdf` | ECE FoML W26 |  |
+| 2026-10-03 12:33 | `06-mni-lab` | `sem3/06-mni-lab/resources/Output_Verification.pdf` | Students Official | MNI lab output verification 3–4 PM |
+| 2026-10-03 12:33 | `06-mni` | `sem3/06-mni/resources/notes/Temperature_NPTEL.pdf` | Students Official |  |
+| 2026-10-03 12:33 | `06-mni` | `sem3/06-mni/resources/notes/Magnetic_Circuits.pdf` | Students Official |  |
+| 2026-10-03 12:33 | `06-mni` | `sem3/06-mni/resources/notes/Inductive_Capacitance.pdf` | Students Official |  |
+| 2026-10-03 12:33 | `06-mni` | `sem3/06-mni/resources/notes/MNI_29Sep2026.pdf` | Students Official |  |
+| 2026-10-03 12:33 | `06-mni` | `sem3/06-mni/resources/notes/AC_Bridges.pdf` | Students Official |  |
+| 2026-10-03 12:33 | `06-mni` | `sem3/06-mni/resources/pyqs/MI_Midsem_2026_Solutions.pdf` | Students Official |  |

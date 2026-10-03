@@ -1,0 +1,15 @@
+{
+  "legacyEditor": false,
+  "livePreview": true,
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "folder",
+  "newFileFolderPath": "sem3/_inbox",
+  "attachmentFolderPath": "sem3/_inbox",
+  "showFrontmatter": true,
+  "readableLineLength": true,
+  "defaultViewMode": "source",
+  "useMarkdownLinks": false,
+  "showUnsupportedFiles": true,
+  "useTab": false,
+  "tabSize": 2
+}

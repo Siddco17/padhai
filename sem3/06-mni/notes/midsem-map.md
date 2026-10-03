@@ -1,5 +1,7 @@
 # ECL204 MNI — MST-1 map (10 h)
 
+**Sat.** September 2026 paper and the **4/30** are in [`midsem-2026.md`](midsem-2026.md). Use this file as the formula bank while redoing that paper.
+
 **Scope (this year’s board):** static characteristics, types of error, limiting error, linear + exponential regression, first-order dynamics (step / ramp / impulse / sine), Wheatstone + quarter/half/full, zeroth-order loading, op-amp (inverting / non-inverting / follower), differential amp, instrumentation amp, PMMC, meter extension including Ayrton.
 
 **Do not grind in these 10 h:** second-order (Tutorial-1 Q4 only if you finish early), Schering / Wien / Maxwell, LVDT / CRO, thermistor *design*, ADC/DAC, IEEE-488, sensor survey.
@@ -16,7 +18,7 @@ Each sitting: **read 20–35 min → closed-book recap → drill**. Do not open 
 | 1 | 1.5 | Limiting error \(+\ -\ \times\ \div\) power; linear + exponential regression | `Limiting_Errors_2-16.pdf`; `Limiting_Error_A.pdf`; Unit-2 §2.5.4 and §2.5.6 |
 | 2 | 1.5 | First-order step, ramp, impulse, sinusoidal | `Step_and_Ramp_Response_First_Order.pdf`; `Tutorial_Appendix_1.pdf`; `Tutorial_1.pdf` Q1–Q3 |
 | 3 | 1.5 | Bridge; Q/H/F derivation; zeroth-order loading | `Bridge_and_Loading_Effect.pdf` (all 5 pp); `Wheatstone_Bridge.pdf` |
-| 4 | 1.5 | Op-amp inv / non-inv / follower; diff amp; IA | ACD `resources/20260810T192659Z_OPAMP (2).pdf`; Bridge PDF pp. 3–4 |
+| 4 | 1.5 | Op-amp inv / non-inv / follower; diff amp; IA | ACD `resources/notes/741_OPAMP.pdf`; Bridge PDF pp. 3–4 |
 | 5 | 1.5 | PMMC; ammeter / voltmeter / Ayrton | `PMMC.pdf`; `PMMC_Ohmmeter_Meter_Extension.pdf` |
 | 6 | 1.5 | Timed 2022 first sessional (16 marks, 60 min) then mark | Close notes. Paper: `resources/pyqs/MI_PYQs.pdf` **p.3** |
 
@@ -33,7 +35,7 @@ Each sitting: **read 20–35 min → closed-book recap → drill**. Do not open 
 | 1st-order step / ramp / impulse / sine | Step-and-ramp PDF; Tutorial appendix | Tutorial-1 Q1–Q3; **2022 MST Q2, Q5** |
 | Wheatstone balance + Q / H / F | Bridge notes pp. 1–2 | \(E_o=(E/4)\delta\), \((E/2)\delta\), \(E\delta\); endsem Q2(a) |
 | Zeroth-order pot loading | Bridge notes p. 5 | \(E_o/E_i=k/[1+(R_p/R_L)k(1-k)]\); **2022 MST Q3** |
-| Op-amp three configs | ACD OPAMP (2).pdf | Gains from golden rules, book closed |
+| Op-amp three configs | ACD `resources/notes/741_OPAMP.pdf` | Gains from golden rules, book closed |
 | Diff amp + 3-op-amp IA | Bridge notes pp. 3–4 | \(v_o=(R_2/R_1)(1+2R_f/R_G)(v_2-v_1)\) |
 | PMMC + meter extension | `PMMC.pdf`; meter-extension PDF | \(R_{sh}=R_m/(m-1)\), \(R_{se}=(m-1)R_m\); **2022 MST Q4** Ayrton |
 

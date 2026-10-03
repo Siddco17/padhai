@@ -1,5 +1,7 @@
 # FoML Lab (CSL2XX)
 
+**Hub:** [[FoML Lab]] · theory [[FoML]]
+
 - **Parent:** CSL2XX Fundamentals of Machine Learning
 - **Credits:** 1 of 4 (from `3-0-2`)
 - **Weight:** **25%** of course grade (AA-critical)

@@ -1,5 +1,7 @@
 # Electromagnetic Fields
 
+**Hub:** [[EMFT]]
+
 - **Code:** ECL305
 - **Credits:** 4 (theory + tutorial; no lab)
 - **Type:** Theory + Tutorial
@@ -35,12 +37,12 @@
 - Extra drill: Schaum or Irodov. Intuition: Feynman / Griffiths only if stuck.
 
 ## Current focus
-- MST-1 crash course: [`notes/midsem-map.md`](notes/midsem-map.md), [`notes/midsem-formulas.md`](notes/midsem-formulas.md), [`notes/crash-course.md`](notes/crash-course.md)
-- Scope: vector calculus + electrostatics only (first ~18 lectures). No magnetostatics / waves.
-- First sitting: Block 0 (i, j, k, dot/cross, what a field is, then coords). Do not skip — Physics hole.
+- 9 Sep 2026 mid is filed, **score not in**: [`notes/midsem-2026.md`](notes/midsem-2026.md). Photo in `resources/pyqs/MST_2026_Sep09.jpg`.
+- Mid is 30 of this course. Get the number onto [`../_meta/semester-plan.md`](../_meta/semester-plan.md) before shifting more hours. Attendance still multiplies internals.
 
 ## Log
 | Date | What I did | Next |
 |------|------------|------|
 | 2026-09-02 | Wrote MST-1 map, formula sheet, crash course (worked line/surface/Gauss + 2022/2023 PYQs) | Sit Block 0 from `notes/crash-course.md`; then Tutorial Sheet 2 Q1, Q7 and 2023 Feb Q3 |
+| 2026-09-23 | Filed 9 Sep 2026 mid (Slot E, 30 marks) | Add the score to the semester plan when it arrives |
 | 2026-08-13 | Digitized teaching plan + eval scheme | Start vector-calculus close |

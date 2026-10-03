@@ -1,5 +1,7 @@
 # Book PDF checklist
 
+**Mind:** [[Home]]
+
 ## Acknowledged (complete Sem 3 set)
 
 | Location | Book |
@@ -11,10 +13,11 @@
 | `02-dchd/resources/` | Kohavi & Jha — *Switching and Finite Automata Theory* (3e) |
 | `03-sns/resources/` | Oppenheim — *Signals & Systems* (2e) |
 | `04-emft/resources/` | **Sadiku — *Elements of Electromagnetics*** (primary; teaching plan also lists Hayt, Griffiths, Schaum) |
-| `05-acd/resources/` | Gaikwad — Op-Amps |
+| `05-acd/resources/books/` | Gaikwad — Op-Amps |
 | `06-mni/resources/` | Bentley — *Principles of Measurement Systems* |
 | `06-mni/resources/` | Doebelin — *Measurement Systems: Application and Design* |
 | `_meta/prereq/` | Alexander & Sadiku — *Fundamentals of Electric Circuits* (5e) |
+| `_meta/prereq/` | Boylestad & Nashelsky — *Electronic Devices and Circuit Theory* (11e). EDC patch for ACD: §1.6–1.9, §2.8, §3.3–3.6, §4.2, §4.5, §4.13–4.14, §5.4, §5.15, §10.2, §10.7, §10.9 |
 | `07-fundamentals-of-ml/resources/` | Syllabus docx (local); fetch Mitchell/Alpaydin + Deisenroth MML |
 
 ## Still add

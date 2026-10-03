@@ -1,5 +1,7 @@
 # ECLA 301 / ECL3xx Linear Algebra for ML — MST-1 map
 
+**Sat 7 Sep 2026.** Questions are in [`midsem-2026.md`](midsem-2026.md). Score not in yet.
+
 **Scope:** classmate lectures through Lecture 11 only (Gaussian / \(E\)-matrices / inverse / solution structure / span–basis / rank–maps). Do **not** grind Boyd, convex, eigen, SVD, Gram–Schmidt, projections, or least squares.
 
 **Local copies:** `resources/classmate/NOTES/SECTION A/LA (BEFORE MID).pdf`; topic PDFs in `resources/classmate/NOTES/`; Strang 4e `resources/Gilbert_Strang_Linear_Algebra_and_Its_Applicatio_230928_225121.pdf`

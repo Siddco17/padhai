@@ -569,202 +569,184 @@
     ],
     "05-acd": [
       {
-        "name": "20260810T192644Z_image.jpg",
-        "id": "130uk73UAOvQikCc23LOR9BAQJSMV3OW1",
-        "size": 84058,
-        "url": "https://drive.google.com/file/d/130uk73UAOvQikCc23LOR9BAQJSMV3OW1/view"
-      },
-      {
-        "name": "20260810T192659Z_OPAMP (2).pdf",
-        "id": "1z27xn8eXB2I6FpieGOtpPbwt5K0JlElK",
-        "size": 241460,
-        "url": "https://drive.google.com/file/d/1z27xn8eXB2I6FpieGOtpPbwt5K0JlElK/view"
-      },
-      {
-        "name": "20260819T155746Z_4b3a0084_ACD Formulas.pdf",
-        "id": "1Kteryw4v9pEUEcpwQmn82BfG7t2Sv_Ht",
-        "size": 188708,
-        "url": "https://drive.google.com/file/d/1Kteryw4v9pEUEcpwQmn82BfG7t2Sv_Ht/view"
-      },
-      {
-        "name": "20260831T061717Z_fd6a4b35_image.jpg",
-        "id": "1_FrDND-l7DCWJwjdC1IZl3Z9F6Z3vN7O",
-        "size": 94425,
-        "url": "https://drive.google.com/file/d/1_FrDND-l7DCWJwjdC1IZl3Z9F6Z3vN7O/view"
-      },
-      {
-        "name": "20260831T062128Z_9771d954_OPAMP (2).pdf",
-        "id": "1AzvYCD9VwpfQFFnJn2HKJRmDQ6PSLmf1",
-        "size": 241460,
-        "url": "https://drive.google.com/file/d/1AzvYCD9VwpfQFFnJn2HKJRmDQ6PSLmf1/view"
-      },
-      {
-        "name": "20260903T050615Z_29bab7f5_ACD SYLLABUS.pdf",
-        "id": "1QTP6QXYPmflWMEXDrn_ZHzuJ9eTG10ZU",
-        "size": 1159970,
-        "url": "https://drive.google.com/file/d/1QTP6QXYPmflWMEXDrn_ZHzuJ9eTG10ZU/view"
-      },
-      {
-        "name": "ACD_GATE_opamp_practice_01Sep2026.pdf",
-        "id": "12IfWGFZa10cvr0FqrJRXukkj5GlYIyBI",
-        "size": 1005918,
-        "url": "https://drive.google.com/file/d/12IfWGFZa10cvr0FqrJRXukkj5GlYIyBI/view"
-      },
-      {
-        "name": "ACD_notes_24258.pdf",
-        "id": "1nnv3eXW_IzGhuzmCuLl6WXDByrwL1iBX",
-        "size": 343861,
-        "url": "https://drive.google.com/file/d/1nnv3eXW_IzGhuzmCuLl6WXDByrwL1iBX/view"
-      },
-      {
-        "name": "ACD_SYLLABUS_midsem.pdf",
-        "id": "1b8k6h3wl9RLY9Vy6j7oL3SvFeesda2WS",
-        "size": 1159970,
-        "url": "https://drive.google.com/file/d/1b8k6h3wl9RLY9Vy6j7oL3SvFeesda2WS/view"
-      },
-      {
-        "name": "classmate/ACD_SYLLABUS.pdf",
-        "id": "13Xhs5tSI9_Rum3r3s-iSfuQTYjM77XYo",
-        "size": 1159970,
-        "url": "https://drive.google.com/file/d/13Xhs5tSI9_Rum3r3s-iSfuQTYjM77XYo/view"
-      },
-      {
-        "name": "classmate/NOTES/ACD Assignment 1.pdf",
-        "id": "1mR2u-GIV_KGFJgyHTn0AobLxslOxA5FI",
-        "size": 408838,
-        "url": "https://drive.google.com/file/d/1mR2u-GIV_KGFJgyHTn0AobLxslOxA5FI/view"
-      },
-      {
-        "name": "classmate/NOTES/SECTION A/ACD (1).pdf",
-        "id": "1r8crzuK2lTJw6f14-W0skSP7WYvjNlY5",
-        "size": 12122266,
-        "url": "https://drive.google.com/file/d/1r8crzuK2lTJw6f14-W0skSP7WYvjNlY5/view"
-      },
-      {
-        "name": "classmate/NOTES/SECTION B/ACD NOTES.pdf",
-        "id": "17iIdAQ_STqQtBU2fcY4z3f1eOkMWgLxQ",
-        "size": 23167068,
-        "url": "https://drive.google.com/file/d/17iIdAQ_STqQtBU2fcY4z3f1eOkMWgLxQ/view"
-      },
-      {
-        "name": "classmate/PYQS/ACD 24.pdf",
-        "id": "1gpP45GJr_Ba3DSDCBN2ADHkgRy1fJTsv",
-        "size": 1993179,
-        "url": "https://drive.google.com/file/d/1gpP45GJr_Ba3DSDCBN2ADHkgRy1fJTsv/view"
-      },
-      {
-        "name": "classmate/PYQS/ACD.pdf",
-        "id": "1oImLmrbVx7N8JeVPrYqBQx4ll9E94Qo1",
-        "size": 811669,
-        "url": "https://drive.google.com/file/d/1oImLmrbVx7N8JeVPrYqBQx4ll9E94Qo1/view"
-      },
-      {
-        "name": "classmate/PYQS/ACD_2021_EndSem_Exam.pdf",
-        "id": "1UjGgYfUXXraPMmw1uiKcqNvnFoUj3woK",
-        "size": 520851,
-        "url": "https://drive.google.com/file/d/1UjGgYfUXXraPMmw1uiKcqNvnFoUj3woK/view"
-      },
-      {
-        "name": "classmate/PYQS/ecl308_Mid_sem2022  - DR. MRS. PRADNYA H GHARE.pdf",
-        "id": "1geiYL_GT9Ma4p7czhAudMnxzF0iBgdg-",
-        "size": 854358,
-        "url": "https://drive.google.com/file/d/1geiYL_GT9Ma4p7czhAudMnxzF0iBgdg-/view"
-      },
-      {
-        "name": "classmate/RESOURCES/Analog-Circuit-EC-405-UNIT-II.pdf",
-        "id": "1WQUN5jozRiLWSBJpNGZyoQexeMOFIxYF",
-        "size": 962544,
-        "url": "https://drive.google.com/file/d/1WQUN5jozRiLWSBJpNGZyoQexeMOFIxYF/view"
-      },
-      {
-        "name": "classmate/RESOURCES/Linear integrated circuits (1).pdf",
-        "id": "1t7vtw98JBzn_h5vxG1usiFcCSZNmbU0p",
-        "size": 9438383,
-        "url": "https://drive.google.com/file/d/1t7vtw98JBzn_h5vxG1usiFcCSZNmbU0p/view"
-      },
-      {
-        "name": "classmate/RESOURCES/OperationalAmplifiersAndLinearICs_3E.pdf",
-        "id": "1ZiHdEy_WoVdr4BK0cRft76uR1NyUdIxF",
-        "size": 13729903,
-        "url": "https://drive.google.com/file/d/1ZiHdEy_WoVdr4BK0cRft76uR1NyUdIxF/view"
-      },
-      {
-        "name": "classmate/RESOURCES/Sergio Franco.pdf",
-        "id": "1TXpapxQqH8bTIvugbvFeNfhw1VNjlZE2",
+        "name": "books/Franco_Design_with_Operational_Amplifiers.pdf",
+        "id": "1I-W1nq-Qhz_biBJba6grzZGVuQTQNNEN",
         "size": 5063009,
-        "url": "https://drive.google.com/file/d/1TXpapxQqH8bTIvugbvFeNfhw1VNjlZE2/view"
+        "url": "https://drive.google.com/file/d/1I-W1nq-Qhz_biBJba6grzZGVuQTQNNEN/view"
       },
       {
-        "name": "Gaikwad Op Amp.pdf",
-        "id": "1Fll7zaOuIKK0UGWPJReQlASU1RlGqHkZ",
+        "name": "books/Gaikwad_Op_Amp.pdf",
+        "id": "1eMB5lXmHcSnIYOoX03QY4okP2Aa6pWdr",
         "size": 71405136,
-        "url": "https://drive.google.com/file/d/1Fll7zaOuIKK0UGWPJReQlASU1RlGqHkZ/view"
+        "url": "https://drive.google.com/file/d/1eMB5lXmHcSnIYOoX03QY4okP2Aa6pWdr/view"
       },
       {
-        "name": "zot-hub-edc/Books - EDC Theory.pdf",
-        "id": "1Z1yqJD4reRAnwj0NqnOs5myry1ODO7M9",
+        "name": "books/Linear_Integrated_Circuits.pdf",
+        "id": "1Xd10NMnH1Lx37DEQGIggly5u9LrFu9I6",
+        "size": 9438383,
+        "url": "https://drive.google.com/file/d/1Xd10NMnH1Lx37DEQGIggly5u9LrFu9I6/view"
+      },
+      {
+        "name": "books/Operational_Amplifiers_and_Linear_ICs_3E.pdf",
+        "id": "1yOlKD6r0GLPQk_FVDbxUMNyUpAUK0yzz",
+        "size": 13729903,
+        "url": "https://drive.google.com/file/d/1yOlKD6r0GLPQk_FVDbxUMNyUpAUK0yzz/view"
+      },
+      {
+        "name": "notes/741_OPAMP.pdf",
+        "id": "1boC0XbktUjOWgrhqmlu2LAS78E0RdDF9",
+        "size": 241460,
+        "url": "https://drive.google.com/file/d/1boC0XbktUjOWgrhqmlu2LAS78E0RdDF9/view"
+      },
+      {
+        "name": "notes/ACD_Formulas.pdf",
+        "id": "15Bf1mGq0Ko-t2H1gokfH3RlGj7QzIltm",
+        "size": 188708,
+        "url": "https://drive.google.com/file/d/15Bf1mGq0Ko-t2H1gokfH3RlGj7QzIltm/view"
+      },
+      {
+        "name": "notes/ACD_notes_24258.pdf",
+        "id": "1D4pzKrwXWzuMLKiGw39X9sOd3l8mjsa8",
+        "size": 343861,
+        "url": "https://drive.google.com/file/d/1D4pzKrwXWzuMLKiGw39X9sOd3l8mjsa8/view"
+      },
+      {
+        "name": "notes/MST_Syllabus.pdf",
+        "id": "1uYR1tzyF4qYN8IRgRYOXuN0jFOwPXnJQ",
+        "size": 1159970,
+        "url": "https://drive.google.com/file/d/1uYR1tzyF4qYN8IRgRYOXuN0jFOwPXnJQ/view"
+      },
+      {
+        "name": "notes/Section_A_ACD.pdf",
+        "id": "1waWJekA3G5PMWhOEfZrbzn5YZuPwfYRO",
+        "size": 12122266,
+        "url": "https://drive.google.com/file/d/1waWJekA3G5PMWhOEfZrbzn5YZuPwfYRO/view"
+      },
+      {
+        "name": "notes/Section_B_ACD_NOTES.pdf",
+        "id": "1AasDJzbqPlL2JDrSMcOxW9-8uF8dCEGh",
+        "size": 23167068,
+        "url": "https://drive.google.com/file/d/1AasDJzbqPlL2JDrSMcOxW9-8uF8dCEGh/view"
+      },
+      {
+        "name": "notes/Timetable.jpg",
+        "id": "1JmOrKddk-6bw9sIe26BPaZUYGV4KCySv",
+        "size": 84058,
+        "url": "https://drive.google.com/file/d/1JmOrKddk-6bw9sIe26BPaZUYGV4KCySv/view"
+      },
+      {
+        "name": "notes/Unit_II_Differential_Amplifier.pdf",
+        "id": "1B6PRSjoy6usnoMDbbWEWqRs1YVDr2PuC",
+        "size": 962544,
+        "url": "https://drive.google.com/file/d/1B6PRSjoy6usnoMDbbWEWqRs1YVDr2PuC/view"
+      },
+      {
+        "name": "practice/Assignment_1.pdf",
+        "id": "1IQ4nrL-bk9xRKiUWwTAitujdqW1N5C3c",
+        "size": 408838,
+        "url": "https://drive.google.com/file/d/1IQ4nrL-bk9xRKiUWwTAitujdqW1N5C3c/view"
+      },
+      {
+        "name": "practice/GATE_opamp_01Sep2026.pdf",
+        "id": "1Dp642jF9M0pb8-aB0Miq0p7fCsWEbz5a",
+        "size": 1005918,
+        "url": "https://drive.google.com/file/d/1Dp642jF9M0pb8-aB0Miq0p7fCsWEbz5a/view"
+      },
+      {
+        "name": "practice/Kanodia_3.5_Q1-5.jpg",
+        "id": "1zr-T1AffpPcsJnr5LmmigCkUCgSVApDi",
+        "size": 94425,
+        "url": "https://drive.google.com/file/d/1zr-T1AffpPcsJnr5LmmigCkUCgSVApDi/view"
+      },
+      {
+        "name": "pyqs/ACD_24.pdf",
+        "id": "1ncVdvH6D5sKRLV-197K2xK_KZmjXoZSK",
+        "size": 1993179,
+        "url": "https://drive.google.com/file/d/1ncVdvH6D5sKRLV-197K2xK_KZmjXoZSK/view"
+      },
+      {
+        "name": "pyqs/Endsem_2021.pdf",
+        "id": "1ZTm6ukHy0JEEcDtm5NCyAthrToSbQp6w",
+        "size": 520851,
+        "url": "https://drive.google.com/file/d/1ZTm6ukHy0JEEcDtm5NCyAthrToSbQp6w/view"
+      },
+      {
+        "name": "pyqs/MST_2022.pdf",
+        "id": "15cEDJoSzonOlK2lREH9d_lBraKrUDmmV",
+        "size": 854358,
+        "url": "https://drive.google.com/file/d/15cEDJoSzonOlK2lREH9d_lBraKrUDmmV/view"
+      },
+      {
+        "name": "pyqs/MST_2023.pdf",
+        "id": "1Jnui6VuwKSKfL7hgwfxtPljFUrmLOckR",
+        "size": 811669,
+        "url": "https://drive.google.com/file/d/1Jnui6VuwKSKfL7hgwfxtPljFUrmLOckR/view"
+      },
+      {
+        "name": "zot-hub-edc/Books_EDC_Theory.pdf",
+        "id": "154sJNqLFhIxOuQ8N2I_QNAmlICiqAntx",
         "size": 22092630,
-        "url": "https://drive.google.com/file/d/1Z1yqJD4reRAnwj0NqnOs5myry1ODO7M9/view"
+        "url": "https://drive.google.com/file/d/154sJNqLFhIxOuQ8N2I_QNAmlICiqAntx/view"
       },
       {
-        "name": "zot-hub-edc/PYQ W23 End EDC ECL206.pdf",
-        "id": "1MET0rKs-cuaP_wPaGiTjxu42B78q46HK",
+        "name": "zot-hub-edc/PYQ_W23_End_EDC_ECL206.pdf",
+        "id": "1676bjYU9nsqpUA04WvW9gud6n5UMfzhE",
         "size": 7708963,
-        "url": "https://drive.google.com/file/d/1MET0rKs-cuaP_wPaGiTjxu42B78q46HK/view"
+        "url": "https://drive.google.com/file/d/1676bjYU9nsqpUA04WvW9gud6n5UMfzhE/view"
       },
       {
-        "name": "zot-hub-edc/PYQ W23 Mid EDC ECL206.pdf",
-        "id": "1ieHcJaPKWCrR5Q4RIebm5JyKys8p5izQ",
+        "name": "zot-hub-edc/PYQ_W23_Mid_EDC_ECL206.pdf",
+        "id": "1zyLqwr_OTIw7H1yG1dk_5p7SKotb9ZcT",
         "size": 7215819,
-        "url": "https://drive.google.com/file/d/1ieHcJaPKWCrR5Q4RIebm5JyKys8p5izQ/view"
+        "url": "https://drive.google.com/file/d/1zyLqwr_OTIw7H1yG1dk_5p7SKotb9ZcT/view"
       },
       {
-        "name": "zot-hub-edc/PYQ W24 End EDC ECL206.pdf",
-        "id": "1l4Pe114bSNQbExz07IqOWKsk6JHySnS0",
+        "name": "zot-hub-edc/PYQ_W24_End_EDC_ECL206.pdf",
+        "id": "18JPtFS68khbIx1VBw-RpgZaZt63kii0o",
         "size": 435511,
-        "url": "https://drive.google.com/file/d/1l4Pe114bSNQbExz07IqOWKsk6JHySnS0/view"
+        "url": "https://drive.google.com/file/d/18JPtFS68khbIx1VBw-RpgZaZt63kii0o/view"
       },
       {
-        "name": "zot-hub-edc/PYQ W24 Mid EDC ECL206.pdf",
-        "id": "19-OYQ6N-Su9FHPbbdoKl4nogbiDylmbi",
+        "name": "zot-hub-edc/PYQ_W24_Mid_EDC_ECL206.pdf",
+        "id": "1fOrO6AWwB2BcUozLphm2OmPF3Lj6j-h6",
         "size": 255974,
-        "url": "https://drive.google.com/file/d/19-OYQ6N-Su9FHPbbdoKl4nogbiDylmbi/view"
+        "url": "https://drive.google.com/file/d/1fOrO6AWwB2BcUozLphm2OmPF3Lj6j-h6/view"
       },
       {
-        "name": "zot-hub-edc/Short Notes - Amplifier & Oscillators.pdf",
-        "id": "19sWd_772UBkozG0ZhSUqHvwMKSkteOCe",
+        "name": "zot-hub-edc/Short_Notes_Amplifier_Oscillators.pdf",
+        "id": "1hIl7msciH9Xr_amAlgRx0uHvRGQuMDjp",
         "size": 1229452,
-        "url": "https://drive.google.com/file/d/19sWd_772UBkozG0ZhSUqHvwMKSkteOCe/view"
+        "url": "https://drive.google.com/file/d/1hIl7msciH9Xr_amAlgRx0uHvRGQuMDjp/view"
       },
       {
-        "name": "zot-hub-edc/Short Notes - BJT & Current Mirror.pdf",
-        "id": "1goeaTqpMgtoXXnFNOdhcg6YsdEt8ewEX",
+        "name": "zot-hub-edc/Short_Notes_BJT_Current_Mirror.pdf",
+        "id": "1OBTuis2ji4wHZacaHs2k5nXLYAYWsxTE",
         "size": 4187851,
-        "url": "https://drive.google.com/file/d/1goeaTqpMgtoXXnFNOdhcg6YsdEt8ewEX/view"
+        "url": "https://drive.google.com/file/d/1OBTuis2ji4wHZacaHs2k5nXLYAYWsxTE/view"
       },
       {
-        "name": "zot-hub-edc/Short Notes - Feedback Amplifier.pdf",
-        "id": "1-I5ULtv_IzfEdMDC3cavaT0-4BV6iaT7",
+        "name": "zot-hub-edc/Short_Notes_Feedback_Amplifier.pdf",
+        "id": "1xsZA6STnwd41cZv8nzEkcYeXtCQdHZWx",
         "size": 1293681,
-        "url": "https://drive.google.com/file/d/1-I5ULtv_IzfEdMDC3cavaT0-4BV6iaT7/view"
+        "url": "https://drive.google.com/file/d/1xsZA6STnwd41cZv8nzEkcYeXtCQdHZWx/view"
       },
       {
-        "name": "zot-hub-edc/Short Notes - Flash Notes.pdf",
-        "id": "1Y9SMJcRPVsBMeZfVB8HWXGE5b3AiEJR7",
+        "name": "zot-hub-edc/Short_Notes_Flash_Notes.pdf",
+        "id": "1tBqhahM-4VQDNWGY-hnr4MBiX1EwVmjL",
         "size": 1704167,
-        "url": "https://drive.google.com/file/d/1Y9SMJcRPVsBMeZfVB8HWXGE5b3AiEJR7/view"
+        "url": "https://drive.google.com/file/d/1tBqhahM-4VQDNWGY-hnr4MBiX1EwVmjL/view"
       },
       {
-        "name": "zot-hub-edc/Short Notes - MOSFET.pdf",
-        "id": "1otp6xYNeZ39A0n-XzASHZDUDYtRmoTre",
+        "name": "zot-hub-edc/Short_Notes_MOSFET.pdf",
+        "id": "1N22I5itjumBa97qR2FT0k9UPaxHyi3sc",
         "size": 833883,
-        "url": "https://drive.google.com/file/d/1otp6xYNeZ39A0n-XzASHZDUDYtRmoTre/view"
+        "url": "https://drive.google.com/file/d/1N22I5itjumBa97qR2FT0k9UPaxHyi3sc/view"
       },
       {
-        "name": "zot-hub-edc/Short Notes - Power Amplifier.pdf",
-        "id": "1JJYL9EvtBoyi7DOgiVVUoGEfr6My-uYj",
+        "name": "zot-hub-edc/Short_Notes_Power_Amplifier.pdf",
+        "id": "13vblIGdUMzsoI8tv7b24REMEnpi7a9tk",
         "size": 448464,
-        "url": "https://drive.google.com/file/d/1JJYL9EvtBoyi7DOgiVVUoGEfr6My-uYj/view"
+        "url": "https://drive.google.com/file/d/13vblIGdUMzsoI8tv7b24REMEnpi7a9tk/view"
       }
     ],
     "05-acd-lab": [

@@ -27,3 +27,5 @@ sem3/_inbox/pending/
 sem3/_inbox/queue/
 sem3/_inbox/state.json
 sem3/_inbox/unsorted/
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json

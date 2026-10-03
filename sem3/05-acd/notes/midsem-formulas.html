@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ECL308 ACD — MST formula sheet</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.css">
+<style>
+  :root { color-scheme: dark; --bg:#1e1e1e; --fg:#d4d4d4; --muted:#9d9d9d; --border:#3c3c3c; --accent:#89b4fa; --ok:#a6e3a1; --warn:#f9e2af; }
+  html,body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.5 ui-sans-serif,system-ui,-apple-system,sans-serif; }
+  main { max-width:860px; margin:0 auto; padding:28px 22px 64px; }
+  h1 { font-size:1.45rem; font-weight:650; margin:0 0 10px; }
+  h2 { font-size:1.12rem; font-weight:650; margin:26px 0 8px; color:var(--accent); }
+  p, li { margin:0.45em 0; }
+  strong { font-weight:650; }
+  ul { padding-left:1.2em; }
+  table { border-collapse:collapse; width:100%; font-size:0.9rem; margin:10px 0 16px; }
+  th,td { border:1px solid var(--border); padding:6px 8px; text-align:left; vertical-align:top; }
+  th { color:var(--muted); font-weight:600; }
+  .freeze { border:1px solid var(--ok); background:#1a2a1c; padding:12px 14px; margin:14px 0 18px; border-radius:6px; }
+  .freeze strong { color:var(--ok); }
+  .katex-display { margin:0.75em 0; overflow-x:auto; overflow-y:hidden; }
+  @media print {
+    :root { color-scheme: light; --bg:#fff; --fg:#111; --muted:#444; --border:#bbb; --accent:#124; --ok:#163; }
+    html,body { background:#fff; color:#111; }
+    .freeze { background:#eef8ee; }
+  }
+</style>
+</head>
+<body>
+<main id="out">Loading…</main>
+<script type="text/markdown" id="src"># ECL308 ACD — MST cheat sheet (6 h)
+
+$V_{BE}=0.7\,\mathrm{V}$, $V_T=26\,\mathrm{mV}$. $\beta$ large $\Rightarrow I_C\approx I_E$. Skip Schmitt / filters / 555 / ADC.
+
+<div class="freeze">
+
+**Freeze these answers**
+
+- Virtual short: $V_+=V_-$ (not “$=0$”). $V_-=-3\,\mathrm{V}$ $\Rightarrow$ $V_+=-3\,\mathrm{V}$.
+- 2023 Q1: $I_T=300\,\mu\mathrm{A}$, $\beta=150$ $\Rightarrow$ $r_\pi=26\,\mathrm{k}\Omega$.
+- 2022 Q6 (printed Figure 4): $R_1=19\,\mathrm{k}$ to GND, $R_2=79\,\mathrm{k}$, $A_0=10^5$, $f_c=8\,\mathrm{Hz}$. $G=1+79/19=98/19$, $\beta=19/98$. $\mathrm{UGB}=800\,\mathrm{kHz}$. At $15\,\mathrm{kHz}$: $|A|=53.33$, **$A_f\approx 4.70$**. Set B at $30\,\mathrm{kHz}$ $\Rightarrow$ **$\approx 4.32$**. (GATE twin used $R_1=1\,\mathrm{k}$ $\Rightarrow G=80$ $\Rightarrow 32$ / $20$. Read the figure.)
+- 2023 Q7: $-10\to+10$ at $0.5\,\mathrm{V/\mu s}$ $\Rightarrow$ **$40\,\mu\mathrm{s}$**.
+- 2023 Q6: $G=200$, $V_{os}=\pm2\,\mathrm{mV}$, $v_i=0.01\sin\omega t$ $\Rightarrow$ $2\sin\omega t\pm0.4\,\mathrm{V}$.
+- 2023 Q2: two freq-dependent params besides $A(f)$: **CMRR, PSRR**.
+- 2023 Q4: T-network $A_f=-120$.
+- Ideal op-amp = **VCVS**. Closed-loop $20\,\mathrm{dB}=10$, UGB $1\,\mathrm{MHz}$ $\Rightarrow$ $f_{3\mathrm{dB}}=100\,\mathrm{kHz}$.
+- Triangle into differentiator $\Rightarrow$ **square**.
+
+</div>
+
+## Golden rules + 741
+
+Negative feedback, not at the rail: $I_+=I_-=0$ and $V_+=V_-$. No feedback (comparator) $\Rightarrow$ no virtual short.
+
+Pins: **1** null, **2** (−), **3** (+), **4** $-V_{EE}$, **5** null, **6** out, **7** $+V_{CC}$, **8** NC.
+
+741 internals: **DIBO → DIUBO → level shifter → push-pull**.
+
+| | Ideal | 741 typical |
+|--|-------|-------------|
+| $A_{OL}$ | $\infty$ | $2\times10^5$ |
+| $Z_{in}$ | $\infty$ | $2\,\mathrm{M}\Omega$ |
+| $Z_{out}$ | $0$ | $75\,\Omega$ |
+| $V_{os}$ | $0$ | $1\,\mathrm{mV}$ |
+| $I_{os}$ | $0$ | $20\,\mathrm{nA}$ |
+| UGB | $\infty$ | $1\,\mathrm{MHz}$ |
+| CMRR | $\infty$ | $90\,\mathrm{dB}$ |
+| SR | $\infty$ | $0.5\,\mathrm{V/\mu s}$ |
+
+## Linear apps (virtual short + KCL)
+
+| Circuit | $v_o$ |
+|---------|-------|
+| Inverting | $- (R_F/R_1)v_i$, $R_i=R_1$ |
+| Non-inverting | $(1+R_F/R_1)v_i$, $R_i\to\infty$ |
+| Follower | $v_o=v_i$ ($\beta=1$, max BW) |
+| Inverting summer | $-R_F(v_1/R_1+v_2/R_2+\cdots)$ |
+| Difference (matched $\alpha=R_F/R_1=R_3/R_2$) | $\alpha(v_2-v_1)$ |
+| I–V | $-I_{in}R_F$ |
+
+Unmatched difference: $V_+$ is a divider, then
+
+$$
+v_o=\Bigl(1+\frac{R_F}{R_1}\Bigr)V_+-\frac{R_F}{R_1}v_1
+$$
+
+**IA:** $v_o=\dfrac{R_2}{R_1}\bigl(1+\dfrac{2R_f}{R_G}\bigr)(v_2-v_1)$. Tune $R_G$. Common-mode cancels.
+
+One-op-amp mixed sum $v_o=a_1v_1+\cdots-b_1u_1-\cdots$: **positives on (+), negatives on (−)**. Inverting weights $=R_F/R_k$. $(+)$ side is then multiplied by $1+R_F/R_{\parallel,-}$.
+
+**T-network:** $R_{F,\mathrm{eq}}=R_a+R_b+R_a R_b/R_c$, $A_f=-R_{F,\mathrm{eq}}/R_1$.
+
+2023 Q4: $R_1=1\,\mathrm{k}$, T $=10\,\mathrm{k}+10\,\mathrm{k}$ with $1\,\mathrm{k}$ to GND $\Rightarrow R_{F,\mathrm{eq}}=120\,\mathrm{k}$ $\Rightarrow A_f=-120$.
+
+Kanodia: $R_1=100\,\mathrm{k}$, $A_f=-10$, T $=R$, $100\,\mathrm{k}$, $100\,\mathrm{k}$ $\Rightarrow R=450\,\mathrm{k}\Omega$.
+
+## Waveforms
+
+$v_{o,\mathrm{int}}=-(1/RC)\int v_i\,dt$. $v_{o,\mathrm{diff}}=-RC\,dv_i/dt$.
+
+| Drive | Integrator | Differentiator |
+|-------|------------|----------------|
+| DC | ramp $\to\pm V_{sat}$ | $0$ |
+| square | triangle | spikes |
+| triangle | parabola | **square** |
+| sine | $-\cos$ | $90^\circ$ lead |
+
+2022 Q4: $R=10\,\mathrm{k}$, $C=0.001\,\mu\mathrm{F}$, triangle $0\to5\,\mathrm{V}$ in $5\,\mu\mathrm{s}$: $RC=10\,\mu\mathrm{s}$, $|dv/dt|=10^6\,\mathrm{V/s}$, $v_o=\mp10\,\mathrm{V}$ square.
+
+## Feedback, GBW, slew, offset, CMRR
+
+Non-inverting: $\beta=R_1/(R_1+R_F)$, $A_f=A/(1+A\beta)\to 1+R_F/R_1$.
+
+$$
+R_{if}=R_i(1+A\beta),\quad R_{of}=R_o/(1+A\beta),\quad f_{cl}=f_{ol}(1+A\beta)
+$$
+
+Inverting, finite $A$:
+
+$$
+A_f=-\frac{R_F/R_1}{1+(1+R_F/R_1)/A}=-\frac{A R_F}{R_1(1+A)+R_F}
+$$
+
+2022 Q8: $A=100$, want $-25$, $R_F=100\,\mathrm{k}$ $\Rightarrow$ ideal $R_1=4\,\mathrm{k}$; finite $R_1=2.97\,\mathrm{k}\Omega$.
+
+**GBW:** $\mathrm{UGB}=A_0 f_c$. For $f\gg f_c$: $|A(f)|=\mathrm{UGB}/f$. Then $A_f=A/(1+A\beta)$. Closed-loop $G=1+R_F/R_1$ $\Rightarrow$ $f_{3\mathrm{dB}}=\mathrm{UGB}/G$.
+
+2022 Q6 printed: $\mathrm{UGB}=800\,\mathrm{kHz}$, $\beta=19/98$, $|A(15\,\mathrm{k})|=53.33$, $A_f=53.33/(1+53.33\times 19/98)\approx 4.70$. GATE / $R_1=1\,\mathrm{k}$ twin: $\beta=1/80$, $A_f=32$.
+
+**Slew:** $t=\Delta V/\mathrm{SR}$. Sine undistorted: $\mathrm{SR}\ge 2\pi f V_p$. 741: $0.5\,\mathrm{V/\mu s}$.
+
+**Offset:** $V_o=G\,V_{os}$ (inputs $0$). With signal: $v_o=G(v_i\pm V_{os})$. $I_B=(I_{B1}+I_{B2})/2$, $I_{os}=|I_{B1}-I_{B2}|$. Compensating $R_C=R_1\parallel R_F$.
+
+**CMRR:** $\mathrm{CMRR}=A_d/A_{cm}$, $\mathrm{CMRR_{dB}}=A_{d,\mathrm{dB}}-A_{cm,\mathrm{dB}}$. $v_d=v_1-v_2$, $v_c=(v_1+v_2)/2$. GATE: $48-2=46\,\mathrm{dB}$. Mirror / big $R_E$ $\Rightarrow A_{cm}\downarrow$ $\Rightarrow$ CMRR $\uparrow$.
+
+## Unit I — differential amp
+
+Tail (bases ~$0$, one $R_E$ to $-V_{EE}$):
+
+$$
+I_T=\frac{|V_{EE}|-0.7}{R_E},\qquad I_E=I_T/2,\qquad r_e=\frac{V_T}{I_E},\qquad r_\pi=\beta r_e
+$$
+
+Two-$R_E$ form: $I_E=(V_{EE}-V_{BE})/(2R_E)$. With $R_{in}$: $I_E=(V_{EE}-V_{BE})/(R_{in}/\beta+2R_E)$.
+
+$V_C=V_{CC}-I_C R_C$. $v_{id}=v_{in1}-v_{in2}$. Extra $r_E$: replace $r_e$ by $r_e+r_E$.
+
+| Config | Bases | $v_o$ | $A_d$ |
+|--------|-------|-------|-------|
+| DIBO | both | between collectors | $R_C/r_e$ |
+| DIUBO | both | one collector | $R_C/(2r_e)$ **half** |
+| SIBO | one | between collectors | $R_C/r_e$ |
+| SIUBO | one | one collector | $R_C/(2r_e)$ |
+
+$R_i\approx 2\beta r_e$ per side. $R_o=R_C$. SE in/out: $A_{v,\mathrm{SE}}=R_C/[2(r_e+r_E)]$; differential out is **twice**.
+
+**Mirror tail:** $I_{\mathrm{ref}}=(V_{CC}+|V_{EE}|-0.7)/R\approx I_T$. Then same $A_d$.
+
+2022 Q1: $15$, $-10$, $R=10\,\mathrm{k}$ $\Rightarrow I_D=2.43\,\mathrm{mA}$, $A_d\approx467$. Set B $V_{EE}=-15$ $\Rightarrow I_D=2.93\,\mathrm{mA}$, $A_d\approx564$.
+
+2022 Q3: $R_T=R_C=10\,\mathrm{k}$, $\pm10\,\mathrm{V}$ $\Rightarrow I_T=0.93\,\mathrm{mA}$, $r_e=56\,\Omega$, SIBO **$179$**, SIUBO **$89$**. Set B $\pm15$: **$275$ / $137$**.
+
+2023 Q1: $r_\pi=\beta V_T/(I_T/2)=150\times0.026/(150\times10^{-6})=26\,\mathrm{k}\Omega$.
+
+**Cascade:** $A_{\mathrm{tot}}=A_1 A_2\cdots$ after $R_{C1}\parallel R_{i2}$. Darlington: $\beta_{\mathrm{eq}}\approx\beta^2$, $V_{BE,\mathrm{eq}}\approx1.4\,\mathrm{V}$. Level shifter: DIUBO $V_C\neq0$, shift DC to $0$ before the next stage.
+
+If a 10-mark Darlington cascade appears: write $I_T=(|V_{EE}|-1.4)/R_{\mathrm{tail}}$, split, $V_C=V_{CC}-I_C R_C$, then $A_v$. Do not blank the DC — that is most of the marks.
+
+## 6-hour order
+
+1. Recite this page once (20 min).
+2. Gift PYQs: virtual short, slew, offset, CMRR/PSRR, GBW $=32$, invert/non-inv/follower, triangle→square.
+3. Unit I: $I_T$, $r_e$, $r_\pi$, two $A_d$ formulas, then 2022 Q3 / Q1 / Q2.
+4. T-network $-120$. Finite-$A$ invert if time.
+5. Skip cascade unless everything above is cold. Summing / IA only if a sketch question is printed and you still have 20 min.
+</script>
+<script src="https://cdn.jsdelivr.net/npm/marked@15.0.12/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.16.22/dist/katex.min.js"></script>
+<script>
+const src = document.getElementById("src").textContent;
+const slots = [];
+function stash(display, body) {
+  const i = slots.length;
+  slots.push({ display, body });
+  return "@@MATH" + i + "@@";
+}
+let protectedSrc = src.replace(/\$\$([\s\S]+?)\$\$/g, (_, body) => stash(true, body));
+protectedSrc = protectedSrc.replace(/\$([^$]+?)\$/g, (_, body) => stash(false, body));
+marked.setOptions({ gfm: true, breaks: false });
+let html = marked.parse(protectedSrc);
+html = html.replace(/@@MATH(\d+)@@/g, (_, n) => {
+  const { display, body } = slots[Number(n)];
+  return katex.renderToString(body, { displayMode: display, throwOnError: false });
+});
+document.getElementById("out").innerHTML = html;
+</script>
+</body>
+</html>

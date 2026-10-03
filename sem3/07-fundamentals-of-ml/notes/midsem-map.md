@@ -1,4 +1,6 @@
-# CSL2XX FoML — MST-1 map
+# CSLA 204 FoML — MST-1 map
+
+**Sat.** September 2026 paper and the **18/30** are in [`midsem-2026.md`](midsem-2026.md). Printed paper is 25 marks. This file is the pre-exam clock; the paper note is the endsem drill.
 
 **Bible:** professor list (numerical) + the six files in `resources/`. Paper is **Friday afternoon** — sleep tonight. Do **not** open Mitchell or Deisenroth.
 

@@ -1,6 +1,8 @@
 # Fundamentals of Machine Learning
 
-- **Code:** CSL2XX (CSE) — confirm final numeric code on registration
+**Hub:** [[FoML]] · [[FoML Lab]]
+
+- **Code:** CSLA 204 (paper header). Vault had been using CSL2XX until the mid confirmed the code.
 - **Credits:** **4** `(3-0-2)` → theory **3** + lab **1**
 - **Type:** **OC** (Open Course) on annexure — counts in your elective/OC slot
 - **Pre-req:** CSL101 Computer Programming (you already have programming strength)
@@ -51,8 +53,8 @@ Same-day lab notes + GitHub notebook hygiene. Project topic: can lean audio/IEM 
 - Use LA course for PCA / least squares intuition the same week they appear
 
 ## Current focus
-- MST Friday afternoon. 14h plan: Sit 1–5 then sleep. Open only the six files in `resources/`.
-- Map/formulas retargeted: professor 5-point linreg, GD one-step, Gini, t-test. No Mitchell/CSC311.
+- **Mid: 18/30** (printed paper is 25; confirm if the script is 18/25). Paper: [`notes/midsem-2026.md`](notes/midsem-2026.md).
+- Hold, don’t restart the crash course. Lab is 25% and still fully open. One weekly pass on the 2026 paper: trees, least squares, logistic, Bayes.
 
 ## Log
 | Date | What I did | Next |
@@ -62,3 +64,4 @@ Same-day lab notes + GitHub notebook hygiene. Project topic: can lean audio/IEM 
 | 2026-09-03 | Professor list confirmed in chat; classmate Python = lab, p-values = extra | Next sitting: Block LA + Block 5 (trees). Map now matches professor. |
 | 2026-09-03 | 14 h to paper, zero prior. Map now has emergency clock. | Sitting 1: linreg four-point + derive \(a_0,a_1\). Then trees. |
 | 2026-09-03 | Folder simplified; map/formulas = 6 files; GD/Gini/t-stat in | Sit 1 you-try (5-point + salary GD). Then Sit 2 trees. |
+| 2026-09-23 | Filed September 2026 mid. Score **18/30**. Code on the paper is CSLA 204 | Keep the lab full; one endsem pass on `notes/midsem-2026.md` |
