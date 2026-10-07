@@ -13,7 +13,8 @@ Original target was AA everywhere → SGPA ≥ 9.5. **That is no longer the oper
 | **FoML** | [2026 mid](../07-fundamentals-of-ml/notes/midsem-2026.md) | **18/30** | Best of the three. Hold it with the lab (25%). |
 | LA | [7 Sep](../01-linear-algebra/notes/midsem-2026.md) | — | Paper filed. Score not in. |
 | EMFT | [9 Sep](../04-emft/notes/midsem-2026.md) | — | Paper filed. Mid is 30 of the course. Get the number. |
-| DCHD, SnS | — | — | Papers were not in this set. |
+| **DCHD** | reported 7 Oct | **18/30** | Same band as FoML. Hold it. Lab is the open part: lab files are behind. Treat the denominator as 30 until the script says otherwise. |
+| SnS | — | — | Paper was not in this set. |
 
 FoML’s printed paper is **25 marks** (any 5). You reported 18/30. If the script is 18/25, say so — that mid is 72%, not 60%.
 
@@ -27,7 +28,7 @@ FoML is Mid 25 / End 50 / Lab 25. At 18/30 the mid is worth **15 of 25**. Reachi
 ## Priority (from these scores)
 1. **MNI** — redo the 2026 paper until Q1 (loading), Q3 (ramp + limiting error), and Q5 (Wheatstone + Ayrton) are clean. Mini-project and lab file stay full; that credit is still open.
 2. **ACD** — redo Q1–Q3 (ideal op-amp), then Q4–Q5 (GBW, CMRR), then Q9 (integrator), then Q6 (BJT operating point). Sunday Thevenin/KVL block is standing, not optional.
-3. **DCHD** — 5 credits, score unknown. Do not let this become the third soft subject. Lab is 2 of those 5.
+3. **DCHD** — 18/30, 5 credits. Hold it. Lab is 2 of those 5, and at least one lab journal is already late. That file comes before new theory.
 4. **EMFT** — get the mid number. Until then keep tutorial problems; attendance still multiplies internals.
 5. **SnS** — paper not filed. Keep the weekly problem habit.
 6. **LA** — paper filed, score unknown. 3 credits, so it moves the SGPA less than MNI/ACD.

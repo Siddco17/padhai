@@ -11,7 +11,7 @@ aliases:
 
 VNIT ECE, NEP 2025. **28 credits.** Vault path: `~/Desktop/padhai`.
 
-**Today:** [[sem3/_meta/operating-brief|operating brief]] — wake 7:00, SGPA near 7.2, MNI then ACD. Scores: [[sem3/_meta/semester-plan|semester plan]]. Whiteboard: [[sem3/_maps/Sem 3 Mind.canvas|Sem 3 Mind]].
+**Today:** [[sem3/_meta/operating-brief|operating brief]] — alarm 7:00, bed 00:30, late lab file before new theory. DCHD 18/30. Scores: [[sem3/_meta/semester-plan|semester plan]].
 
 ## Maps
 
