@@ -2,7 +2,7 @@
 
 **Mind:** [[Home]] · [[sem3/_maps/Sem 3 Mind.canvas|Sem 3 Mind]]
 
-Original target was AA everywhere → SGPA ≥ 9.5. **That is no longer the operating target.** Midsem scores below already use up the “one soft subject” budget. Full write-up: [`ten-pointer-plan.md`](ten-pointer-plan.md).
+Original target was AA everywhere → SGPA ≥ 9.5. **That is no longer the operating target.** The live week, the 7.2 SGPA aim, and the 2029 sequence are in [`operating-brief.md`](operating-brief.md). Midsem scores below already use up the “one soft subject” budget. The old all-AA write-up: [`ten-pointer-plan.md`](ten-pointer-plan.md).
 
 ## Midsem scores (23 Sep 2026)
 
@@ -37,4 +37,4 @@ FoML is Mid 25 / End 50 / Lab 25. At 18/30 the mid is worth **15 of 25**. Reachi
 See `academic-background.md` and `remediation.md`.
 
 ## IEM side project
-`iem-fr-eq` stays off while MNI and ACD are the repair subjects.
+`iem-fr-eq`, the e-ink dashboard, and JyotAI stay off until endsem week is over. The project that counts before that is the FoML lab. See [`operating-brief.md`](operating-brief.md).

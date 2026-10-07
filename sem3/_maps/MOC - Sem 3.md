@@ -18,6 +18,7 @@ Index of the mind. Visual: [[sem3/_maps/Sem 3 Mind.canvas|Sem 3 Mind]]. Ops: [[H
 
 ## Meta
 
+- [[sem3/_meta/operating-brief|operating brief]]
 - [[sem3/_meta/semester-plan|semester plan]]
 - [[sem3/_meta/mst1-sessions|MST-1 chats]]
 - [[sem3/_meta/ten-pointer-plan|10-pointer]] (parked)

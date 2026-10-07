@@ -50,4 +50,4 @@ Shared WhatsApp PDFs/photos can be queued from Beeper, approved, then filed into
 
 ## Web guide
 
-Source: [`docs/index.html`](docs/index.html) — subjects, remediation, books checklist, weekly timetable, IEM plan.
+Source: [`docs/index.html`](docs/index.html) — subjects, remediation, books checklist, weekly timetable, IEM plan. The live semester rules are [`sem3/_meta/operating-brief.md`](sem3/_meta/operating-brief.md).

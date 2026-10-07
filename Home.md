@@ -11,7 +11,7 @@ aliases:
 
 VNIT ECE, NEP 2025. **28 credits.** Vault path: `~/Desktop/padhai`.
 
-**Today:** [[sem3/_meta/semester-plan|semester plan]] — MNI 4/30, ACD 9/30, FoML 18/30. Whiteboard: [[sem3/_maps/Sem 3 Mind.canvas|Sem 3 Mind]].
+**Today:** [[sem3/_meta/operating-brief|operating brief]] — wake 7:00, SGPA near 7.2, MNI then ACD. Scores: [[sem3/_meta/semester-plan|semester plan]]. Whiteboard: [[sem3/_maps/Sem 3 Mind.canvas|Sem 3 Mind]].
 
 ## Maps
 
@@ -48,7 +48,7 @@ Playbook: [[sem3/_meta/remediation|remediation]] · honest map: [[sem3/_meta/aca
 
 Scores and the new order are in [[sem3/_meta/semester-plan|semester plan]]: **MNI 4/30**, **ACD 9/30**, **FoML 18/30**. LA and EMFT papers are filed; those scores are not in. DCHD and SnS papers were not in this set.
 
-Repair order: MNI, then ACD. FoML is maintenance (protect the lab). DCHD stays protected because it is 5 credits.
+Repair order and the week are in [[sem3/_meta/operating-brief|operating brief]]: MNI, then ACD. FoML lab is the software proof. DCHD stays protected because it is 5 credits. Home is India. A US job in 2029 would be a first move, not a return.
 
 ## How this vault works
 
