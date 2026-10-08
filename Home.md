@@ -44,6 +44,10 @@ Playbook: [[sem3/_meta/remediation|remediation]] · honest map: [[sem3/_meta/aca
 - Physics: [[Vectors and fields]] · [[Dot and cross product]] · [[Coordinate systems]]
 - Networks: [[Impedance]] · [[Laplace transform]]
 
+## Chip club (this week)
+
+Viva pack: [[sem3/_meta/chip-club-interview|3-day schedule and mock]] · [[sem3/_meta/chip-club-edc|EDC]] · [[sem3/_meta/chip-club-acd-dchd|ACD and DCHD]].
+
 ## After midsem
 
 Scores and the new order are in [[sem3/_meta/semester-plan|semester plan]]: **MNI 4/30**, **ACD 9/30**, **FoML 18/30**. LA and EMFT papers are filed; those scores are not in. DCHD and SnS papers were not in this set.
