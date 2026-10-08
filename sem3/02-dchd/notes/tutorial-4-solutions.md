@@ -178,7 +178,7 @@ Selects \(S_1=C\), \(S_0=D\). Input index is \(2C+D\).
 
 ## 9. Propagation delay
 
-Delays: XOR \(4\,\text{ns}\), AND \(2\,\text{ns}\), MUX \(1\,\text{ns}\). Inputs \(P,Q,R,S,T\) change together.
+Delays: XOR 4 ns, AND 2 ns, MUX 1 ns. Inputs \(P,Q,R,S,T\) change together.
 
 Wiring:
 
@@ -188,27 +188,23 @@ Wiring:
 - First MUX select is \(T\). Its output is the other input of the second AND.
 - Second AND drives input 1 of the output MUX. Output MUX select is \(T\).
 
-Longest path:
+Longest path: Q or R, then the XOR (4 ns), then the first MUX (1 ns), then the AND (2 ns), then the output MUX (1 ns).
 
-\[
-Q \text{ or } R \xrightarrow{\text{XOR } 4} \text{first MUX } 1 \xrightarrow{\text{AND } 2} \text{output MUX } 1
-\]
+**Maximum delay = 8 ns**
 
-**Maximum delay = \(8\,\text{ns}\)**
-
-Shorter paths, for checking: \(RS\) through the same chain is \(2+1+2+1=6\,\text{ns}\). \(PQ\) straight into the output MUX is \(2+1=3\,\text{ns}\).
+Shorter paths, for checking: \(RS\) through the same chain is \(2+1+2+1=6\) ns. \(PQ\) straight into the output MUX is \(2+1=3\) ns.
 
 ---
 
 ## 10. \(Y = (f_1 f_2) \oplus (f_3+f_4)\)
 
 \[
-\begin{align*}
+\begin{aligned}
 f_1 &= \sum(0,2,3,5,7,8,11,13)\\
 f_2 &= \sum(1,3,5,7,11,13,15)\\
 f_3 &= \sum(0,1,4,11)\\
 f_4 &= \sum(0,2,6,13)
-\end{align*}
+\end{aligned}
 \]
 
 \[
@@ -242,7 +238,7 @@ The MUX realizes \(F=\sum m(1,3,5,7,9,11,13,15)\), so its data input \(k\) is 1 
 \(F=1\) when some odd input is 1 and every higher input is 0:
 
 \[
-\begin{align*}
+\begin{aligned}
 F = I_{15}
 &+ I_{15}' I_{14}' I_{13}\\
 &+ I_{15}' I_{14}' I_{13}' I_{12}' I_{11}\\
@@ -251,7 +247,7 @@ F = I_{15}
 &+ I_{15}' I_{14}' I_{13}' I_{12}' I_{11}' I_{10}' I_9' I_8' I_7' I_6' I_5\\
 &+ I_{15}' I_{14}' I_{13}' I_{12}' I_{11}' I_{10}' I_9' I_8' I_7' I_6' I_5' I_4' I_3\\
 &+ I_{15}' I_{14}' I_{13}' I_{12}' I_{11}' I_{10}' I_9' I_8' I_7' I_6' I_5' I_4' I_3' I_2' I_1
-\end{align*}
+\end{aligned}
 \]
 
 Even inputs appear only complemented. They never turn \(F\) on by themselves. The eight products are disjoint and do not combine, so this is minimal SOP.
@@ -316,12 +312,12 @@ Conversion used to build the lists: \(B_3=G_3\), \(B_2=G_3\oplus G_2\), \(B_1=B_
 OR the decoder outputs where that binary bit is 1:
 
 \[
-\begin{align*}
+\begin{aligned}
 B_3 &= D_8+D_9+D_{10}+D_{11}+D_{12}+D_{13}+D_{14}+D_{15}\\
 B_2 &= D_4+D_5+D_6+D_7+D_8+D_9+D_{10}+D_{11}\\
 B_1 &= D_2+D_3+D_4+D_5+D_8+D_9+D_{14}+D_{15}\\
 B_0 &= D_1+D_2+D_4+D_7+D_8+D_{11}+D_{13}+D_{14}
-\end{align*}
+\end{aligned}
 \]
 
 Check row: Gray \(1101\) is minterm 13 and converts to binary \(1001\), which is in \(B_3\) and \(B_0\) only. Both lists contain \(D_{13}\), and \(B_2, B_1\) do not.
