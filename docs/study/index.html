@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a1f16" />
+  <title>End-sem study · padhai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #1a1f16; --bg-elev: #242b1f; --bg-card: #2c3426; --line: #3d4734;
+      --text: #e8eadf; --muted: #a3ad96; --accent: #d4a017;
+      --accent-soft: rgba(212, 160, 23, 0.14); --ok: #7cb87c; --danger: #d97b6c;
+      --radius: 14px; --font: "IBM Plex Sans", system-ui, sans-serif;
+      --display: "Fraunces", Georgia, serif;
+      --safe: env(safe-area-inset-bottom, 0px);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; font-family: var(--font); color: var(--text); line-height: 1.5;
+      background:
+        radial-gradient(900px 480px at 8% -10%, #2f3a24 0%, transparent 55%),
+        radial-gradient(700px 420px at 100% 0%, #3a2e14 0%, transparent 46%),
+        var(--bg);
+      min-height: 100dvh;
+    }
+    a { color: var(--accent); }
+    button, input { font: inherit; color: inherit; }
+    .wrap { width: min(680px, 100%); margin: 0 auto; padding: 1rem 1rem calc(1.4rem + var(--safe)); }
+    .eyebrow { font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 0; }
+    h1, h2, h3 { font-family: var(--display); font-weight: 560; letter-spacing: -0.02em; margin: 0.2rem 0 0.35rem; }
+    h1 { font-size: clamp(1.7rem, 6vw, 2.15rem); }
+    h2 { font-size: 1.25rem; }
+    p { margin: 0.35rem 0; }
+    .muted { color: var(--muted); }
+    .small { font-size: 0.86rem; }
+    .gate { min-height: 70dvh; display: grid; align-content: center; }
+    .card, .row, .cert {
+      background: var(--bg-card); border: 1px solid var(--line); border-radius: var(--radius); padding: 0.85rem 1rem; margin: 0.55rem 0;
+    }
+    .row {
+      display: grid; grid-template-columns: auto 1fr auto; gap: 0.7rem; align-items: center;
+      width: 100%; text-align: left; cursor: pointer;
+    }
+    .row.done { border-color: #3f5a3f; }
+    .row.current { border-color: var(--accent); background: var(--accent-soft); }
+    .row.locked { opacity: 0.45; cursor: not-allowed; }
+    .badge {
+      width: 2rem; height: 2rem; border-radius: 50%; display: grid; place-items: center;
+      border: 1px solid var(--line); background: var(--bg-elev); font-weight: 600;
+    }
+    .bar { height: 8px; background: var(--bg-elev); border-radius: 99px; overflow: hidden; border: 1px solid var(--line); margin: 0.55rem 0; }
+    .bar > span { display: block; height: 100%; background: var(--accent); }
+    .ghost, .primary, .step {
+      border-radius: 999px; border: 1px solid var(--line); background: var(--bg-elev); padding: 0.5rem 0.85rem; cursor: pointer;
+    }
+    .primary { background: var(--accent); color: #1a1f16; border-color: var(--accent); font-weight: 600; }
+    .primary:disabled, .step:disabled { opacity: 0.45; cursor: not-allowed; }
+    .top { display: flex; justify-content: space-between; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem; }
+    .steps { display: flex; gap: 0.35rem; flex-wrap: wrap; margin: 0.55rem 0 0.8rem; }
+    .step.on { background: var(--accent); color: #1a1f16; border-color: var(--accent); }
+    .eq { font-family: var(--display); background: var(--bg-elev); border-radius: 10px; padding: 0.45rem 0.7rem; margin: 0.4rem 0; }
+    .fig { width: 100%; height: auto; background: #1e241b; border-radius: 12px; border: 1px solid var(--line); display: block; }
+    fieldset { border: 1px solid var(--line); border-radius: 12px; margin: 0.65rem 0; padding: 0.65rem 0.75rem 0.35rem; }
+    legend { padding: 0 0.25rem; font-weight: 600; }
+    .choice { display: flex; gap: 0.5rem; align-items: flex-start; width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: 0.45rem 0.6rem; margin: 0.3rem 0; background: var(--bg-elev); }
+    .choice.right { border-color: #3f5a3f; color: var(--ok); }
+    .choice.wrong { border-color: #6a3d36; color: var(--danger); }
+    label.field { display: block; margin: 0.65rem 0; font-weight: 600; }
+    input[type="text"], input[type="password"] {
+      display: block; width: 100%; margin-top: 0.3rem; background: var(--bg);
+      border: 1px solid var(--line); border-radius: 10px; padding: 0.6rem 0.7rem;
+    }
+    .ok { color: var(--ok); } .bad { color: var(--danger); }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.7rem; }
+    .links a { display: inline-block; margin: 0.2rem 0.55rem 0.2rem 0; }
+    ul.clean { margin: 0.3rem 0; padding-left: 1.1rem; }
+    .why { color: var(--muted); font-size: 0.86rem; }
+    .sheet li { margin: 0.28rem 0; }
+  </style>
+</head>
+<body>
+  <div class="wrap" id="app"></div>
+  <script src="lessons.js"></script>
+  <script src="courses.js"></script>
+  <script src="courses2.js"></script>
+  <script>
+    const AUTH = "padhai-study-auth";
+    const KEY = "padhai-study-v1";
+    const PASS = "0909";
+    const STEPS = ["read", "see", "quiz", "num"];
+    const STEP_LABEL = { read: "Read", see: "See", quiz: "Quiz", num: "Numerical" };
+
+    const FIGS = {
+      pulse: `<svg class="fig" viewBox="0 0 360 120" role="img" aria-label="A finite pulse is an energy signal. A forever sine is a power signal.">
+        <path d="M20 90 H70 V40 H130 V90 H180" fill="none" stroke="#d4a017" stroke-width="2"/>
+        <path d="M200 70 Q230 30 260 70 T320 70" fill="none" stroke="#7cb87c" stroke-width="2"/>
+        <text x="70" y="110" fill="#d4a017" font-size="12">energy</text>
+        <text x="230" y="110" fill="#7cb87c" font-size="12">power</text>
+      </svg>`,
+      conv: `<svg class="fig" viewBox="0 0 360 130" role="img" aria-label="Flip h, slide it across x, multiply, add.">
+        <path d="M30 100 H150" stroke="#3d4734"/>
+        <path d="M40 100 V50 H90 V100" fill="none" stroke="#d4a017" stroke-width="2"/>
+        <text x="50" y="44" fill="#d4a017" font-size="12">x</text>
+        <path d="M190 100 H330" stroke="#3d4734"/>
+        <path d="M250 100 V60 H300 V100" fill="none" stroke="#7cb87c" stroke-width="2"/>
+        <text x="255" y="52" fill="#7cb87c" font-size="12">h flipped</text>
+        <text x="20" y="20" fill="#a3ad96" font-size="12">overlap area is y at that shift</text>
+      </svg>`,
+      sample: `<svg class="fig" viewBox="0 0 360 120" role="img" aria-label="Sampling faster than twice the highest frequency keeps the sine. Slower sampling folds it.">
+        <path d="M20 70 Q60 20 100 70 T180 70 T260 70 T340 70" fill="none" stroke="#d4a017" stroke-width="2"/>
+        <g fill="#7cb87c">
+          <circle cx="20" cy="70" r="4"/><circle cx="60" cy="20" r="4"/><circle cx="100" cy="70" r="4"/>
+          <circle cx="140" cy="120" r="0"/><circle cx="140" cy="20" r="4"/><circle cx="180" cy="70" r="4"/>
+        </g>
+        <text x="20" y="110" fill="#a3ad96" font-size="12">fs &gt; 2 fmax, or the sine aliases</text>
+      </svg>`,
+      gauss: `<svg class="fig" viewBox="0 0 360 140" role="img" aria-label="A point charge and a Gaussian sphere. Flux depends on enclosed charge.">
+        <circle cx="150" cy="70" r="48" fill="none" stroke="#d4a017" stroke-width="2"/>
+        <circle cx="150" cy="70" r="5" fill="#e8eadf"/>
+        <text x="210" y="74" fill="#a3ad96" font-size="13">flux = Qenc / ε</text>
+      </svg>`,
+      wave: `<svg class="fig" viewBox="0 0 360 120" role="img" aria-label="A plane wave travels in z. E and H are perpendicular to each other and to z.">
+        <path d="M30 70 H330" stroke="#3d4734"/>
+        <path d="M40 70 Q80 20 120 70 T200 70 T280 70" fill="none" stroke="#d4a017" stroke-width="2"/>
+        <path d="M40 70 Q80 110 120 70 T200 70" fill="none" stroke="#7cb87c" stroke-width="2"/>
+        <text x="40" y="24" fill="#d4a017" font-size="12">E</text>
+        <text x="40" y="112" fill="#7cb87c" font-size="12">H</text>
+        <text x="250" y="24" fill="#a3ad96" font-size="12">travel →</text>
+      </svg>`,
+      bridge: `<svg class="fig" viewBox="0 0 360 150" role="img" aria-label="Wheatstone bridge. Balance when the ratio of one arm equals the ratio of the other.">
+        <path d="M80 30 H240 M80 30 V120 M240 30 V120 M80 120 H240" fill="none" stroke="#e8eadf"/>
+        <text x="140" y="24" fill="#d4a017" font-size="12">P</text>
+        <text x="248" y="78" fill="#d4a017" font-size="12">Q</text>
+        <text x="60" y="78" fill="#7cb87c" font-size="12">R</text>
+        <text x="140" y="140" fill="#7cb87c" font-size="12">S</text>
+        <text x="250" y="130" fill="#a3ad96" font-size="12">balance: P/Q = R/S</text>
+      </svg>`,
+      tree: `<svg class="fig" viewBox="0 0 360 140" role="img" aria-label="A decision tree splits the parent into purer children.">
+        <rect x="140" y="16" width="80" height="28" rx="6" fill="none" stroke="#d4a017"/>
+        <text x="180" y="35" text-anchor="middle" fill="#d4a017" font-size="12">parent</text>
+        <path d="M160 44 L90 78 M200 44 L270 78" stroke="#a3ad96"/>
+        <rect x="50" y="78" width="80" height="28" rx="6" fill="none" stroke="#7cb87c"/>
+        <rect x="230" y="78" width="80" height="28" rx="6" fill="none" stroke="#e0a06a"/>
+        <text x="90" y="96" text-anchor="middle" fill="#7cb87c" font-size="12">purer</text>
+        <text x="270" y="96" text-anchor="middle" fill="#e0a06a" font-size="12">other</text>
+      </svg>`,
+      proj: `<svg class="fig" viewBox="0 0 360 140" role="img" aria-label="Least squares drops a perpendicular from b onto the column space.">
+        <path d="M40 110 H300" stroke="#d4a017" stroke-width="2"/>
+        <path d="M60 110 L200 30" stroke="#7cb87c" stroke-width="2"/>
+        <path d="M200 30 L200 110" stroke="#a3ad96" stroke-dasharray="4 3"/>
+        <text x="210" y="28" fill="#7cb87c" font-size="12">b</text>
+        <text x="150" y="128" fill="#d4a017" font-size="12">column space</text>
+        <text x="208" y="78" fill="#a3ad96" font-size="12">error ⟂</text>
+      </svg>`,
+      opamp: `<svg class="fig" viewBox="0 0 360 130" role="img" aria-label="Inverting amp has a virtual ground. Non-inverting amp has a virtual short at the signal.">
+        <polygon points="40,30 90,60 40,90" fill="none" stroke="#e8eadf"/>
+        <text x="48" y="55" fill="#d4a017" font-size="12">−</text>
+        <text x="48" y="78" fill="#7cb87c" font-size="12">+</text>
+        <text x="20" y="115" fill="#d4a017" font-size="12">v− = 0</text>
+        <polygon points="200,30 250,60 200,90" fill="none" stroke="#e8eadf"/>
+        <text x="208" y="55" fill="#d4a017" font-size="12">−</text>
+        <text x="208" y="78" fill="#7cb87c" font-size="12">+</text>
+        <text x="180" y="115" fill="#7cb87c" font-size="12">v− = vi</text>
+      </svg>`,
+      diode: `<svg class="fig" viewBox="0 0 360 120" role="img" aria-label="Forward curve rises after 0.7 volts. Zener knee is in reverse.">
+        <line x1="40" y1="20" x2="40" y2="100" stroke="#3d4734"/>
+        <line x1="20" y1="70" x2="180" y2="70" stroke="#3d4734"/>
+        <path d="M40 78 C70 78 80 40 150 22" fill="none" stroke="#d4a017" stroke-width="2"/>
+        <path d="M40 70 C30 90 24 100 18 104" fill="none" stroke="#e0a06a" stroke-width="2"/>
+        <text x="120" y="18" fill="#d4a017" font-size="12">0.7 V</text>
+        <text x="200" y="70" fill="#a3ad96" font-size="13">rd = ηVT / ID</text>
+      </svg>`,
+      kmap: `<svg class="fig" viewBox="0 0 360 110" role="img" aria-label="K-map groups are powers of two. Edges wrap.">
+        <g stroke="#3d4734" fill="#242b1f">
+          <rect x="40" y="30" width="40" height="30"/><rect x="80" y="30" width="40" height="30"/>
+          <rect x="120" y="30" width="40" height="30"/><rect x="160" y="30" width="40" height="30"/>
+          <rect x="40" y="60" width="40" height="30"/><rect x="80" y="60" width="40" height="30"/>
+          <rect x="120" y="60" width="40" height="30"/><rect x="160" y="60" width="40" height="30"/>
+        </g>
+        <rect x="42" y="32" width="76" height="26" fill="rgba(212,160,23,0.35)" stroke="#d4a017"/>
+        <text x="220" y="55" fill="#a3ad96" font-size="13">group 1s</text>
+        <text x="220" y="78" fill="#a3ad96" font-size="13">size 1, 2, 4, 8</text>
+      </svg>`
+    };
+
+    let state = load();
+    let authed = sessionStorage.getItem(AUTH) === "1";
+    let view = { name: "home" };
+    let quizPick = {};
+    let quizGraded = null;
+    let forceQuiz = false;
+    let numShown = false;
+
+    function load() {
+      try { return JSON.parse(localStorage.getItem(KEY) || "{}"); }
+      catch (e) { return {}; }
+    }
+    function save() { localStorage.setItem(KEY, JSON.stringify(state)); }
+    function passedKey(sid, lid) { return sid + ":" + lid; }
+    function lessonPassed(subject, lesson) {
+      const k = passedKey(subject.id, lesson.id);
+      return !!(state[k] && state[k].quiz && (lesson.numerical ? state[k].num : true));
+    }
+    function subjectCount(subject) {
+      return subject.lessons.filter(l => lessonPassed(subject, l)).length;
+    }
+    function unlocked(subject, lesson) {
+      const i = subject.lessons.findIndex(l => l.id === lesson.id);
+      if (i <= 0) return true;
+      return lessonPassed(subject, subject.lessons[i - 1]);
+    }
+    function esc(s) {
+      return String(s).replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+    }
+    function subjectById(id) { return (window.SUBJECTS || []).find(s => s.id === id); }
+
+    function render() {
+      const app = document.getElementById("app");
+      if (!authed) app.innerHTML = gateHtml();
+      else if (view.name === "home") app.innerHTML = homeHtml();
+      else if (view.name === "subject") app.innerHTML = subjectHtml();
+      else if (view.name === "sheet") app.innerHTML = sheetHtml();
+      else app.innerHTML = lessonHtml();
+      bind();
+    }
+
+    function gateHtml() {
+      return `<div class="gate">
+        <p class="eyebrow">padhai</p>
+        <h1>End-sem study</h1>
+        <p class="muted">Seven courses and the chip-club path. One screen lock for this tab.</p>
+        <label class="field">Password
+          <input id="pw" type="password" inputmode="numeric" autocomplete="off" />
+        </label>
+        <div class="actions"><button class="primary" id="enter" type="button">Open</button></div>
+        <p id="gate-msg" class="bad"></p>
+      </div>`;
+    }
+    function homeHtml() {
+      const subjects = window.SUBJECTS || [];
+      const done = subjects.reduce((n, s) => n + subjectCount(s), 0);
+      const total = subjects.reduce((n, s) => n + s.lessons.length, 0);
+      return `<p class="eyebrow">padhai · one link</p>
+        <h1>End-sem</h1>
+        <p class="muted">Diagram, formula, quiz, then the number. Local file links open on this Mac. Drive links open the same book on your phone.</p>
+        <div class="bar"><span style="width:${total ? (100 * done / total) : 0}%"></span></div>
+        <p class="small muted">${done} of ${total} lessons passed</p>
+        ${subjects.map(s => {
+          const n = subjectCount(s);
+          const cls = n === s.lessons.length ? "done" : n ? "current" : "";
+          return `<button class="row ${cls}" type="button" data-subject="${s.id}">
+            <span class="badge">${n === s.lessons.length ? "✓" : s.short}</span>
+            <span><strong>${esc(s.title)}</strong><br><span class="small muted">${n} / ${s.lessons.length} · ${esc(s.blurb)}</span></span>
+            <span class="small muted">Open</span>
+          </button>`;
+        }).join("")}
+        <p class="small muted"><a href="../">Phone guide</a></p>`;
+    }
+    function subjectHtml() {
+      const s = subjectById(view.id);
+      const n = subjectCount(s);
+      const current = s.lessons.find(l => unlocked(s, l) && !lessonPassed(s, l));
+      return `<div class="top"><button class="ghost" type="button" data-nav="home">Subjects</button>
+        <button class="ghost" type="button" data-sheet="${s.id}">Formula sheet</button></div>
+        <p class="eyebrow">${esc(s.code || "")}</p>
+        <h1>${esc(s.title)}</h1>
+        <p class="muted">${esc(s.blurb)}</p>
+        <div class="bar"><span style="width:${100 * n / s.lessons.length}%"></span></div>
+        <p class="small muted">${n} of ${s.lessons.length}</p>
+        ${s.lessons.map(l => {
+          const open = unlocked(s, l);
+          const done = lessonPassed(s, l);
+          const cls = done ? "done" : !open ? "locked" : (current && current.id === l.id ? "current" : "");
+          return `<button class="row ${cls}" type="button" data-lesson="${l.id}" ${open ? "" : "disabled"}>
+            <span class="badge">${done ? "✓" : l.id}</span>
+            <span><strong>${esc(l.title)}</strong><br><span class="small muted">${l.minutes} min</span></span>
+            <span class="small muted">${done ? "Passed" : open ? "Open" : "Locked"}</span>
+          </button>`;
+        }).join("")}`;
+    }
+    function sheetHtml() {
+      const s = subjectById(view.id);
+      return `<div class="top"><button class="ghost" type="button" data-subject="${s.id}">Lessons</button></div>
+        <p class="eyebrow">Night-before</p>
+        <h1>${esc(s.title)}</h1>
+        <p class="muted">From the vault formula sheet. The lesson quizzes use these lines.</p>
+        <ol class="sheet">${s.sheet.map(line => `<li>${esc(line)}</li>`).join("")}</ol>
+        <div class="links">${linkHtml(s.links || [])}</div>`;
+    }
+    function linkHtml(links) {
+      return (links || []).map(l => `<a href="${esc(l.href)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join("");
+    }
+    function lessonHtml() {
+      const s = subjectById(view.subject);
+      const lesson = s.lessons.find(l => l.id === view.lesson);
+      const step = view.step;
+      return `<div class="top"><button class="ghost" type="button" data-subject="${s.id}">${esc(s.short)}</button>
+        <span class="small muted">${lesson.minutes} min</span></div>
+        <p class="eyebrow">Lesson ${lesson.id} of ${s.lessons.length}</p>
+        <h1>${esc(lesson.title)}</h1>
+        <div class="steps">
+          ${STEPS.filter(st => st !== "num" || lesson.numerical).map(st =>
+            `<button class="step ${st === step ? "on" : ""}" type="button" data-step="${st}" ${stepOpen(s, lesson, st) ? "" : "disabled"}>${STEP_LABEL[st]}</button>`
+          ).join("")}
+        </div>
+        ${step === "read" ? readHtml(lesson) : ""}
+        ${step === "see" ? seeHtml(lesson) : ""}
+        ${step === "quiz" ? quizHtml(s, lesson) : ""}
+        ${step === "num" && lesson.numerical ? numHtml(s, lesson) : ""}`;
+    }
+    function stepOpen(subject, lesson, step) {
+      if (step === "num") return !!(state[passedKey(subject.id, lesson.id)] || {}).quiz;
+      return true;
+    }
+    function readHtml(lesson) {
+      return `<p>${esc(lesson.read)}</p>
+        <div class="card links"><p class="small muted">Sources</p>${linkHtml(lesson.links)}</div>
+        <div class="actions"><button class="primary" type="button" data-step="see">See the picture</button></div>`;
+    }
+    function seeHtml(lesson) {
+      const fig = FIGS[lesson.fig] || "";
+      return `<h2>${esc(lesson.seeTitle)}</h2>
+        ${lesson.see}
+        ${fig}
+        <p class="small muted">${esc(lesson.figCap || "")}</p>
+        <p class="small muted">Source: ${esc(lesson.source)}</p>
+        <div class="actions"><button class="primary" type="button" data-step="quiz">Quiz</button></div>`;
+    }
+    function quizHtml(subject, lesson) {
+      const bag = state[passedKey(subject.id, lesson.id)] || {};
+      if (bag.quiz && !quizGraded && !forceQuiz) {
+        const next = lesson.numerical ? "num" : null;
+        return `<p class="ok">Quiz already passed.</p><div class="actions">
+          ${next ? `<button class="primary" type="button" data-step="num">Numerical</button>` : `<button class="primary" type="button" data-subject="${subject.id}">Back to the path</button>`}
+          <button class="ghost" type="button" id="redo-quiz">Redo</button></div>`;
+      }
+      const graded = quizGraded && quizGraded.key === passedKey(subject.id, lesson.id);
+      return `<p class="small muted">Four questions. Three correct ${lesson.numerical ? "opens the numerical" : "passes the lesson"}.</p>
+        ${lesson.quiz.map((item, i) => `<fieldset><legend>${i + 1}. ${esc(item.q)}</legend>
+          ${item.choices.map((c, j) => {
+            let cls = "choice";
+            if (graded && j === item.answer) cls += " right";
+            else if (graded && quizPick[i] === j && j !== item.answer) cls += " wrong";
+            return `<label class="${cls}"><input type="radio" name="q${i}" value="${j}" ${quizPick[i] === j ? "checked" : ""} ${graded ? "disabled" : ""}/> <span>${esc(c)}</span></label>`;
+          }).join("")}
+          ${graded ? `<p class="why">${esc(item.why)}</p>` : ""}
+        </fieldset>`).join("")}
+        ${graded ? `<p class="${quizGraded.ok ? "ok" : "bad"}">${quizGraded.score} of 4.</p>` : ""}
+        <div class="actions">
+          ${graded && quizGraded.ok && lesson.numerical ? `<button class="primary" type="button" data-step="num">Numerical</button>` : ""}
+          ${graded && quizGraded.ok && !lesson.numerical ? `<button class="primary" type="button" data-subject="${subject.id}">Back to the path</button>` : ""}
+          ${graded && !quizGraded.ok ? `<button class="primary" type="button" id="redo-quiz">Try again</button>` : ""}
+          ${!graded ? `<button class="primary" type="button" id="grade-quiz">Check</button>` : ""}
+        </div>`;
+    }
+    function numHtml(subject, lesson) {
+      const n = lesson.numerical;
+      const done = !!(state[passedKey(subject.id, lesson.id)] || {}).num;
+      return `<p>${esc(n.prompt)}</p>
+        ${n.fields.map(f => `<label class="field">${esc(f.label)}<input type="text" data-field="${f.key}" autocomplete="off"/></label>`).join("")}
+        <div class="actions">
+          <button class="primary" type="button" id="grade-num">Check</button>
+          <button class="ghost" type="button" id="show-num">Show the worked solution</button>
+        </div>
+        <div id="num-out"></div>
+        ${done ? `<p class="ok">This lesson is passed.</p><div class="actions"><button class="primary" type="button" data-subject="${subject.id}">Back to the path</button></div>` : ""}
+        ${numShown ? `<article class="card"><p>${esc(n.solution)}</p></article>` : ""}`;
+    }
+
+    function bind() {
+      const pw = document.getElementById("pw");
+      const enter = document.getElementById("enter");
+      if (enter) {
+        const go = () => {
+          if ((pw.value || "").trim() === PASS) {
+            sessionStorage.setItem(AUTH, "1");
+            authed = true;
+            render();
+          } else {
+            const msg = document.getElementById("gate-msg");
+            if (msg) msg.textContent = "That is not the code.";
+          }
+        };
+        enter.addEventListener("click", go);
+        pw.addEventListener("keydown", e => { if (e.key === "Enter") go(); });
+      }
+      document.querySelectorAll("[data-nav]").forEach(b => b.addEventListener("click", () => { view = { name: b.dataset.nav }; render(); }));
+      document.querySelectorAll("[data-subject]").forEach(b => b.addEventListener("click", () => {
+        view = { name: "subject", id: b.dataset.subject };
+        quizGraded = null; forceQuiz = false; numShown = false;
+        render();
+      }));
+      document.querySelectorAll("[data-sheet]").forEach(b => b.addEventListener("click", () => {
+        view = { name: "sheet", id: b.dataset.sheet };
+        render();
+      }));
+      document.querySelectorAll("[data-lesson]").forEach(b => b.addEventListener("click", () => {
+        const s = subjectById(view.id);
+        const lesson = s.lessons.find(l => String(l.id) === b.dataset.lesson);
+        if (!unlocked(s, lesson)) return;
+        quizPick = {}; quizGraded = null; forceQuiz = false; numShown = false;
+        view = { name: "lesson", subject: s.id, lesson: lesson.id, step: "read" };
+        render();
+      }));
+      document.querySelectorAll("[data-step]").forEach(b => b.addEventListener("click", () => {
+        const s = subjectById(view.subject);
+        const lesson = s.lessons.find(l => l.id === view.lesson);
+        if (!stepOpen(s, lesson, b.dataset.step)) return;
+        view.step = b.dataset.step;
+        if (b.dataset.step !== "quiz") quizGraded = null;
+        render();
+      }));
+      const grade = document.getElementById("grade-quiz");
+      if (grade) grade.addEventListener("click", gradeQuiz);
+      const redo = document.getElementById("redo-quiz");
+      if (redo) redo.addEventListener("click", () => { quizPick = {}; quizGraded = null; forceQuiz = true; render(); });
+      document.querySelectorAll("input[type=radio]").forEach(input => {
+        input.addEventListener("change", () => { quizPick[Number(input.name.slice(1))] = Number(input.value); });
+      });
+      const gn = document.getElementById("grade-num");
+      if (gn) gn.addEventListener("click", gradeNum);
+      const sn = document.getElementById("show-num");
+      if (sn) sn.addEventListener("click", () => { numShown = true; render(); });
+    }
+    function ensureBag(key) {
+      if (!state[key]) state[key] = {};
+      return state[key];
+    }
+    function gradeQuiz() {
+      const s = subjectById(view.subject);
+      const lesson = s.lessons.find(l => l.id === view.lesson);
+      let score = 0;
+      lesson.quiz.forEach((item, i) => { if (quizPick[i] === item.answer) score += 1; });
+      const ok = score >= 3;
+      quizGraded = { key: passedKey(s.id, lesson.id), score, ok };
+      if (ok) {
+        ensureBag(passedKey(s.id, lesson.id)).quiz = true;
+        if (!lesson.numerical) ensureBag(passedKey(s.id, lesson.id)).num = true;
+        forceQuiz = false;
+        save();
+      }
+      render();
+    }
+    function gradeNum() {
+      const s = subjectById(view.subject);
+      const lesson = s.lessons.find(l => l.id === view.lesson);
+      const n = lesson.numerical;
+      let ok = true;
+      n.fields.forEach(f => {
+        const el = document.querySelector(`[data-field="${f.key}"]`);
+        const raw = el ? el.value : "";
+        if (f.exact) {
+          if (String(raw).trim().toLowerCase().replace(/\s+/g, "") !== String(f.exact).toLowerCase().replace(/\s+/g, "")) ok = false;
+        } else {
+          const x = parseFloat(String(raw).replace(",", "."));
+          if (!Number.isFinite(x) || Math.abs(x - f.target) > f.tol) ok = false;
+        }
+      });
+      const out = document.getElementById("num-out");
+      if (ok) {
+        ensureBag(passedKey(s.id, lesson.id)).num = true;
+        numShown = true;
+        save();
+        render();
+      } else if (out) out.innerHTML = `<p class="bad">Not yet. Check the sign and the unit.</p>`;
+    }
+    render();
+  </script>
+</body>
+</html>

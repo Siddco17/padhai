@@ -48,6 +48,10 @@ Playbook: [[sem3/_meta/remediation|remediation]] · honest map: [[sem3/_meta/aca
 
 Viva pack: [[sem3/_meta/chip-club-interview|3-day schedule and mock]] · [[sem3/_meta/chip-club-edc|EDC]] · [[sem3/_meta/chip-club-acd-dchd|ACD and DCHD]].
 
+Course, with the book pages and the quizzes: [docs/club/index.html](docs/club/index.html). Phone, after this is on main: https://siddco17.github.io/padhai/club/
+
+End-sem site, all seven courses plus the chip-club path, screen lock `0909`: [docs/study/index.html](docs/study/index.html). Phone, after this is on main: https://siddco17.github.io/padhai/study/
+
 ## After midsem
 
 Scores and the new order are in [[sem3/_meta/semester-plan|semester plan]]: **MNI 4/30**, **ACD 9/30**, **FoML 18/30**. LA and EMFT papers are filed; those scores are not in. DCHD and SnS papers were not in this set.

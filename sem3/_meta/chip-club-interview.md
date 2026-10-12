@@ -7,6 +7,8 @@ aliases: [chip club, chip design club]
 
 Whiteboard interview on the list you were given: DCHD combinational, EDC devices and bias, ACD op-amp blocks. Not a second midterm. Not HDL.
 
+Course (book pages, diagram, quiz, numerical): [docs/club/index.html](../../docs/club/index.html). On the phone, after this is on main: https://siddco17.github.io/padhai/club/
+
 Sheets:
 
 - [[sem3/_meta/chip-club-edc|EDC]] — Day 1 and Day 2. This is the hole (Sem 2 barely passed).

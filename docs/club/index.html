@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#1a1f16" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>Chip club course · padhai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,560;9..144,700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #1a1f16;
+      --bg-elev: #242b1f;
+      --bg-card: #2c3426;
+      --line: #3d4734;
+      --text: #e8eadf;
+      --muted: #a3ad96;
+      --accent: #d4a017;
+      --accent-soft: rgba(212, 160, 23, 0.14);
+      --ok: #7cb87c;
+      --warn: #e0a06a;
+      --danger: #d97b6c;
+      --radius: 14px;
+      --font: "IBM Plex Sans", system-ui, sans-serif;
+      --display: "Fraunces", Georgia, serif;
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: var(--font);
+      background:
+        radial-gradient(900px 480px at 8% -10%, #2f3a24 0%, transparent 55%),
+        radial-gradient(700px 420px at 100% 0%, #3a2e14 0%, transparent 46%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100dvh;
+    }
+    a { color: var(--accent); }
+    button, input { font: inherit; color: inherit; }
+    .wrap { width: min(640px, 100%); margin: 0 auto; padding: 1rem 1rem calc(1.5rem + var(--safe-bottom)); }
+    .eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      font-weight: 600;
+      margin: 0;
+    }
+    h1, h2, h3 { font-family: var(--display); font-weight: 560; letter-spacing: -0.02em; }
+    h1 { font-size: clamp(1.7rem, 6vw, 2.2rem); margin: 0.2rem 0 0.35rem; }
+    h2 { font-size: 1.35rem; margin: 0 0 0.35rem; }
+    h3 { font-size: 1.05rem; margin: 0 0 0.35rem; }
+    p { margin: 0.4rem 0; }
+    .muted { color: var(--muted); }
+    .small { font-size: 0.86rem; }
+    .bar {
+      height: 8px;
+      background: var(--bg-elev);
+      border-radius: 99px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      margin: 0.7rem 0 0.3rem;
+    }
+    .bar > span { display: block; height: 100%; background: var(--accent); width: 0; }
+    .track-label { margin: 1.3rem 0 0.45rem; }
+    .row {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 0.75rem;
+      align-items: center;
+      width: 100%;
+      text-align: left;
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 0.75rem 0.8rem;
+      margin: 0 0 0.5rem;
+      cursor: pointer;
+    }
+    .row.done { border-color: #3f5a3f; }
+    .row.current { border-color: var(--accent); background: var(--accent-soft); }
+    .row.locked { opacity: 0.48; cursor: not-allowed; }
+    .badge {
+      width: 2rem;
+      height: 2rem;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--line);
+      font-weight: 600;
+      background: var(--bg-elev);
+    }
+    .row.done .badge { color: var(--ok); border-color: #3f5a3f; }
+    .row.current .badge { color: var(--accent); border-color: var(--accent); }
+    .status { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.8rem;
+    }
+    .ghost, .primary, .choice {
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--bg-elev);
+      padding: 0.55rem 0.9rem;
+      cursor: pointer;
+    }
+    .primary { background: var(--accent); color: #1a1f16; border-color: var(--accent); font-weight: 600; }
+    .primary:disabled { opacity: 0.45; cursor: not-allowed; }
+    .steps { display: flex; gap: 0.35rem; flex-wrap: wrap; margin: 0.6rem 0 0.9rem; }
+    .step {
+      border: 1px solid var(--line);
+      background: transparent;
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 0.28rem 0.65rem;
+      cursor: pointer;
+    }
+    .step.on { color: #1a1f16; background: var(--accent); border-color: var(--accent); }
+    .step:disabled { opacity: 0.4; cursor: not-allowed; }
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 0.9rem 1rem;
+      margin: 0.6rem 0;
+    }
+    .read-item { margin: 0.55rem 0; }
+    .book { color: var(--accent); font-weight: 600; }
+    .fig {
+      width: 100%;
+      height: auto;
+      background: #1e241b;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      display: block;
+    }
+    .shot { margin: 0.75rem 0 0.2rem; }
+    .shot img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      background: #fff;
+    }
+    .shot figcaption { margin-top: 0.3rem; }
+    .eq {
+      font-family: var(--display);
+      background: var(--bg-elev);
+      border-radius: 10px;
+      padding: 0.45rem 0.7rem;
+      margin: 0.45rem 0;
+    }
+    fieldset {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      margin: 0.7rem 0;
+      padding: 0.7rem 0.8rem 0.4rem;
+    }
+    legend { padding: 0 0.3rem; font-weight: 600; }
+    .choice {
+      display: flex;
+      gap: 0.55rem;
+      align-items: flex-start;
+      width: 100%;
+      border-radius: 10px;
+      margin: 0.35rem 0;
+      text-align: left;
+    }
+    .choice.right { border-color: #3f5a3f; color: var(--ok); }
+    .choice.wrong { border-color: #6a3d36; color: var(--danger); }
+    label.field { display: block; margin: 0.7rem 0; font-weight: 600; }
+    input[type="text"], input[type="number"] {
+      display: block;
+      width: 100%;
+      margin-top: 0.3rem;
+      background: var(--bg);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 0.6rem 0.7rem;
+      font-weight: 500;
+    }
+    .ok { color: var(--ok); }
+    .bad { color: var(--danger); }
+    .actions { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.8rem; }
+    .cert {
+      border: 1px solid var(--accent);
+      background:
+        linear-gradient(180deg, rgba(212, 160, 23, 0.12), transparent 40%),
+        var(--bg-card);
+      border-radius: 18px;
+      padding: 1.1rem 1rem 0.8rem;
+      margin: 0.8rem 0;
+    }
+    .cert ol { margin: 0.4rem 0 0.2rem; padding-left: 1.2rem; }
+    .why { color: var(--muted); font-size: 0.86rem; margin: 0.25rem 0 0.45rem; }
+    ul.clean { margin: 0.3rem 0; padding-left: 1.1rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap" id="app"></div>
+  <script>
+    const KEY = "padhai-chip-club-v1";
+
+    const FIG = {
+      diode: `<svg class="fig" viewBox="0 0 360 168" role="img" aria-label="PN junction and a diode curve with a forward knee and a Zener knee">
+        <rect x="16" y="36" width="64" height="72" rx="8" fill="#3a2e14" stroke="#d4a017"/>
+        <text x="48" y="78" text-anchor="middle" fill="#e8eadf" font-size="16">p</text>
+        <rect x="92" y="48" width="26" height="48" fill="#242b1f" stroke="#a3ad96"/>
+        <text x="105" y="32" text-anchor="middle" fill="#a3ad96" font-size="11">barrier</text>
+        <rect x="130" y="36" width="64" height="72" rx="8" fill="#243028" stroke="#7cb87c"/>
+        <text x="162" y="78" text-anchor="middle" fill="#e8eadf" font-size="16">n</text>
+        <path d="M28 128 H78" stroke="#d4a017" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+        <text x="48" y="146" text-anchor="middle" fill="#d4a017" font-size="11">forward</text>
+        <line x1="230" y1="20" x2="230" y2="140" stroke="#3d4734"/>
+        <line x1="214" y1="78" x2="344" y2="78" stroke="#3d4734"/>
+        <path d="M214 92 C226 92 232 78 240 70 C252 56 268 28 300 22" fill="none" stroke="#d4a017" stroke-width="2"/>
+        <path d="M230 78 C226 100 222 118 216 128" fill="none" stroke="#e0a06a" stroke-width="2"/>
+        <text x="292" y="18" fill="#d4a017" font-size="11">0.7 V</text>
+        <text x="200" y="150" fill="#e0a06a" font-size="11">Zener</text>
+        <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6 Z" fill="#d4a017"/></marker></defs>
+      </svg>`,
+      divider: `<svg class="fig" viewBox="0 0 360 180" role="img" aria-label="Voltage divider bias reduced to a Thevenin source">
+        <text x="70" y="18" text-anchor="middle" fill="#a3ad96" font-size="12">as drawn</text>
+        <text x="250" y="18" text-anchor="middle" fill="#a3ad96" font-size="12">base loop</text>
+        <path d="M40 36 V150 M40 36 H100 M100 36 V70" fill="none" stroke="#e8eadf" stroke-width="1.5"/>
+        <path d="M100 96 V150 H40" fill="none" stroke="#e8eadf" stroke-width="1.5"/>
+        <rect x="92" y="70" width="16" height="26" fill="none" stroke="#d4a017"/>
+        <text x="118" y="86" fill="#d4a017" font-size="12">R1</text>
+        <rect x="92" y="112" width="16" height="26" fill="none" stroke="#e8eadf"/>
+        <text x="118" y="128" fill="#e8eadf" font-size="12">R2</text>
+        <circle cx="100" cy="108" r="3" fill="#d4a017"/>
+        <text x="78" y="166" fill="#a3ad96" font-size="11">VCC</text>
+        <path d="M210 40 H250 V150 H210" fill="none" stroke="#e8eadf" stroke-width="1.5"/>
+        <circle cx="230" cy="58" r="10" fill="none" stroke="#d4a017"/>
+        <text x="230" y="62" text-anchor="middle" fill="#d4a017" font-size="9">Vth</text>
+        <rect x="222" y="84" width="16" height="22" fill="none" stroke="#e0a06a"/>
+        <text x="246" y="100" fill="#e0a06a" font-size="12">Rth</text>
+        <rect x="222" y="118" width="16" height="22" fill="none" stroke="#7cb87c"/>
+        <text x="246" y="134" fill="#7cb87c" font-size="12">RE</text>
+        <text x="188" y="166" fill="#a3ad96" font-size="11">open the base lead first</text>
+      </svg>`,
+      re: `<svg class="fig" viewBox="0 0 360 170" role="img" aria-label="Midband common-emitter model with the bypass capacitor shorted">
+        <text x="16" y="22" fill="#a3ad96" font-size="12">midband CE, RE bypassed</text>
+        <circle cx="70" cy="78" r="22" fill="none" stroke="#e8eadf"/>
+        <text x="70" y="82" text-anchor="middle" fill="#e8eadf" font-size="11">vin</text>
+        <path d="M92 78 H130" stroke="#e8eadf"/>
+        <rect x="130" y="66" width="46" height="24" fill="none" stroke="#d4a017"/>
+        <text x="153" y="82" text-anchor="middle" fill="#d4a017" font-size="11">β re</text>
+        <path d="M176 78 H210" stroke="#e8eadf"/>
+        <circle cx="228" cy="78" r="16" fill="none" stroke="#7cb87c"/>
+        <path d="M214 78 H242 M228 64 V92" stroke="#7cb87c"/>
+        <text x="228" y="112" text-anchor="middle" fill="#7cb87c" font-size="11">gm vbe</text>
+        <path d="M244 78 H280" stroke="#e8eadf"/>
+        <rect x="280" y="66" width="36" height="24" fill="none" stroke="#e8eadf"/>
+        <text x="298" y="82" text-anchor="middle" fill="#e8eadf" font-size="11">RC</text>
+        <path d="M316 78 H340 V140 H70 V100" fill="none" stroke="#3d4734"/>
+        <text x="16" y="150" fill="#e0a06a" font-size="12">Av = −RC / re. Unbypassed: re becomes re + RE.</text>
+      </svg>`,
+      miller: `<svg class="fig" viewBox="0 0 360 188" role="img" aria-label="Miller multiplication and the four feedback jobs">
+        <text x="16" y="18" fill="#a3ad96" font-size="12">Cμ seen from the base</text>
+        <rect x="20" y="36" width="70" height="36" fill="none" stroke="#e8eadf"/>
+        <text x="55" y="58" text-anchor="middle" fill="#e8eadf" font-size="12">Cπ</text>
+        <text x="110" y="58" fill="#d4a017" font-size="18">+</text>
+        <rect x="132" y="36" width="150" height="36" fill="#3a2e14" stroke="#d4a017"/>
+        <text x="207" y="58" text-anchor="middle" fill="#d4a017" font-size="13">Cμ (1 + gm RC)</text>
+        <text x="16" y="96" fill="#a3ad96" font-size="12">what the feedback pair does to the ports</text>
+        <text x="16" y="118" fill="#e8eadf" font-size="12">voltage amp · series–shunt · Ri up · Ro down</text>
+        <text x="16" y="136" fill="#e8eadf" font-size="12">current amp · shunt–series · Ri down · Ro up</text>
+        <text x="16" y="154" fill="#e8eadf" font-size="12">transconductance · series–series · both up</text>
+        <text x="16" y="172" fill="#e8eadf" font-size="12">transresistance · shunt–shunt · both down</text>
+      </svg>`,
+      mos: `<svg class="fig" viewBox="0 0 360 180" role="img" aria-label="MOSFET regions and a CMOS inverter">
+        <line x1="28" y1="150" x2="150" y2="150" stroke="#3d4734"/>
+        <line x1="28" y1="30" x2="28" y2="150" stroke="#3d4734"/>
+        <path d="M36 140 Q70 140 90 70 Q110 30 140 28" fill="none" stroke="#d4a017" stroke-width="2"/>
+        <path d="M36 148 L70 120" fill="none" stroke="#7cb87c" stroke-width="2"/>
+        <text x="40" y="24" fill="#a3ad96" font-size="11">ID</text>
+        <text x="120" y="166" fill="#a3ad96" font-size="11">VDS</text>
+        <text x="78" y="64" fill="#d4a017" font-size="11">saturation</text>
+        <text x="48" y="112" fill="#7cb87c" font-size="11">triode</text>
+        <path d="M220 36 V150" stroke="#e8eadf"/>
+        <rect x="250" y="40" width="18" height="40" fill="none" stroke="#e0a06a"/>
+        <text x="276" y="64" fill="#e0a06a" font-size="12">P</text>
+        <rect x="250" y="100" width="18" height="40" fill="none" stroke="#7cb87c"/>
+        <text x="276" y="124" fill="#7cb87c" font-size="12">N</text>
+        <text x="200" y="166" fill="#a3ad96" font-size="11">one of them is off</text>
+        <text x="188" y="28" fill="#a3ad96" font-size="12">CMOS</text>
+      </svg>`,
+      opamp: `<svg class="fig" viewBox="0 0 360 170" role="img" aria-label="Inverting amp with virtual ground and non-inverting amp with a virtual short">
+        <text x="70" y="18" text-anchor="middle" fill="#a3ad96" font-size="12">inverting</text>
+        <text x="250" y="18" text-anchor="middle" fill="#a3ad96" font-size="12">non-inverting</text>
+        <polygon points="70,40 110,70 70,100" fill="none" stroke="#e8eadf"/>
+        <text x="78" y="66" fill="#d4a017" font-size="12">−</text>
+        <text x="78" y="86" fill="#7cb87c" font-size="12">+</text>
+        <path d="M40 62 H70" stroke="#e8eadf"/>
+        <rect x="24" y="54" width="16" height="16" fill="none" stroke="#d4a017"/>
+        <path d="M110 70 H140" stroke="#e8eadf"/>
+        <path d="M128 70 V40 H86" stroke="#d4a017" fill="none"/>
+        <text x="20" y="120" fill="#d4a017" font-size="12">v− = 0</text>
+        <text x="20" y="140" fill="#a3ad96" font-size="11">virtual ground</text>
+        <polygon points="230,40 270,70 230,100" fill="none" stroke="#e8eadf"/>
+        <text x="238" y="66" fill="#d4a017" font-size="12">−</text>
+        <text x="238" y="86" fill="#7cb87c" font-size="12">+</text>
+        <path d="M200 86 H230" stroke="#7cb87c"/>
+        <text x="188" y="82" fill="#7cb87c" font-size="11">vi</text>
+        <path d="M270 70 H310" stroke="#e8eadf"/>
+        <path d="M292 70 V48 H246" stroke="#d4a017" fill="none"/>
+        <text x="190" y="130" fill="#7cb87c" font-size="12">v− = vi</text>
+        <text x="190" y="148" fill="#a3ad96" font-size="11">short, not ground</text>
+      </svg>`,
+      schmitt: `<svg class="fig" viewBox="0 0 360 170" role="img" aria-label="Inverting Schmitt trigger with two thresholds">
+        <polygon points="40,36 86,70 40,104" fill="none" stroke="#e8eadf"/>
+        <text x="48" y="66" fill="#d4a017" font-size="13">−</text>
+        <text x="48" y="88" fill="#7cb87c" font-size="13">+</text>
+        <path d="M16 62 H40" stroke="#e8eadf"/>
+        <text x="8" y="54" fill="#a3ad96" font-size="11">vi</text>
+        <path d="M86 70 H130" stroke="#e8eadf"/>
+        <text x="108" y="62" fill="#a3ad96" font-size="11">vo</text>
+        <path d="M112 70 V36 H62" stroke="#d4a017" fill="none"/>
+        <text x="88" y="30" fill="#d4a017" font-size="11">R2</text>
+        <path d="M62 88 V130" stroke="#7cb87c" fill="none"/>
+        <text x="68" y="124" fill="#7cb87c" font-size="11">R1</text>
+        <line x1="180" y1="20" x2="180" y2="150" stroke="#3d4734"/>
+        <line x1="160" y1="80" x2="340" y2="80" stroke="#3d4734"/>
+        <path d="M190 120 H230 V40 H300" fill="none" stroke="#d4a017" stroke-width="2"/>
+        <path d="M300 40 H330" fill="none" stroke="#d4a017" stroke-width="2"/>
+        <text x="200" y="136" fill="#e0a06a" font-size="11">VLT</text>
+        <text x="248" y="34" fill="#7cb87c" font-size="11">VUT</text>
+        <text x="300" y="28" fill="#a3ad96" font-size="11">+Vsat</text>
+        <text x="190" y="164" fill="#a3ad96" font-size="11">output stays until the other threshold</text>
+      </svg>`,
+      kmap: `<svg class="fig" viewBox="0 0 360 210" role="img" aria-label="Four-variable K-map with three groups">
+        <text x="16" y="18" fill="#a3ad96" font-size="12">AB down, CD across, Gray order 00 01 11 10</text>
+        <g font-size="12" fill="#e8eadf" text-anchor="middle">
+          <text x="118" y="40">00</text><text x="166" y="40">01</text><text x="214" y="40">11</text><text x="262" y="40">10</text>
+          <text x="78" y="68">00</text><text x="78" y="108">01</text><text x="78" y="148">11</text><text x="78" y="188">10</text>
+        </g>
+        <g stroke="#3d4734" fill="#242b1f">
+          <rect x="96" y="48" width="48" height="36"/><rect x="144" y="48" width="48" height="36"/><rect x="192" y="48" width="48" height="36"/><rect x="240" y="48" width="48" height="36"/>
+          <rect x="96" y="84" width="48" height="36"/><rect x="144" y="84" width="48" height="36"/><rect x="192" y="84" width="48" height="36"/><rect x="240" y="84" width="48" height="36"/>
+          <rect x="96" y="120" width="48" height="36"/><rect x="144" y="120" width="48" height="36"/><rect x="192" y="120" width="48" height="36"/><rect x="240" y="120" width="48" height="36"/>
+          <rect x="96" y="156" width="48" height="36"/><rect x="144" y="156" width="48" height="36"/><rect x="192" y="156" width="48" height="36"/><rect x="240" y="156" width="48" height="36"/>
+        </g>
+        <g fill="rgba(212,160,23,0.35)" stroke="#d4a017">
+          <rect x="98" y="50" width="44" height="32"/><rect x="242" y="50" width="44" height="32"/>
+          <rect x="98" y="158" width="44" height="32"/><rect x="242" y="158" width="44" height="32"/>
+        </g>
+        <g fill="rgba(124,184,124,0.28)" stroke="#7cb87c">
+          <rect x="98" y="50" width="92" height="32"/><rect x="98" y="158" width="92" height="32"/>
+        </g>
+        <rect x="146" y="50" width="44" height="68" fill="rgba(224,160,106,0.35)" stroke="#e0a06a"/>
+        <g fill="#e8eadf" font-size="13" text-anchor="middle">
+          <text x="120" y="70">1</text><text x="168" y="70">1</text><text x="216" y="70">0</text><text x="264" y="70">1</text>
+          <text x="120" y="106">0</text><text x="168" y="106">1</text><text x="216" y="106">0</text><text x="264" y="106">0</text>
+          <text x="120" y="142">0</text><text x="168" y="142">0</text><text x="216" y="142">0</text><text x="264" y="142">0</text>
+          <text x="120" y="178">1</text><text x="168" y="178">1</text><text x="216" y="178">0</text><text x="264" y="178">1</text>
+        </g>
+      </svg>`,
+      adder: `<svg class="fig" viewBox="0 0 360 150" role="img" aria-label="Full adder and a multiplexer used as a function">
+        <rect x="24" y="36" width="120" height="78" rx="8" fill="none" stroke="#e8eadf"/>
+        <text x="84" y="70" text-anchor="middle" fill="#e8eadf" font-size="13">full adder</text>
+        <text x="84" y="90" text-anchor="middle" fill="#a3ad96" font-size="11">sum odd · carry ≥ 2</text>
+        <text x="16" y="28" fill="#a3ad96" font-size="11">A B Cin</text>
+        <rect x="210" y="36" width="120" height="78" rx="8" fill="none" stroke="#d4a017"/>
+        <text x="270" y="68" text-anchor="middle" fill="#d4a017" font-size="13">MUX</text>
+        <text x="270" y="88" text-anchor="middle" fill="#a3ad96" font-size="11">data = 0, 1, D, D'</text>
+        <text x="200" y="28" fill="#a3ad96" font-size="11">select = the other vars</text>
+      </svg>`,
+      gbw: `<svg class="fig" viewBox="0 0 360 160" role="img" aria-label="Closed-loop gain trades against bandwidth on one gain-bandwidth product">
+        <line x1="40" y1="20" x2="40" y2="130" stroke="#3d4734"/>
+        <line x1="40" y1="130" x2="330" y2="130" stroke="#3d4734"/>
+        <path d="M50 40 H150 L300 120" fill="none" stroke="#d4a017" stroke-width="2"/>
+        <path d="M50 70 H210 L300 120" fill="none" stroke="#7cb87c" stroke-width="2"/>
+        <text x="56" y="36" fill="#d4a017" font-size="12">gain 100</text>
+        <text x="56" y="66" fill="#7cb87c" font-size="12">gain 50</text>
+        <text x="250" y="148" fill="#a3ad96" font-size="12">same GBW, twice the bandwidth</text>
+      </svg>`,
+      diffpair: `<svg class="fig" viewBox="0 0 360 180" role="img" aria-label="Differential pair with the tail current splitting in half">
+        <path d="M80 30 V70 M200 30 V70" stroke="#e8eadf"/>
+        <text x="80" y="22" text-anchor="middle" fill="#a3ad96" font-size="11">Q1</text>
+        <text x="200" y="22" text-anchor="middle" fill="#a3ad96" font-size="11">Q2</text>
+        <circle cx="80" cy="86" r="14" fill="none" stroke="#e8eadf"/>
+        <circle cx="200" cy="86" r="14" fill="none" stroke="#e8eadf"/>
+        <path d="M80 100 V130 H200 V100" fill="none" stroke="#d4a017" stroke-width="1.5"/>
+        <path d="M140 130 V160" stroke="#d4a017" stroke-width="2"/>
+        <text x="148" y="150" fill="#d4a017" font-size="13">IT</text>
+        <text x="28" y="118" fill="#7cb87c" font-size="12">IE = IT/2</text>
+        <text x="214" y="118" fill="#7cb87c" font-size="12">IE = IT/2</text>
+        <text x="70" y="176" fill="#a3ad96" font-size="12">matched devices, bases at the signal</text>
+      </svg>`
+    };
+
+    const SHOTS = {
+      "1-0": [["b-p011.png", "Boylestad p. 11 — the junction"], ["b-p014.png", "Boylestad p. 14 — the diode curve"]],
+      "1-1": [["b-p028.png", "Boylestad p. 28 — diode equivalent"]],
+      "1-2": [["b-p039.png", "Boylestad p. 39 — Zener"]],
+      "2-0": [["a-p037.png", "Alexander p. 37 — Kirchhoff"]],
+      "2-1": [["a-p139.png", "Alexander p. 139 — Thevenin"]],
+      "2-2": [["b-p163.png", "Boylestad p. 163 — fixed bias"], ["b-p170.png", "Boylestad p. 170 — emitter bias"]],
+      "2-3": [["b-p176.png", "Boylestad p. 176 — voltage divider"]],
+      "2-4": [["b-p182.png", "Boylestad p. 182 — collector feedback"]],
+      "2-5": [["b-p191.png", "Boylestad p. 191 — both feedbacks"]],
+      "2-6": [["b-p220.png", "Boylestad p. 220 — stability factor"]],
+      "3-0": [["b-p258.png", "Boylestad p. 258 — re model"]],
+      "3-1": [["b-p262.png", "Boylestad p. 262 — common emitter"]],
+      "3-2": [["b-p273.png", "Boylestad p. 273 — emitter follower"]],
+      "3-3": [["b-p277.png", "Boylestad p. 277 — common base"]],
+      "3-4": [["b-p293.png", "Boylestad p. 293 — Zi, Zo, Av"]],
+      "4-0": [["b-p575.png", "Boylestad p. 575 — Miller"]],
+      "4-1": [["b-p754.png", "Boylestad p. 754 — feedback connections"]],
+      "5-0": [["b-p403.png", "Boylestad p. 403 — enhancement MOSFET"], ["b-p405.png", "Boylestad p. 405 — drain curves"]],
+      "5-1": [["b-p412.png", "Boylestad p. 412 — CMOS inverter"]],
+      "6-0": [["b-p623.png", "Boylestad p. 623 — inverting"], ["b-p624.png", "Boylestad p. 624 — non-inverting"]],
+      "7-0": [["b-p657.png", "Boylestad p. 657 — summing"], ["b-p660.png", "Boylestad p. 660 — follower"], ["b-p663.png", "Boylestad p. 663 — instrumentation"]],
+      "7-1": [["b-p723.png", "Boylestad p. 723 — comparator"]],
+      "8-0": [["m-p048.png", "Mano p. 48 — gate equivalents"]],
+      "8-1": [["m-p061.png", "Mano p. 61 — logic gates"]],
+      "8-2": [["m-p075.png", "Mano p. 75 — K-map"], ["m-p081.png", "Mano p. 81 — four variables"], ["m-p091.png", "Mano p. 91 — NAND–NAND"]],
+      "9-0": [["m-p134.png", "Mano p. 134 — half adder"], ["m-p136.png", "Mano p. 136 — full adder"]],
+      "9-1": [["m-p150.png", "Mano p. 150 — decoder"]],
+      "9-2": [["m-p158.png", "Mano p. 158 — multiplexer"]],
+      "10-0": [["b-p632.png", "Boylestad p. 632 — gain and bandwidth"]],
+      "10-1": [["b-p641.png", "Boylestad p. 641 — differential and common mode"]],
+      "11-0": [["b-p611.png", "Boylestad p. 611 — diff pair"]],
+      "11-1": [["b-p206.png", "Boylestad p. 206 — current mirror"]]
+    };
+
+    const LESSONS = [
+      {
+        id: 1, track: "club", title: "Diode", minutes: 40,
+        read: [
+          { book: "Boylestad 11e", pages: "printed pp. 10–16", note: "§1.6 Semiconductor diode. Depletion, barrier, forward and reverse. Skip the bonding chapter before this." },
+          { book: "Boylestad 11e", pages: "printed pp. 21–29", note: "§1.8–1.9 Resistance levels and the equivalent circuit. This is where rd and the 0.7 V drop come from." },
+          { book: "Boylestad 11e", pages: "printed pp. 38–41", note: "§1.15 Zener diodes. Skip capacitance, reverse recovery, LEDs, and the spec-sheet pages in between." }
+        ],
+        seeTitle: "Barrier, then a knee",
+        see: `<p>A PN junction leaves a depletion region of uncovered ions. Those ions are the barrier. Forward bias lowers it and current rises. Reverse bias widens it and the current sits near −IS until breakdown.</p>
+          <p class="eq">I = IS (e^(V / ηVT) − 1) &nbsp;&nbsp; rd = ηVT / ID</p>
+          <p>Silicon turns on near 0.7 V, germanium near 0.3 V. Zener breakdown is tunneling, sharp, and used as a reference, usual below about 5 V. Avalanche is carrier multiplication, usual above about 7 V. The part is still called a Zener and is run reverse biased.</p>`,
+        fig: "diode",
+        figCap: "Gold curve is forward conduction. The amber tail is the Zener knee in reverse.",
+        quiz: [
+          { q: "What does forward bias do to the barrier?", choices: ["Lowers it, so current rises", "Widens the depletion region", "Sets the current to −IS", "Removes the junction"], answer: 0, why: "Forward bias reduces the barrier. Reverse bias widens the depletion region." },
+          { q: "A large reverse voltage, before breakdown, gives about what current?", choices: ["IS e^(V/VT)", "−IS", "V / rd", "Zero exactly, for a real diode"], answer: 1, why: "The exponential dies and I ≈ −IS." },
+          { q: "Which breakdown is the reference diode?", choices: ["Avalanche, because it is soft", "Either, they are the same mechanism", "Zener, tunneling, sharp knee", "The forward knee at 0.7 V"], answer: 2, why: "Zener is the sharp tunneling knee used as a reference." },
+          { q: "Dynamic resistance at the Q-point is", choices: ["ηVT / ID", "IS / VT", "0.7 / ID", "ηID / VT"], answer: 0, why: "rd = ηVT / ID. At 10 mA and η = 1 that is 2.6 Ω." }
+        ],
+        numerical: {
+          prompt: "ID = 10 mA, η = 1, VT = 26 mV. Find rd in ohms.",
+          fields: [{ key: "rd", label: "rd (Ω)", target: 2.6, tol: 0.05 }],
+          solution: "rd = 26 mV / 10 mA = 2.6 Ω. A conducting diode is a 0.7 V drop plus a few ohms."
+        }
+      },
+      {
+        id: 2, track: "club", title: "Five biases and S", minutes: 55,
+        read: [
+          { book: "Alexander & Sadiku", pages: "printed p. 37", note: "§2.4 Kirchhoff’s laws. One loop is enough: down from VCC through the base-emitter path." },
+          { book: "Alexander & Sadiku", pages: "printed p. 139", note: "§4.5 Thevenin’s theorem. You need this before the divider." },
+          { book: "Boylestad 11e", pages: "printed pp. 163–174", note: "§4.3 fixed bias and §4.4 emitter bias." },
+          { book: "Boylestad 11e", pages: "printed pp. 175–180", note: "§4.5 voltage-divider bias. This is the one to be able to redraw." },
+          { book: "Boylestad 11e", pages: "printed pp. 181–188", note: "§4.6 collector feedback. RC carries IE, not just IC." },
+          { book: "Boylestad 11e", pages: "printed pp. 189–192", note: "§4.9 miscellaneous bias. Both feedbacks live here." },
+          { book: "Boylestad 11e", pages: "printed pp. 217–224", note: "§4.18 bias stabilization. Skip the design and troubleshooting sections around it." }
+        ],
+        seeTitle: "Open the base, then write S",
+        see: `<p>Same three questions every time: IB, IC, VCE. Fixed bias puts β naked in IC, so S = 1+β. Collector feedback takes RB from the collector, and RC carries IE. Emitter feedback adds RE. Both feedbacks use RB from collector to base and RE to ground.</p>
+          <p class="eq">VTH = VCC · R2 / (R1 + R2) &nbsp;&nbsp; RTH = R1 ∥ R2</p>
+          <p class="eq">IE = (VTH − 0.7) / (RE + RTH / (β+1))</p>
+          <p>The shortcut IC ≈ (VTH − 0.7) / RE is legal when β RE ≥ 10 RTH. Stability when an emitter resistor is present:</p>
+          <p class="eq">S = (1+β)(1 + RB/RE) / (1+β + RB/RE)</p>
+          <p>RE helps only when RB/RE is not huge: IC up, VE up, VBE down, IB down. For the sample set β = 100, RB = 100 kΩ, RC = RE = 1 kΩ, divider RTH = 10 kΩ, the S values run 101, 50.8, 50.8, 34.1, 10 from fixed to divider.</p>`,
+        fig: "divider",
+        figCap: "The divider is emitter feedback after you replace R1 and R2 with VTH and RTH.",
+        quiz: [
+          { q: "Fixed bias has stability factor", choices: ["S = 1", "S = 1+β", "S = β / RE", "S = RB / RE"], answer: 1, why: "No emitter resistor. S = 1+β. For β = 100 that is 101." },
+          { q: "In collector feedback, the current in RC is", choices: ["IE", "IC only", "IB only", "IC − IB"], answer: 0, why: "Base current is taken from the collector node, so RC carries IC + IB." },
+          { q: "The divider shortcut is legal when", choices: ["β is infinite", "RTH ≥ β RE", "β RE ≥ 10 RTH", "RE = 0"], answer: 2, why: "β RE at least ten times RTH. Otherwise use the exact IE formula." },
+          { q: "Why does RE pull IC back?", choices: ["It increases β", "IC up, VE up, VBE down, IB down", "It shorts the collector", "It makes S = 1+β"], answer: 1, why: "That loop is the whole point of the emitter resistor." }
+        ],
+        numerical: {
+          prompt: "VCC = 10 V, R1 = 40 kΩ, R2 = 10 kΩ, RE = 1 kΩ, β = 100, VBE = 0.7 V. Shortcut IC, then exact IC, both in mA.",
+          fields: [
+            { key: "short", label: "Shortcut IC (mA)", target: 1.3, tol: 0.02 },
+            { key: "exact", label: "Exact IC (mA)", target: 1.19, tol: 0.02 }
+          ],
+          solution: "VTH = 2 V, RTH = 8 kΩ. β RE = 100 kΩ is more than 10 × 8 kΩ, so the shortcut is legal: IC ≈ 1.30 mA. Exact IE = 1.30 / (1 + 8/101) kΩ = 1.20 mA, and IC = 1.19 mA."
+        }
+      },
+      {
+        id: 3, track: "club", title: "re, CE, CC, CB", minutes: 40,
+        read: [
+          { book: "Boylestad 11e", pages: "printed pp. 257–261", note: "§5.4 The re transistor model. Stop before the hybrid chapters." },
+          { book: "Boylestad 11e", pages: "printed pp. 262–265", note: "§5.5 Common-emitter fixed bias. Midband gain." },
+          { book: "Boylestad 11e", pages: "printed pp. 273–276", note: "§5.8 Emitter follower." },
+          { book: "Boylestad 11e", pages: "printed pp. 277–279", note: "§5.9 Common base." },
+          { book: "Boylestad 11e", pages: "printed pp. 292–294", note: "§5.15 Two-port Zi, Zo, Av. Skip §5.19–5.22." }
+        ],
+        seeTitle: "DC sets IE. AC uses re.",
+        see: `<p class="eq">re = VT / IE &nbsp;&nbsp; gm ≈ 1/re &nbsp;&nbsp; rπ = β re</p>
+          <p>Those last two need IC ≈ IE. At 1 mA, re = 26 Ω. A bypass capacitor shorts RE at midband. Unbypassed, every re becomes re + RE: gain falls, input resistance rises.</p>
+          <ul class="clean">
+            <li>CE: Av = −RC/re, 180°, Ri = β re, Ro = RC. The voltage amplifier.</li>
+            <li>CC: Av ≈ 1, no inversion, Ri = β(re+RE), Ro ≈ re. A buffer.</li>
+            <li>CB: Av = +RC/re, Ri = re, Ro = RC. Same gain size as CE, better at high frequency.</li>
+          </ul>
+          <p>The divider resistors sit in parallel with β re. Forgetting that parallel is the usual lost mark.</p>`,
+        fig: "re",
+        figCap: "With the bypass in place, RE is gone from the midband picture.",
+        quiz: [
+          { q: "re is", choices: ["VT / IE", "β VT / IC always, with no approximation", "RC / Av with the sign kept", "26 Ω at every current"], answer: 0, why: "re = VT/IE. 26 Ω is only the 1 mA case." },
+          { q: "Shorting RE with a bypass capacitor", choices: ["Lowers the gain and raises Ri", "Does nothing at midband", "Raises |Av| and lowers Ri", "Turns the stage into CB"], answer: 2, why: "The emitter resistor disappears, so |Av| = RC/re and Ri = β re." },
+          { q: "A common collector is there to", choices: ["Invert and give gain RC/re", "Buffer: Av ≈ 1, high Ri, low Ro", "Give Ri = re", "Replace the collector resistor"], answer: 1, why: "Gain just under 1 is the feature. It isolates a weak source." },
+          { q: "Common-base input resistance is about", choices: ["re", "β re", "RC", "RE ∥ RC"], answer: 0, why: "Ri = re, tens of ohms. That is why CB is not driven from a soft source." }
+        ],
+        numerical: {
+          prompt: "IE = 1 mA, VT = 26 mV, RC = 2.6 kΩ, β = 100. |Av| with RE bypassed. Then |Av| with RE = 260 Ω left in.",
+          fields: [
+            { key: "byp", label: "|Av| bypassed", target: 100, tol: 0.6 },
+            { key: "un", label: "|Av| unbypassed", target: 9.1, tol: 0.2 }
+          ],
+          solution: "re = 26 Ω. Bypassed |Av| = 2600/26 = 100. Unbypassed |Av| = 2600/(26+260) = 9.1."
+        }
+      },
+      {
+        id: 4, track: "club", title: "Frequency and feedback", minutes: 40,
+        read: [
+          { book: "Boylestad 11e", pages: "printed pp. 574–580", note: "§9.10 Miller effect and the start of §9.11 high-frequency BJT response. Skip the Bode-plot drill earlier in the chapter." },
+          { book: "Boylestad 11e", pages: "printed pp. 751–756", note: "§14.1–14.2 Feedback concepts and the four connection types. Stop before oscillators." }
+        ],
+        seeTitle: "Miller, then 1 + Aβ",
+        see: `<p>fT = β fβ is where β has fallen to 1. CE loses bandwidth because the collector-base capacitance is multiplied:</p>
+          <p class="eq">Cin ≈ Cπ + Cμ (1 + gm RC)</p>
+          <p>CB and cascode avoid that multiplication. Negative feedback:</p>
+          <p class="eq">Af = A / (1 + A βf)</p>
+          <p>βf is the feedback factor, not the BJT β. The same factor cuts gain, desensitizes it, raises bandwidth, and cuts distortion. Series mixing raises Ri. Shunt mixing lowers it. Voltage sampling lowers Ro. Current sampling raises it.</p>`,
+        fig: "miller",
+        figCap: "A 2 pF device capacitor becomes about 200 pF at the input when the gain is 100.",
+        quiz: [
+          { q: "fT is", choices: ["The low-frequency bypass corner", "β times fβ, where β has fallen to 1", "1 / (2π RC)", "The midband gain"], answer: 1, why: "fβ is the −3 dB point of β. fT is where β = 1." },
+          { q: "Miller input capacitance is about", choices: ["Cπ + Cμ(1 + gm RC)", "Cπ + Cμ", "Cμ / (1 + gm RC)", "gm RC only"], answer: 0, why: "The gain multiplies Cμ. That is why CE rolls off first." },
+          { q: "A voltage amplifier samples and mixes as", choices: ["Shunt–shunt", "Shunt–series", "Series–shunt", "Series–series"], answer: 2, why: "Voltage sampling, series mixing. Ri up, Ro down." },
+          { q: "A = 1000 and βf = 0.1. If A falls 20%, Af", choices: ["Falls 20%", "Stays near 9.9", "Doubles", "Becomes 800"], answer: 1, why: "Af = 9.90, then 9.88. That is desensitivity." }
+        ],
+        numerical: {
+          prompt: "A = 1000, βf = 0.1. Af now, and Af after A falls to 800. Two decimals.",
+          fields: [
+            { key: "af1", label: "Af at A = 1000", target: 9.90, tol: 0.02 },
+            { key: "af2", label: "Af at A = 800", target: 9.88, tol: 0.03 }
+          ],
+          solution: "1000/101 = 9.90. 800/81 = 9.88. Open-loop gain moved by 200. Closed-loop gain moved by about 0.03."
+        }
+      },
+      {
+        id: 5, track: "club", title: "MOSFET", minutes: 25,
+        read: [
+          { book: "Boylestad 11e", pages: "printed pp. 402–409", note: "§6.8 Enhancement-type MOSFET only. Skip the JFET sections before it." },
+          { book: "Boylestad 11e", pages: "printed pp. 411–412", note: "§6.11 CMOS. Skip chapters 7 and 8. This lesson is for the club, not the ACD paper." }
+        ],
+        seeTitle: "Square law, and one device off",
+        see: `<p>An enhancement MOSFET is off at VGS = 0. Overdrive VOV = VGS − Vt.</p>
+          <ul class="clean">
+            <li>Cutoff: VGS &lt; Vt, ID = 0.</li>
+            <li>Triode: VDS &lt; VOV. This is the closed switch.</li>
+            <li>Saturation: VDS ≥ VOV. This is the amplifier region.</li>
+          </ul>
+          <p class="eq">ID = ½ μCox (W/L) (VGS − Vt)²</p>
+          <p>The word saturation is the trap. A saturated BJT is the closed switch. A saturated MOSFET is not. In a CMOS inverter the PMOS and NMOS are never both on once the input has settled, so there is no static path from VDD to ground.</p>`,
+        fig: "mos",
+        figCap: "The gold curve is saturation. The green line is triode. The inverter has no DC path when it is sitting still.",
+        quiz: [
+          { q: "NMOS saturation means", choices: ["VDS ≥ VGS − Vt, and VGS > Vt", "VDS is almost 0", "The device is fully on as a switch", "VGS = 0"], answer: 0, why: "Saturation is the flat amplifier region, past the overdrive." },
+          { q: "The MOSFET region used as a closed switch is", choices: ["Saturation", "Triode", "Cutoff", "Zener"], answer: 1, why: "Small VDS. Opposite naming from a saturated BJT." },
+          { q: "A settled CMOS inverter", choices: ["Draws a steady current through both devices", "Needs a base current", "Has one device off, so no DC path", "Uses depletion loads only"], answer: 2, why: "Current flows while the next gate is charging, not while the output sits still." },
+          { q: "In saturation, ID depends on", choices: ["(VGS − Vt)²", "VDS² only", "VGS linearly", "The BJT exponential"], answer: 0, why: "Square law. A BJT is exponential." }
+        ],
+        numerical: {
+          prompt: "μCox = 200 μA/V², W/L = 10, Vt = 0.5 V, VGS = 1.5 V, VDS = 2 V. ID in mA.",
+          fields: [{ key: "id", label: "ID (mA)", target: 1, tol: 0.02 }],
+          solution: "VOV = 1 V and VDS > VOV, so saturation. ID = ½ × 200 μA/V² × 10 × 1² = 1.00 mA."
+        }
+      },
+      {
+        id: 6, track: "club", title: "Inverting and non-inverting", minutes: 30,
+        read: [
+          { book: "Boylestad 11e", pages: "printed pp. 620–628", note: "§10.4–10.5 Op-amp basics and the practical inverting and non-inverting circuits." },
+          { book: "Gaikwad", pages: "chapter 3", note: "Same two gains. The PDF is a scan, so use the contents page. The figure is here." }
+        ],
+        seeTitle: "Short is not ground",
+        see: `<p>Linear region, negative feedback: the input currents are zero, and v+ ≈ v−. A virtual short is that equality. Virtual ground is the special case v+ = 0, so v− = 0. The pin is not wired to ground, and the input current goes through the feedback element.</p>
+          <p class="eq">inverting: vo = −(RF / R1) vi &nbsp;&nbsp; Rin = R1</p>
+          <p class="eq">non-inverting: vo = (1 + RF / R1) vi &nbsp;&nbsp; Rin → ∞</p>
+          <p>The non-inverting circuit has a virtual short and no virtual ground. Setting v− to 0 there ruins the gain.</p>`,
+        fig: "opamp",
+        figCap: "Left: v− sits at 0 because the + pin is grounded. Right: both inputs sit at vi.",
+        quiz: [
+          { q: "Which circuit has a virtual ground?", choices: ["Inverting", "Non-inverting", "Both", "Neither, if the gain is finite but huge"], answer: 0, why: "Virtual ground needs the + pin at 0 V. The non-inverting input is the signal." },
+          { q: "On a non-inverting amp the inverting pin sits at", choices: ["0 V", "vi", "vo", "−vi"], answer: 1, why: "Virtual short: v− = v+ = vi." },
+          { q: "Ideal inverting input resistance is", choices: ["Infinite", "RF", "R1", "R1 ∥ RF"], answer: 2, why: "The source sees R1 into a virtual ground." },
+          { q: "Current through the input resistor", choices: ["Enters the op-amp pin", "Continues through the feedback element", "Is zero because Rin is infinite on an inverting amp", "Comes from the + pin"], answer: 1, why: "Input current into the device is zero. The resistor current has to go through RF." }
+        ],
+        numerical: {
+          prompt: "Inverting: R1 = 10 kΩ, RF = 47 kΩ. Non-inverting: R1 = 10 kΩ, RF = 40 kΩ. The two gains.",
+          fields: [
+            { key: "inv", label: "Inverting gain", target: -4.7, tol: 0.05 },
+            { key: "non", label: "Non-inverting gain", target: 5, tol: 0.05 }
+          ],
+          solution: "−47/10 = −4.7. 1 + 40/10 = 5."
+        }
+      },
+      {
+        id: 7, track: "club", title: "Op-amp blocks and Schmitt", minutes: 50,
+        read: [
+          { book: "Boylestad 11e", pages: "printed pp. 653–666", note: "§11.1–11.3 constant gain, summing, buffer, and §11.5 instrumentation." },
+          { book: "Boylestad 11e", pages: "printed pp. 722–727", note: "§13.2 Comparator. Boylestad does not teach the Schmitt trigger as its own section." },
+          { book: "Gaikwad", pages: "chapter 6", note: "Integrator and differentiator. Scan: use the contents. Schmitt is the nonlinear chapter in the same book; the thresholds are drawn here." }
+        ],
+        seeTitle: "One threshold chatters. Two do not.",
+        see: `<ul class="clean">
+            <li>Summer: vo = −RF (v1/R1 + v2/R2 + …)</li>
+            <li>Difference, matched ratios α: vo = α (v2 − v1)</li>
+            <li>Follower: vo = vi. Buffer, widest bandwidth.</li>
+            <li>Integrator: vo = −(1/RC) ∫ vi dt. Square in, triangle out. RF across C so offset does not ramp to the rail.</li>
+            <li>Differentiator: vo = −RC dvi/dt. Gain rises with frequency, so it is noisy. A small series R with C stops that.</li>
+            <li>IA: vo = (R2/R1) (1 + 2 Rf/RG) (v2 − v1). Both inputs are + pins.</li>
+          </ul>
+          <p>A comparator has no negative feedback and one threshold, so noise chatters. The inverting Schmitt puts the signal on −, R1 from + to ground, R2 from the output back to +.</p>
+          <p class="eq">VUT = +Vsat · R1/(R1+R2) &nbsp;&nbsp; VLT = −VUT &nbsp;&nbsp; VH = VUT − VLT</p>`,
+        fig: "schmitt",
+        figCap: "Between VLT and VUT the output stays where it last switched.",
+        quiz: [
+          { q: "A square wave into an ideal integrator comes out as", choices: ["A triangle", "Spikes", "The same square", "Zero"], answer: 0, why: "The integral of a constant is a ramp. Square in, triangle out." },
+          { q: "The resistor across an integrator capacitor", choices: ["Raises the ideal high-frequency gain", "Is the differentiator", "Keeps DC gain finite so offset does not rail the output", "Sets the Schmitt thresholds"], answer: 2, why: "DC gain becomes −RF/R instead of infinite." },
+          { q: "An ideal differentiator’s gain magnitude", choices: ["Falls with frequency", "Rises with frequency", "Is 1", "Is −RF/R1"], answer: 1, why: "|vo/vi| = ω RC. That is why it amplifies hiss." },
+          { q: "Inverting Schmitt, R1 to ground and R2 to the output. VUT is", choices: ["+Vsat · R1/(R1+R2)", "+Vsat · R2/R1", "0", "−Vsat"], answer: 0, why: "The + pin is a divider on the output. Rising input trips at the positive fraction of Vsat." }
+        ],
+        numerical: {
+          prompt: "Inverting Schmitt, ±Vsat = ±10 V, R1 = 10 kΩ to ground, R2 = 40 kΩ to the output. VUT and VLT in volts.",
+          fields: [
+            { key: "ut", label: "VUT (V)", target: 2, tol: 0.05 },
+            { key: "lt", label: "VLT (V)", target: -2, tol: 0.05 }
+          ],
+          solution: "β = 10/50 = 0.2. VUT = +2 V, VLT = −2 V, hysteresis = 4 V."
+        }
+      },
+      {
+        id: 8, track: "club", title: "Boolean and K-map", minutes: 45,
+        read: [
+          { book: "Mano & Ciletti 5e", pages: "printed pp. 43–55", note: "§2.4–2.6 Theorems, Boolean functions, canonical SOP and POS." },
+          { book: "Mano & Ciletti 5e", pages: "printed pp. 60–66", note: "§2.8 Digital logic gates. NAND and NOR as universal gates." },
+          { book: "Mano & Ciletti 5e", pages: "printed pp. 73–92", note: "§3.2–3.6 K-map through NAND and NOR implementation. Skip HDL at the end of the chapter." }
+        ],
+        seeTitle: "Circle 1s. A don’t-care is optional.",
+        see: `<p>SOP lists the 1s as products and ORs them. POS lists the 0s as sums and ANDs them. Canonical means every variable is in every term. NAND is a bubbled-OR. NOR is a bubbled-AND. SOP becomes NAND–NAND. POS becomes NOR–NOR.</p>
+          <p>Gray order on both axes. Groups of 2^k only. Edges wrap. A group of 2^k removes k variables. Use a don’t-care only when it enlarges a group. Never pull a 0 into an SOP group.</p>
+          <p class="eq">F = Σ m(0,1,2,5,8,9,10) = B'D' + B'C' + A'C'D</p>
+          <p>Gold is the four corners, B'D', and that group wraps. Green is B'C', also wrapping. Amber is the pair that exists only to cover m5.</p>`,
+        fig: "kmap",
+        figCap: "All three groups are essential. m5 has nowhere else to go.",
+        quiz: [
+          { q: "On a K-map you circle", choices: ["1s for POS and 0s for SOP", "1s for SOP and 0s for POS", "Only the don’t-cares", "Every cell"], answer: 1, why: "SOP is the 1s. POS is the 0s." },
+          { q: "A don’t-care is used when", choices: ["It makes a legal group larger", "It is a required 1", "You must cover every d", "It lets you group a 0"], answer: 0, why: "A d you leave out is not a missed 1." },
+          { q: "A sum of products is built in NAND as", choices: ["NOR–NOR", "One NAND and a separate OR", "NAND–NAND", "XOR only"], answer: 2, why: "The second NAND does the OR, by DeMorgan." },
+          { q: "A group of 4 removes", choices: ["1 variable", "2 variables", "4 variables", "No variables"], answer: 1, why: "A group of 2^k removes k variables. 4 = 2^2." }
+        ],
+        numerical: {
+          prompt: "Type a minimum SOP for Σ m(0,1,2,5,8,9,10). Primes as quotes. Example shape: B'D' + B'C' + A'C'D",
+          kind: "sop",
+          fields: [{ key: "f", label: "F" }],
+          solution: "F = B'D' + B'C' + A'C'D. The pair A'C'D is essential because of m5. B'(C' + D') + A'C'D is the same function."
+        }
+      },
+      {
+        id: 9, track: "club", title: "Combinational blocks", minutes: 35,
+        read: [
+          { book: "Mano & Ciletti 5e", pages: "printed pp. 133–141", note: "§4.5 Binary adder–subtractor." },
+          { book: "Mano & Ciletti 5e", pages: "printed pp. 150–155", note: "§4.9 Decoders." },
+          { book: "Mano & Ciletti 5e", pages: "printed pp. 158–164", note: "§4.11 Multiplexers. Skip HDL." }
+        ],
+        seeTitle: "Odd ones, and a data pin",
+        see: `<p>Half adder: sum = A ⊕ B, carry = AB. Full adder: sum = A ⊕ B ⊕ Cin, which is 1 for an odd number of 1s. Carry = AB + BCin + ACin, which is 1 when at least two inputs are 1.</p>
+          <p>On an adder–subtractor, M = 0 adds. M = 1 inverts B and sets C0 = 1, which adds the 2’s complement.</p>
+          <p>A decoder makes one output per minterm. OR the outputs whose minterms are 1 and you have the SOP. A MUX puts variables on the select pins and wires each data pin to 0, 1, D, or D'.</p>`,
+        fig: "adder",
+        figCap: "Left is the adder. Right is a function built by wiring the MUX data pins.",
+        quiz: [
+          { q: "Full-adder sum is", choices: ["A ⊕ B ⊕ Cin", "AB + Cin", "A + B + Cin", "AB Cin"], answer: 0, why: "XOR of the three bits. 1 when the number of 1s is odd." },
+          { q: "Full-adder carry is 1 when", choices: ["All three inputs are 0", "Exactly one input is 1", "At least two inputs are 1", "The sum is 0"], answer: 2, why: "Majority. Cout = AB + BCin + ACin." },
+          { q: "M = 1 on an adder–subtractor", choices: ["Adds B", "Inverts B and sets the first carry to 1", "Disables the adder", "Swaps sum and carry"], answer: 1, why: "That is a 2’s-complement subtraction." },
+          { q: "Leftover-variable MUX data pins are wired to", choices: ["0, 1, D, or D'", "Only the minterms", "Clock and reset", "The carry chain"], answer: 0, why: "Select takes all but one variable. The last variable shows up as D or D' on a data pin." }
+        ],
+        numerical: {
+          prompt: "Full adder. A = 1, B = 1, Cin = 1. Sum and carry, each 0 or 1.",
+          fields: [
+            { key: "sum", label: "Sum", target: 1, tol: 0 },
+            { key: "cout", label: "Carry", target: 1, tol: 0 }
+          ],
+          solution: "Three 1s. Sum = 1 ⊕ 1 ⊕ 1 = 1. Carry = 1, because at least two inputs are 1."
+        }
+      },
+      {
+        id: 10, track: "semester", title: "GBW and CMRR", minutes: 40,
+        read: [
+          { book: "Boylestad 11e", pages: "printed pp. 631–634", note: "§10.7 Frequency parameters. Gain–bandwidth." },
+          { book: "Boylestad 11e", pages: "printed pp. 639–642", note: "§10.9 Differential and common-mode operation." }
+        ],
+        seeTitle: "One product, two gains",
+        see: `<p>For a compensated op-amp the closed-loop bandwidth is the gain–bandwidth product divided by the closed-loop gain.</p>
+          <p class="eq">f3dB = GBW / G &nbsp;&nbsp; GBW = G · f3dB</p>
+          <p>Common-mode and differential:</p>
+          <p class="eq">vd = v1 − v2 &nbsp;&nbsp; vc = (v1 + v2) / 2</p>
+          <p class="eq">CMRR = Ad / Acm &nbsp;&nbsp; CMRR(dB) = 20 log10(Ad / Acm)</p>
+          <p class="eq">vo = Ad vd + Acm vc</p>
+          <p>100 dB is a ratio of 10^5, not 100. The September paper’s Q4 and Q5 are the numerical below.</p>`,
+        fig: "gbw",
+        figCap: "Halving the gain doubles the bandwidth. The corner still meets the same slope.",
+        quiz: [
+          { q: "Closed-loop 3 dB frequency is", choices: ["GBW × G", "GBW / G", "G / GBW", "Always the open-loop bandwidth"], answer: 1, why: "More gain, less bandwidth, on one product." },
+          { q: "CMRR is", choices: ["Ad / Acm", "Acm / Ad", "Ad + Acm", "20 log vd"], answer: 0, why: "The ratio of differential gain to common-mode gain. Decibels are 20 log of that." },
+          { q: "100 dB is a ratio of", choices: ["100", "1000", "10^5", "2"], answer: 2, why: "20 log10(10^5) = 100. A factor of 100 would be 40 dB." },
+          { q: "Common-mode input is", choices: ["v1 − v2", "(v1 + v2) / 2", "v1 + v2", "Ad / 2"], answer: 1, why: "The part that is the same on both inputs. The difference is vd." }
+        ],
+        numerical: {
+          prompt: "Gain 100 has f3dB = 10 kHz. Highest gain that still has 20 kHz bandwidth. Then Ad = 200000, CMRR = 100 dB, v1 = 2.001 V, v2 = 1.999 V. Ideal vo in volts. The paper says it does not saturate.",
+          fields: [
+            { key: "g", label: "Highest gain", target: 50, tol: 0.5 },
+            { key: "vo", label: "vo (V)", target: 404, tol: 1 }
+          ],
+          solution: "GBW = 100 × 10 kHz = 1 MHz. At 20 kHz the gain is 1 MHz / 20 kHz = 50. CMRR = 10^5, so Acm = 2. vd = 0.002 V, vc = 2 V. vo = 200000×0.002 + 2×2 = 404 V."
+        }
+      },
+      {
+        id: 11, track: "semester", title: "Diff pair", minutes: 40,
+        read: [
+          { book: "Boylestad 11e", pages: "printed pp. 610–617", note: "§10.2 Differential amplifier circuit." },
+          { book: "Boylestad 11e", pages: "printed pp. 205–208", note: "§4.13 Current mirrors. This is the tail." }
+        ],
+        seeTitle: "The tail splits in half",
+        see: `<p>Two matched transistors share one tail current. Bases near ground, emitter resistor down to −VEE:</p>
+          <p class="eq">IT = (|VEE| − 0.7) / RE &nbsp;&nbsp; IE1 = IE2 = IT / 2</p>
+          <p>re uses that half current, not the whole tail. A current mirror sets IT from a reference and holds a high AC tail resistance, which cuts common-mode gain and raises CMRR. Differential gain barely moves.</p>
+          <p>The September photo of the whole multi-transistor chain is still a paper job after this. Do that Q6 from the photo once this number is easy.</p>`,
+        fig: "diffpair",
+        figCap: "One tail, two equal emitter currents, if the devices match.",
+        quiz: [
+          { q: "A matched pair with one tail has", choices: ["Each IE = IT / 2", "Each IE = IT", "Each IE = 2 IT", "IE set by β only"], answer: 0, why: "The tail splits. re is VT over that half." },
+          { q: "re of each device uses", choices: ["The whole tail current", "IT / 2", "IC of the mirror reference only", "VCC / RC"], answer: 1, why: "Each emitter carries half the tail." },
+          { q: "A stiffer tail (larger RE, or a mirror)", choices: ["Kills Ad", "Lowers CMRR", "Raises CMRR", "Removes the 0.7 V drop"], answer: 2, why: "Common-mode gain falls. Differential gain stays about the same." },
+          { q: "A mirror-set tail is about", choices: ["Equal to the reference current", "β times the reference", "Zero at AC and DC", "VBE / β"], answer: 0, why: "Iref = (VCC − VBE) / R, and IT ≈ Iref." }
+        ],
+        numerical: {
+          prompt: "RE = 10 kΩ down to VEE = −8 V. Tail current IT, and each emitter current, in mA.",
+          fields: [
+            { key: "it", label: "IT (mA)", target: 0.73, tol: 0.015 },
+            { key: "ie", label: "Each IE (mA)", target: 0.365, tol: 0.01 }
+          ],
+          solution: "IT = (8 − 0.7) / 10 kΩ = 0.73 mA. Each IE = 0.365 mA."
+        }
+      }
+    ];
+
+    const STEPS = ["read", "see", "quiz", "num"];
+    const STEP_LABEL = { read: "Read", see: "See", quiz: "Quiz", num: "Numerical" };
+
+    let state = load();
+    let view = { name: "path" };
+    let quizPick = {};
+    let quizGraded = null;
+    let forceQuiz = false;
+    let numShown = false;
+
+    function load() {
+      try {
+        const raw = JSON.parse(localStorage.getItem(KEY) || "{}");
+        return {
+          quiz: raw.quiz || {},
+          num: raw.num || {},
+          clubAt: raw.clubAt || null,
+          semAt: raw.semAt || null
+        };
+      } catch (e) {
+        return { quiz: {}, num: {}, clubAt: null, semAt: null };
+      }
+    }
+    function save() {
+      localStorage.setItem(KEY, JSON.stringify(state));
+    }
+    function lessonPassed(id) {
+      return !!(state.quiz[id] && state.num[id]);
+    }
+    function clubDone() {
+      return LESSONS.filter(l => l.track === "club").every(l => lessonPassed(l.id));
+    }
+    function semDone() {
+      return LESSONS.every(l => lessonPassed(l.id));
+    }
+    function unlocked(lesson) {
+      if (lesson.track === "semester") return clubDone();
+      const prev = LESSONS.filter(l => l.track === "club" && l.id < lesson.id);
+      return prev.every(l => lessonPassed(l.id));
+    }
+    function stampCerts() {
+      if (clubDone() && !state.clubAt) state.clubAt = new Date().toISOString();
+      if (semDone() && !state.semAt) state.semAt = new Date().toISOString();
+      save();
+    }
+    function esc(s) {
+      return String(s).replace(/[&<>]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[c]));
+    }
+    function normSop(raw) {
+      let s = String(raw).toLowerCase().replace(/[’′]/g, "'").replace(/\s+/g, "");
+      s = s.replace(/^f=/, "");
+      s = s.replace(/b'\(c'\+d'\)/g, "b'c'+b'd'");
+      s = s.replace(/b'\(d'\+c'\)/g, "b'd'+b'c'");
+      const terms = s.split("+").filter(Boolean).map(term => {
+        const lits = term.match(/[a-d]'?/g) || [];
+        return lits.sort().join("");
+      }).sort();
+      return terms.join("+");
+    }
+    const SOP_OK = normSop("b'd'+b'c'+a'c'd");
+
+    function render() {
+      const app = document.getElementById("app");
+      if (view.name === "path") app.innerHTML = pathHtml();
+      else if (view.name === "cert") app.innerHTML = certHtml(view.which);
+      else app.innerHTML = lessonHtml();
+      bind();
+    }
+
+    function pathHtml() {
+      const club = LESSONS.filter(l => l.track === "club");
+      const n = club.filter(l => lessonPassed(l.id)).length;
+      const current = LESSONS.find(l => unlocked(l) && !lessonPassed(l.id));
+      return `
+        <p class="eyebrow">padhai · certificate path</p>
+        <h1>Chip club</h1>
+        <p class="muted">Read the printed pages, look at the figure, then pass the quiz and the numerical. Page numbers are the ones printed on the paper. If a viewer counts the cover, add 21 for Boylestad, 18 for Mano, and 24 for Alexander.</p>
+        <div class="bar" aria-hidden="true"><span style="width:${(n / 9) * 100}%"></span></div>
+        <p class="small muted">${n} of 9 club lessons passed${clubDone() ? " · semester path open" : ""}</p>
+        ${certBanner()}
+        <h2 class="track-label">Before the interview</h2>
+        ${club.map(l => rowHtml(l, current)).join("")}
+        <h2 class="track-label">After the interview</h2>
+        <p class="small muted">September ACD paper. Opens when lessons 1–9 are passed.</p>
+        ${LESSONS.filter(l => l.track === "semester").map(l => rowHtml(l, current)).join("")}
+        <p class="small muted"><a href="../">Back to the guide</a></p>`;
+    }
+    function certBanner() {
+      let html = "";
+      if (state.clubAt) html += `<div class="card"><h3>Club path complete</h3><p class="small muted">${new Date(state.clubAt).toLocaleString()}</p><button class="primary" data-cert="club" type="button">View certificate</button></div>`;
+      if (state.semAt) html += `<div class="card"><h3>Semester path complete</h3><p class="small muted">${new Date(state.semAt).toLocaleString()}</p><button class="primary" data-cert="sem" type="button">View certificate</button></div>`;
+      return html;
+    }
+    function rowHtml(lesson, current) {
+      const open = unlocked(lesson);
+      const done = lessonPassed(lesson.id);
+      const cls = done ? "done" : !open ? "locked" : (current && current.id === lesson.id ? "current" : "");
+      const status = done ? "Passed" : !open ? "Locked" : "Open";
+      return `<button class="row ${cls}" type="button" data-open="${lesson.id}" ${open ? "" : "disabled"}>
+        <span class="badge">${done ? "✓" : lesson.id}</span>
+        <span><strong>${esc(lesson.title)}</strong><br><span class="small muted">${lesson.minutes} min</span></span>
+        <span class="status">${status}</span>
+      </button>`;
+    }
+    function certHtml(which) {
+      const list = which === "club" ? LESSONS.filter(l => l.track === "club") : LESSONS;
+      const when = which === "club" ? state.clubAt : state.semAt;
+      const title = which === "club" ? "Club path" : "Semester path";
+      return `
+        <div class="top"><button class="ghost" type="button" data-nav="path">Path</button></div>
+        <article class="cert">
+          <p class="eyebrow">padhai · chip club</p>
+          <h2>${title}</h2>
+          <p>${which === "club" ? "Lessons 1–9 passed. The viva blocks and the EDC hole they share." : "Lessons 1–11 passed, including GBW, CMRR, and the diff-pair tail."}</p>
+          <p class="small muted">${when ? new Date(when).toLocaleString() : ""}</p>
+          <ol>${list.map(l => `<li>${esc(l.title)}</li>`).join("")}</ol>
+        </article>`;
+    }
+    function lessonById(id) {
+      return LESSONS.find(l => l.id === id);
+    }
+    function stepOpen(lesson, step) {
+      if (step === "read" || step === "see") return true;
+      if (step === "quiz") return true;
+      return !!state.quiz[lesson.id];
+    }
+    function lessonHtml() {
+      const lesson = lessonById(view.id);
+      const step = view.step;
+      return `
+        <div class="top">
+          <button class="ghost" type="button" data-nav="path">Path</button>
+          <span class="small muted">${lesson.track === "club" ? "Club" : "Semester"} · ${lesson.minutes} min</span>
+        </div>
+        <p class="eyebrow">Lesson ${lesson.id} of 11</p>
+        <h1>${esc(lesson.title)}</h1>
+        <div class="steps">
+          ${STEPS.map(s => `<button class="step ${s === step ? "on" : ""}" type="button" data-step="${s}" ${stepOpen(lesson, s) ? "" : "disabled"}>${STEP_LABEL[s]}</button>`).join("")}
+        </div>
+        ${step === "read" ? readHtml(lesson) : ""}
+        ${step === "see" ? seeHtml(lesson) : ""}
+        ${step === "quiz" ? quizHtml(lesson) : ""}
+        ${step === "num" ? numHtml(lesson) : ""}`;
+    }
+    function readHtml(lesson) {
+      return `<p>These are the pages. Skip anything the note does not name.</p>
+        ${lesson.read.map((r, i) => `<article class="card read-item"><p class="book">${esc(r.book)}</p><p>${esc(r.pages)}</p><p class="muted">${esc(r.note)}</p>
+          ${(SHOTS[lesson.id + "-" + i] || []).map(([src, cap]) => `<figure class="shot"><img src="figures/${src}" alt="${esc(cap)}" loading="lazy" onerror="this.parentElement.remove()"><figcaption class="small muted">${esc(cap)}</figcaption></figure>`).join("")}
+        </article>`).join("")}
+        <div class="actions"><button class="primary" type="button" data-step="see">I have the pages</button></div>`;
+    }
+    function seeHtml(lesson) {
+      return `<h2>${esc(lesson.seeTitle)}</h2>${lesson.see}
+        ${FIG[lesson.fig]}
+        <p class="small muted">${esc(lesson.figCap)}</p>
+        <div class="actions"><button class="primary" type="button" data-step="quiz">Quiz</button></div>`;
+    }
+    function quizHtml(lesson) {
+      if (state.quiz[lesson.id] && !quizGraded && !forceQuiz) {
+        return `<p class="ok">Quiz already passed.</p><div class="actions"><button class="primary" type="button" data-step="num">Numerical</button><button class="ghost" type="button" id="redo-quiz">Redo</button></div>`;
+      }
+      const graded = quizGraded && quizGraded.id === lesson.id;
+      return `<p class="small muted">Four questions. Three correct opens the numerical.</p>
+        ${lesson.quiz.map((item, i) => `<fieldset><legend>${i + 1}. ${esc(item.q)}</legend>
+          ${item.choices.map((c, j) => {
+            let cls = "choice";
+            if (graded && j === item.answer) cls += " right";
+            else if (graded && quizPick[i] === j && j !== item.answer) cls += " wrong";
+            return `<label class="${cls}"><input type="radio" name="q${i}" value="${j}" ${quizPick[i] === j ? "checked" : ""} ${graded ? "disabled" : ""}/> <span>${esc(c)}</span></label>`;
+          }).join("")}
+          ${graded ? `<p class="why">${esc(item.why)}</p>` : ""}
+        </fieldset>`).join("")}
+        ${graded ? `<p class="${quizGraded.ok ? "ok" : "bad"}">${quizGraded.score} of 4.</p>` : ""}
+        <div class="actions">
+          ${graded && quizGraded.ok ? `<button class="primary" type="button" data-step="num">Numerical</button>` : ""}
+          ${graded && !quizGraded.ok ? `<button class="primary" type="button" id="redo-quiz">Try again</button>` : ""}
+          ${!graded ? `<button class="primary" type="button" id="grade-quiz">Check</button>` : ""}
+        </div>`;
+    }
+    function numHtml(lesson) {
+      const n = lesson.numerical;
+      const done = !!state.num[lesson.id];
+      return `<p>${esc(n.prompt)}</p>
+        ${n.fields.map(f => `<label class="field">${esc(f.label)}<input type="text" inputmode="${n.kind === "sop" ? "text" : "decimal"}" data-field="${f.key}" autocomplete="off"/></label>`).join("")}
+        <div class="actions">
+          <button class="primary" type="button" id="grade-num">Check</button>
+          <button class="ghost" type="button" id="show-num">Show the worked solution</button>
+        </div>
+        <div id="num-out"></div>
+        ${done ? `<p class="ok">This lesson is passed.</p><div class="actions"><button class="primary" type="button" data-nav="path">Back to the path</button></div>` : ""}
+        ${numShown ? `<article class="card"><p>${esc(n.solution)}</p></article>` : ""}`;
+    }
+
+    function bind() {
+      document.querySelectorAll("[data-open]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const lesson = lessonById(Number(btn.dataset.open));
+          if (!unlocked(lesson)) return;
+          quizPick = {};
+          quizGraded = null;
+          forceQuiz = false;
+          numShown = false;
+          view = { name: "lesson", id: lesson.id, step: "read" };
+          render();
+        });
+      });
+      document.querySelectorAll("[data-nav]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          view = { name: btn.dataset.nav };
+          render();
+        });
+      });
+      document.querySelectorAll("[data-cert]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          view = { name: "cert", which: btn.dataset.cert };
+          render();
+        });
+      });
+      document.querySelectorAll("[data-step]").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const lesson = lessonById(view.id);
+          const step = btn.dataset.step;
+          if (!stepOpen(lesson, step)) return;
+          view.step = step;
+          if (step !== "quiz") quizGraded = null;
+          render();
+        });
+      });
+      const grade = document.getElementById("grade-quiz");
+      if (grade) grade.addEventListener("click", gradeQuiz);
+      const redo = document.getElementById("redo-quiz");
+      if (redo) redo.addEventListener("click", () => {
+        quizPick = {};
+        quizGraded = null;
+        forceQuiz = true;
+        render();
+      });
+      document.querySelectorAll("input[type=radio]").forEach(input => {
+        input.addEventListener("change", () => {
+          const i = Number(input.name.slice(1));
+          quizPick[i] = Number(input.value);
+        });
+      });
+      const gn = document.getElementById("grade-num");
+      if (gn) gn.addEventListener("click", gradeNum);
+      const sn = document.getElementById("show-num");
+      if (sn) sn.addEventListener("click", () => {
+        numShown = true;
+        render();
+      });
+    }
+    function gradeQuiz() {
+      const lesson = lessonById(view.id);
+      let score = 0;
+      lesson.quiz.forEach((item, i) => {
+        if (quizPick[i] === item.answer) score += 1;
+      });
+      const ok = score >= 3;
+      quizGraded = { id: lesson.id, score, ok };
+      if (ok) {
+        state.quiz[lesson.id] = true;
+        forceQuiz = false;
+        stampCerts();
+      }
+      render();
+    }
+    function gradeNum() {
+      const lesson = lessonById(view.id);
+      const n = lesson.numerical;
+      const values = {};
+      let ok = true;
+      n.fields.forEach(f => {
+        const el = document.querySelector(`[data-field="${f.key}"]`);
+        values[f.key] = el ? el.value : "";
+        if (n.kind === "sop") {
+          if (normSop(values[f.key]) !== SOP_OK) ok = false;
+        } else {
+          const x = parseFloat(String(values[f.key]).replace(",", "."));
+          if (!Number.isFinite(x) || Math.abs(x - f.target) > f.tol) ok = false;
+        }
+      });
+      const out = document.getElementById("num-out");
+      if (ok) {
+        state.num[lesson.id] = true;
+        numShown = true;
+        stampCerts();
+        render();
+      } else if (out) {
+        out.innerHTML = `<p class="bad">Not yet. Check the sign and the unit.</p>`;
+      }
+    }
+    render();
+  </script>
+</body>
+</html>
