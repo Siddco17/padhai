@@ -133,3 +133,23 @@ Files stay local (gitignored). This log is what gets committed.
 | 2026-10-03 12:33 | `06-mni` | `sem3/06-mni/resources/notes/MNI_29Sep2026.pdf` | Students Official |  |
 | 2026-10-03 12:33 | `06-mni` | `sem3/06-mni/resources/notes/AC_Bridges.pdf` | Students Official |  |
 | 2026-10-03 12:33 | `06-mni` | `sem3/06-mni/resources/pyqs/MI_Midsem_2026_Solutions.pdf` | Students Official |  |
+| 2026-10-16 05:54 | `06-mni` | `sem3/06-mni/resources/20261016T055057Z_047fe313_9. strain gauge.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-10-16 05:54 | `06-mni` | `sem3/06-mni/resources/20261016T055106Z_0ac96bc9_ADC.pdf` | Students Official |  |
+| 2026-10-16 05:54 | `05-acd` | `sem3/05-acd/resources/20261016T055005Z_0d575cad_image.jpg` | ACD- Section A - W26 |  |
+| 2026-10-16 05:54 | `06-mni` | `sem3/06-mni/resources/20261016T055048Z_1fdc35ae_RTD-Thermistor-Thermocouple_Numericals.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-10-16 05:54 | `02-dchd-lab` | `sem3/02-dchd-lab/resources/20261016T055101Z_2274088c_DC Journal.pdf` | Anvay (ECE) |  |
+| 2026-10-16 05:54 | `06-mni` | `sem3/06-mni/resources/20261016T055045Z_31d85155_Pressure measurment_Nptel strain gauge.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-10-16 05:54 | `02-dchd` | `sem3/02-dchd/resources/20261016T055052Z_405c6d9d_Tutorial_5_DCHD_Solutions.pdf` | Anvay (ECE) | <p><em>↷ Forwarded</em></p>enjoy |
+| 2026-10-16 05:54 | `02-dchd` | `sem3/02-dchd/resources/20261016T055112Z_43ab01c9_Attendance Sheet DCHD - T.pdf` | Batch 2 | <p><em>↷ Forwarded</em></p> |
+| 2026-10-16 05:54 | `06-mni` | `sem3/06-mni/resources/20261016T055109Z_4db466bc_10. Nptel strain gauge (1).pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-10-16 05:54 | `06-mni` | `sem3/06-mni/resources/20261016T055044Z_5709d920_image.png` | Thrishanth Arunan (ECE) CR | also for the mni project |
+| 2026-10-16 05:54 | `06-mni` | `sem3/06-mni/resources/20261016T055049Z_618c7e5c_Piezo-electric Transducer.pdf` | Students Official |  |
+| 2026-10-16 05:54 | `06-mni` | `sem3/06-mni/resources/20261016T055058Z_78d55a50_34. Pressure Measurement (1).pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-10-16 05:54 | `06-mni` | `sem3/06-mni/resources/20261016T055110Z_80bcd5fe_34. Pressure Measurement (1).pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-10-16 05:54 | `06-mni` | `sem3/06-mni/resources/20261016T055050Z_936c26c6_33. DUAL SLOPE ADC.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-10-16 05:54 | `06-mni` | `sem3/06-mni/resources/20261016T055059Z_9b3631bd_ADC and DAC NPTEL.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-10-16 05:54 | `02-dchd-lab` | `sem3/02-dchd-lab/resources/20261016T055115Z_a8fe0913_DC Journal.pdf` | Thrishanth Arunan (ECE) CR |  |
+| 2026-10-16 05:54 | `06-mni` | `sem3/06-mni/resources/20261016T055054Z_ad49fa27_ADC.pdf` | Students Official |  |
+| 2026-10-16 05:54 | `06-mni` | `sem3/06-mni/resources/20261016T055046Z_b6b8381d_34. Pressure Measurement (1).pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-10-16 05:54 | `04-emft` | `sem3/04-emft/resources/20261016T055055Z_ceb5bf0b_T6.pdf` | Batch 2 | <p><em>↷ Forwarded</em></p> |
+| 2026-10-16 05:54 | `02-dchd` | `sem3/02-dchd/resources/20261016T055044Z_d3b4e5cb_Tutorial_5_DCHD_Solutions (2).pdf` | Siddharth Sharma | <p><em>↷ Forwarded</em></p> |
