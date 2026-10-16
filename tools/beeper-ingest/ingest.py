@@ -626,6 +626,10 @@ PERSONAL_CHATS = {
     "aarya mistry",
     "lawn tennis ece",
     "aaryaphobics",
+    "s ramanujan hostel 2026-27",
+    "purple bus",
+    "barbeque nation",
+    "jiomart shop",
 }
 
 # College/admin noise even if PDF.
@@ -641,6 +645,13 @@ ADMIN_NAME_MARKERS = (
     "eligible and non eligible",
     "coursebook",
     "jc bose",
+    "trichy trial",
+    "swimming and kabaddi",
+    "vnit hackathon",
+    "fee remission",
+    "model presentation",
+    "budget allocation",
+    "students activities",
 )
 
 CHAT_COURSE = {
@@ -685,6 +696,22 @@ FILENAME_COURSE = (
     ("pmmc", "06-mni"),
     ("ml_notes", "07-fundamentals-of-ml"),
     ("ml notes", "07-fundamentals-of-ml"),
+    ("t6.pdf", "04-emft"),
+    ("tutorial_5_dchd", "02-dchd"),
+    ("tutorial 5 dchd", "02-dchd"),
+    ("tutorial 4 dchd", "02-dchd"),
+    ("tutorial 3 dchd", "02-dchd"),
+    ("tutorial 2 dchd", "02-dchd"),
+    ("attendance sheet dchd", "02-dchd"),
+    ("pressure measurement", "06-mni"),
+    ("pressure measurment", "06-mni"),
+    ("strain gauge", "06-mni"),
+    ("rtd-thermistor", "06-mni"),
+    ("rtd", "06-mni"),
+    ("piezo-electric", "06-mni"),
+    ("dual slope adc", "06-mni"),
+    ("adc and dac", "06-mni"),
+    ("adc.pdf", "06-mni"),
 )
 
 

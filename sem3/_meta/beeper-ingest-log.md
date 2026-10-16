@@ -153,3 +153,7 @@ Files stay local (gitignored). This log is what gets committed.
 | 2026-10-16 05:54 | `06-mni` | `sem3/06-mni/resources/20261016T055046Z_b6b8381d_34. Pressure Measurement (1).pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
 | 2026-10-16 05:54 | `04-emft` | `sem3/04-emft/resources/20261016T055055Z_ceb5bf0b_T6.pdf` | Batch 2 | <p><em>↷ Forwarded</em></p> |
 | 2026-10-16 05:54 | `02-dchd` | `sem3/02-dchd/resources/20261016T055044Z_d3b4e5cb_Tutorial_5_DCHD_Solutions (2).pdf` | Siddharth Sharma | <p><em>↷ Forwarded</em></p> |
+| 2026-10-16 05:55 | `05-acd-lab` | `sem3/05-acd-lab/resources/ACD_Lab_Multisim_Assignment.docx` | Devashree / CR | Multisim circuit simulation lab assignment |
+| 2026-10-16 05:55 | `06-mni` | `sem3/06-mni/resources/Measurement and Instrumentation - 13 Group Assignment.xlsx` | Students Official | Group topics & roll numbers (Group 7: RTD/Thermistor/Thermocouple) |
+| 2026-10-16 05:55 | `06-mni` | `sem3/06-mni/resources/3-RTD_Sensor_Fundamentals.pptx` | Students Official | RTD sensor fundamentals |
+| 2026-10-16 05:55 | `01-linear-algebra` | `sem3/01-linear-algebra/resources/Attendance_list_LAML_Odd2026 2.xlsx` | SECTION A-Official | LA attendance sheet |

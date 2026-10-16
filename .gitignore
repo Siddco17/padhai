@@ -2,6 +2,8 @@
 *.pdf
 *.docx
 *.pptx
+*.xlsx
+*.xls
 *.zip
 *.jpg
 *.jpeg
