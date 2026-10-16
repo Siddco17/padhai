@@ -157,3 +157,29 @@ Files stay local (gitignored). This log is what gets committed.
 | 2026-10-16 05:55 | `06-mni` | `sem3/06-mni/resources/Measurement and Instrumentation - 13 Group Assignment.xlsx` | Students Official | Group topics & roll numbers (Group 7: RTD/Thermistor/Thermocouple) |
 | 2026-10-16 05:55 | `06-mni` | `sem3/06-mni/resources/3-RTD_Sensor_Fundamentals.pptx` | Students Official | RTD sensor fundamentals |
 | 2026-10-16 05:55 | `01-linear-algebra` | `sem3/01-linear-algebra/resources/Attendance_list_LAML_Odd2026 2.xlsx` | SECTION A-Official | LA attendance sheet |
+| 2026-10-16 06:00 | `06-mni` | `sem3/06-mni/resources/notes/ac-bridges/01_DeSauty_Schering_Wien_Formulas.jpg` | MNI | De Sauty, Schering & Wien bridge formulas |
+| 2026-10-16 06:00 | `06-mni` | `sem3/06-mni/resources/notes/ac-bridges/02_Maxwell_Hays_Bridge_Formulas.jpg` | MNI | Maxwell & Hay's bridge formulas & derivations |
+| 2026-10-16 06:00 | `06-mni` | `sem3/06-mni/resources/notes/ac-bridges/03_Schering_Bridge_Derivation.jpg` | MNI | Schering bridge impedance derivation |
+| 2026-10-16 06:00 | `06-mni` | `sem3/06-mni/resources/notes/ac-bridges/04_Schering_Bridge_D_Q_PF.jpg` | MNI | Schering bridge dissipation factor & power factor |
+| 2026-10-16 06:00 | `06-mni` | `sem3/06-mni/resources/notes/ac-bridges/05_Hays_Bridge_Circuit_Derivation.jpg` | MNI | Hay's bridge circuit & balance equations |
+| 2026-10-16 06:00 | `06-mni` | `sem3/06-mni/resources/notes/ac-bridges/06_Hays_Bridge_Balance_Equation.jpg` | MNI | Hay's bridge quality factor & balance expressions |
+| 2026-10-16 06:00 | `06-mni` | `sem3/06-mni/resources/notes/capacitive-transducers/01_Capacitive_Displacement_Sensor.jpg` | MNI | Capacitive displacement sensor (variable plate separation) |
+| 2026-10-16 06:00 | `06-mni` | `sem3/06-mni/resources/notes/capacitive-transducers/02_Differential_and_Variable_Dielectric.jpg` | MNI | Differential capacitive sensors & variable dielectric area |
+| 2026-10-16 06:00 | `06-mni` | `sem3/06-mni/resources/notes/capacitive-transducers/03_Liquid_Level_Capacitive_Sensor.jpg` | MNI | Flat & coaxial liquid level capacitive sensor derivations |
+| 2026-10-16 06:00 | `06-mni` | `sem3/06-mni/resources/notes/capacitive-transducers/04_Charge_Amplifier_Signal_Conditioning.jpg` | MNI | Charge amplifier signal conditioning circuit for capacitive sensors |
+| 2026-10-16 06:00 | `06-mni` | `sem3/06-mni/resources/notes/bentley-problems/Bentley_p160_Reluctance_Sensor_Theory.jpg` | MNI | Bentley textbook p160: Reluctance sensor theory & formulas |
+| 2026-10-16 06:00 | `06-mni` | `sem3/06-mni/resources/notes/bentley-problems/Bentley_p187_Ch8_Problems.jpg` | MNI | Bentley textbook p187: Ch8 inductive/reluctance exercises |
+| 2026-10-16 06:00 | `06-mni` | `sem3/06-mni/resources/notes/bentley-problems/Bentley_p223_Ch9_Problems_9.5-9.8.jpg` | MNI | Bentley textbook p223: Ch9 capacitive sensor problems |
+| 2026-10-16 06:00 | `06-mni` | `sem3/06-mni/resources/notes/bentley-problems/Bentley_p224_Ch9_Problems_9.8-9.11.jpg` | MNI | Bentley textbook p224: Ch9 problems continued |
+| 2026-10-16 06:00 | `06-mni` | `sem3/06-mni/resources/notes/bentley-problems/Bentley_Prob_8.5_Reluctance_Inductance_Solution.jpg` | Students Official | Worked solution for Bentley Prob 8.5 (reluctance sensor inductance) |
+| 2026-10-16 06:00 | `06-mni` | `sem3/06-mni/resources/notes/bentley-problems/Bentley_Prob_9.8_Capacitance_Bridge_Solution.jpg` | Students Official | Worked solution for Bentley Prob 9.8 (capacitance bridge level sensor) |
+| 2026-10-16 06:00 | `06-mni-lab` | `sem3/06-mni-lab/resources/reports/RTD_Linear_Regression_Matlab/RTD_Regression_Page_1.jpg` | Batch 2 | RTD linear regression MATLAB lab experiment (Page 1) |
+| 2026-10-16 06:00 | `06-mni-lab` | `sem3/06-mni-lab/resources/reports/RTD_Linear_Regression_Matlab/RTD_Regression_Page_2.jpg` | Batch 2 | RTD linear regression MATLAB lab experiment (Page 2) |
+| 2026-10-16 06:00 | `06-mni-lab` | `sem3/06-mni-lab/resources/reports/RTD_Linear_Regression_Matlab/RTD_Regression_Page_3.jpg` | Batch 2 | RTD linear regression MATLAB lab experiment (Page 3) |
+| 2026-10-16 06:00 | `06-mni-lab` | `sem3/06-mni-lab/resources/reports/RTD_Linear_Regression_Matlab/RTD_Regression_Page_4.jpg` | Batch 2 | RTD linear regression MATLAB lab experiment (Page 4) |
+| 2026-10-16 06:00 | `03-sns-lab` | `sem3/03-sns-lab/reports/Lab_08_DTFT_Board_Notes.jpg` | Batch 2 | Lab 8 DTFT blackboard notes & MATLAB code |
+| 2026-10-16 06:00 | `03-sns-lab` | `sem3/03-sns-lab/reports/Lab_09_DFT_Phase_Delay_Board_Notes.jpg` | Batch 2 | Lab 9 DFT phase delay blackboard notes & MATLAB code |
+| 2026-10-16 06:00 | `02-dchd-lab` | `sem3/02-dchd-lab/resources/DM74LS151_MUX_Datasheet.jpg` | Batch 2 | 8-line to 1-line data selector/multiplexer IC pinout |
+| 2026-10-16 06:00 | `02-dchd-lab` | `sem3/02-dchd-lab/resources/DM74LS153_Dual_MUX_Datasheet.jpg` | Batch 2 | Dual 4-line to 1-line multiplexer IC pinout |
+| 2026-10-16 06:00 | `02-dchd-lab` | `sem3/02-dchd-lab/resources/IC7473_Dual_JK_FlipFlop.jpg` | Batch 2 | Dual JK flip-flop with clear IC pinout |
+| 2026-10-16 06:00 | `02-dchd-lab` | `sem3/02-dchd-lab/resources/IC7474_Dual_D_FlipFlop.jpg` | Batch 2 | Dual D-type positive-edge-triggered flip-flop IC pinout |
