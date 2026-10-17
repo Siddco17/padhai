@@ -183,9 +183,9 @@ Files stay local (gitignored). This log is what gets committed.
 | 2026-10-16 06:00 | `02-dchd-lab` | `sem3/02-dchd-lab/resources/DM74LS153_Dual_MUX_Datasheet.jpg` | Batch 2 | Dual 4-line to 1-line multiplexer IC pinout |
 | 2026-10-16 06:00 | `02-dchd-lab` | `sem3/02-dchd-lab/resources/IC7473_Dual_JK_FlipFlop.jpg` | Batch 2 | Dual JK flip-flop with clear IC pinout |
 | 2026-10-16 06:00 | `02-dchd-lab` | `sem3/02-dchd-lab/resources/IC7474_Dual_D_FlipFlop.jpg` | Batch 2 | Dual D-type positive-edge-triggered flip-flop IC pinout |
-| 2026-10-17 15:37 | `04-emft` | `sem3/04-emft/resources/20261017T153738Z_0047bf9c_Electromagnetic Flow Meter.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-10-17 15:37 | `06-mni` | `sem3/06-mni/resources/20261017T153738Z_0047bf9c_Electromagnetic Flow Meter.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
 | 2026-10-17 15:37 | `06-mni` | `sem3/06-mni/resources/20261017T153737Z_0aa3d10c_Flow measurements.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
 | 2026-10-17 15:37 | `02-dchd` | `sem3/02-dchd/resources/20261017T153739Z_89d6b9fc_Tutorial 6 DCHD (1).pdf` | ECLA 201 DCHD | Submission date: 23 rd October '26 |
-| 2026-10-17 15:37 | `06-mni-lab` | `sem3/06-mni-lab/resources/20261017T153744Z_ecc3ecfc_ACD EXPERIMENT 2.pdf` | Muzammil | <p><em>↷ Forwarded</em></p> |
-| 2026-10-17 15:37 | `_unsorted` | `sem3/_inbox/unsorted/20261017T153738Z_eea73ab2_U manometer.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-10-17 15:37 | `05-acd-lab` | `sem3/05-acd-lab/resources/20261017T153744Z_ecc3ecfc_ACD EXPERIMENT 2.pdf` | Muzammil | <p><em>↷ Forwarded</em></p> |
+| 2026-10-17 15:37 | `06-mni` | `sem3/06-mni/resources/20261017T153738Z_eea73ab2_U manometer.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
 | 2026-10-17 15:37 | `_unsorted` | `sem3/_inbox/unsorted/20261017T153735Z_ff26cb31_Freshers_26_event_flow.pdf` | Students Official |  |
