@@ -189,3 +189,20 @@ Files stay local (gitignored). This log is what gets committed.
 | 2026-10-17 15:37 | `05-acd-lab` | `sem3/05-acd-lab/resources/20261017T153744Z_ecc3ecfc_ACD EXPERIMENT 2.pdf` | Muzammil | <p><em>↷ Forwarded</em></p> |
 | 2026-10-17 15:37 | `06-mni` | `sem3/06-mni/resources/20261017T153738Z_eea73ab2_U manometer.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
 | 2026-10-17 15:37 | `_unsorted` | `sem3/_inbox/unsorted/20261017T153735Z_ff26cb31_Freshers_26_event_flow.pdf` | Students Official |  |
+| 2026-10-25 16:17 | `06-mni` | `sem3/06-mni/resources/20261025T161236Z_07afdf53_36. Qmeter.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-10-25 16:17 | `02-dchd` | `sem3/02-dchd/resources/20261025T161141Z_0d123017_image.jpg` | ECLA 201 DCHD |  |
+| 2026-10-25 16:17 | `06-mni` | `sem3/06-mni/resources/20261025T161233Z_2bc46343_resonance_15_16_22_24_26.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-10-25 16:17 | `06-mni` | `sem3/06-mni/resources/20261025T161232Z_30650b9b_resonance.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-10-25 16:17 | `06-mni` | `sem3/06-mni/resources/20261025T161238Z_3c497cf1_ECE_sub.docx.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-10-25 16:17 | `04-emft` | `sem3/04-emft/resources/20261025T161219Z_43695a9d_EMFT Marks.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-10-25 16:17 | `01-linear-algebra` | `sem3/01-linear-algebra/resources/20261025T161155Z_69ec7815_image.jpg` | Linear algebra for ML | <p><em>↷ Forwarded</em></p> |
+| 2026-10-25 16:17 | `06-mni` | `sem3/06-mni/resources/20261025T161234Z_80250057_MNI 22 oct.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-10-25 16:17 | `02-dchd` | `sem3/02-dchd/resources/20261025T161153Z_804e6204_image.jpg` | ECLA 201 DCHD |  |
+| 2026-10-25 16:17 | `02-dchd` | `sem3/02-dchd/resources/20261025T161153Z_8398a062_image.jpg` | ECLA 201 DCHD | Tutorial 1 to 5 roll nos of students who have submitted |
+| 2026-10-25 16:17 | `06-mni` | `sem3/06-mni/resources/20261025T161235Z_9da21fb2_37. CRO.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-10-25 16:17 | `05-acd-lab` | `sem3/05-acd-lab/resources/20261025T161238Z_b1aadfc2_Scan documents20261020_080123.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-10-25 16:17 | `05-acd-lab` | `sem3/05-acd-lab/resources/20261025T161227Z_c7670c50_Multisim_Guide_Exp1-9.pdf` | Siddharth Sharma | <p><em>↷ Forwarded</em></p>ENJOY |
+| 2026-10-25 16:17 | `02-dchd` | `sem3/02-dchd/resources/20261025T161232Z_c82fcd9e_DCHD_Tutorial_6_Solutions.pdf` | Siddharth Sharma | <p><em>↷ Forwarded</em></p>ENJOY |
+| 2026-10-25 16:17 | `02-dchd` | `sem3/02-dchd/resources/20261025T161239Z_d9eb87ab_Tutorial 7 DCHD (1).pdf` | ECLA 201 DCHD | Tutorial 7 submission date: 30th October '26 |
+| 2026-10-25 16:17 | `06-mni` | `sem3/06-mni/resources/20261025T161234Z_f1a1fb92_40. radiation pyrometer.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-10-25 16:17 | `02-dchd` | `sem3/02-dchd/resources/20261025T161153Z_f6ee8705_image.jpg` | ECLA 201 DCHD |  |
