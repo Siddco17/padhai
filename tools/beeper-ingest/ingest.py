@@ -652,6 +652,14 @@ ADMIN_NAME_MARKERS = (
     "model presentation",
     "budget allocation",
     "students activities",
+    "selection trial",
+    "karwaan",
+    "suspension of classes",
+    "petso",
+    "tech_inventa",
+    "idsdone",
+    "idsgetdone",
+    "bus_ticket",
 )
 
 CHAT_COURSE = {
@@ -712,6 +720,15 @@ FILENAME_COURSE = (
     ("dual slope adc", "06-mni"),
     ("adc and dac", "06-mni"),
     ("adc.pdf", "06-mni"),
+    ("dchd_tutorial_6", "02-dchd"),
+    ("tutorial 7 dchd", "02-dchd"),
+    ("multisim", "05-acd-lab"),
+    ("cro.pdf", "06-mni"),
+    ("qmeter", "06-mni"),
+    ("radiation pyrometer", "06-mni"),
+    ("ece_sub.docx", "06-mni"),
+    ("scan documents20261020", "05-acd-lab"),
+    ("resonance", "06-mni"),
 )
 
 
