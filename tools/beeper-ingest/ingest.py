@@ -660,6 +660,8 @@ ADMIN_NAME_MARKERS = (
     "idsdone",
     "idsgetdone",
     "bus_ticket",
+    "pcems",
+    "detailed paper schedule",
 )
 
 CHAT_COURSE = {
@@ -680,6 +682,17 @@ def strip_html(text: str) -> str:
 
 # Strong filename overrides when keyword classifier is thin.
 FILENAME_COURSE = (
+    ("acd experiment", "05-acd-lab"),
+    ("acd_lab", "05-acd-lab"),
+    ("vnit_acd_lab", "05-acd-lab"),
+    ("differentiator", "05-acd-lab"),
+    ("integrator", "05-acd-lab"),
+    ("filter.pdf", "05-acd-lab"),
+    ("schmitt trigger", "05-acd-lab"),
+    ("comparator", "05-acd-lab"),
+    ("tutorial 8 dchd", "02-dchd"),
+    ("dchd_tutorial7", "02-dchd"),
+    ("flow measurement", "06-mni"),
     ("static characteristics", "06-mni"),
     ("dynamic characteristics", "06-mni"),
     ("order systems", "06-mni"),
