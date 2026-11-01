@@ -206,3 +206,19 @@ Files stay local (gitignored). This log is what gets committed.
 | 2026-10-25 16:17 | `02-dchd` | `sem3/02-dchd/resources/20261025T161239Z_d9eb87ab_Tutorial 7 DCHD (1).pdf` | ECLA 201 DCHD | Tutorial 7 submission date: 30th October '26 |
 | 2026-10-25 16:17 | `06-mni` | `sem3/06-mni/resources/20261025T161234Z_f1a1fb92_40. radiation pyrometer.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
 | 2026-10-25 16:17 | `02-dchd` | `sem3/02-dchd/resources/20261025T161153Z_f6ee8705_image.jpg` | ECLA 201 DCHD |  |
+| 2026-11-01 14:16 | `06-mni` | `sem3/06-mni/resources/20261101T141031Z_0084daa3_MNI 22 oct.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-11-01 14:16 | `05-acd-lab` | `sem3/05-acd-lab/resources/20261101T141029Z_24feaf6c_ACD EXPERIMENT 2.pdf` | Thrishanth Arunan |  |
+| 2026-11-01 14:16 | `02-dchd` | `sem3/02-dchd/resources/20261101T141021Z_34b1a1f7_DCHD_Tutorial7_Solutions.pdf` | Siddharth Sharma | <p><em>↷ Forwarded</em></p> |
+| 2026-11-01 14:16 | `05-acd-lab` | `sem3/05-acd-lab/resources/20261101T141027Z_8527f7ac_INTEGRATOR.pdf` | Thrishanth Arunan |  |
+| 2026-11-01 14:16 | `06-mni` | `sem3/06-mni/resources/20261101T141030Z_9670e3a3_40. radiation pyrometer.pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
+| 2026-11-01 14:16 | `05-acd-lab` | `sem3/05-acd-lab/resources/20261101T141029Z_9a931472_SCHMITT TRIGGER.pdf` | Thrishanth Arunan |  |
+| 2026-11-01 14:16 | `05-acd-lab` | `sem3/05-acd-lab/resources/20261101T141028Z_b37c5cac_COMPARATOR.pdf` | Thrishanth Arunan |  |
+| 2026-11-01 14:16 | `05-acd-lab` | `sem3/05-acd-lab/resources/20261101T141026Z_b4ea6bb4_DIFFERENTIATOR.pdf` | Thrishanth Arunan |  |
+| 2026-11-01 14:16 | `05-acd-lab` | `sem3/05-acd-lab/resources/20261101T141023Z_c5c6dbbf_VNIT_ACD_Lab___Viva_Study_Guide__Exps_1-9_.pdf` | Siddharth Sharma |  |
+| 2026-11-01 14:16 | `06-mni` | `sem3/06-mni/resources/20261101T141025Z_d8b3dc26_Pressure measurment_Nptel strain gauge.pdf` | Batch 2 | <p><em>↷ Forwarded</em></p> |
+| 2026-11-01 14:16 | `05-acd-lab` | `sem3/05-acd-lab/resources/20261101T141027Z_e102205a_FILTER.pdf` | Thrishanth Arunan |  |
+| 2026-11-01 14:16 | `02-dchd` | `sem3/02-dchd/resources/20261101T141023Z_e18e326a_Tutorial 8 DCHD.pdf` | ECLA 201 DCHD |  |
+| 2026-11-01 14:16 | `05-acd-lab` | `sem3/05-acd-lab/resources/20261101T141020Z_e243d56b_ACD_Lab_Multisim_Assignment.pdf` | Siddharth Sharma |  |
+| 2026-11-01 14:16 | `01-linear-algebra` | `sem3/01-linear-algebra/resources/20261101T140958Z_f0172fe5_image.jpg` | Linear algebra for ML |  |
+| 2026-11-01 14:16 | `06-mni` | `sem3/06-mni/resources/20261101T141024Z_f387b9b1_Flow measurements.pdf` | Batch 2 | <p><em>↷ Forwarded</em></p> |
+| 2026-11-01 14:16 | `05-acd` | `sem3/05-acd/resources/20261101T141015Z_ff3066e3_ACD Assignment.pdf` | Students Official |  |
