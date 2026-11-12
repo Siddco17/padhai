@@ -226,3 +226,4 @@ Files stay local (gitignored). This log is what gets committed.
 | 2026-11-12 08:45 | `02-dchd` | `sem3/02-dchd/resources/20261112T083306Z_a87be371_image.jpg` | ECLA 201 DCHD |  |
 | 2026-11-12 08:45 | `07-fundamentals-of-ml` | `sem3/07-fundamentals-of-ml/resources/20261112T083506Z_f6d51dc8_attandence.pdf` | ECE FoML W26 |  |
 | 2026-11-12 08:45 | `02-dchd` | `sem3/02-dchd/resources/20261112T083306Z_fde572ba_image.jpg` | ECLA 201 DCHD |  |
+| 2026-11-12 09:04 | `03-sns` | `sem3/03-sns/resources/20261112T090334Z_63a7920f_(Schaum_s Outlines) Hwei Hsu - Schaum_s Outline of Signals and Systems-McGraw Hill (2019).pdf` | Students Official | <p><em>↷ Forwarded</em></p> |
