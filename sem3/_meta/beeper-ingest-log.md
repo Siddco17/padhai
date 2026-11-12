@@ -222,3 +222,7 @@ Files stay local (gitignored). This log is what gets committed.
 | 2026-11-01 14:16 | `01-linear-algebra` | `sem3/01-linear-algebra/resources/20261101T140958Z_f0172fe5_image.jpg` | Linear algebra for ML |  |
 | 2026-11-01 14:16 | `06-mni` | `sem3/06-mni/resources/20261101T141024Z_f387b9b1_Flow measurements.pdf` | Batch 2 | <p><em>↷ Forwarded</em></p> |
 | 2026-11-01 14:16 | `05-acd` | `sem3/05-acd/resources/20261101T141015Z_ff3066e3_ACD Assignment.pdf` | Students Official |  |
+| 2026-11-12 08:45 | `_unsorted` | `sem3/_inbox/unsorted/20261112T083503Z_7bc7d19e_Endsem_Syllabus.pdf` | SECTION A-Official |  |
+| 2026-11-12 08:45 | `02-dchd` | `sem3/02-dchd/resources/20261112T083306Z_a87be371_image.jpg` | ECLA 201 DCHD |  |
+| 2026-11-12 08:45 | `07-fundamentals-of-ml` | `sem3/07-fundamentals-of-ml/resources/20261112T083506Z_f6d51dc8_attandence.pdf` | ECE FoML W26 |  |
+| 2026-11-12 08:45 | `02-dchd` | `sem3/02-dchd/resources/20261112T083306Z_fde572ba_image.jpg` | ECLA 201 DCHD |  |
